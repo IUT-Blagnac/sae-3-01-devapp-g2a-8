@@ -1,18 +1,21 @@
-= Exigences du Site E-commerce
+= Exigences du Site E-commerce SigmaPrime
 
 == [MUST] Naviguer sur le site (2 / 4)
 En tant que visiteur, je veux pouvoir naviguer sur le site, afin de découvrir les produits et les services proposés.
+Afin de réaliser cette exigence :
 Le site doit avoir une page d’accueil.
 Il doit être possible de voir la page de description de chaque produit disponible sur le site.
 Respecter l’arborescence du site.
 
 == [MUST] Interface Utilisateur (1 / 4)
 En tant que visiteur, je veux pouvoir naviguer sur un site agréable à l'œil avec une identité visuelle forte, afin d’être dans de bonnes conditions pour visualiser les produits et effectuer des achats.
+Afin de réaliser cette exigence :
 La palette de couleurs du site est restreinte à une combinaison de noir et blanc. 
 L'interface utilisateur reste esthétiquement plaisante malgré la limitation des couleurs.
 
 == [MUST] Site sécurisé (1 / 4)
 En tant que visiteur, je veux pouvoir naviguer sur un site sécurisé, afin de garder mes informations confidentielles.
+Afin de réaliser cette exigence :
 Un test de sécurité est effectué pour identifier et documenter les vulnérabilités potentielles.
 Les pages du site sont accessibles via le protocole HTTPS.
 Un certificat Secure Sockets Layer (SSL) est correctement installé sur le serveur du site.
@@ -20,18 +23,21 @@ Les vulnérabilités identifiées sont corrigées et retestées pour s'assurer d
 
 == [MUST] Fonctionnalités du panier (2 / 4)
 En tant que visiteur, je veux pouvoir accéder facilement à mon panier et y ajouter des articles, afin de pouvoir potentiellement procéder à l’achat.
+Afin de réaliser cette exigence :
 L'interface utilisateur du panier est accessible depuis toutes les pages pertinentes du site.
 Les utilisateurs peuvent ajouter des articles au panier avec succès.
 Le panier affiche correctement le résumé des articles sélectionnés.
 
 == [MUST] Moyens de paiement (3 / 4)
 En tant que client connecté, je veux pouvoir choisir mon mode de paiement sécurisé, afin de régler ma commande de façon optimale.
+Afin de réaliser cette exigence :
 Les passerelles de paiement (PayPal…) sont intégrées au site.
 Les utilisateurs peuvent sélectionner leur méthode de paiement préférée lors de la commande.
 Les paiements sont traités de manière sécurisée et les informations sensibles sont correctement gérées.
 
 == [MUST] Page d’administration (4 / 4)
 En tant qu’administrateur, je veux pouvoir accéder à une interface privée et sécurisée, afin de gérer les utilisateurs, les produits et les commandes
+Afin de réaliser cette exigence :
 Une interface d'administration est accessible via une authentification sécurisée.
 Les administrateurs peuvent ajouter, modifier ou supprimer des produits avec succès.
 Les administrateurs peuvent consulter et mettre à jour les informations des utilisateurs.
@@ -40,17 +46,20 @@ L'interface d'administration comprend des sections distinctes pour la gestion de
 
 == [SHOULD] Responsive Design (1 / 4)
 En tant que visiteur, je veux pouvoir visualiser de façon optimisée depuis n’importe quelle plateforme, afin d’avoir une meilleure accessibilité.
+Afin de réaliser cette exigence :
 Le site est accessible et offre une expérience utilisateur cohérente sur différents appareils (ordinateurs, tablettes, smartphones...).
 Les éléments de l'interface utilisateur s'ajustent dynamiquement en fonction de la taille de l'écran.
 
 == [SHOULD] Affichage des différents types de produits sur la même page (A VOIR) (2 / 4)
 En tant que visiteur, je veux pouvoir visualiser les produits voulus selon mes critères, afin d’accéder rapidement à ma requête.
+Afin de réaliser cette exigence :
 Tous les types de produits sont répertoriés sur une seule page principale.
 Les utilisateurs peuvent filtrer les produits par type sans recharger la page.
 L'affichage des produits est cohérent et esthétiquement plaisant.
 
 == [SHOULD] Création et connexion à un compte (1 / 4)
 En tant que visiteur, je veux pouvoir créer un compte et m’y connecter, afin de sauvegarder mes informations sur le site.
+Afin de réaliser cette exigence :
 Les utilisateurs peuvent créer un compte en fournissant des informations nécessaires.
 Les comptes créés sont stockés de manière sécurisée dans la base de données.
 Les utilisateurs peuvent se connecter à leur compte en utilisant leurs identifiants.
@@ -58,38 +67,45 @@ La fonctionnalité "Mot de passe oublié" permet aux utilisateurs de réinitiali
 
 == [SHOULD] Fluidité (1 / 4)
 En tant que visiteur, je veux pouvoir naviguer sur le site sans rencontrer de bugs et de manière fluide, afin d’avoir une expérience fluide.
+Afin de réaliser cette exigence :
 Aucun bug majeur n'est présent, et toutes les fonctionnalités répondent correctement.
 Le site fonctionne sans ralentissements ni délais notables lors de la navigation.
 Les tests d'utilisabilité sont effectués pour garantir une expérience fluide.
 
 == [COULD] Historique des produits consultés (1 / 4)
 En tant que client connecté, je veux pouvoir visualiser l’historique des produits consultés, afin de retrouver facilement les produits qui m’intéressent.
+Afin de réaliser cette exigence :
 Les produits consultés par un utilisateur sont enregistrés dans son historique de navigation.
 Les utilisateurs peuvent accéder à leur historique de produits consultés depuis leur compte.
 
 == [COULD] Proposition des packs (A VOIR) (3 / 4)
 En tant que client connecté, je veux pouvoir avoir des propositions basées sur mes préférences, afin d’être guidé sur des produits qui pourraient m’intéresser.
+Afin de réaliser cette exigence :
 Des packs de produits sont proposés aux utilisateurs sur la base de leurs préférences ou de leurs achats précédents.
 Les utilisateurs peuvent ajouter un pack complet à leur panier avec une seule action.
 Les suggestions de packs sont dynamiques et basées sur l'historique d'achat des utilisateurs.
 
 == [COULD] Évaluer un produit (2 / 4)
 En tant que client connecté, je veux pouvoir évaluer un produit, afin d’informer les autres utilisateurs de la fiabilité du produit
+Afin de réaliser cette exigence :
 Les utilisateurs peuvent laisser des avis sur les produits.
 
 == [COULD] Visualiser les avis (1 / 4)
 En tant que visiteur, je veux pouvoir visualiser les avis des produits, afin d’avoir un critère de fiabilité.
+Afin de réaliser cette exigence :
 Une section "Avis" est disponible sur chaque page produit.
 Les avis sont affichés de manière claire et accessible aux autres utilisateurs.
 
 == [COULD] Trier les produits (3 / 4)
 En tant que visiteur, je veux pouvoir trier les produits, afin d’affiner rapidement ma recherche.
+Afin de réaliser cette exigence :
 Les utilisateurs peuvent trier les produits par différents critères tels que le prix, la popularité, etc.
 L'interface utilisateur est intuitive et offre une expérience optimale pour le tri.
 Les préférences de tri des utilisateurs sont sauvegardées pour leurs sessions ultérieures.
 
 == [WILL] Programme de fidélité (4 / 4)
 En tant que client connecté, je veux pouvoir participer à un programme de fidélité, afin de bénéficier d’avantages.
+Afin de réaliser cette exigence :
 Les utilisateurs peuvent adhérer au programme de fidélité.
 Les points de fidélité sont attribués correctement en fonction des actions spécifiées.
 Les récompenses du programme de fidélité sont clairement définies et accessibles aux utilisateurs.
@@ -97,18 +113,21 @@ Les utilisateurs peuvent consulter leur solde de points dans leur compte.
 
 == [WILL] Liens vers les réseaux sociaux (1 / 4)
 En tant que visiteur, je veux pouvoir accéder aux réseaux sociaux du site, afin de partager des produits ou des pages du site avec d’autres utilisateurs.
+Afin de réaliser cette exigence :
 Des icônes de réseaux sociaux sont présentes sur le site.
 Les liens redirigent vers les profils officiels de l'entreprise sur les réseaux sociaux.
 Les utilisateurs peuvent partager des produits ou des pages du site sur leurs propres profils de réseaux sociaux.
 
 == [WILL] Développement durable (1 / 4)
 En tant que visiteur, je veux pouvoir accéder à un site respectant le développement durable, afin de soutenir les initiatives en faveur de l’écologie.
+Afin de réaliser cette exigence :
 Les pratiques durables de l'entreprise sont clairement communiquées aux utilisateurs.
 Une section du site est dédiée aux initiatives de développement durable de l'entreprise.
 Des informations sur les produits respectueux de l'environnement sont mises en avant.
 
 == [MUST] Récupérer les données des capteurs (1 / 4)
 En tant qu’utilisateur, je veux pouvoir visualiser les données des capteurs, afin de vérifier l’activité des entrepôts 
+Afin de réaliser cette exigence :
 - les données affichées sont correctes
 - les données sont affichées clairement sur l’application
 - les capteurs doivent afficher les données pour les valeurs de la température, du CO2 et de l’humidité
@@ -116,15 +135,18 @@ En tant qu’utilisateur, je veux pouvoir visualiser les données des capteurs, 
 
 == [MUST] Alertes (3 / 4)
 En tant qu’utilisateur, je veux être alerté lorsque qu’un seuil est dépassé, afin de garantir la sécurité des employés et du matériel
+Afin de réaliser cette exigence :
 Les alertes sont très visibles et le message les accompagnant est clair
 Les alertes doivent apparaître lors du dépassement d’un seuil
 
 == [SHOULD] Historique des capteurs (2/4)
 En tant qu’utilisateur , je veux pouvoir consulter l’historique des données des capteurs, afin de comparer les données du passé 
+Afin de réaliser cette exigence :
 - stocker les données des capteurs
 - afficher l’historique de toutes les données des capteurs pour un entrepôt donné
 
 == [SHOULD] Comportement du programme (3 / 4)
 En tant qu’utilisateur, je veux pouvoir paramétrer le comportement du programme, afin de gérer les données reçues 
+Afin de réaliser cette exigence :
 - liret un fichier de configuration fournissant les informations nécessaires à propos du comportement du programme
 - modifier le fichier de configuration depuis l’application pour gérer les données affichées
