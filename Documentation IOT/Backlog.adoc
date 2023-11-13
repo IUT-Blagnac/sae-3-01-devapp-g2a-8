@@ -1,1 +1,25 @@
+== [MUST] Récupérer les données des capteurs
+*Complexité : Peu complexe*
+En tant qu’utilisateur, je veux pouvoir visualiser les données des capteurs, afin de vérifier l’activité des entrepôts 
+* les données affichées sont correctes
+* les données sont affichées clairement sur l’application
+* les capteurs doivent afficher les données pour les valeurs de la température, du CO2 et de l’humidité
+* les données doivent pouvoir être visualisées pour chaque entrepôt
 
+== [MUST] Alertes
+*Complexité : Complexe*
+En tant qu’utilisateur, je veux être alerté lorsque qu’un seuil est dépassé, afin de garantir la sécurité des employés et du matériel
+* Les alertes sont très visibles et le message les accompagnant est clair
+* Les alertes doivent apparaître lors du dépassement d’un seuil
+
+== [SHOULD] Historique des capteurs
+*Complexité : Moyennement complexe*
+En tant qu’utilisateur , je veux pouvoir consulter l’historique des données des capteurs, afin de comparer les données du passé 
+* stocker les données des capteurs
+* afficher l’historique de toutes les données des capteurs pour un entrepôt donné
+
+== [SHOULD] Comportement du programme
+*Complexité : Complexe*
+En tant qu’utilisateur, je veux pouvoir paramétrer le comportement du programme, afin de gérer les données reçues 
+* lire un fichier de configuration fournissant les informations nécessaires à propos du comportement du programme
+* modifier le fichier de configuration depuis l’application pour gérer les données affichées
