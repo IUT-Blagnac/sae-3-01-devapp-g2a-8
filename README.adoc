@@ -97,13 +97,26 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
+=== Partie Web (site e-commerce)
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/e9f13b05a8d0cd65e32f8fe9712da6527973b700/Documentation%20Web/Documentation%20technique.adoc[documentation technique]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/e9f13b05a8d0cd65e32f8fe9712da6527973b700/Documentation%20Web/Documentation%20utilisateur.adoc[documentation utilisateur]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/e9f13b05a8d0cd65e32f8fe9712da6527973b700/Documentation%20Web/Backlog.adoc[backlog]
 - Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+
+=== Partie IOT (Java-Python)
+- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/9dc8dcee6c337c193a5ed2a4817b668ec0f0b9a0/Documentation%20IOT/Documentation%20technique.adoc[documentation technique]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/9dc8dcee6c337c193a5ed2a4817b668ec0f0b9a0/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/ead7c6cbe7520293f0d9365d1f37cc8aed34126b/Documentation%20IOT/Backlog.adoc[backlog]
+- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
+- Tests unitaires et plans de test
+- Indicateurs de qualité du code (dette technique)
+- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+
 
 Voici un exemple d'évaluation :
 
