@@ -1,4 +1,4 @@
-package sae.s3.application;
+package sae.s3.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
