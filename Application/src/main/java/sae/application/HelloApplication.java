@@ -1,4 +1,4 @@
-package sae.s3.application;
+package sae.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

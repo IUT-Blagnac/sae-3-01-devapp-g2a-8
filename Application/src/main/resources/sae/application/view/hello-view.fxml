@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="sae.s3.view.HelloController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sae.view.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -26,8 +26,7 @@
          <Button mnemonicParsing="false" text="Paramétrer" GridPane.columnIndex="1" />
          <Button mnemonicParsing="false" text="Historique" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          <Button mnemonicParsing="false" text="Salle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Label text="Label" />
       </children>
    </GridPane>
-
-    <Label fx:id="welcomeText" />
 </VBox>
