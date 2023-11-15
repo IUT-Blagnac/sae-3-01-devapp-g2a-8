@@ -26,12 +26,12 @@
        <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-         <Button fx:id="prmtr" mnemonicParsing="false" text="Paramétrage" GridPane.columnIndex="1">
+         <Button fx:id="prmtr" mnemonicParsing="false" onAction="#ouvrirParam" text="Paramétrage" GridPane.columnIndex="1">
             <GridPane.margin>
                <Insets left="40.0" top="300.0" />
             </GridPane.margin>
          </Button>
-         <Button fx:id="hstrq" mnemonicParsing="false" text="Historique" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <Button fx:id="hstrq" mnemonicParsing="false" onAction="#ouvrirHist" text="Historique" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <GridPane.margin>
                <Insets left="40.0" top="170.0" />
             </GridPane.margin>
