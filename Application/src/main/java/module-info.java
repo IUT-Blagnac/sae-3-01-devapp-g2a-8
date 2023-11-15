@@ -3,8 +3,8 @@ module sae.s3.application {
     requires javafx.fxml;
 
 
-    opens sae.application to javafx.fxml;
-    exports sae.application;
-    exports sae.view;
-    opens sae.view to javafx.fxml;
+    opens saeS3.application to javafx.fxml;
+    exports saeS3.application;
+    exports saeS3.view;
+    opens saeS3.view to javafx.fxml;
 }

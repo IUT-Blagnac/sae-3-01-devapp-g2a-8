@@ -1,4 +1,4 @@
-package sae.view;
+package saeS3.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
