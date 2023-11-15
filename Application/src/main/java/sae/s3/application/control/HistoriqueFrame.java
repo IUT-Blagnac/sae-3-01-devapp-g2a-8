@@ -2,24 +2,23 @@ package sae.s3.application.control;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sae.s3.application.tools.StageManagement;
-import sae.s3.application.view.SettingsFrameController;
+import sae.s3.application.view.HistoriqueFrameController;
 
-public class SettingsFrame {
+public class HistoriqueFrame {
 
     private Stage primaryStage;
-    private SettingsFrameController settingsFrameController;
+    private HistoriqueFrameController historiqueFrameController;
 
     /**
      * Constructeur de classe paramétré
      * @param _parentStage Stage source de l'appel au constructeur
      */
-    public SettingsFrame(Stage _parentStage) {
+    public HistoriqueFrame(Stage _parentStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(SettingsFrameController.class.getResource("settings-frame.fxml"));
+            FXMLLoader loader = new FXMLLoader(HistoriqueFrameController.class.getResource("historique-frame.fxml"));
 
             Scene scene = new Scene(loader.load(), 426, 321);
             // CSS :
@@ -30,18 +29,18 @@ public class SettingsFrame {
             this.primaryStage.initOwner(_parentStage);
             StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
             this.primaryStage.setScene(scene);
-            this.primaryStage.setTitle("Gestion des paramètres");
+            this.primaryStage.setTitle("Historique des données");
             this.primaryStage.setResizable(false);
 
-            this.settingsFrameController = loader.getController();
-            this.settingsFrameController.initContext(this.primaryStage, this);
+            this.historiqueFrameController = loader.getController();
+            this.historiqueFrameController.initContext(this.primaryStage, this);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void doSettingsDialog(){
-        this.settingsFrameController.displayDialog();
+    public void doHistoriqueDialog(){
+        this.historiqueFrameController.displayDialog();
     }
 }

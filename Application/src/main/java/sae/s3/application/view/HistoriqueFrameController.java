@@ -7,25 +7,25 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import sae.s3.application.control.MainFrame;
+import sae.s3.application.control.HistoriqueFrame;
 import sae.s3.application.tools.AlertUtilities;
 
-public class MainFrameController {
+public class HistoriqueFrameController {
 
+    private HistoriqueFrame historiqueFrame;
     private Stage primaryStage;
-    private MainFrame mainFrame;
 
     /**
      * Initialisation du contrôleur de vue SettingsFrameController.
      *
      * @param _containingStage Stage qui contient le fichier xml contrôlé par
-     *                         SettingsFrameController
-     * @param _mainFrame            Contrôleur de Dialogue qui réalisera les opérations
+     *                         HistoriqueFrameController
+     * @param _historiqueFrame            Contrôleur de Dialogue qui réalisera les opérations
      *                         de navigation ou calcul
      */
-    public void initContext(Stage _containingStage, MainFrame _mainFrame) {
+    public void initContext(Stage _containingStage, HistoriqueFrame _historiqueFrame) {
         this.primaryStage = _containingStage;
-        this.mainFrame = _mainFrame;
+        this.historiqueFrame = _historiqueFrame;
         this.configure();
     }
 
@@ -46,20 +46,22 @@ public class MainFrameController {
         e.consume();
     }
 
+    public void displayDialog(){
+        this.primaryStage.showAndWait();
+    }
+
     /*
      * Demande une confirmation puis ferme la fenêtre.
      */
     @FXML
     private void doQuit() {
-        if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter les paramètres",
+        if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter l'historique",
                 "Êtes vous sur de vouloir quitter ?", null, Alert.AlertType.CONFIRMATION)) {
             this.primaryStage.close();
         }
     }
 
-    public void displayDialog(){
-        this.primaryStage.show();
-    }
+    // Partie FXML
 
     @FXML
     private Label welcomeText;
@@ -81,11 +83,11 @@ public class MainFrameController {
 
     @FXML
     protected void ouvrirParam() {
-        this.mainFrame.choisirParametres();
+        welcomeText.setText("Welcome to JavaFX Application!");
     }
 
     @FXML
     protected void ouvrirHist() {
-        this.mainFrame.afficherHistorique();
+        welcomeText.setText("Welcome to JavaFX Application!");
     }
 }

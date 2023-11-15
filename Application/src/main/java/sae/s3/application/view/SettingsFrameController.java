@@ -49,6 +49,10 @@ public class SettingsFrameController {
         e.consume();
     }
 
+    public void displayDialog(){
+        this.primaryStage.showAndWait();
+    }
+
     /*
      * Demande une confirmation puis ferme la fenêtre.
      */
