@@ -1,10 +1,7 @@
 package sae.s3.application.view;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import sae.s3.application.control.SettingsFrame;
@@ -14,6 +11,18 @@ import sae.s3.application.tools.AlertUtilities;
  * Controller JavaFX de la view settings-frame.
  */
 public class SettingsFrameController {
+
+    private boolean affichageCo2=true;
+    private boolean affichageHumidite=true;
+    private boolean affichageTemperature=true;
+    private boolean affichageActivite=true;
+
+    private float seuilCo2;
+    private float seuilHumidite;
+    private float seuilTemperature;
+    private float seuilActivite;
+
+    private int frequence;
 
     private SettingsFrame settingsFrame;
     private Stage primaryStage;
@@ -67,30 +76,61 @@ public class SettingsFrameController {
     // Partie FXML
 
     @FXML
-    private Label welcomeText;
+    private Button valider;
 
     @FXML
-    private Button prmtr;
+    private RadioButton co2;
+    @FXML
+    private RadioButton temp;
+    @FXML
+    private RadioButton hum;
+    @FXML
+    private RadioButton act;
 
     @FXML
-    private Button hstrq;
-
+    private TextField textCo2;
     @FXML
-    private MenuButton entrpts;
-
+    private TextField texthHum;
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextField textTemp;
+    @FXML
+    private TextField textAct;
+    @FXML
+    private TextField textFreq;
+
+    private String trouverErreursSaisie() {
+        String erreurs = "";
+        
+        return erreurs;
     }
 
-
     @FXML
-    protected void ouvrirParam() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    protected void valider() {
+        if(co2.isSelected()){
+            affichageCo2=true;
+        }else{
+            affichageCo2=false;
+        }
+        if(temp.isSelected()){
+            affichageTemperature=true;
+        }else{
+            affichageTemperature=false;
+        }
+        if(act.isSelected()){
+            affichageActivite=true;
+        }else{
+            affichageActivite=false;
+        }
+        if(hum.isSelected()){
+            affichageHumidite=true;
+        }else{
+            affichageHumidite=false;
+        }
+        seuilCo2= Float.parseFloat(textCo2.getText());
+        seuilHumidite= Float.parseFloat(texthHum.getText());
+        seuilTemperature= Float.parseFloat(textTemp.getText());
+        seuilActivite= Float.parseFloat(textAct.getText());
+        frequence=Integer.parseInt(textFreq.getText());
 
-    @FXML
-    protected void ouvrirHist() {
-        welcomeText.setText("Welcome to JavaFX Application!");
     }
 }

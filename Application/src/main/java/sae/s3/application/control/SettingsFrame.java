@@ -21,7 +21,7 @@ public class SettingsFrame {
         try {
             FXMLLoader loader = new FXMLLoader(SettingsFrameController.class.getResource("settings-frame.fxml"));
 
-            Scene scene = new Scene(loader.load(), 426, 321);
+            Scene scene = new Scene(loader.load(), 600, 400);
             // CSS :
             // scene.getStylesheets().add(Application.class.getResource("application.css").toExternalForm());
 

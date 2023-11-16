@@ -20,7 +20,7 @@ public class HistoriqueFrame {
         try {
             FXMLLoader loader = new FXMLLoader(HistoriqueFrameController.class.getResource("historique-frame.fxml"));
 
-            Scene scene = new Scene(loader.load(), 426, 321);
+            Scene scene = new Scene(loader.load(), 560, 420);
             // CSS :
             // scene.getStylesheets().add(Application.class.getResource("application.css").toExternalForm());
 
