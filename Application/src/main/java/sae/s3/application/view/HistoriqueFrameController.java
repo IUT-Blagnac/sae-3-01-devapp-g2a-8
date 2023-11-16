@@ -1,10 +1,7 @@
 package sae.s3.application.view;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import sae.s3.application.control.HistoriqueFrame;
@@ -64,30 +61,14 @@ public class HistoriqueFrameController {
     // Partie FXML
 
     @FXML
-    private Label welcomeText;
+    private Button valider;
 
     @FXML
-    private Button prmtr;
-
-    @FXML
-    private Button hstrq;
-
-    @FXML
-    private MenuButton entrpts;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    private ListView liste;
 
 
     @FXML
-    protected void ouvrirParam() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    protected void valider() {
 
-    @FXML
-    protected void ouvrirHist() {
-        welcomeText.setText("Welcome to JavaFX Application!");
     }
 }

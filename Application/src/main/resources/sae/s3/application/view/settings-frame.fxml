@@ -11,10 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sae.s3.application.view.SettingsFrameController">
     <children>
-        <GridPane layoutX="104.0" layoutY="81.0" prefHeight="249.0" prefWidth="376.0">
+        <GridPane layoutX="103.0" layoutY="14.0" prefHeight="325.0" prefWidth="376.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -28,37 +27,67 @@
             <children>
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                     <children>
-                        <RadioButton mnemonicParsing="false" text="CO2" />
-                        <RadioButton mnemonicParsing="false" text="Humidité">
+                        <RadioButton fx:id="co2" mnemonicParsing="false" text="CO2">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></RadioButton>
+                        <RadioButton fx:id="hum" mnemonicParsing="false" text="Humidité">
                             <VBox.margin>
-                                <Insets top="10.0" />
+                                <Insets top="20.0" />
                             </VBox.margin>
                         </RadioButton>
-                        <RadioButton mnemonicParsing="false" text="Température">
+                        <RadioButton fx:id="temp" mnemonicParsing="false" text="Température">
                             <VBox.margin>
-                                <Insets top="10.0" />
+                                <Insets top="20.0" />
                             </VBox.margin>
                         </RadioButton>
-                        <RadioButton mnemonicParsing="false" text="Activité">
+                        <RadioButton fx:id="act" mnemonicParsing="false" text="Activité">
                             <VBox.margin>
-                                <Insets top="10.0" />
+                                <Insets top="20.0" />
                             </VBox.margin>
                         </RadioButton>
                     </children>
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-                        <TextField />
-                        <TextField />
-                        <TextField />
-                        <TextField />
+                        <TextField fx:id="textCo2">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></TextField>
+                        <TextField fx:id="texthHum">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></TextField>
+                        <TextField fx:id="textTemp">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></TextField>
+                        <TextField fx:id="textAct">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></TextField>
                     </children>
                 </VBox>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seuils d'alerte :" GridPane.columnIndex="1" />
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fréquences de réception des données (en secondes) :" wrappingWidth="174.439453125" GridPane.rowIndex="2" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Données à recevoir :" />
-                <Button mnemonicParsing="false" text="Valider" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seuils d'alerte :" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin></Text>
+                <TextField fx:id="textFreq" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="85.0" />
+               </GridPane.margin></TextField>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fréquences de réception des données (en secondes) :" wrappingWidth="174.439453125" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="80.0" />
+               </GridPane.margin></Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Données à recevoir :">
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin></Text>
+                <Button fx:id="valider" mnemonicParsing="false" text="Valider" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="50.0" />
+               </GridPane.margin></Button>
             </children>
         </GridPane>
     </children>
