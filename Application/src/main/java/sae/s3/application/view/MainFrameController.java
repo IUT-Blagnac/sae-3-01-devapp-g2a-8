@@ -8,12 +8,14 @@ import javafx.scene.control.MenuButton;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import sae.s3.application.control.MainFrame;
+import sae.s3.application.model.Donnees;
 import sae.s3.application.tools.AlertUtilities;
 
 public class MainFrameController {
 
     private Stage primaryStage;
     private MainFrame mainFrame;
+    private Donnees donnees;
 
     /**
      * Initialisation du contrôleur de vue SettingsFrameController.
@@ -59,6 +61,8 @@ public class MainFrameController {
 
     public void displayDialog(){
         this.primaryStage.show();
+        donnees = mainFrame.getDonnees();
+        affichageDonnees.setText(donnees.toString());
     }
 
     @FXML
@@ -72,6 +76,9 @@ public class MainFrameController {
 
     @FXML
     private MenuButton entrpts;
+
+    @FXML
+    private Label affichageDonnees;
 
     @FXML
     protected void onHelloButtonClick() {
