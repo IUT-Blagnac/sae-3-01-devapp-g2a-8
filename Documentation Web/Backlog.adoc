@@ -56,7 +56,7 @@ En tant qu’administrateur, je veux pouvoir accéder à une interface privée e
 * Les administrateurs peuvent voir une liste complète des commandes et les marquer comme traitées.
 * L'interface d'administration comprend des sections distinctes pour la gestion des produits, des utilisateurs et des commandes.
 
-== [SHOULD] Responsive Design
+== [MUST] Responsive Design
 *Complexité : Peu complexe*
 
 En tant que visiteur, je veux pouvoir visualiser de façon optimisée depuis n’importe quelle plateforme, afin d’avoir une meilleure accessibilité.
