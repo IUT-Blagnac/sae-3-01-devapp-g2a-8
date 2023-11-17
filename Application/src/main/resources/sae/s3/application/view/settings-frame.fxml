@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -50,19 +51,19 @@
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-                        <TextField fx:id="textCo2">
+                        <TextField fx:id="textCo2" text="100000">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin></TextField>
-                        <TextField fx:id="texthHum">
+                        <TextField fx:id="texthHum" text="100000">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin></TextField>
-                        <TextField fx:id="textTemp">
+                        <TextField fx:id="textTemp" text="100000">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin></TextField>
-                        <TextField fx:id="textAct">
+                        <TextField fx:id="textAct" text="100000">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin></TextField>
@@ -72,7 +73,7 @@
                <GridPane.margin>
                   <Insets bottom="30.0" />
                </GridPane.margin></Text>
-                <TextField fx:id="textFreq" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <TextField fx:id="textFreq" text="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets top="85.0" />
                </GridPane.margin></TextField>
@@ -84,10 +85,20 @@
                <GridPane.margin>
                   <Insets bottom="30.0" />
                </GridPane.margin></Text>
-                <Button fx:id="valider" mnemonicParsing="false" text="Valider" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Button fx:id="valider" mnemonicParsing="false" onAction="#valider" text="Appliquer" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets top="50.0" />
                </GridPane.margin></Button>
+            <Button mnemonicParsing="false" onAction="#doQuit" text="Fermer" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="90.0" top="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="texteValid" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="90.0" />
+               </GridPane.margin>
+            </Label>
             </children>
         </GridPane>
     </children>
