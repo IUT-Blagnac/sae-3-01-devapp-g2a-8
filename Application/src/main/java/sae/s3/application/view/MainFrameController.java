@@ -56,6 +56,7 @@ public class MainFrameController {
         if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter les paramètres",
                 "Êtes vous sur de vouloir quitter ?", null, Alert.AlertType.CONFIRMATION)) {
             this.primaryStage.close();
+            Runtime.getRuntime().exit(0);
         }
     }
 

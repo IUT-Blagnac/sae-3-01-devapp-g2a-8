@@ -106,7 +106,6 @@ public class SettingsFrameController {
     @FXML
     private TextField textFreq;
 
-
     private String trouverErreursSaisie() {
         String erreurs = "";
         String regex = "^\\d+(\\.\\d+)?$";
