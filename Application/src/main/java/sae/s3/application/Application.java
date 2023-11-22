@@ -35,7 +35,10 @@ public class Application {
 
     private static void startPython(){
         try{
-            ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/main/resources/sae/s3/application/python/DonneesCapteurs.py");
+            String cheminScript = "src/main/resources/sae/s3/application/python/DonneesCapteurs.py";
+            String cheminEcriture = "src/main/resources/sae/s3/application/python/";
+            ProcessBuilder processBuilder = new ProcessBuilder("python3", cheminScript);
+            processBuilder.directory(new File(cheminEcriture));
             processBuilder.redirectErrorStream(true);
             Process process = processBuilder.start();
 
