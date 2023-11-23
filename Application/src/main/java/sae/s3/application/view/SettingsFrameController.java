@@ -183,7 +183,8 @@ public class SettingsFrameController {
             seuilActivite = Float.parseFloat(textAct.getText());
             frequence = Integer.parseInt(textFreq.getText());
             this.texteValid.setText("Données enregistrées !");
-            
         }
     }
+
+
 }
