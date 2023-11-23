@@ -1,9 +1,0 @@
-{
-  "Alerte" : {
-    "Humidite" : 30,
-    "Temperature" : 40,
-    "CO2" : 400
-  },
-  "Frequence" : 10,
-  "Salle" : "+"
-}
