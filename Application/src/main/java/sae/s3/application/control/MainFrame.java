@@ -5,7 +5,6 @@ import com.google.gson.JsonParser;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import sae.s3.application.model.Donnees;
 import sae.s3.application.view.MainFrameController;
@@ -37,7 +36,6 @@ public class MainFrame extends Application {
             e.printStackTrace();
             System.exit(-1);
         }
-
     }
 
     /**
@@ -58,7 +56,7 @@ public class MainFrame extends Application {
     }
 
     public Donnees getDonnees() {
-        String cheminFichier = "/sae/s3/application/donnees.json";
+        String cheminFichier = "/sae/s3/application/python/donnees.json";
 
         Donnees donnees = null;
         try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
