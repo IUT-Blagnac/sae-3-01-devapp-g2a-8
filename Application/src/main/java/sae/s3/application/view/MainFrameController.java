@@ -11,11 +11,15 @@ import sae.s3.application.control.MainFrame;
 import sae.s3.application.model.Donnees;
 import sae.s3.application.tools.AlertUtilities;
 
+
+
 public class MainFrameController {
 
     private Stage primaryStage;
     private MainFrame mainFrame;
     private Donnees donnees;
+
+
 
     /**
      * Initialisation du contrôleur de vue SettingsFrameController.
@@ -59,21 +63,21 @@ public class MainFrameController {
         }
     }
 
+
+
     public void displayDialog(){
+
         this.primaryStage.show();
         donnees = mainFrame.getDonnees();
         affichageDonnees.setText(donnees.toString());
-    }
 
+    }
     @FXML
     private Label welcomeText;
-
     @FXML
     private Button prmtr;
-
     @FXML
     private Button hstrq;
-
     @FXML
     private MenuButton entrpts;
 
