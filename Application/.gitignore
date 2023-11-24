@@ -36,3 +36,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+donnees.json
+historique.json
+alerte.json
+src/main/resources/sae/s3/application/python/donnees.json
+src/main/resources/sae/s3/application/python/historique.json
+src/main/resources/sae/s3/application/python/config.ini
+src/main/resources/sae/s3/application/python/alerte.json
