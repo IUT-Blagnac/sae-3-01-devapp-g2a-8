@@ -36,5 +36,11 @@ build/
 java/build/**
 
 # Historique et donnees
+donnees.json
+historique.json
+alerte.json
+config.ini
+Application/src/main/resources/sae/s3/application/python/config.ini
+Application/src/main/resources/sae/s3/application/python/alerte.json
 Application/src/main/resources/sae/s3/application/python/donnees.json
 Application/src/main/resources/sae/s3/application/python/historique.json
