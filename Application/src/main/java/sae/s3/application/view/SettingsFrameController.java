@@ -8,6 +8,10 @@ import javafx.stage.WindowEvent;
 import sae.s3.application.control.SettingsFrame;
 import sae.s3.application.tools.AlertUtilities;
 
+import java.io.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,6 +34,8 @@ public class SettingsFrameController {
 
     private SettingsFrame settingsFrame;
     private Stage primaryStage;
+
+    private static final String CONFIG_FILE_PATH = "src/main/resources/sae/s3/application/python/config.ini";
 
     /**
      * Initialisation du contrôleur de vue SettingsFrameController.
@@ -141,6 +147,69 @@ public class SettingsFrameController {
         return erreurs;
     }
 
+    private Map<String, Properties> loadConfigFromFile() {
+        Map<String, Properties> configMap = new LinkedHashMap<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE_PATH))) {
+            String currentSection = null;
+            Properties currentProperties = null;
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                line = line.trim();
+                if (line.startsWith("[") && line.endsWith("]")) {
+                    currentSection = line;
+                    currentProperties = new Properties();
+                    configMap.put(currentSection, currentProperties);
+                } else if (line.contains("=") && currentProperties != null) {
+                    String[] parts = line.split("=");
+                    currentProperties.setProperty(parts[0].trim(), parts[1].trim());
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();  // Gérer les exceptions de manière appropriée dans votre application
+        }
+
+        return configMap;
+    }
+    private void saveConfigToFile(Map<String, Properties> configMap) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(CONFIG_FILE_PATH))) {
+            for (Map.Entry<String, Properties> entry : configMap.entrySet()) {
+                writer.write(entry.getKey());
+                writer.newLine();
+
+                Properties properties = entry.getValue();
+                for (Map.Entry<Object, Object> propertyEntry : properties.entrySet()) {
+                    writer.write(propertyEntry.getKey() + " = " + propertyEntry.getValue());
+                    writer.newLine();
+                }
+
+                writer.newLine(); // Ligne vide entre les sections
+            }
+        } catch (IOException e) {
+            e.printStackTrace();  // Gérer les exceptions de manière appropriée dans votre application
+        }
+    }
+    private void updateConfigValues() {
+        Map<String, Properties> configMap = loadConfigFromFile();
+
+        // Mettre à jour les valeurs nécessaires
+        Properties seuilsProperties = configMap.get("[Seuils]");
+        if (seuilsProperties != null) {
+            seuilsProperties.setProperty("temperature_max", String.valueOf(seuilTemperature));
+            seuilsProperties.setProperty("humidity_max", String.valueOf(seuilHumidite));
+            seuilsProperties.setProperty("co2_max", String.valueOf(seuilCo2));
+        }
+
+        Properties frequencesProperties = configMap.get("[Frequences]");
+        if (frequencesProperties != null) {
+            frequencesProperties.setProperty("frequence", String.valueOf(frequence));
+        }
+
+        // Sauvegarder les modifications dans le fichier
+        saveConfigToFile(configMap);
+    }
+
     @FXML
     protected void valider()  {
         String erreurs = this.trouverErreursSaisie();
@@ -182,6 +251,9 @@ public class SettingsFrameController {
             seuilActivite = Float.parseFloat(textAct.getText());
             frequence = Integer.parseInt(textFreq.getText());
             this.texteValid.setText("Données enregistrées !");
+            this.updateConfigValues();
+            this.texteValid.setText("Données enregistrées !");
+
         }
     }
 
