@@ -34,3 +34,7 @@ bin/
 build/
 /bin1/
 java/build/**
+
+# Historique et donnees
+Application/src/main/resources/sae/s3/application/python/donnees.json
+Application/src/main/resources/sae/s3/application/python/historique.json
