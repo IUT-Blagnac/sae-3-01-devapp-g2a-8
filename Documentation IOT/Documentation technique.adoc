@@ -1,0 +1,16 @@
+# Documentation Technique
+:toc:
+:toc-title: Table des matières
+:sectnums:
+
+----
+Version : 1
+Date : 11/2023
+Equipe : 8
+Auteurs : Tristan Deltil - Bastien Perruffel - Paul Espinasse
+Projet : Développement d'une application IOT
+----
+
+== Présentation de l'Application
+
+L'application IOT...
