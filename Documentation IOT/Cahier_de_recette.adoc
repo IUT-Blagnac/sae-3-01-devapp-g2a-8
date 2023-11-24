@@ -1,0 +1,82 @@
+= Cahier De Recette - Application IOT
+:toc:
+:toc-title: Sommaire 
+
+
+
+== I. Introduction
+=== 1. Objet :
+[.text-justify]
+Ce document a été produit dans le cadre d'un projet d'élaboration d'une application bancaire pour ...
+
+
+== II. Pre-Requis :
+[.text-justify]
+L'exécution des tests spécifiés au chapitre suivant requiert :
+
+* ...
+* ...
+
+
+=== 1. Éléments à tester :
+[.text-justify]
+Les éléments testés concernent les Use-Cases spécifiés dans la *documentation technique*.
+
+
+=== 2. Environnement de test :
+[.text-justify]
+Ordinateur possédant les installations requises :
+
+
+
+== III. Cas de test :
+=== 1. Récupérer les données des capteurs :
+==== 1.1 Les données affichées sont correctes :
+
+|====
+
+>|Cas de test 4+|Test-01-01-01
+>|Titre 4+|Récupération des données
+>|Objectif 4+| Vérifier que les données récupérées par le fichier python sont correctes
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Lancer le programme python dans un terminal. ^|Les données reçues sont correctes. ^| aucune ^|OK
+
+5+|
+
+5+|Commentaire :
+...
+|====
+
+
+|====
+
+>|Cas de test 4+|Test-01-01-02
+>|Titre 4+|Les données sont affichées clairement sur l'application
+>|Objectif 4+| Vérifier que les données s'affichent dans l'application JavaFX
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.3 ^|Lancer l'application et vérifier les données. ^|Les données s'affichent correctement sur la page d'accueil. ^|Aucune ^|OK
+
+|====
+
+
+==== 1.2 ... :
+
+
+|====
+
+>|Cas de test 4+|Test-01-02-01
+>|Titre 4+|...
+>|Objectif 4+| ...
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_CB.1 ^|... ^|... ^|... ^|OK
+...
+
+|====
