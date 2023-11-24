@@ -1,0 +1,49 @@
+.root {
+    -fx-background-color: #f4f4f4;
+}
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.text-field {
+    -fx-background-color: #ecf0f1;
+}
+
+.text-area {
+    -fx-background-color: #ecf0f1;
+}
+
+.progress-bar {
+    -fx-background-color: #ecf0f1;
+}
+
+.slider {
+    -fx-background-color: #ecf0f1;
+}
+
+.combo-box {
+    -fx-background-color: #ecf0f1;
+}
+
+.menu-bar {
+    -fx-background-color: #3498db;
+}
+
+.menu-item {
+    -fx-text-fill: white;
+}
+
+.dialog-pane {
+    -fx-background-color: #ecf0f1;
+}

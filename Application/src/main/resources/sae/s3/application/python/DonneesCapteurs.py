@@ -2,8 +2,16 @@ import datetime
 import paho.mqtt.client as mqtt
 import os
 import json
+import configparser
 
-#The callback for when the client receives a CONNACK response from the server.
+config = configparser.ConfigParser()
+config.read("config.ini")
+
+temperature_max = config.getint('Seuils', 'temperature_max')
+humidity_max = config.getint('Seuils', 'humidity_max')
+co2_max = config.getint('Seuils', 'co2_max')
+frequence = config.getint('Frequences', 'frequence')
+salle_config = config['Salles']['salle']
 
 def write_log(nomSalle, donneesHist):
 
@@ -58,13 +66,13 @@ def on_connect(client, userdata, flags, rc):
 
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe("AM107/by-room/+/data")
+    client.subscribe(f"AM107/by-room/{salle_config}/data")
 
 #The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
 
     message = msg.payload
-    data = json.loads(message) 
+    data = json.loads(message)
     fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
 
     if "room" in data[1]:
@@ -110,6 +118,43 @@ def on_message(client, userdata, msg):
         print("Activité : ", data[0]["activity"])
 
         write_log(salle, donneesHist)
+
+        if data[0]["temperature"] > temperature_max:
+            ajouter_alerte(salle, "temperature", "alerte.json")
+        if data[0]["humidity"] > humidity_max:
+            ajouter_alerte(salle, "humidity", "alerte.json")
+        if data[0]["co2"] > co2_max:
+            ajouter_alerte(salle, "co2", "alerte.json")
+
+
+def ajouter_alerte(salle, type_alerte, fichier_alerte):
+    date_courante = datetime.datetime.now().strftime('%d/%m/%Y, %H:%M:%S')
+    alerte = {
+        "Date": date_courante,
+        "Salle": salle,
+        "Type": type_alerte,
+        "Message": f"Le seuil maximal de {type_alerte} a été dépassé."
+    }
+
+    try:
+        fichier_alerte_write = os.open(fichier_alerte, os.O_WRONLY | os.O_CREAT | os.O_APPEND)
+
+        try:
+            fichier_alerte_read = os.open(fichier_alerte, os.O_RDONLY)
+            alertes_existantes = json.load(os.fdopen(fichier_alerte_read, 'r'))
+        except (json.decoder.JSONDecodeError, FileNotFoundError):
+            alertes_existantes = []
+
+        alertes_existantes.insert(0, alerte.copy())
+
+        os.ftruncate(fichier_alerte_write, 0)
+        os.write(fichier_alerte_write, json.dumps(alertes_existantes, indent=2).encode())
+
+        os.close(fichier_alerte_write)
+
+    except Exception as e:
+        print(f"Erreur lors de la création du fichier d'alerte : {e}")
+
 
 client = mqtt.Client()
 client.on_connect = on_connect

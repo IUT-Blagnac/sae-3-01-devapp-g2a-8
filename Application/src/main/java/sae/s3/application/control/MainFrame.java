@@ -12,6 +12,7 @@ import sae.s3.application.view.MainFrameController;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 /**
  * Classe de controleur de Dialogue de la fenêtre principale.
@@ -25,7 +26,8 @@ public class MainFrame extends Application {
         this.primaryStage = primaryStage;
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(MainFrameController.class.getResource("main-frame.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 426, 321);
+            Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/sae/s3/application/application.css")).toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setTitle("Hello!");
 

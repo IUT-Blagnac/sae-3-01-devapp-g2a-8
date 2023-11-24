@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 import sae.s3.application.tools.StageManagement;
 import sae.s3.application.view.SettingsFrameController;
 
+import java.util.Objects;
+
 public class SettingsFrame {
 
     private Stage primaryStage;
@@ -22,6 +24,7 @@ public class SettingsFrame {
             FXMLLoader loader = new FXMLLoader(SettingsFrameController.class.getResource("settings-frame.fxml"));
 
             Scene scene = new Scene(loader.load(), 600, 400);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/sae/s3/application/application.css")).toExternalForm());
             // CSS :
             // scene.getStylesheets().add(Application.class.getResource("application.css").toExternalForm());
 

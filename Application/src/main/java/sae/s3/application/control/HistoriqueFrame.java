@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import sae.s3.application.tools.StageManagement;
 import sae.s3.application.view.HistoriqueFrameController;
 
+import java.util.Objects;
+
 public class HistoriqueFrame {
 
     private Stage primaryStage;
@@ -21,6 +23,7 @@ public class HistoriqueFrame {
             FXMLLoader loader = new FXMLLoader(HistoriqueFrameController.class.getResource("historique-frame.fxml"));
 
             Scene scene = new Scene(loader.load(), 560, 420);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/sae/s3/application/application.css")).toExternalForm());
             // CSS :
             // scene.getStylesheets().add(Application.class.getResource("application.css").toExternalForm());
 
