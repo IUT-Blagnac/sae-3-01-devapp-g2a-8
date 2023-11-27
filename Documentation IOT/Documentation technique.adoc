@@ -1,6 +1,6 @@
 # Documentation Technique 
 :toc:
-:toc-title: Table des matières
+:toc-title: Sommaire
 :sectnums:
 
 == Informations pratiques
