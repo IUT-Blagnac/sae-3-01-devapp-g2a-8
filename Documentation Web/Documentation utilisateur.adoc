@@ -9,7 +9,7 @@ Version : 0.1.2
 Date : 27/2023
 Equipe : 8
 Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
-Projet : Application de lecture des données de capteurs
+Projet : Site de e-commerce Sigma Prime
 ----
 
 = Introduction
