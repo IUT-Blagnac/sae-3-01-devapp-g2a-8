@@ -8,7 +8,7 @@
 Version : 0.3
 Date : 27/2023
 Equipe : 8
-Auteurs : Tristan Deltil - Bastien Perruffel - Paul Espinasse
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
 Projet : Développement d'une application IOT
 ----
 
