@@ -1,0 +1,18 @@
+= Sprint 2 - Backlog
+
+== [MUST] Naviguer sur le site
+*Complexité : Moyennement complexe*
+
+En tant que visiteur, je veux pouvoir naviguer sur le site, afin de découvrir les produits et les services proposés.
+
+* Le site doit avoir une page d’accueil.
+
+== [MUST] Interface Utilisateur
+*Complexité : Peu complexe*
+
+En tant que visiteur, je veux pouvoir naviguer sur un site agréable à l'œil avec une identité visuelle forte, afin d’être dans de bonnes conditions pour visualiser les produits et effectuer des achats.
+
+* La palette de couleurs du site est restreinte à une combinaison de noir et blanc. 
+* L'interface utilisateur reste esthétiquement plaisante malgré la limitation des couleurs.
+
+
