@@ -104,8 +104,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog produit]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/129[User Stories en cours de développement]
 - Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web/Tests[tests]
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+- Indicateurs de qualité du code (dette technique) *(à venir)*
 
 === Partie IOT (Java-Python)
 - Version courante : v0.3 (release à venir)
@@ -114,8 +113,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog produit]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/144[User Stories en cours de développement]
 - Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT/Tests[tests]  
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+- Indicateurs de qualité du code (dette technique) *(à venir)*
 
 
 Évaluation :
