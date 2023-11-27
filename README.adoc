@@ -90,6 +90,10 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
 
+Le GitHub est séparé en deux parties bien disctinctes. +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT[Lien vers la documentation de la partie IOT] +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web[Lien vers la documentation de la partie Web]
+
 == Gestion de projet & Qualité
 
 Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
