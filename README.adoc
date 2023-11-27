@@ -101,9 +101,9 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur.adoc[documentation utilisateur]
-- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog produit]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/129[User Stories en cours de développement]
-- Tests unitaires et plans de test
+- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web/Tests[tests]
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
 
@@ -111,9 +111,9 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
-- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog produit]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/144[User Stories en cours de développement]
-- Tests unitaires et plans de test
+- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT/Tests[tests]  
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
 
