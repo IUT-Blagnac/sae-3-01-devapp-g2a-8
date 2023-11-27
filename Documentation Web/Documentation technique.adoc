@@ -1,0 +1,37 @@
+# Documentation Technique 
+:toc:
+:toc-title: Table des matières
+:sectnums:
+
+= Informations pratiques
+----
+Version : 0.1.2
+Date : 27/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Développement d'un site de e-commerce
+----
+
+= Partie Web
+
+== Présentation du site web
+
+== Architecture
+
+== Structure
+
+== Éléments essentiels
+
+== Fonctionnalités
+
+= Partie BD
+
+== Présentation de la BD
+
+== Architecture
+
+== Structure
+
+== Éléments essentiels
+
+== Fonctionnalités
