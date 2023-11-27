@@ -102,7 +102,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur.adoc[documentation utilisateur]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog]
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
+- Lien vers les https://github.com/orgs/IUT-Blagnac/projects/129[User Stories en cours de développement]
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
@@ -112,13 +112,13 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog]
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
+- Lien vers les https://github.com/orgs/IUT-Blagnac/projects/144[User Stories en cours de développement]
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
 
 
-Voici un exemple d'évaluation :
+Évaluation :
 
 ifdef::env-github[]
 image:https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=881427875&format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=881427875&format=image]
