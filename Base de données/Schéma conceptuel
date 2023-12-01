@@ -1,1 +1,16 @@
+Evaluation(idEval, #codearticle,#numclient note, avis, dtEval)
 
+CarteCB(ncb, dateexp, crypto)
+
+Client(numclient, ptFidelite, civiliteClient, nomClient, prenomClient, adresseRueClient,
+codePostalClient, villeClient, telephoneClient, tportableClient, dtNaissanceClient, emailClient)
+
+Article(codearticle, reference, noma, taille, couleur, goût , prixu)
+
+AdrLivraison(codeadrliv, adresseliv, codepostalliv , villeliv ,#numclient);
+
+Livraison(codeliv, modeliv, fraisliv);
+
+BonCommande(numbc , datebc, modepaiement , #numclient , #codeliv, #ncb)
+
+Commander(numbc , #codearticle , quantite)
