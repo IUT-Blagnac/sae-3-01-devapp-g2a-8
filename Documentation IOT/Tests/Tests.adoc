@@ -1,1 +1,38 @@
+# Documentation Utilisateur
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.1.2
+Date : 12/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Site de e-commerce Sigma Prime
+----
+
+== Tests des applications
+
+=== Partie Java
+
+==== Modifier le fichier de configuration
+
+Lorsque nous allons dans les paramètres de l'application, nous avons ce résultat :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/fenetre_base.png[]
+
+Actuellement, le fichier de configuration n'est pas configuré : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/config_sans_modif.png[]
+
+Nous allons donc modifier les valeurs depuis l'application Java pour vérifier si les données sont modifiées dans le fichier de configuration.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/fenetre_modif.png[]
+
+Comme nous pouvons le voir, les données ont été modifiées. Le programme python peut désormais lire le fichier de configuration afin de récupérer les données attendues.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/config_modif.png[]
+
+=== Partie Python
 
