@@ -36,7 +36,7 @@ build/
 java/build/**
 
 # Historique et donnees
-donnees.json
+*/donnees.json
 historique.json
 alerte.json
 config.ini
