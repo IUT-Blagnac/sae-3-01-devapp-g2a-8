@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>SigmaPrime</title>
+    <title>SigmaPrime - Panier d'achat</title>
 </head>
 <body>
-
     <?php
-      include("include/header.php")
+        include("include/header.php")
     ?>
 
-    <p>...</p>
-
     <?php
-      include("include/footer.php")
+        include("include/footer.php")
     ?>
-
 </body>
 </html>
+

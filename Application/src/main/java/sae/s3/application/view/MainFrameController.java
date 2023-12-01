@@ -67,10 +67,13 @@ public class MainFrameController {
 
 
     public void displayDialog(){
-
         this.primaryStage.show();
         donnees = mainFrame.getDonnees();
-        affichageDonnees.setText(donnees.toString());
+        if(donnees != null){
+            affichageDonnees.setText(donnees.toString());
+        }else{
+            affichageDonnees.setText("Aucune donnée");
+        }
 
     }
     @FXML
