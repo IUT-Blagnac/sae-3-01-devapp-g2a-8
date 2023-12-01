@@ -3,7 +3,7 @@
 :toc-title: Sommaire
 :sectnums:
 
-= Informations pratiques
+== Informations pratiques
 ----
 Version : 0.1.2
 Date : 27/2023
@@ -12,8 +12,49 @@ Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
 Projet : Site de e-commerce Sigma Prime
 ----
 
-= Introduction
+== Introduction
 
-= Installation
+Le projet vise à développer un site de e-commerce pour SigmaPrime, en mettant en avant la vente de produits sportifs et de vêtements de sport. Les principaux objectifs sont :
+- Augmenter le chiffre d’affaires et la rentabilité de l’entreprise
+- Fidéliser les Sigma existants et en attirer de nouveaux
+- Renforcer l’image de marque et la notoriété de l’entreprise
+- Proposer une expérience utilisateur optimale et personnalisée
+- Se différencier de la concurrence par la qualité des produits et des services
 
-= Fonctionnalités
+== Installation
+
+Aucune installation nécessaire. Pour accéder à l'application il suffit de se rendre sur un moteur de recherche et d'accéder au site depuis l'adresse : "Non disponible" si vous êtes sur le réseau. Sinon, cette adresse est accessible : "Non disponible".
+
+== Fonctionnalités
+
+=== Fonctionnalités visiteur : 
+
+==== Naviguer sur le site
+
+==== Créer un compte et se connecter
+
+==== Ajouter des articles au panier
+
+==== Gérer le panier
+
+==== Trier la liste des produits (croissant/décroissant)
+
+==== Rechercher des produits
+
+=== Fonctionnalités client (un client est un visiteur possédant un compte) : 
+
+==== Procéder au paiement
+
+==== Visualiser ses commandes passées
+
+==== Visualiser ses dernières consultations de produits
+
+==== Gérer des points fidélité
+
+=== Fonctionnalités administrateur : 
+
+==== Gérer les comptes clients (CRUD)
+
+==== Gérer les commandes en cours (CRUD)
+
+==== Gérer les articles (CRUD)
