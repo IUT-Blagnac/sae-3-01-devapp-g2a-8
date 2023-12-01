@@ -2,7 +2,7 @@ Evaluation( _idEval_ , `#codearticle`, `#numclient`, note, avis, dtEval)
 
 Pack( _idPack_ , `prix`, `stock`)
 
-AjouterPack ( '#'_idPack_ , '#'_codearticle_ )
+AjouterPack ( #_idPack_ , #_codearticle_ )
 
 CarteCB( _ncb_ , dateexp, crypto)
 
