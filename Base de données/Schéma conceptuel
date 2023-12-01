@@ -1,16 +1,16 @@
-Evaluation(idEval, #codearticle,#numclient note, avis, dtEval)
+Evaluation(_idEval_, #codearticle,#numclient note, avis, dtEval)
 
-CarteCB(ncb, dateexp, crypto)
+CarteCB(_ncb_, dateexp, crypto)
 
-Client(numclient, ptFidelite, civiliteClient, nomClient, prenomClient, adresseRueClient,
+Client(_numclient_, ptFidelite, civiliteClient, nomClient, prenomClient, adresseRueClient,
 codePostalClient, villeClient, telephoneClient, tportableClient, dtNaissanceClient, emailClient)
 
-Article(codearticle, reference, noma, taille, couleur, goût , prixu)
+Article(_codearticle_, reference, noma, taille, couleur, goût , prixu)
 
-AdrLivraison(codeadrliv, adresseliv, codepostalliv , villeliv ,#numclient);
+AdrLivraison(_codeadrliv_, adresseliv, codepostalliv , villeliv ,#numclient);
 
-Livraison(codeliv, modeliv, fraisliv);
+Livraison(_codeliv_, modeliv, fraisliv);
 
-BonCommande(numbc , datebc, modepaiement , #numclient , #codeliv, #ncb)
+BonCommande(_numbc_ , datebc, modepaiement , #numclient , #codeliv, #ncb)
 
-Commander(numbc , #codearticle , quantite)
+Commander(_numbc_ , #codearticle , quantite)
