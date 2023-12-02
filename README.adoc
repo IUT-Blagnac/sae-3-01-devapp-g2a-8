@@ -92,7 +92,7 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
 === Partie Web (site e-commerce)
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.2[v0.2]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur.adoc[documentation utilisateur]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog produit]
@@ -101,7 +101,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Indicateurs de qualité du code (dette technique) *(à venir)*
 
 === Partie IOT (Java-Python)
-- Version courante : v0.3 (release à venir)
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.2[v0.2]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog produit]
