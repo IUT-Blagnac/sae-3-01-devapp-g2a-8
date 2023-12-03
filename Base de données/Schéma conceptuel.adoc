@@ -8,7 +8,7 @@ CarteCB( _ncb_ , dateexp, crypto)
 
 Client( _numclient_ , ptFidelite, civiliteClient, nomClient, prenomClient, adresseRueClient, codePostalClient, villeClient, telephoneClient, tportableClient, dtNaissanceClient, emailClient)
 
-Article( _codearticle_ , reference, noma, taille, couleur, goût, prixu)
+Article( _codearticle_ , reference, noma, taille, couleur, goût, prixu, description)
 
 AdrLivraison( _codeadrliv_ , adresseliv, codepostalliv, villeliv, `#numclient`)
 
