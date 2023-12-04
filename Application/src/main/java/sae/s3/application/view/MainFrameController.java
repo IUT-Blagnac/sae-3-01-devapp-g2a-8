@@ -69,11 +69,23 @@ public class MainFrameController {
     public void displayDialog(){
         this.primaryStage.show();
         donnees = mainFrame.getDonnees();
+        String affichage = "Aucune donnée";
         if(donnees != null){
-            affichageDonnees.setText(donnees.toString());
-        }else{
-            affichageDonnees.setText("Aucune donnée");
+            affichage = "Salle : " + donnees.getSalle() + "\nDate : " + donnees.getDate();
+            if(!donnees.getTemperature().isEmpty()) {
+                affichage += "\nTempérature : " + donnees.getTemperature();
+            }
+            if(!donnees.getCo2().isEmpty()) {
+                affichage += "\nCO2 : " + donnees.getCo2();
+            }
+            if(!donnees.getHumidite().isEmpty()) {
+                affichage += "\nHumidité : " + donnees.getHumidite();
+            }
+            if(!donnees.getActivite().isEmpty()) {
+                affichage += "\nActivité : " + donnees.getActivite();
+            }
         }
+        affichageDonnees.setText(affichage);
 
     }
     @FXML
