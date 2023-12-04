@@ -7,10 +7,10 @@ import configparser
 config = configparser.ConfigParser()
 config.read("config.ini")
 
-temperature_max = config.getint('Seuils', 'temperature_max')
-humidity_max = config.getint('Seuils', 'humidity_max')
-co2_max = config.getint('Seuils', 'co2_max')
-frequence = config.getint('Frequences', 'frequence')
+temperature_max = config.getfloat('Seuils', 'temperature_max')
+humidity_max = config.getfloat('Seuils', 'humidity_max')
+co2_max = config.getfloat('Seuils', 'co2_max')
+frequence = config.getfloat('Frequences', 'frequence')
 salle_config = config['Salles']['salle']
 
 def write_log(nomSalle, donneesHist):
@@ -31,8 +31,8 @@ def write_log(nomSalle, donneesHist):
         os.write(fDest, str.encode(donneesHist[date]["CO2"]))
         os.write(fDest, b'",\n\t\t\t"Activite" : "')
         os.write(fDest, str.encode(donneesHist[date]["Activite"]))
-        os.write(fDest, b'",\n\t\t\t"Alerte" : "')
-        os.write(fDest, str.encode(donneesHist[date]["Alerte"]))
+        os.write(fDest, b'",\n\t\t\t"Temperature" : "')
+        os.write(fDest, str.encode(donneesHist[date]["Temperature"]))
         os.write(fDest, b'"\n\t\t}')
         os.write(fDest, b'\n\t}')
         os.write(fDest, b'\n}')
@@ -94,8 +94,8 @@ def on_message(client, userdata, msg):
         os.write(fDest, str.encode(str(co2)))
         os.write(fDest, b'",\n\t\t\t"Activite" : "')
         os.write(fDest, str.encode(str(act)))
-        os.write(fDest, b'",\n\t\t\t"Alerte" : "')
-        os.write(fDest, b'non')
+        os.write(fDest, b'",\n\t\t\t"Temperature" : "')
+        os.write(fDest, str.encode(str(temp)))
         os.write(fDest, b'"\n\t\t}')
         os.write(fDest, b'\n\t}')
         os.write(fDest, b'\n}')
@@ -106,7 +106,7 @@ def on_message(client, userdata, msg):
                 "Humidite": str(hum),
                 "CO2": str(co2),
                 "Activite": str(act),
-                "Alerte": "non"
+                "Temperature": str(temp)
             }
         }
 
