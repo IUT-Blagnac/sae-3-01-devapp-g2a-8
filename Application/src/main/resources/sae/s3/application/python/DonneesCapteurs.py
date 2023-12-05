@@ -10,6 +10,11 @@ config.read("config.ini")
 temperature_max = config.getfloat('Seuils', 'temperature_max')
 humidity_max = config.getfloat('Seuils', 'humidity_max')
 co2_max = config.getfloat('Seuils', 'co2_max')
+activity_max = config.getfloat('Seuils', 'activity_max')
+temperature_min = config.getfloat('Seuils', 'temperature_min')
+humidity_min = config.getfloat('Seuils', 'humidity_min')
+co2_min = config.getfloat('Seuils', 'co2_min')
+activity_min = config.getfloat('Seuils', 'activity_min')
 frequence = config.getfloat('Frequences', 'frequence')
 salle_config = config['Salles']['salle']
 
