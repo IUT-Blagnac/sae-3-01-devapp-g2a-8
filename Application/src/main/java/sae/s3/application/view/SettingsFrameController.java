@@ -53,6 +53,7 @@ public class SettingsFrameController {
         this.primaryStage = _containingStage;
         this.settingsFrame = _settingsFrame;
         this.configure();
+        loadConfigValues();
     }
 
     /*
@@ -259,6 +260,40 @@ public class SettingsFrameController {
         saveConfigToFile(configMap);
     }
 
+    private void loadConfigValues() {
+        Map<String, Properties> configMap = loadConfigFromFile();
+
+        // Charger les valeurs de la section [Seuils]
+        Properties seuilsProperties = configMap.get("[Seuils]");
+        if (seuilsProperties != null) {
+            textCo2.setText(seuilsProperties.getProperty("co2_max", ""));
+            texthHum.setText(seuilsProperties.getProperty("humidity_max", ""));
+            textTemp.setText(seuilsProperties.getProperty("temperature_max", ""));
+            textAct.setText(seuilsProperties.getProperty("activity_max", ""));
+            textCo2Min.setText(seuilsProperties.getProperty("co2_min", ""));
+            texthHumMin.setText(seuilsProperties.getProperty("humidity_min", ""));
+            textTempMin.setText(seuilsProperties.getProperty("temperature_min", ""));
+            textActMin.setText(seuilsProperties.getProperty("activity_min", ""));
+        }
+
+        // Charger les valeurs de la section [Frequences]
+        Properties frequencesProperties = configMap.get("[Frequences]");
+        if (frequencesProperties != null) {
+            textFreq.setText(frequencesProperties.getProperty("frequence", ""));
+        }
+
+        // Charger les valeurs de la section [Donnees]
+        Properties donneesProperties = configMap.get("[Donnees]");
+        if (donneesProperties != null) {
+            act.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("activity", "false")));
+            co2.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("co2", "false")));
+            hum.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("humidity", "false")));
+            temp.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("temperature", "false")));
+            // ... (répétez pour les autres champs)
+        }
+    }
+
+
     @FXML
     protected void valider()  {
         String erreurs = this.trouverErreursSaisie();
@@ -303,6 +338,7 @@ public class SettingsFrameController {
             seuilTemperatureMin = Float.parseFloat(textTempMin.getText());
             seuilActiviteMin = Float.parseFloat(textActMin.getText());
             frequence = Integer.parseInt(textFreq.getText());
+
             this.texteValid.setText("Données enregistrées !");
             this.updateConfigValues();
             this.texteValid.setText("Données enregistrées !");
