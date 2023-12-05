@@ -95,7 +95,7 @@ public class MainFrameController {
     @FXML
     private Button hstrq;
     @FXML
-    private MenuButton entrpts;
+    private Button entrpts;
     @FXML
     private BarChart<String, Number> barChart;
     @FXML
