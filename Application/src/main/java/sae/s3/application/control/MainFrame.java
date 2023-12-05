@@ -57,6 +57,11 @@ public class MainFrame extends Application {
         settingsFrame.doSettingsDialog();
     }
 
+    public void choisirEntrepots(){
+        EntrepotsFrame entrepotsFrame = new EntrepotsFrame(primaryStage);
+        EntrepotsFrame.doEntrepotsDialog();
+    }
+
     public void afficherHistorique(){
         HistoriqueFrame historiqueFrame = new HistoriqueFrame(primaryStage);
         historiqueFrame.doHistoriqueDialog();

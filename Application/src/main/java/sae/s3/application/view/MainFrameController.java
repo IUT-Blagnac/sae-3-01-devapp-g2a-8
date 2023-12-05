@@ -126,4 +126,9 @@ public class MainFrameController {
     protected void ouvrirHist() {
         this.mainFrame.afficherHistorique();
     }
+
+    @FXML
+    protected void ouvrirEntrepots() {
+        this.mainFrame.choisirEntrepots();
+    }
 }
