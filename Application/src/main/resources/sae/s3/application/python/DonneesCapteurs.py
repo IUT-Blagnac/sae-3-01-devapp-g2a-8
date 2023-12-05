@@ -4,6 +4,7 @@ import os
 import json
 import configparser
 
+# Lecture du fichier de configuration
 config = configparser.ConfigParser()
 config.read("config.ini")
 
@@ -18,6 +19,7 @@ activity_min = config.getfloat('Seuils', 'activity_min')
 frequence = config.getfloat('Frequences', 'frequence')
 salle_config = config['Salles']['salle']
 
+# Ecriture des données dans le fichier historique.json
 def write_log(nomSalle, donneesHist):
 
     if not os.path.exists("historique.json"):
@@ -68,68 +70,78 @@ def write_log(nomSalle, donneesHist):
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
-
-    # Subscribing in on_connect() means that if we lose the connection and
-    # reconnect then subscriptions will be renewed.
     client.subscribe(f"AM107/by-room/{salle_config}/data")
 
-#The callback for when a PUBLISH message is received from the server.
+# Réception des données
 def on_message(client, userdata, msg):
 
     message = msg.payload
     data = json.loads(message)
     fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
+    salleActuelle = data[1]["room"]
 
     if "room" in data[1]:
-        salle = data[1]["room"]
-        temp = data[0]["temperature"]
-        hum = data[0]["humidity"]
-        co2 = data[0]["co2"]
-        act = data[0]["activity"]
+        if salle_config == "+" or salle_config == salleActuelle :
+            salle = data[1]["room"]
+            temp = data[0]["temperature"]
+            hum = data[0]["humidity"]
+            co2 = data[0]["co2"]
+            act = data[0]["activity"]
 
-        os.write(fDest, b'{\n\t"')
-        os.write(fDest, str.encode(salle))
-        os.write(fDest, b'": {\n')
-        os.write(fDest, b'\t\t"')
-        os.write(fDest, str.encode(datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S")))
-        os.write(fDest, b'": {\n')
-        os.write(fDest, b'\t\t\t"Humidite": "')
-        os.write(fDest, str.encode(str(hum)))
-        os.write(fDest, b'",\n\t\t\t"CO2" : "')
-        os.write(fDest, str.encode(str(co2)))
-        os.write(fDest, b'",\n\t\t\t"Activite" : "')
-        os.write(fDest, str.encode(str(act)))
-        os.write(fDest, b'",\n\t\t\t"Temperature" : "')
-        os.write(fDest, str.encode(str(temp)))
-        os.write(fDest, b'"\n\t\t}')
-        os.write(fDest, b'\n\t}')
-        os.write(fDest, b'\n}')
-        os.close(fDest)
+            os.write(fDest, b'{\n\t"')
+            os.write(fDest, str.encode(salle))
+            os.write(fDest, b'": {\n')
+            os.write(fDest, b'\t\t"')
+            os.write(fDest, str.encode(datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S")))
+            os.write(fDest, b'": {\n')
+            os.write(fDest, b'\t\t\t"Humidite": "')
+            os.write(fDest, str.encode(str(hum)))
+            os.write(fDest, b'",\n\t\t\t"CO2" : "')
+            os.write(fDest, str.encode(str(co2)))
+            os.write(fDest, b'",\n\t\t\t"Activite" : "')
+            os.write(fDest, str.encode(str(act)))
+            os.write(fDest, b'",\n\t\t\t"Temperature" : "')
+            os.write(fDest, str.encode(str(temp)))
+            os.write(fDest, b'"\n\t\t}')
+            os.write(fDest, b'\n\t}')
+            os.write(fDest, b'\n}')
+            os.close(fDest)
 
-        donneesHist = {
-            datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"): {
-                "Humidite": str(hum),
-                "CO2": str(co2),
-                "Activite": str(act),
-                "Temperature": str(temp)
+            donneesHist = {
+                datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"): {
+                    "Humidite": str(hum),
+                    "CO2": str(co2),
+                    "Activite": str(act),
+                    "Temperature": str(temp)
+                }
             }
-        }
 
-        print ("\n \n")
-        print("Salle : ", data[1]["room"])
-        print("Température : ", data[0]["temperature"])
-        print("Humidité : ", data[0]["humidity"])
-        print("CO2 : ", data[0]["co2"])
-        print("Activité : ", data[0]["activity"])
+            print ("\n \n")
+            print("Salle : ", data[1]["room"])
+            print("Température : ", data[0]["temperature"])
+            print("Humidité : ", data[0]["humidity"])
+            print("CO2 : ", data[0]["co2"])
+            print("Activité : ", data[0]["activity"])
 
-        write_log(salle, donneesHist)
+            write_log(salle, donneesHist)
+        
 
         if data[0]["temperature"] > temperature_max:
-            ajouter_alerte(salle, "temperature", "alerte.json")
+            ajouter_alerte(salle, "temperature_max", "alerte.json")
         if data[0]["humidity"] > humidity_max:
-            ajouter_alerte(salle, "humidity", "alerte.json")
+            ajouter_alerte(salle, "humidity_max", "alerte.json")
         if data[0]["co2"] > co2_max:
             ajouter_alerte(salle, "co2", "alerte.json")
+        if data[0]["activity"] > activity_max:
+            ajouter_alerte(salle, "activity_max", "alerte.json")
+        if data[0]["temperature"] < temperature_min:
+            ajouter_alerte(salle, "temperature_min", "alerte.json")
+        if data[0]["humidity"] < humidity_min:
+            ajouter_alerte(salle, "humidity_min", "alerte.json")
+        if data[0]["co2"] < co2_min:
+            ajouter_alerte(salle, "co2_min", "alerte.json")
+        if data[0]["activity"] > activity_min:
+            ajouter_alerte(salle, "activity_min", "alerte.json")
 
 
 def ajouter_alerte(salle, type_alerte, fichier_alerte):

@@ -1,6 +1,8 @@
 package sae.s3.application.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -86,25 +88,34 @@ public class MainFrameController {
             }
         }
         affichageDonnees.setText(affichage);
-
+        displayGraph(donnees);
     }
-    @FXML
-    private Label welcomeText;
     @FXML
     private Button prmtr;
     @FXML
     private Button hstrq;
     @FXML
     private MenuButton entrpts;
-
+    @FXML
+    private BarChart<String, Number> barChart;
     @FXML
     private Label affichageDonnees;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    public void displayGraph(Donnees donnees) {
+        // Efface le graphique précédent (va servir pour actualiser l'application-
+        barChart.getData().clear();
 
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        if (!donnees.getTemperature().isEmpty()) {
+            series.getData().add(new XYChart.Data<>("Température", Double.parseDouble(donnees.getTemperature())));
+        }
+
+        if (!donnees.getHumidite().isEmpty()) {
+            series.getData().add(new XYChart.Data<>("Humidité", Double.parseDouble(donnees.getHumidite())));
+        }
+
+        barChart.getData().add(series);
+    }
 
     @FXML
     protected void ouvrirParam() {
