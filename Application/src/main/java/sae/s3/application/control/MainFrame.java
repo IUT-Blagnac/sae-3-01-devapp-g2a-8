@@ -71,28 +71,22 @@ public class MainFrame extends Application {
 
         String cheminFichier = "/sae/s3/application/python/donnees.json";
 
-        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
-             InputStreamReader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
+            assert inputStream != null;
+            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
 
-            if (inputStream == null) {
-                throw new IOException("Fichier non trouvé : " + cheminFichier);
+                JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
+                String salle = jsonObject.keySet().iterator().next();
+
+                JsonObject salleData = jsonObject.getAsJsonObject(salle);
+                String date = salleData.entrySet().iterator().next().getKey();
+                JsonObject values = salleData.getAsJsonObject(date);
+
+                return new Donnees(salle, date, values.get("Temperature").getAsString(),
+                        values.get("Humidite").getAsString(),
+                        values.get("CO2").getAsString(),
+                        values.get("Activite").getAsString());
             }
-
-            JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
-            String salle = jsonObject.keySet().iterator().next();
-
-            JsonObject salleData = jsonObject.getAsJsonObject(salle);
-            String date = salleData.entrySet().iterator().next().getKey();
-            JsonObject values = salleData.getAsJsonObject(date);
-
-            return new Donnees(
-                    salle,
-                    date,
-                    values.get("Temperature").getAsString(),
-                    values.get("Humidite").getAsString(),
-                    values.get("CO2").getAsString(),
-                    values.get("Activite").getAsString()
-            );
         } catch (IOException e) {
             e.printStackTrace();
             return null;

@@ -25,7 +25,7 @@
             <RowConstraints maxHeight="150.0" minHeight="3.0" prefHeight="3.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="400.0" minHeight="300.0" prefHeight="300.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-         <RowConstraints />
+            <RowConstraints />
         </rowConstraints>
         <children>
             <Button fx:id="prmtr" mnemonicParsing="false" onAction="#ouvrirParam" text="Paramétrage" GridPane.columnIndex="1">
@@ -48,11 +48,11 @@
                     <NumberAxis label="Valeurs" />
                 </yAxis>
             </BarChart>
-         <Button fx:id="entrpts" mnemonicParsing="false" onAction="#ouvrirEntrepots" text="Entrepôts" GridPane.columnIndex="1" GridPane.rowIndex="3">
-            <GridPane.margin>
-               <Insets left="50.0" />
-            </GridPane.margin>
-         </Button>
+            <Button fx:id="entrpts" mnemonicParsing="false" onAction="#ouvrirEntrepots" text="Entrepôts" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets left="50.0" />
+                </GridPane.margin>
+            </Button>
         </children>
     </GridPane>
 
