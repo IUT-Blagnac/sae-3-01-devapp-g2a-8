@@ -289,7 +289,6 @@ public class SettingsFrameController {
             co2.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("co2", "false")));
             hum.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("humidity", "false")));
             temp.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("temperature", "false")));
-            // ... (répétez pour les autres champs)
         }
     }
 

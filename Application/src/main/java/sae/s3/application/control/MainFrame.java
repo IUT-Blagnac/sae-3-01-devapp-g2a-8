@@ -59,7 +59,7 @@ public class MainFrame extends Application {
 
     public void choisirEntrepots(){
         EntrepotsFrame entrepotsFrame = new EntrepotsFrame(primaryStage);
-        EntrepotsFrame.doEntrepotsDialog();
+        entrepotsFrame.doEntrepotsDialog();
     }
 
     public void afficherHistorique(){

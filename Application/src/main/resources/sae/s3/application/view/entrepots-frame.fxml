@@ -1,58 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<GridPane xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="sae.s3.application.view.EntrepotsFrameController">
-
-    <!-- Ligne 1 -->
-    <ToggleButton text="Button 1" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 2" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 3" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 4" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 5" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 6" GridPane.columnIndex="5" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 7" GridPane.columnIndex="6" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 8" GridPane.columnIndex="7" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 9" GridPane.columnIndex="8" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 10" GridPane.columnIndex="9" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 11" GridPane.columnIndex="10" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 12" GridPane.columnIndex="11" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 13" GridPane.columnIndex="12" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 14" GridPane.columnIndex="13" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 15" GridPane.columnIndex="14" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 16" GridPane.columnIndex="15" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 17" GridPane.columnIndex="16" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 18" GridPane.columnIndex="17" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 19" GridPane.columnIndex="18" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 20" GridPane.columnIndex="19" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 21" GridPane.columnIndex="20" GridPane.rowIndex="0"/>
-    <ToggleButton text="Button 22" GridPane.columnIndex="21" GridPane.rowIndex="0"/>
-
-    <!-- Ligne 2 -->
-    <ToggleButton text="Button 23" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 24" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 25" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 26" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 27" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 28" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 29" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 30" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 31" GridPane.columnIndex="8" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 32" GridPane.columnIndex="9" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 33" GridPane.columnIndex="10" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 34" GridPane.columnIndex="11" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 35" GridPane.columnIndex="12" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 36" GridPane.columnIndex="13" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 37" GridPane.columnIndex="14" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 38" GridPane.columnIndex="15" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 39" GridPane.columnIndex="16" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 40" GridPane.columnIndex="17" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 41" GridPane.columnIndex="18" GridPane.rowIndex="1"/>
-    <ToggleButton text="Button 42" GridPane.columnIndex="19" GridPane.rowIndex="1"/>
-
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="sae.s3.application.view.EntrepotsFrameController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
 </GridPane>
