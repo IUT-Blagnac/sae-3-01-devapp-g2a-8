@@ -3,6 +3,7 @@ import paho.mqtt.client as mqtt
 import os
 import json
 import configparser
+from threading import Timer
 
 # Lecture du fichier de configuration
 config = configparser.ConfigParser()
@@ -18,55 +19,70 @@ co2_min = config.getfloat('Seuils', 'co2_min')
 activity_min = config.getfloat('Seuils', 'activity_min')
 frequence = config.getfloat('Frequences', 'frequence')
 salle_config = config['Salles']['salle']
+donneesHist = []
 
 # Ecriture des données dans le fichier historique.json
-def write_log(nomSalle, donneesHist):
+def write_log():
+    global donneesHist
+    
+    for data in donneesHist:
+        salle = data["Salle"]
+        date = data["Date"]
+        temp = data["Temperature"]
+        hum = data["Humidite"]
+        co2 = data["CO2"]
+        act = data["Activite"]
+        donnees = {date: {"Humidite": hum, "Temperature": temp, "CO2": co2, "Activite": act}}
 
-    if not os.path.exists("historique.json"):
-        date = list(donneesHist.keys())[0]
+        if not os.path.exists("historique.json"):
+            date = list(donneesHist.keys())[0]
 
-        fDest = os.open('historique.json', os.O_RDWR | os.O_CREAT | os.O_APPEND)
-        os.write(fDest, b'{\n\t"')
-        os.write(fDest, str.encode(nomSalle))
-        os.write(fDest, b'": {\n')
-        os.write(fDest, b'\t\t"')
-        os.write(fDest, str.encode(date))
-        os.write(fDest, b'": {\n')
-        os.write(fDest, b'\t\t\t"Humidite": "')
-        os.write(fDest, str.encode(donneesHist[date]["Humidite"]))
-        os.write(fDest, b'",\n\t\t\t"CO2" : "')
-        os.write(fDest, str.encode(donneesHist[date]["CO2"]))
-        os.write(fDest, b'",\n\t\t\t"Activite" : "')
-        os.write(fDest, str.encode(donneesHist[date]["Activite"]))
-        os.write(fDest, b'",\n\t\t\t"Temperature" : "')
-        os.write(fDest, str.encode(donneesHist[date]["Temperature"]))
-        os.write(fDest, b'"\n\t\t}')
-        os.write(fDest, b'\n\t}')
-        os.write(fDest, b'\n}')
-        os.close(fDest)
-
-    else:
-        with open('historique.json', 'r') as fichier_json:
-            donnees_existantes = json.load(fichier_json)
-
-        if len(donnees_existantes) == 0:
-            donneesNvSalle = {nomSalle: donneesHist}
-            donnees_existantes.update(donneesNvSalle)
+            fDest = os.open('historique.json', os.O_RDWR | os.O_CREAT | os.O_APPEND)
+            os.write(fDest, b'{\n\t"')
+            os.write(fDest, str.encode(salle))
+            os.write(fDest, b'": {\n')
+            os.write(fDest, b'\t\t"')
+            os.write(fDest, str.encode(date))
+            os.write(fDest, b'": {\n')
+            os.write(fDest, b'\t\t\t"Humidite": "')
+            os.write(fDest, str.encode(hum))
+            os.write(fDest, b'",\n\t\t\t"CO2" : "')
+            os.write(fDest, str.encode(co2))
+            os.write(fDest, b'",\n\t\t\t"Activite" : "')
+            os.write(fDest, str.encode(act))
+            os.write(fDest, b'",\n\t\t\t"Temperature" : "')
+            os.write(fDest, str.encode(temp))
+            os.write(fDest, b'"\n\t\t}')
+            os.write(fDest, b'\n\t}')
+            os.write(fDest, b'\n}')
+            os.close(fDest)
 
         else:
-            existe = False
-            for cle, val in donnees_existantes.items():
-                if cle == nomSalle:
-                    donnees_existantes[nomSalle].update(donneesHist)
-                    existe = True
-                    break
+            with open('historique.json', 'r') as fichier_json:
+                donnees_existantes = json.load(fichier_json)
 
-            if not existe:
-                donneesNvSalle = {nomSalle: donneesHist}
+            if len(donnees_existantes) == 0:
+                donneesNvSalle = {salle: donnees}
                 donnees_existantes.update(donneesNvSalle)
 
-        with open('historique.json', 'w') as fichier_json:
-            json.dump(donnees_existantes, fichier_json, indent=4)
+            else:
+                existe = False
+                for cle, val in donnees_existantes.items():
+                    if cle == salle:
+                        donnees_existantes[salle].update(donneesHist)
+                        existe = True
+                        break
+
+                if not existe:
+                    donneesNvSalle = {salle: donnees}
+                    donnees_existantes.update(donneesNvSalle)
+
+            with open('historique.json', 'w') as fichier_json:
+                json.dump(donnees_existantes, fichier_json, indent=4)
+
+    donneesHist = []
+    minuteur = Timer(frequence, write_log)
+    minuteur.start()
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -74,13 +90,13 @@ def on_connect(client, userdata, flags, rc):
 
 # Réception des données
 def on_message(client, userdata, msg):
-
+    global donneesHist
     message = msg.payload
     data = json.loads(message)
-    fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
-    salleActuelle = data[1]["room"]
-
     if "room" in data[1]:
+        fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
+        salleActuelle = data[1]["room"]
+
         if salle_config == "+" or salle_config == salleActuelle :
             salle = data[1]["room"]
             temp = data[0]["temperature"]
@@ -107,14 +123,15 @@ def on_message(client, userdata, msg):
             os.write(fDest, b'\n}')
             os.close(fDest)
 
-            donneesHist = {
-                datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"): {
-                    "Humidite": str(hum),
-                    "CO2": str(co2),
-                    "Activite": str(act),
-                    "Temperature": str(temp)
-                }
-            }
+            dictDonnees = {"Salle": salle,
+                           "Date": datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),
+                           "Humidite": str(hum),
+                           "CO2": str(co2),
+                           "Activite": str(act),
+                           "Temperature": str(temp)
+                           }
+
+            donneesHist.append(dictDonnees)
 
             print ("\n \n")
             print("Salle : ", data[1]["room"])
@@ -122,8 +139,6 @@ def on_message(client, userdata, msg):
             print("Humidité : ", data[0]["humidity"])
             print("CO2 : ", data[0]["co2"])
             print("Activité : ", data[0]["activity"])
-
-            write_log(salle, donneesHist)
         
 
         if data[0]["temperature"] > temperature_max:
@@ -178,5 +193,8 @@ client.on_connect = on_connect
 client.on_message = on_message
 
 client.connect("chirpstack.iut-blagnac.fr", 1883, 60)
+
+minuteur = Timer(frequence, write_log)
+minuteur.start()
 
 client.loop_forever()
