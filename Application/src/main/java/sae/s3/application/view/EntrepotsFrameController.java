@@ -30,6 +30,7 @@ public class EntrepotsFrameController {
 
     private static final String CONFIG_FILE_PATH = "src/main/resources/sae/s3/application/python/config.ini";
 
+
     /**
      * Initialisation du contrôleur de vue SettingsFrameController.
      *
@@ -41,7 +42,7 @@ public class EntrepotsFrameController {
     public void initContext(Stage _containingStage, EntrepotsFrame _entrepotsFrame) {
         this.primaryStage = _containingStage;
         this.entrepotsFrame = _entrepotsFrame;
-        createToggleButtons();
+        createButtons();
         this.configure();
     }
 
@@ -76,6 +77,8 @@ public class EntrepotsFrameController {
 
             this.updateConfigValues();
             this.primaryStage.close();
+            System.out.println(SettingsFrameController.selectedButtonLabels);
+
         }
     }
 
@@ -86,17 +89,15 @@ public class EntrepotsFrameController {
             "B109", "E100", "E007", "salleConseil", "E104", "B203", "B003", "localVelo", "B108",
             "E006", "C006", "E004", "B202", "E001", "E101"
     );
-    private List<String> selectedButtonLabels = new ArrayList<>(); // Liste pour stocker les textes des boutons sélectionnés
+
 
     @FXML
     private GridPane gridPane; // Assurez-vous d'avoir un GridPane dans votre FXML avec l'id correspondant
 
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        createToggleButtons();
-    }
 
-    private void createToggleButtons() {
+
+    private void createButtons() {
         int numButtons = buttonNames.size();
         int columns = 7; // Vous pouvez ajuster le nombre de colonnes en fonction de vos besoins
 
@@ -107,35 +108,46 @@ public class EntrepotsFrameController {
         gridPane.setPadding(new Insets(10, 10, 10, 10)); // Marge autour du GridPane avec 10 de padding de tous les côtés
 
         for (int i = 0; i < numButtons; i++) {
-            ToggleButton toggleButton = new ToggleButton(buttonNames.get(i)); // Utiliser le nom de la liste
-            toggleButton.setMinHeight(buttonHeight);
-            toggleButton.setPrefHeight(buttonHeight);
-            toggleButton.setMaxHeight(buttonHeight);
+            Button button = new Button(buttonNames.get(i)); // Utiliser le nom de la liste
+            button.setMinHeight(buttonHeight);
+            button.setPrefHeight(buttonHeight);
+            button.setMaxHeight(buttonHeight);
 
             int row = i / columns;
             int col = i % columns;
-            gridPane.add(toggleButton, col, row);
-            toggleButton.setOnAction(this::handleButtonClick);
+            gridPane.add(button, col, row);
+
+            // Ajouter le gestionnaire d'événements pour chaque bouton
+            button.setOnAction(this::handleButtonClick);
+
+            // Vérifier si le bouton est dans la liste selectedButtonLabels et le mettre en vert si nécessaire
+            if (SettingsFrameController.selectedButtonLabels.contains(button.getText())) {
+                button.setStyle("-fx-background-color: green;");
+            }
         }
     }
+
+
 
     private void handleButtonClick(ActionEvent event) {
-        if (event.getSource() instanceof ToggleButton) {
-            ToggleButton clickedButton = (ToggleButton) event.getSource();
+        if (event.getSource() instanceof Button) {
+            Button clickedButton = (Button) event.getSource();
             String buttonText = clickedButton.getText();
 
-            if (clickedButton.isSelected()) {
-                // Ajouter le texte du bouton à la liste si le bouton est sélectionné
-                selectedButtonLabels.add(buttonText);
+            if (!SettingsFrameController.selectedButtonLabels.contains(buttonText)) {
+                // Bouton non sélectionné
+                SettingsFrameController.selectedButtonLabels.add(buttonText);
+                clickedButton.setStyle("-fx-background-color: green;");
             } else {
-                // Retirer le texte du bouton de la liste si le bouton est désélectionné
-                selectedButtonLabels.remove(buttonText);
+                // Bouton déjà sélectionné, le désélectionner
+                SettingsFrameController.selectedButtonLabels.remove(buttonText);
+                clickedButton.setStyle("-fx-background-color: #3498db;"); // Changer la couleur en bleu clair
             }
 
-            // Vous pouvez faire quelque chose avec la liste mise à jour ici
-            System.out.println("Boutons sélectionnés : " + selectedButtonLabels);
+            System.out.println("Boutons sélectionnés : " + SettingsFrameController.selectedButtonLabels);
         }
     }
+
 
     private Map<String, Properties> loadConfigFromFile() {
         Map<String, Properties> configMap = new LinkedHashMap<>();
@@ -183,11 +195,9 @@ public class EntrepotsFrameController {
     private void updateConfigValues() {
         Map<String, Properties> configMap = loadConfigFromFile();
 
-
-
         Properties frequencesProperties = configMap.get("[Salles]");
         if (frequencesProperties != null) {
-            frequencesProperties.setProperty("salle", String.valueOf(this.selectedButtonLabels));
+            frequencesProperties.setProperty("salle", String.valueOf(SettingsFrameController.selectedButtonLabels));
         }
 
 

@@ -35,6 +35,7 @@ public class MainFrameController {
         this.primaryStage = _containingStage;
         this.mainFrame = _mainFrame;
         this.configure();
+        SettingsFrameController.updateSelectedButtonsList();
     }
 
     /*

@@ -9,9 +9,7 @@ import sae.s3.application.control.SettingsFrame;
 import sae.s3.application.tools.AlertUtilities;
 
 import java.io.*;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +18,7 @@ import java.util.regex.Pattern;
  */
 public class SettingsFrameController {
 
+    public static List<String> selectedButtonLabels = new ArrayList<>(); // Liste pour stocker les textes des boutons sélectionnés
     private boolean affichageCo2=true;
     private boolean affichageHumidite=true;
     private boolean affichageTemperature=true;
@@ -54,6 +53,7 @@ public class SettingsFrameController {
         this.settingsFrame = _settingsFrame;
         this.configure();
         loadConfigValues();
+
     }
 
     /*
@@ -184,7 +184,7 @@ public class SettingsFrameController {
         return erreurs;
     }
 
-    private Map<String, Properties> loadConfigFromFile() {
+    private static Map<String, Properties> loadConfigFromFile() {
         Map<String, Properties> configMap = new LinkedHashMap<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE_PATH))) {
@@ -342,6 +342,23 @@ public class SettingsFrameController {
             this.updateConfigValues();
             this.texteValid.setText("Données enregistrées !");
 
+        }
+    }
+
+    public static void updateSelectedButtonsList() {
+        Map<String, Properties> configMap = loadConfigFromFile();
+        Properties sallesProperties = configMap.get("[Salles]");
+
+        if (sallesProperties != null) {
+            String sallesString = sallesProperties.getProperty("salle", "");
+            sallesString = sallesString.replaceAll("\\[|\\]", "");  // Retire "[" et "]"
+            String[] sallesArray = sallesString.split(",");
+            selectedButtonLabels.clear();
+
+            // Ajouter chaque salle à la liste des boutons sélectionnés
+            for (String salle : sallesArray) {
+                selectedButtonLabels.add(salle.trim());
+            }
         }
     }
 
