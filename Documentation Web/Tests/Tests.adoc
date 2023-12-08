@@ -18,9 +18,45 @@ Projet : Site de e-commerce Sigma Prime
 
 ==== Naviguer sur le site
 
+Une fois sur la page d'accueil du site, il est possible de cliquer sur les différentes catégories pour se rendre sur les différentes pages ou se connecter et consulter son panier grâce aux deux boutons situés en haut à droite.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/index.png[]
+
 ==== Se connecter avec un compte client
 
+Une fois sur la page de connexion, l'adresse e-mail et le mot de passe du compte sont demandés :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/login.png[]
+
+Il se peut que les identifiants soit mauvais. Si c'est le cas, un message d'erreur prévient l'utilisateur : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisIdentifiants.png[]
+
+Si les informations sont correctes, l'utilisateur est redirigé vers la page d'accueil et peut maintenant se déconnecter.
+Si c'est un compte administrateur, une page sécurisé lui est également proposé : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/connecteAdmin.png[]
+
 ==== Créer un compte client
+
+Une fois sur la page de création de compte, plusieurs informations sont demandées à l'utilisateur :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/creerCompte.png[]
+
+Si les informations sont correctes, le compte est alors créé et l'utilisateur est redirigé vers la page d'accueil du site.
+
+Si les informations sont incorrectes, une erreur détaillant ce qui doit être changé est affichée à l'utilisateur.
+Dans le cas où les deux mots de passe ne sont pas identiques :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/confirmMdpFaux.png[]
+
+Dans le cas où le code postal n'est pas au bon format :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisCodePostal.png[]
+
+Dans le cas où le numéro de téléphone n'est pas au bon format : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisTel.png[]
 
 === Partie BD
 
