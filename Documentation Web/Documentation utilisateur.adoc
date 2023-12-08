@@ -31,7 +31,24 @@ Aucune installation nécessaire. Pour accéder à l'application il suffit de se 
 
 ==== Naviguer sur le site
 
+Lorsqu'on arrive sur le site, une page d'accueil est proposée avec différentes catégories cliquables. Il est également possible de se connecter, de consulter son panier ou de créer un compte.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/index.png[]
+
 ==== Créer un compte et se connecter
+
+Si on choisi de créer un compte, différentes informations sont demandées :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/creerCompte.png[]
+
+Il suffit de renseigner tous les champs et de cliquer sur "Créer un compte".
+
+Pour se connecter, l'adresse e-mail et le mot de passe du compte sont demandés :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/login.png[]
+
+Il suffit de renseigner tous les champs et de cliquer sur "Me connecter".
+Il est également possible de cliquer sur "Se souvenir de moi" pour ne pas avoir à entrer de nouveau l'adresse e-mail.
 
 ==== Ajouter des articles au panier
 
