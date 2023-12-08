@@ -1,0 +1,280 @@
+/* Formulaire de connexion */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.login-container h1 {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid silver;
+}
+
+.login-container form {
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.form-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 40px 0;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.form-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.form-field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #0c1013;
+    transition: .5s;
+}
+
+.form-field input:focus ~ label,
+.form-field input:valid ~ label{
+    top: -5px;
+    color: #0c1013;
+}
+.form-field input:focus ~ span::before,
+.form-field input:valid ~ span::before{
+    width: 100%;
+}
+
+.forgot-password {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: black;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.signup-link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.signup-link a {
+    color: #6495ed;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: 48%;
+}
+
+
+/* style.css modifié */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: gray;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-left, #header-right {
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+header li a {
+    display: block;
+    padding: 20px;
+}
+
+header li:hover a {
+    background-color: black;
+    color: rgb(197, 196, 196);
+}
+
+header li:hover .menu-deroulant{
+    display: block;
+}
+
+.menu-deroulant {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    padding: 0;
+}
+
+.menu-deroulant li {
+    display: block;
+}
+
+.menu-deroulant li a {
+    color: white;
+}
+
+.menu-deroulant li:hover a {
+    background-color: white;
+    color: black;
+}
+
+img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+#header-right input {
+    margin-right: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+#panier-button, #login-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.white-background {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section.third {
+    justify-content: flex-end;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.gray-text {
+    color: gray;
+}
+
+.large-text {
+    font-size: 18px;
+}
+
+.white-text {
+    color: white;
+}
+
+.logos-reseaux {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.logo-reseaux {
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 5px;
+}

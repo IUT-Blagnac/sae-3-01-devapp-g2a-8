@@ -3,13 +3,15 @@ package sae.s3.application.model;
 public class Donnees {
 
     private String salle;
-    private double temperature;
-    private double humidite;
-    private int co2;
-    private int activite;
+    private String date;
+    private String temperature;
+    private String humidite;
+    private String co2;
+    private String activite;
 
-    public Donnees(String salle, double temperature, double humidite, int co2, int activite){
+    public Donnees(String salle, String date, String temperature, String humidite, String co2, String activite){
         this.salle = salle;
+        this.date = date;
         this.temperature = temperature;
         this.humidite = humidite;
         this.co2 = co2;
@@ -20,25 +22,29 @@ public class Donnees {
         return salle;
     }
 
-    public double getTemperature() {
+    public String getDate(){
+        return this.date;
+    }
+
+    public String getTemperature() {
         return temperature;
     }
 
-    public double getHumidite() {
+    public String getHumidite() {
         return humidite;
     }
 
-    public int getCo2() {
+    public String getCo2() {
         return co2;
     }
 
-    public int getActivite() {
+    public String getActivite() {
         return activite;
     }
 
     @Override
     public String toString() {
-        return "Salle : " + this.salle + "\nTempérature : " + this.temperature +
+        return "Salle : " + this.salle + "\nDate : " + this.date + "\nTempérature : " + this.temperature +
                 "\nHumidité : " + this.humidite + "\nCO2 : " + this.co2 + "\nActivité : "
                 + this.activite;
     }

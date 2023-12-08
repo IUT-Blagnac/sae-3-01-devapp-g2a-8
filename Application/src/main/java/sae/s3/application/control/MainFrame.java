@@ -1,5 +1,7 @@
 package sae.s3.application.control;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.application.Application;
@@ -9,10 +11,13 @@ import javafx.stage.Stage;
 import sae.s3.application.model.Donnees;
 import sae.s3.application.view.MainFrameController;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * Classe de controleur de Dialogue de la fenêtre principale.
@@ -29,7 +34,7 @@ public class MainFrame extends Application {
             Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/sae/s3/application/application.css")).toExternalForm());
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Hello!");
+            primaryStage.setTitle("Données des entrepôts");
 
             MainFrameController mainFrameController = fxmlLoader.getController();
             mainFrameController.initContext(primaryStage, this);
@@ -52,41 +57,39 @@ public class MainFrame extends Application {
         settingsFrame.doSettingsDialog();
     }
 
+    public void choisirEntrepots(){
+        EntrepotsFrame entrepotsFrame = new EntrepotsFrame(primaryStage);
+        entrepotsFrame.doEntrepotsDialog();
+    }
+
     public void afficherHistorique(){
         HistoriqueFrame historiqueFrame = new HistoriqueFrame(primaryStage);
         historiqueFrame.doHistoriqueDialog();
     }
 
     public Donnees getDonnees() {
+
         String cheminFichier = "/sae/s3/application/python/donnees.json";
 
-        Donnees donnees = null;
-        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
-             InputStreamReader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
+            assert inputStream != null;
+            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
 
-            JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
-            if (jsonObject.has("Salle")) {
-                String salle = jsonObject.get("Salle").getAsString();
-                double temperature = jsonObject.get("Temperature").getAsDouble();
-                double humidite = jsonObject.get("Humidite").getAsDouble();
-                int co2 = jsonObject.get("CO2").getAsInt();
-                int activite = jsonObject.get("Activite").getAsInt();
+                JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
+                String salle = jsonObject.keySet().iterator().next();
 
-                donnees = new Donnees(salle, temperature, humidite, co2, activite);
+                JsonObject salleData = jsonObject.getAsJsonObject(salle);
+                String date = salleData.entrySet().iterator().next().getKey();
+                JsonObject values = salleData.getAsJsonObject(date);
 
-                System.out.println("Salle : " + salle);
-                System.out.println("Température : " + temperature);
-                System.out.println("Humidité : " + humidite);
-                System.out.println("CO2 : " + co2);
-                System.out.println("Activité : " + activite);
-            } else {
-                System.out.println("La clé 'Salle' n'existe pas dans le fichier JSON.");
+                return new Donnees(salle, date, values.get("Temperature").getAsString(),
+                        values.get("Humidite").getAsString(),
+                        values.get("CO2").getAsString(),
+                        values.get("Activite").getAsString());
             }
-
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
+            return null;
         }
-
-        return donnees;
     }
 }

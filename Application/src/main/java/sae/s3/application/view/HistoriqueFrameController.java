@@ -5,7 +5,11 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import sae.s3.application.control.HistoriqueFrame;
+import sae.s3.application.model.Alerte;
+import sae.s3.application.model.Donnees;
 import sae.s3.application.tools.AlertUtilities;
+
+import java.util.List;
 
 public class HistoriqueFrameController {
 
@@ -28,15 +32,15 @@ public class HistoriqueFrameController {
 
     /*
      * Configuration de SettingsFrameController.
-     * Fermeture par la croix.
      */
     private void configure() {
         this.primaryStage.setOnCloseRequest(this::closeWindow);
+        this.chargerAlertes();
+        this.chargerHistorique();
     }
 
     /*
      * Méthode de fermeture de la fenêtre par la croix.
-     *
      */
     private void closeWindow(WindowEvent e) {
         this.doQuit();
@@ -61,14 +65,26 @@ public class HistoriqueFrameController {
     // Partie FXML
 
     @FXML
-    private Button valider;
-
+    private TableView<Alerte> alertesTable;
     @FXML
-    private ListView liste;
+    private TableView<Donnees> historiqueTable;
 
+    /*
+     * Chargement des alertes sur la fenêtre grâce à une Table.
+     */
+    private void chargerAlertes() {
+        List<Alerte> alerteData = this.historiqueFrame.getAlertes();
 
-    @FXML
-    protected void valider() {
+        if (alerteData != null) {
+            alertesTable.getItems().addAll(alerteData);
+        }
+    }
 
+    private void chargerHistorique(){
+        List<Donnees> donneesHistorique = this.historiqueFrame.getDonneesHistorique();
+
+        if(!donneesHistorique.isEmpty()){
+            historiqueTable.getItems().addAll(donneesHistorique);
+        }
     }
 }

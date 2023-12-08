@@ -9,9 +9,7 @@ import sae.s3.application.control.SettingsFrame;
 import sae.s3.application.tools.AlertUtilities;
 
 import java.io.*;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,15 +18,20 @@ import java.util.regex.Pattern;
  */
 public class SettingsFrameController {
 
+    public static List<String> selectedButtonLabels = new ArrayList<>(); // Liste pour stocker les textes des boutons sélectionnés
     private boolean affichageCo2=true;
     private boolean affichageHumidite=true;
     private boolean affichageTemperature=true;
     private boolean affichageActivite=true;
     private Stage  dialogStage;
     private float seuilCo2;
+    private float seuilCo2Min;
     private float seuilHumidite;
+    private float seuilHumiditeMin;
     private float seuilTemperature;
+    private float seuilTemperatureMin;
     private float seuilActivite;
+    private float seuilActiviteMin;
 
     private int frequence;
 
@@ -49,6 +52,8 @@ public class SettingsFrameController {
         this.primaryStage = _containingStage;
         this.settingsFrame = _settingsFrame;
         this.configure();
+        loadConfigValues();
+
     }
 
     /*
@@ -110,6 +115,18 @@ public class SettingsFrameController {
     @FXML
     private TextField textAct;
     @FXML
+    private TextField textCo2Min;
+
+    @FXML
+    private TextField texthHumMin;
+
+    @FXML
+    private Label texteValidMin;
+    @FXML
+    private TextField textTempMin;
+    @FXML
+    private TextField textActMin;
+    @FXML
     private TextField textFreq;
 
     private String trouverErreursSaisie() {
@@ -138,6 +155,26 @@ public class SettingsFrameController {
         if (!matcher.matches()) {
             erreurs += "La saisie du CO2 ne doit contenir que des chiffres\n";
         }
+        matcher = pattern.matcher(textTempMin.getText());
+        if (!matcher.matches()) {
+            erreurs += "La saisie de température ne doit contenir que des chiffres\n";
+        }
+        matcher = pattern.matcher(texthHumMin.getText());
+        if (!matcher.matches()) {
+            erreurs += "La saisie de l'humidité ne doit contenir que des chiffres\n";
+        }
+        matcher = pattern.matcher(textCo2Min.getText());
+        if (!matcher.matches()) {
+            erreurs += "La saisie du CO2 ne doit contenir que des chiffres\n";
+        }
+        matcher = pattern.matcher(textAct.getText());
+        if (!matcher.matches()) {
+            erreurs += "La saisie de l'activité ne doit contenir que des chiffres\n";
+        }
+        matcher = pattern.matcher(textActMin.getText());
+        if (!matcher.matches()) {
+            erreurs += "La saisie de l'activité ne doit contenir que des chiffres\n";
+        }
         regex = "^\\d+$";
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(textFreq.getText());
@@ -147,7 +184,7 @@ public class SettingsFrameController {
         return erreurs;
     }
 
-    private Map<String, Properties> loadConfigFromFile() {
+    private static Map<String, Properties> loadConfigFromFile() {
         Map<String, Properties> configMap = new LinkedHashMap<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE_PATH))) {
@@ -199,6 +236,11 @@ public class SettingsFrameController {
             seuilsProperties.setProperty("temperature_max", String.valueOf(seuilTemperature));
             seuilsProperties.setProperty("humidity_max", String.valueOf(seuilHumidite));
             seuilsProperties.setProperty("co2_max", String.valueOf(seuilCo2));
+            seuilsProperties.setProperty("activity_max", String.valueOf(seuilActivite));
+            seuilsProperties.setProperty("temperature_min", String.valueOf(seuilTemperatureMin));
+            seuilsProperties.setProperty("humidity_min", String.valueOf(seuilHumiditeMin));
+            seuilsProperties.setProperty("co2_min", String.valueOf(seuilCo2Min));
+            seuilsProperties.setProperty("activity_min", String.valueOf(seuilActiviteMin));
         }
 
         Properties frequencesProperties = configMap.get("[Frequences]");
@@ -206,9 +248,50 @@ public class SettingsFrameController {
             frequencesProperties.setProperty("frequence", String.valueOf(frequence));
         }
 
+        Properties donneesProperties = configMap.get("[Donnees]");
+        if (donneesProperties != null) {
+            donneesProperties.setProperty("activity", String.valueOf(affichageActivite));
+            donneesProperties.setProperty("co2", String.valueOf(affichageCo2));
+            donneesProperties.setProperty("temperature", String.valueOf(affichageTemperature));
+            donneesProperties.setProperty("humidity", String.valueOf(affichageHumidite));
+        }
+
         // Sauvegarder les modifications dans le fichier
         saveConfigToFile(configMap);
     }
+
+    private void loadConfigValues() {
+        Map<String, Properties> configMap = loadConfigFromFile();
+
+        // Charger les valeurs de la section [Seuils]
+        Properties seuilsProperties = configMap.get("[Seuils]");
+        if (seuilsProperties != null) {
+            textCo2.setText(seuilsProperties.getProperty("co2_max", ""));
+            texthHum.setText(seuilsProperties.getProperty("humidity_max", ""));
+            textTemp.setText(seuilsProperties.getProperty("temperature_max", ""));
+            textAct.setText(seuilsProperties.getProperty("activity_max", ""));
+            textCo2Min.setText(seuilsProperties.getProperty("co2_min", ""));
+            texthHumMin.setText(seuilsProperties.getProperty("humidity_min", ""));
+            textTempMin.setText(seuilsProperties.getProperty("temperature_min", ""));
+            textActMin.setText(seuilsProperties.getProperty("activity_min", ""));
+        }
+
+        // Charger les valeurs de la section [Frequences]
+        Properties frequencesProperties = configMap.get("[Frequences]");
+        if (frequencesProperties != null) {
+            textFreq.setText(frequencesProperties.getProperty("frequence", ""));
+        }
+
+        // Charger les valeurs de la section [Donnees]
+        Properties donneesProperties = configMap.get("[Donnees]");
+        if (donneesProperties != null) {
+            act.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("activity", "false")));
+            co2.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("co2", "false")));
+            hum.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("humidity", "false")));
+            temp.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("temperature", "false")));
+        }
+    }
+
 
     @FXML
     protected void valider()  {
@@ -249,11 +332,33 @@ public class SettingsFrameController {
             seuilHumidite = Float.parseFloat(texthHum.getText());
             seuilTemperature = Float.parseFloat(textTemp.getText());
             seuilActivite = Float.parseFloat(textAct.getText());
+            seuilCo2Min = Float.parseFloat(textCo2Min.getText());
+            seuilHumiditeMin = Float.parseFloat(texthHumMin.getText());
+            seuilTemperatureMin = Float.parseFloat(textTempMin.getText());
+            seuilActiviteMin = Float.parseFloat(textActMin.getText());
             frequence = Integer.parseInt(textFreq.getText());
+
             this.texteValid.setText("Données enregistrées !");
             this.updateConfigValues();
             this.texteValid.setText("Données enregistrées !");
 
+        }
+    }
+
+    public static void updateSelectedButtonsList() {
+        Map<String, Properties> configMap = loadConfigFromFile();
+        Properties sallesProperties = configMap.get("[Salles]");
+
+        if (sallesProperties != null) {
+            String sallesString = sallesProperties.getProperty("salle", "");
+            sallesString = sallesString.replaceAll("\\[|\\]", "");  // Retire "[" et "]"
+            String[] sallesArray = sallesString.split(",");
+            selectedButtonLabels.clear();
+
+            // Ajouter chaque salle à la liste des boutons sélectionnés
+            for (String salle : sallesArray) {
+                selectedButtonLabels.add(salle.trim());
+            }
         }
     }
 

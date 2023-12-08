@@ -21,19 +21,19 @@ public class Application {
      */
     public static void main(String[] args) {
         // Lance le script Python dans un thread séparé
-        Thread pythonThread = new Thread(Application::startPython);
-        pythonThread.start();
+        //Thread pythonThread = new Thread(Application::startPython);
+        //pythonThread.start();
 
         // Lancer l'application JavaFX
         MainFrame.runApp();
 
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+        /*Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("Fermeture de l'application. Arrêt du script Python.");
             pythonThread.interrupt();
-        }));
+        }));*/
     }
 
-    private static void startPython(){
+    /*private static void startPython(){
         try{
             String cheminScript = "src/main/resources/sae/s3/application/python/DonneesCapteurs.py";
             String cheminEcriture = "src/main/resources/sae/s3/application/python/";
@@ -63,5 +63,5 @@ public class Application {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 }

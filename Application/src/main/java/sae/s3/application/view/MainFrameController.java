@@ -1,6 +1,8 @@
 package sae.s3.application.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -33,6 +35,7 @@ public class MainFrameController {
         this.primaryStage = _containingStage;
         this.mainFrame = _mainFrame;
         this.configure();
+        SettingsFrameController.updateSelectedButtonsList();
     }
 
     /*
@@ -69,30 +72,51 @@ public class MainFrameController {
     public void displayDialog(){
         this.primaryStage.show();
         donnees = mainFrame.getDonnees();
+        String affichage = "Aucune donnée";
         if(donnees != null){
-            affichageDonnees.setText(donnees.toString());
-        }else{
-            affichageDonnees.setText("Aucune donnée");
+            affichage = "Salle : " + donnees.getSalle() + "\nDate : " + donnees.getDate();
+            if(!donnees.getTemperature().isEmpty()) {
+                affichage += "\nTempérature : " + donnees.getTemperature();
+            }
+            if(!donnees.getCo2().isEmpty()) {
+                affichage += "\nCO2 : " + donnees.getCo2();
+            }
+            if(!donnees.getHumidite().isEmpty()) {
+                affichage += "\nHumidité : " + donnees.getHumidite();
+            }
+            if(!donnees.getActivite().isEmpty()) {
+                affichage += "\nActivité : " + donnees.getActivite();
+            }
         }
-
+        affichageDonnees.setText(affichage);
+        displayGraph(donnees);
     }
-    @FXML
-    private Label welcomeText;
     @FXML
     private Button prmtr;
     @FXML
     private Button hstrq;
     @FXML
-    private MenuButton entrpts;
-
+    private Button entrpts;
+    @FXML
+    private BarChart<String, Number> barChart;
     @FXML
     private Label affichageDonnees;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    public void displayGraph(Donnees donnees) {
+        // Efface le graphique précédent (va servir pour actualiser l'application-
+        barChart.getData().clear();
 
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        if (!donnees.getTemperature().isEmpty()) {
+            series.getData().add(new XYChart.Data<>("Température", Double.parseDouble(donnees.getTemperature())));
+        }
+
+        if (!donnees.getHumidite().isEmpty()) {
+            series.getData().add(new XYChart.Data<>("Humidité", Double.parseDouble(donnees.getHumidite())));
+        }
+
+        barChart.getData().add(series);
+    }
 
     @FXML
     protected void ouvrirParam() {
@@ -102,5 +126,10 @@ public class MainFrameController {
     @FXML
     protected void ouvrirHist() {
         this.mainFrame.afficherHistorique();
+    }
+
+    @FXML
+    protected void ouvrirEntrepots() {
+        this.mainFrame.choisirEntrepots();
     }
 }
