@@ -34,9 +34,9 @@ Comme nous pouvons le voir, les données ont été modifiées. Le programme pyth
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/config_modif.png[181, 336]
 
-Maintenant on souhaite choisir les salles dont on veux recevoir les Données.
+==== Choix des salles (réception des données)
 
-On clique donc sur le bouton "Entrepots" sur la page principale. Actuellement, la liste "salle" est vide car aucune salle n'est sélectionnée.
+Lorsque nous sommes sur la page principale de l'application, on clique sur le bouton "Entrepots". Actuellement, la liste "salle" est vide car aucune salle n'est sélectionnée.
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/configVierge.png[200, 350]
 
@@ -50,7 +50,17 @@ Après avoir validé et fermé la fenêtre, on peut voir que la liste "salle" da
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/configListeSalle.png[250, 400]
 
+==== Historique des données et des alertes
 
+Comme on peut le voir dans le fichier Json de l'historique, nous avons à chaque fois : la salle, la date et les différentes données qui y sont associées.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/affichageJson.png[452, 762]
+
+Maintenant, voici ce qui est affiché dans l'application :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/affichageHistorique.png[2878, 906]
+
+Comme on peut le voir, les données sont les mêmes.
 
 === Partie Python
 
