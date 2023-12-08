@@ -1,1 +1,26 @@
+# Documentation Utilisateur
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.1.2
+Date : 12/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Site de e-commerce Sigma Prime
+----
+
+== Tests du site e-commerce
+
+=== Partie Web
+
+==== Naviguer sur le site
+
+==== Se connecter avec un compte client
+
+==== Créer un compte client
+
+=== Partie BD
 
