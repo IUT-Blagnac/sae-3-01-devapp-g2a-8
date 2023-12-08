@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['SigmaPrime_acces']) || $_SESSION['SigmaPrime_acces'] == "oui") {
+    header('Location: index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,72 +23,76 @@
 
     <div class="login-container">
         <h1>Créer un compte <br>SigmaPrime</h1>
-        <form method="post">
+        <form action="TraitCreationCompte.php" method="post">
+        <?php
+            if (isset($_GET['msgErreur'])) {
+                echo '<p style="color: red;">' . htmlspecialchars($_GET['msgErreur']) . '</p>';
+            }
+        ?>
             <div class="form-columns">
                 <div class="form-column">
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="nom" required>
                         <span></span>
-                        <label for="username">Nom</label>
+                        <label>Nom</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="prenom" required>
                         <span></span>
-                        <label for="username">Prénom</label>
+                        <label>Prénom</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="email" required>
                         <span></span>
-                        <label for="username">Adresse e-mail</label>
+                        <label>Adresse e-mail</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="adresse" required>
                         <span></span>
-                        <label for="username">Adresse</label>
+                        <label>Adresse</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="date" name="date" value="2000-01-01" required>
                         <span></span>
-                        <label for="username">Date de naissance</label>
+                        <label>Date de naissance</label>
                     </div>
                 </div>
 
                 <div class="form-column">
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="ville" required>
                         <span></span>
-                        <label for="username">Ville</label>
+                        <label>Ville</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="codePostal" required>
                         <span></span>
-                        <label for="username">Code postal</label>
+                        <label>Code postal</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" required>
+                        <input type="text" name="telephone" required>
                         <span></span>
-                        <label for="username">Téléphone</label>
+                        <label>Téléphone</label>
                     </div>
                     <div class="form-field">
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <span></span>
-                        <label for="password">Mot de passe</label>
+                        <label>Mot de passe</label>
                     </div>
                     <div class="form-field">
-                        <input type="password" required>
+                        <input type="password" name="confirmPassword" required>
                         <span></span>
-                        <label for="password">Confirmer le mot de passe</label>
+                        <label>Confirmer le mot de passe</label>
                     </div>
                 </div>
             </div>
 
-            <input type="submit" value="S'inscrire">
+            <input type="submit" name="EnvoiCreation" value="S'inscrire">
             <div class="signup-link">
                 Vous avez déjà un compte ? <a href="FormConnexion.php">Connectez-vous !</a>
             </div>
         </form>
     </div>
-
 
     <?php
       include("include/footer.php")
