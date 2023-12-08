@@ -56,11 +56,15 @@ Comme on peut le voir dans le fichier Json de l'historique, nous avons à chaque
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/historiqueJson.png[226, 331]
 
+De même pour les alertes : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/historiqueJson.png[554, 327]
+
 Maintenant, voici ce qui est affiché dans l'application :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/affichageHistorique.png[2878, 906]
 
-Comme on peut le voir, les données sont les mêmes.
+Comme on peut le voir, les données sont les mêmes et les alertes également.
 
 === Partie Python
 
