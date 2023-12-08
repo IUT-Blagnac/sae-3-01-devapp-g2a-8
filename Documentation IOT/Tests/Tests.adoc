@@ -34,8 +34,10 @@ Comme nous pouvons le voir, les données ont été modifiées. Le programme pyth
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/config_modif.png[181, 336]
 
-Maintenant on souhaite choisir les salles dont on veux recevoir les Données
-On clique donc sur le bouton "Entrepots" sur la page principale
+Maintenant on souhaite choisir les salles dont on veux recevoir les Données.
+
+On clique donc sur le bouton "Entrepots" sur la page principale. Actuellement, la liste "salle" est vide car aucune salle n'est sélectionnée.
+
 
 === Partie Python
 
