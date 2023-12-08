@@ -69,8 +69,8 @@ Le GitHub est séparé en deux parties bien disctinctes. +
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT[Lien vers la documentation de la partie IOT] +
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web[Lien vers la documentation de la partie Web]
 
-Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.2[v0.2] +
-Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.2[v0.2]
+Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.3[v0.3] +
+Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.3[v0.3]
 
 == Gestion de projet & Qualité
 
