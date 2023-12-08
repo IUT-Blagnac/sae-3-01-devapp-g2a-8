@@ -83,7 +83,7 @@ Ordinateur possédant les installations requises :
 |====
 
 >|Cas de test 4+|Test-01-02-01
->|Titre 4+|Les données de l'historique sont affichées et correctes
+>|Titre 4+|Les alertes de l'historique sont affichées et correctes
 >|Objectif 4+| Pouvoir consulter les anciennes alertes depuis l'application JavaFX
 
 5+|
