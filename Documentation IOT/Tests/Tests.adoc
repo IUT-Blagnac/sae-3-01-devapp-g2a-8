@@ -54,7 +54,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 Comme on peut le voir dans le fichier Json de l'historique, nous avons à chaque fois : la salle, la date et les différentes données qui y sont associées.
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/historiqueJson.png[452, 762]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/historiqueJson.png[226, 331]
 
 Maintenant, voici ce qui est affiché dans l'application :
 
