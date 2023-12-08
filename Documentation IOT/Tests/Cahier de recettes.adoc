@@ -64,19 +64,32 @@ Ordinateur possédant les installations requises :
 |====
 
 
-==== 1.2 ... :
+==== 1.2 L'historique des données et des alertes est correct :
 
 
 |====
 
 >|Cas de test 4+|Test-01-02-01
->|Titre 4+|...
->|Objectif 4+| ...
+>|Titre 4+|Les données de l'historique sont affichées et correctes
+>|Objectif 4+| Pouvoir consulter les anciennes données depuis l'application JavaFX
 
 5+|
 
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_CB.1 ^|... ^|... ^|... ^|OK
+^|All_G_CB.1 ^|Cliquer sur le bouton historique. ^|Affichage des données de l'historique. ^|Aucune ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-02-01
+>|Titre 4+|Les données de l'historique sont affichées et correctes
+>|Objectif 4+| Pouvoir consulter les anciennes alertes depuis l'application JavaFX
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_CB.1 ^|Cliquer sur le bouton historique. ^|Affichage des alertes de l'historique. ^|Aucune ^|OK
 ...
 
 |====
