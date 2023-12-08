@@ -30,14 +30,11 @@ endif::[]
 
 WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT2 Informatique de l'IUT de Blagnac.
 
-Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquement effectué par GitHUb), fait partie du dépôt initial cloné à partir du lien GitHub classroom qui vous a été donné en cours (https://classroom.github.com/a/fePVlfpN).
-Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. <<liensUtiles>>), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
-
 toc::[]
 
 == Equipe
 
-Projet est réalisé par::
+Ce projet est réalisé par::
 
 - https://github.com/tristandlth[Tristan Delthil (Scrum Master)]
 - https://github.com/paulEspi117[Paul Espinasse]
@@ -51,10 +48,6 @@ TIP: Cette partie de votre `README.adoc` peut être supprimée ou mise ailleurs.
 
 === Dépôt initial
 
-Ce dépôt initial a été créé pour que tous les groupes de 2ème année aient les mêmes informations de départ.
-
-Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pas utiles :
-
 - `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l'ajout d'un fichier Jar qui ne bougera plus, pour archive par exemple).
 - `.github` => le répertoire qui contient des éléments de gestion de projet :
 ** `workflows` => le repertoire qui contient les actions à lancer à chaque push sur votre repo. 
@@ -63,8 +56,6 @@ Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pa
 *** `us.yml` => Exemple de template pour les User Stories
 *** `bug.yml` => Exemple de template pour les issues de bug report
 
-TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-vous en pour en ajouter.
-
 [[liensUtiles]]
 === Liens utiles
 
@@ -72,17 +63,13 @@ TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-
 - Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
 - Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
 
-TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
-
 == Réalisations 
-
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
 
 Le GitHub est séparé en deux parties bien disctinctes. +
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT[Lien vers la documentation de la partie IOT] +
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web[Lien vers la documentation de la partie Web]
 
-Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.2[v0.2]
+Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.2[v0.2] +
 Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.2[v0.2]
 
 == Gestion de projet & Qualité
@@ -99,7 +86,8 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog produit]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/89f9c050e7c9f7faf2d7e5024827c339c47164ca/Base%20de%20donn%C3%A9es[base de données]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/129[User Stories en cours de développement]
-- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web/Tests[tests]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Cahier%20de%20recettes.adoc[cahier de recettes]
+- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Tests.adoc[tests]
 - Indicateurs de qualité du code (dette technique) *(à venir)*
 
 === Partie IOT (Java-Python)
@@ -108,7 +96,8 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog produit]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/144[User Stories en cours de développement]
-- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT/Tests[tests]  
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/Cahier%20de%20recettes.adoc[cahier de recettes]
+- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/Tests.adoc[tests]
 - Indicateurs de qualité du code (dette technique) *(à venir)*
 
 
