@@ -1,1 +1,82 @@
+= Cahier De Recette - Site e-commerce (SigmaPrime)
+:toc:
+:toc-title: Sommaire 
 
+
+
+== I. Introduction
+=== 1. Objet :
+[.text-justify]
+Ce document a été produit dans le cadre d'un projet de création d'un site web e-commerce pour l'entreprise SigmaPrime.
+
+
+== II. Pre-Requis :
+[.text-justify]
+L'exécution des tests spécifiés au chapitre suivant requiert :
+
+* ...
+
+=== 1. Éléments à tester :
+[.text-justify]
+Les éléments testés concernent les users story.
+
+
+=== 2. Environnement de test :
+[.text-justify]
+Ordinateur possédant les installations requises :
+
+* Un navigateur internet
+* Un accès au site web
+
+
+== III. Cas de test :
+=== 1. Naviguer sur le site web :
+==== 1.1 La page d'accueil du site est accessible :
+
+|====
+
+>|Cas de test 4+|Test-01-01-01
+>|Titre 4+|Accès à la page d'accueil
+>|Objectif 4+| Pouvoir accéder à la page d'accueil du site
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Se connecter à l'adresse du site. ^|Affichage de la page d'accueil. ^| aucune ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-01-02
+>|Titre 4+|Affichage des différentes catégories
+>|Objectif 4+| Avoir accès aux différentes catégories depuis la page d'accueil du site
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur la page d'accueil du site. ^|Accès aux différentes catégories et sous-catégories du site. ^| aucune ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-01-03
+>|Titre 4+|Se connecter au site
+>|Objectif 4+| Pouvoir se connecter avec un compte client
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur la page de connexion et entrer ses identifiants. ^|Connexion au compte (création d'une session). ^| Avoir un compte client ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-01-03
+>|Titre 4+|Créer un compte
+>|Objectif 4+| Pouvoir créer un compte client
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur la page de création d'un compte et entrer ses informations. ^|Création du compte et insertion dans la BD. ^| Aucune ^|OK
+
+|====
