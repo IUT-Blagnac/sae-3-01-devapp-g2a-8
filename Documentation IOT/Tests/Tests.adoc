@@ -38,6 +38,19 @@ Maintenant on souhaite choisir les salles dont on veux recevoir les Données.
 
 On clique donc sur le bouton "Entrepots" sur la page principale. Actuellement, la liste "salle" est vide car aucune salle n'est sélectionnée.
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/configVierge.png[200, 350]
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/listeSalleVierge.png[200, 350]
+
+On choisie maintenant des salles dans la liste:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/listeSalles.png[200, 350]
+
+Après avoir validé et fermé la fenêtre, on peut voir que la liste "salle" dans le fichier config a été mise à jour:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/configListeSalle.png[250, 400]
+
+
 
 === Partie Python
 
