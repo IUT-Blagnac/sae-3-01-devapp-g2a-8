@@ -108,6 +108,8 @@ image:https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s
 endif::[]
 Sprint 1 : Quel est votre backlog sprint 1 pour le site  ? Si c'est les US en TODO elles devraient avoir un milestone sprint 1. Sinon OK. Les docs doivent être initialisées (page de garde, sommaire ... cf. SAE2) ... je n'ai qu'un lien vers un doc vide ! Pas de tests ni de fiches, ni de plan de tests ... pourtant des tâches sont terminées en IOT ! Pas de release ou au moins un état d'avancement ...
 S2 :Release : commenter la relaese (reste à faire par ex).  Readme à revoir j'ai toujours beaucoup d'inutile. Pensez à affecter une US à un sprint (Milestone) et à l'assignée lorsqu'elle est en todo. Pour un meilleur suivi il faudrait une vue par sprint dans votre projet.  Faire une page de garde pour les docs (cf. S2).  Tests j'ai des liens vers des adoc qui ne s'ouvrent pas.
+
+S3 : Commencer à implémenter la doc technique  ! Préciser le nom de votre client. Mettre un lien vers le site fonctionnel si possible. Ok pour le cahier de recette, je e comprends pas le lien vers les tests qui reprend la doc utilisateur ? Le scrumboard n'indique pas le sprint en cours  et ne garde pas l'historique des sprints passés du coup c'est très confus : US en sprint 4 , en sprint 5 ... en Scrum on ne prévoit que le sprint courant. Toutes les tâches doivent être rattachées à une US.
 ifndef::env-github[]
 ++++
 <iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image"></iframe>
