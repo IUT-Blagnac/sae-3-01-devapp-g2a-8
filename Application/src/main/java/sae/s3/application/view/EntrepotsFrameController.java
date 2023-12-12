@@ -83,10 +83,10 @@ public class EntrepotsFrameController {
     }
 
     private List<String> buttonNames = Arrays.asList(
-            "C004", "B106", "E003", "Serveurs", "E209", "B234", "E207", "E103", "hallAmphi",
-            "B103", "B113", "B217", "E106", "B212", "E102", "FoyerPersonnel", "B201", "amphi1",
-            "E208", "hallEntreePrincipale", "E206", "B112", "E210", "E105", "B111", "B110",
-            "B109", "E100", "E007", "salleConseil", "E104", "B203", "B003", "localVelo", "B108",
+            "C004", "B106", "E003", "Serveurs", "E209", "B234", "E207", "E103", " hall-amphi",
+            "B103", "B113", "B217", "E106", "B212", "E102", "Foyer-personnels", "B201", "amphi1",
+            "E208", "hall-entrée-principale", "E206", "B112", "E210", "E105", "B111", "B110",
+            "B109", "E100", "E007", "salleConseil", "E104", "B203", "B003", "Local-velo", "B108",
             "E006", "C006", "E004", "B202", "E001", "E101"
     );
 
