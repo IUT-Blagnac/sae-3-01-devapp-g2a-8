@@ -19,7 +19,7 @@ activity_min = config
 frequenceDonnees = config
 salle_config = config
 frequenceConfig = 15.0
-
+dictBoolDonnees = {}
 
 #Lecture du fichier configuration
 def read_config():
@@ -33,6 +33,7 @@ def read_config():
     global activity_min
     global frequenceDonnees
     global salle_config
+    global dictBoolDonnees
 
     config.read("config.ini")
 
@@ -46,6 +47,11 @@ def read_config():
     activity_min = config.getfloat('Seuils', 'activity_min')
     frequenceDonnees = config.getfloat('Frequences', 'frequence')
     salle_config = config['Salles']['salle']
+    dictBoolDonnees = {"Activite":config.getboolean('Donnees', 'activity'),
+                      "CO2":config.getboolean('Donnees', 'co2'),
+                      "Temperature":config.getboolean('Donnees', 'temperature'),
+                      "Humidite":config.getboolean('Donnees', 'humidity')
+                      }
 
     minuteurConfig = Timer(frequenceConfig, read_config)
     minuteurConfig.start()
@@ -119,6 +125,7 @@ def on_connect(client, userdata, flags, rc):
 # Réception des données
 def on_message(client, userdata, msg):
     global donneesHist
+    global dictBoolDonnees
     message = msg.payload
     data = json.loads(message)
     if "room" in data[1]:
@@ -127,10 +134,22 @@ def on_message(client, userdata, msg):
 
         if salle_config == "+" or salle_config == salleActuelle :
             salle = data[1]["room"]
-            temp = data[0]["temperature"]
-            hum = data[0]["humidity"]
-            co2 = data[0]["co2"]
-            act = data[0]["activity"]
+            if dictBoolDonnees["Temperature"] is True:
+                temp = data[0]["temperature"]
+            else:
+                temp = ""
+            if dictBoolDonnees["Humidite"] is True:
+                hum = data[0]["humidity"]
+            else:
+                hum = ""
+            if dictBoolDonnees["CO2"] is True:
+                co2 = data[0]["co2"]
+            else:
+                co2 = ""
+            if dictBoolDonnees["Activite"] is True:
+                act = data[0]["activity"]
+            else:
+                act = ""
 
             os.write(fDest, b'{\n\t"')
             os.write(fDest, str.encode(salle))
