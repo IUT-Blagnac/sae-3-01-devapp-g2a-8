@@ -31,7 +31,7 @@ public class MainFrame extends Application {
         this.primaryStage = primaryStage;
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(MainFrameController.class.getResource("main-frame.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+            Scene scene = new Scene(fxmlLoader.load(), 1001, 600);
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/sae/s3/application/application.css")).toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setTitle("Données des entrepôts");
