@@ -16,9 +16,38 @@ Projet : Développement d'un site de e-commerce
 
 == Présentation du site web
 
+L'entreprise SigmaPrime veut créer un site e-commerce pour gagner en visibilité et en notoriété, conquérir des parts de marché, vendre des produits en ligne et informer ses clients, partenaires et fournisseurs. Le site permet la création et connexion à un compte avec la possibilité d'acheter différents articles en ligne de façon sécurisée.
+
+Les principaux utilisateurs du site sont les clients et les administrateurs. Les administrateurs travaille pour l'entreprise SigmaPrime et bénéficient de fonctionnalités supplémentaires.
+
+Fonctionnalités du client :
+
+    - Création d'un compte avec possibilité de s'y connecter.
+
+    - Modification des informations personnelles sur la page "Compte".
+
+    - Naviguer sur le site.
+
+    - Ajouter des articles au panier et procéder au paiement.
+
+Fonctionnalités de l'administrateur :
+
+    - Accès à une page privée et sécurisée.
+
+    - Gestion des comptes clients (modifier, supprimer).
+
+    - Gestion des commandes (modifier, supprimer).
+
+    - Gestion des articles (ajouter, modifier, supprimer).
+
+
 == Architecture
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Architecture%20du%20site.png[]
+
 == Structure
+
+La structure du système est composé d'un serveur web Apache, d'une base de données et d'un navigateur permettant l'affichage du site e-commerce.
 
 == Éléments essentiels
 
