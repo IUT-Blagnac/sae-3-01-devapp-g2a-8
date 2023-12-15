@@ -54,11 +54,33 @@ Il est également possible de cliquer sur "Se souvenir de moi" pour ne pas avoir
 
 ==== Gérer le panier
 
+Il est possible de supprimer l'entièreté du panier grâce au bouton "Supprimer mon panier" ou de choisir de supprimer seulement un article en cliquant sur "Supprimer".
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panier.png[]
+
 ==== Trier la liste des produits (croissant/décroissant)
 
 ==== Rechercher des produits
 
 === Fonctionnalités client (un client est un visiteur possédant un compte) : 
+
+==== Afficher les informations de son compte
+
+Avant d'afficher les informations de votre compte, il vous faut être connecté. Ensuite, cliquez sur l'onglet "Compte" représenté par l'image ci-dessous :
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Compte.png[]
+
+Vous pourrez alors afficher vos informations :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/affichageInformations.png[]
+
+==== Modifier les informations de son compte
+
+Avant de modifier les informations de votre compte, il vous faut être connecté. Ensuite, cliquez sur l'onglet "Compte" représenté par l'image ci-dessous :
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Compte.png[]
+
+Vous pourrez alors cliquer sur "Editer" et vous pourrez modifier vos informations en validant les modifications :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/modifInformations.png[]
 
 ==== Procéder au paiement
 
