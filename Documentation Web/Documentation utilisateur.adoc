@@ -67,6 +67,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 ==== Afficher les informations de son compte
 
 Avant d'afficher les informations de votre compte, il vous faut être connecté. Ensuite, cliquez sur l'onglet "Compte" représenté par l'image ci-dessous :
+
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Compte.png[]
 
 Vous pourrez alors afficher vos informations :
@@ -76,6 +77,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 ==== Modifier les informations de son compte
 
 Avant de modifier les informations de votre compte, il vous faut être connecté. Ensuite, cliquez sur l'onglet "Compte" représenté par l'image ci-dessous :
+
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Compte.png[]
 
 Vous pourrez alors cliquer sur "Editer" et vous pourrez modifier vos informations en validant les modifications :
