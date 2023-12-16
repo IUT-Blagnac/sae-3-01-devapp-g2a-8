@@ -125,12 +125,26 @@ Ordinateur possédant les installations requises :
 
 |====
 
+==== 1.6 Parcourir les produits :
+
+|====
+
+>|Cas de test 4+|Test-01-01-08
+>|Titre 4+|Parcourir les produits
+>|Objectif 4+| Parcourir les produits triés par classes et sous classes
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Afficher les produits de manière détaillée. ^|Accès aux différents produits de la catégorie. ^| accéder à une sous catégorie ^|OK
+
+|====
+
 === 2. Fonctionnalités d'un client connecté :
 ==== 2.1 Le client peut accéder à ses informations et les modifier :
 
 |====
 
->|Cas de test 4+|Test-01-01-08
+>|Cas de test 4+|Test-01-01-09
 >|Titre 4+|Accéder à son compte
 >|Objectif 4+| Afficher les informations personnelles liées au compte
 
@@ -142,7 +156,7 @@ Ordinateur possédant les installations requises :
 
 |====
 
->|Cas de test 4+|Test-01-01-08
+>|Cas de test 4+|Test-01-01-09
 >|Titre 4+|Modifier son profil
 >|Objectif 4+| Afficher les informations personnelles liées au compte et les modifier
 
@@ -154,7 +168,7 @@ Ordinateur possédant les installations requises :
 
 |====
 
->|Cas de test 4+|Test-01-01-08
+>|Cas de test 4+|Test-01-01-09
 >|Titre 4+|Modification du mot de passe
 >|Objectif 4+| Modifier le mot de passe du compte client
 
