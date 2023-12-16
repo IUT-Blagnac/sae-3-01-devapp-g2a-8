@@ -70,7 +70,9 @@ https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%2
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web[Lien vers la documentation de la partie Web]
 
 Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.3[v0.3] +
-Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.3[v0.3]
+Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.3[v0.3] +
+
+Lien vers le site SigmaPrime : http://193.54.227.208/~saephp08/index.php[v0.4]
 
 == Gestion de projet & Qualité
 
