@@ -7,6 +7,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+}
+
+
+
+.container {
+    text-align: center;
+    margin-top: 50px;
 }
 
 header {
@@ -159,7 +167,6 @@ nav a {
     margin-right: 5px;
 }
 
-/* Responsive */
 @media only screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -167,6 +174,92 @@ nav a {
     }
 
     #header-left, #header-right {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px; /* Ajout d'une marge en haut pour séparer le logo du menu sur les petits écrans */
+    }
+
+    header li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header li a {
+        padding: 15px;
+    }
+
+    header li:hover .menu-deroulant {
+        position: static;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-deroulant li {
+        width: 100%;
+    }
+
+    #panier-button, #login-button {
         margin-top: 10px;
     }
+
+    #header-right input {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.modif-compte-container {
+    position: relative;
+    margin: 50px auto 100px;
+    top: 40%;
+    width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+}
+
+.modif-compte-container h1 {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid silver;
+}
+
+.modif-compte-container form {
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.modif-form-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.modif-form-field label {
+    width: 150px;
+    margin-right: 10px;
+    color: #adadad;
+    font-size: 16px;
+}
+
+.modif-form-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: none;
+    outline: none;
+}
+
+.modif-compte-container form {
+    margin-top: 20px;
 }

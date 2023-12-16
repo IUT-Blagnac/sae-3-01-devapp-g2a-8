@@ -21,12 +21,22 @@ if (!empty($_POST['EnvoiCreation']) && !empty($_POST['nom']) && !empty($_POST['p
         $confirmMotDePasse = $_POST['confirmPassword'];
 
         if(!is_numeric($codePostal)){
-            header("Location: CreerCompte.php?msgErreur=Le code postal doit être composé de chiffres !");
+            header("Location: Register.php?msgErreur=Le code postal doit être composé de chiffres !");
             exit();
         }
 
         if(!is_numeric($telephone)){
-            header("Location: CreerCompte.php?msgErreur=Le numéro de téléphone doit être composé de chiffres !");
+            header("Location: Register.php?msgErreur=Le numéro de téléphone doit être composé de chiffres !");
+            exit();
+        }
+
+        $req = $conn->prepare("SELECT COUNT(*) as count FROM Client WHERE emailClient = :email");
+        $req->bindParam(':email', $email);
+        $req->execute();
+        $count = $req->fetch(PDO::FETCH_ASSOC)['count'];
+
+        if ($count > 0) {
+            header('Location: Register.php?msgErreur=L\'adresse e-mail est déjà utilisée par un autre compte.');
             exit();
         }
 
@@ -35,7 +45,7 @@ if (!empty($_POST['EnvoiCreation']) && !empty($_POST['nom']) && !empty($_POST['p
 
             $ptFidelite = 0;
             $civilite = 'H';
-            $typeCompte = "C";
+            $typeCompte = "Client";
 
             $req = $conn->prepare("INSERT INTO Client (mdp, ptFidelite, civiliteClient, nomClient, prenomClient, adresseRueClient, codePostalClient, villeClient, telephoneClient, dtNaissanceClient, emailClient, typeCompte) VALUES (:mdp, :ptFidelite, :civilite, :nom, :prenom, :adresse, :codePostal, :ville, :telephone, :dateNaissance, :email, :typeCompte)");
 
@@ -58,15 +68,15 @@ if (!empty($_POST['EnvoiCreation']) && !empty($_POST['nom']) && !empty($_POST['p
 
             exit();
         } else {
-            header("Location: CreerCompte.php?msgErreur=Les mots de passe ne correspondent pas");
+            header("Location: Register.php?msgErreur=Les mots de passe ne correspondent pas");
             exit();
         }
     } else {
-        header("Location: CreerCompte.php?msgErreur=Tous les champs doivent être remplis");
+        header("Location: Register.php?msgErreur=Tous les champs doivent être remplis");
         exit();
     }
 } else {
-    header("Location: CreerCompte.php");
+    header("Location: Register.php");
     exit();
 }
 ?>

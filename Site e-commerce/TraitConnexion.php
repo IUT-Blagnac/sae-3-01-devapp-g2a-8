@@ -7,7 +7,7 @@ if (!empty($_POST['EnvoiLogin']) && !empty($_POST['email']) && !empty($_POST['pa
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $req = $conn->prepare("SELECT emailClient, mdp, typeCompte FROM Client WHERE emailClient=:email");
+    $req = $conn->prepare("SELECT idClient, emailClient, mdp, typeCompte FROM Client WHERE emailClient=:email");
     $req->bindParam(':email', $email);
     $req->execute();
 
@@ -16,6 +16,7 @@ if (!empty($_POST['EnvoiLogin']) && !empty($_POST['email']) && !empty($_POST['pa
     if($user && password_verify($password, $user['mdp'])){
         $_SESSION['SigmaPrime_acces'] = "oui";
         $_SESSION['SigmaPrime_login'] = htmlentities($email);
+        $_SESSION['SigmaPrime_idClient'] = $user['idClient'];
 
         if($user['typeCompte'] == "Admin"){
             $_SESSION['SigmaPrime_admin'] = "Admin";
