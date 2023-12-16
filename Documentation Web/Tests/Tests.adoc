@@ -93,7 +93,7 @@ Les flocons d'avoine sont bien supprimés.
 
 Et maintenant on supprime tout le panier : 
 
-https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panierSupprimer.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panierSupprimer.png[]
 
 Cela fonctionne également.
 
