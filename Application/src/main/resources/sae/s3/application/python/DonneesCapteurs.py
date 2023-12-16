@@ -5,26 +5,61 @@ import json
 import configparser
 from threading import Timer
 
-# Lecture du fichier de configuration
-config = configparser.ConfigParser()
-config.read("config.ini")
-
-temperature_max = config.getfloat('Seuils', 'temperature_max')
-humidity_max = config.getfloat('Seuils', 'humidity_max')
-co2_max = config.getfloat('Seuils', 'co2_max')
-activity_max = config.getfloat('Seuils', 'activity_max')
-temperature_min = config.getfloat('Seuils', 'temperature_min')
-humidity_min = config.getfloat('Seuils', 'humidity_min')
-co2_min = config.getfloat('Seuils', 'co2_min')
-activity_min = config.getfloat('Seuils', 'activity_min')
-frequence = config.getfloat('Frequences', 'frequence')
-salle_config = config['Salles']['salle']
+# Données globales
 donneesHist = []
+config = configparser.ConfigParser()
+temperature_max = config
+humidity_max = config
+co2_max = config
+activity_max = config
+temperature_min = config
+humidity_min = config
+co2_min = config
+activity_min = config
+frequenceDonnees = config
+salle_config = config
+frequenceConfig = 15.0
+dictBoolDonnees = {}
+
+#Lecture du fichier configuration
+def read_config():
+    global temperature_max
+    global humidity_max
+    global co2_max
+    global activity_max
+    global temperature_min
+    global humidity_min
+    global co2_min
+    global activity_min
+    global frequenceDonnees
+    global salle_config
+    global dictBoolDonnees
+
+    config.read("config.ini")
+
+    temperature_max = config.getfloat('Seuils', 'temperature_max')
+    humidity_max = config.getfloat('Seuils', 'humidity_max')
+    co2_max = config.getfloat('Seuils', 'co2_max')
+    activity_max = config.getfloat('Seuils', 'activity_max')
+    temperature_min = config.getfloat('Seuils', 'temperature_min')
+    humidity_min = config.getfloat('Seuils', 'humidity_min')
+    co2_min = config.getfloat('Seuils', 'co2_min')
+    activity_min = config.getfloat('Seuils', 'activity_min')
+    frequenceDonnees = config.getfloat('Frequences', 'frequence')
+    salle_config = config['Salles']['salle']
+    dictBoolDonnees = {"Activite":config.getboolean('Donnees', 'activity'),
+                      "CO2":config.getboolean('Donnees', 'co2'),
+                      "Temperature":config.getboolean('Donnees', 'temperature'),
+                      "Humidite":config.getboolean('Donnees', 'humidity')
+                      }
+
+    minuteurConfig = Timer(frequenceConfig, read_config)
+    minuteurConfig.start()
 
 # Ecriture des données dans le fichier historique.json
 def write_log():
     global donneesHist
-    
+
     for data in donneesHist:
         salle = data["Salle"]
         date = data["Date"]
@@ -35,7 +70,6 @@ def write_log():
         donnees = {date: {"Humidite": hum, "Temperature": temp, "CO2": co2, "Activite": act}}
 
         if not os.path.exists("historique.json"):
-            date = list(donneesHist.keys())[0]
 
             fDest = os.open('historique.json', os.O_RDWR | os.O_CREAT | os.O_APPEND)
             os.write(fDest, b'{\n\t"')
@@ -69,7 +103,7 @@ def write_log():
                 existe = False
                 for cle, val in donnees_existantes.items():
                     if cle == salle:
-                        donnees_existantes[salle].update(donneesHist)
+                        donnees_existantes[salle].update(donnees)
                         existe = True
                         break
 
@@ -81,8 +115,8 @@ def write_log():
                 json.dump(donnees_existantes, fichier_json, indent=4)
 
     donneesHist = []
-    minuteur = Timer(frequence, write_log)
-    minuteur.start()
+    minuteurHistorique = Timer(frequenceDonnees, write_log)
+    minuteurHistorique.start()
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -91,6 +125,7 @@ def on_connect(client, userdata, flags, rc):
 # Réception des données
 def on_message(client, userdata, msg):
     global donneesHist
+    global dictBoolDonnees
     message = msg.payload
     data = json.loads(message)
     if "room" in data[1]:
@@ -99,10 +134,22 @@ def on_message(client, userdata, msg):
 
         if salle_config == "+" or salle_config == salleActuelle :
             salle = data[1]["room"]
-            temp = data[0]["temperature"]
-            hum = data[0]["humidity"]
-            co2 = data[0]["co2"]
-            act = data[0]["activity"]
+            if dictBoolDonnees["Temperature"] is True:
+                temp = data[0]["temperature"]
+            else:
+                temp = ""
+            if dictBoolDonnees["Humidite"] is True:
+                hum = data[0]["humidity"]
+            else:
+                hum = ""
+            if dictBoolDonnees["CO2"] is True:
+                co2 = data[0]["co2"]
+            else:
+                co2 = ""
+            if dictBoolDonnees["Activite"] is True:
+                act = data[0]["activity"]
+            else:
+                act = ""
 
             os.write(fDest, b'{\n\t"')
             os.write(fDest, str.encode(salle))
@@ -142,21 +189,21 @@ def on_message(client, userdata, msg):
         
 
         if data[0]["temperature"] > temperature_max:
-            ajouter_alerte(salle, "temperature_max", "alerte.json")
+            ajouter_alerte(salleActuelle, "temperature_max", "alerte.json")
         if data[0]["humidity"] > humidity_max:
-            ajouter_alerte(salle, "humidity_max", "alerte.json")
+            ajouter_alerte(salleActuelle, "humidity_max", "alerte.json")
         if data[0]["co2"] > co2_max:
-            ajouter_alerte(salle, "co2", "alerte.json")
+            ajouter_alerte(salleActuelle, "co2", "alerte.json")
         if data[0]["activity"] > activity_max:
-            ajouter_alerte(salle, "activity_max", "alerte.json")
+            ajouter_alerte(salleActuelle, "activity_max", "alerte.json")
         if data[0]["temperature"] < temperature_min:
-            ajouter_alerte(salle, "temperature_min", "alerte.json")
+            ajouter_alerte(salleActuelle, "temperature_min", "alerte.json")
         if data[0]["humidity"] < humidity_min:
-            ajouter_alerte(salle, "humidity_min", "alerte.json")
+            ajouter_alerte(salleActuelle, "humidity_min", "alerte.json")
         if data[0]["co2"] < co2_min:
-            ajouter_alerte(salle, "co2_min", "alerte.json")
+            ajouter_alerte(salleActuelle, "co2_min", "alerte.json")
         if data[0]["activity"] > activity_min:
-            ajouter_alerte(salle, "activity_min", "alerte.json")
+            ajouter_alerte(salleActuelle, "activity_min", "alerte.json")
 
 
 def ajouter_alerte(salle, type_alerte, fichier_alerte):
@@ -188,13 +235,14 @@ def ajouter_alerte(salle, type_alerte, fichier_alerte):
         print(f"Erreur lors de la création du fichier d'alerte : {e}")
 
 
+read_config()
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
 client.connect("chirpstack.iut-blagnac.fr", 1883, 60)
 
-minuteur = Timer(frequence, write_log)
-minuteur.start()
+minuteurHistorique = Timer(frequenceDonnees, write_log)
+minuteurHistorique.start()
 
 client.loop_forever()

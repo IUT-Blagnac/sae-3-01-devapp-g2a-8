@@ -353,11 +353,13 @@ public class SettingsFrameController {
             String sallesString = sallesProperties.getProperty("salle", "");
             sallesString = sallesString.replaceAll("\\[|\\]", "");  // Retire "[" et "]"
             String[] sallesArray = sallesString.split(",");
+
             selectedButtonLabels.clear();
 
             // Ajouter chaque salle à la liste des boutons sélectionnés
             for (String salle : sallesArray) {
                 selectedButtonLabels.add(salle.trim());
+
             }
         }
     }

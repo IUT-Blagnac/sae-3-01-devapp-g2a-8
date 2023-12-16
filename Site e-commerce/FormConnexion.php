@@ -12,8 +12,6 @@
     ?>
 
     <?php
-        session_start();
-
         if (isset($_COOKIE["SigmaPrime_remember_me"])) {
             $email = $_COOKIE["SigmaPrime_remember_me"];
         } else {
@@ -26,7 +24,7 @@
         <form action="TraitConnexion.php" method="post">
         <?php
             if (isset($_GET['msgErreur'])) {
-                echo '<p style="color: red;">' . htmlspecialchars($_GET['msgErreur']) . '</p>';
+                echo '<p style="color: red;">' . htmlentities($_GET['msgErreur']) . '</p>';
             }
         ?>
             <div class="form-field">
@@ -43,7 +41,7 @@
             <input type="checkbox" name="remember_me" id="remember_me">Se souvenir de moi<br><br>
             <input type="submit" name="EnvoiLogin" value="Me connecter">
             <div class="signup-link">
-                Vous n'avez pas de compte ? <a href="CreerCompte.php">Créez-en un !</a>
+                Vous n'avez pas de compte ? <a href="Register.php">Créez-en un !</a>
             </div>
         </form>
     </div>
@@ -53,3 +51,4 @@
     ?>
 </body>
 </html>
+﻿
