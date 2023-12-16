@@ -58,5 +58,14 @@ Dans le cas où le numéro de téléphone n'est pas au bon format :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisTel.png[scale=50]
 
+==== Visualiser les produits
+Depuis n'importe quelle page du site , il suffit de cliquer sur n'importe quelle catégorie en haut de la page pour visualiser chaque catégorie de produit.
+
+On clique ensuite sur la catégorie qu'on souhaite visualiser pour accéder à la liste des produits qui appartiennent à cette catégorie.
+
+Une fois dans cette liste, on peut cliquer sur un produit pour avoir des détails et pour l'ajouter au panier
+
+(Evidemment, ce n'est qu'un début, le design et les fonctionnalités vont changer et s'améliorer par la suite)
+
 === Partie BD
 
