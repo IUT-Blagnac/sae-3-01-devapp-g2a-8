@@ -113,6 +113,8 @@ Sprint 1 : Quel est votre backlog sprint 1 pour le site  ? Si c'est les US en TO
 S2 :Release : commenter la relaese (reste à faire par ex).  Readme à revoir j'ai toujours beaucoup d'inutile. Pensez à affecter une US à un sprint (Milestone) et à l'assignée lorsqu'elle est en todo. Pour un meilleur suivi il faudrait une vue par sprint dans votre projet.  Faire une page de garde pour les docs (cf. S2).  Tests j'ai des liens vers des adoc qui ne s'ouvrent pas.
 
 S3 : Commencer à implémenter la doc technique  ! Préciser le nom de votre client. Mettre un lien vers le site fonctionnel si possible. Ok pour le cahier de recette, je e comprends pas le lien vers les tests qui reprend la doc utilisateur ? Le scrumboard n'indique pas le sprint en cours  et ne garde pas l'historique des sprints passés du coup c'est très confus : US en sprint 4 , en sprint 5 ... en Scrum on ne prévoit que le sprint courant. Toutes les tâches doivent être rattachées à une US.
+
+S4: Pensez à mettre un lien dans le readme vers le site. Date doc à revoir ... la doc tech web n'avance pas vite. Pensez à indiquer le nom du site dans le titre. liens Test toujours aussi confus, ok recette. Idem concernant la gestion des scrumboard ... attention si vous ne voulez pas voir les notes de suivi diminuer.
 endif::[]
 ifndef::env-github[]
 ++++
