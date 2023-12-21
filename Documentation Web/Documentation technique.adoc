@@ -91,7 +91,7 @@ Interactions avec le système : +
 * Le client modifie la quantité d'articles ou supprime des articles de son panier.
 * Le système met à jour le panier du client en conséquence.
 
-== Fonctionnalité - Modifier les informations de son compte (profil > modifier compte)
+== Fonctionnalité - Modifier les informations de son compte
 
 Interactions avec le système : +
 
@@ -100,14 +100,14 @@ Interactions avec le système : +
 * Le système vérifie la validité des données modifiées.
 * Le système enregistre les modifications dans la base de données.
 
-== Fonctionnalité - Voir l'historique de ses commandes (profil > historique commandes)
+== Fonctionnalité - Voir l'historique de ses commandes
 
 Interactions avec le système : +
 
 * Le client utilise l'interface utilisateur du système pour accéder à son profil utilisateur et sélectionne l'option "Historique commandes".
 * Le système affiche la liste des commandes passées par le client.
 
-== Fonctionnalité - Évaluer un produit (profil > historique commandes > mettre un avis sur les commandes que le client n'a pas encore noté)
+== Fonctionnalité - Évaluer un produit
 
 Interactions avec le système : +
 
