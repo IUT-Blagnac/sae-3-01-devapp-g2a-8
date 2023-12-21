@@ -51,7 +51,23 @@ La structure du système est composé d'un serveur web Apache, d'une base de don
 
 == Éléments essentiels
 
-== Fonctionnalités
+== Fonctionnalité - Créer un compte client
+
+Dans cette fonctionnalité, toutes les personnes visisant le site ont la possibilité de créer un compte.
+
+Scénario principal : +
+
+   1 - Le client accède à la page de connexion à un compte et clique sur "Créer un compte".
+   2 - Le système affiche la fenêtre de création de compte.
+   3 - Le client saisit les informations, telles que son nom, son adresse, son numéro de téléphone, son mot de passe (avec confirmation), etc.
+   4 - Le système vérifie les données saisies pour s'assurer de leur validité.
+   5 - Le système enregistre les informations dans la base de données.
+
+Interactions avec le système : +
+
+* Le client utilise l'interface utilisateur du système pour accéder à la page de création de compte client et clique sur "Créer un compte".
+* Le système vérifie la validité des données saisies en effectuant des contrôles, tels que la vérification de la conformité du format des informations, l'absence de doublons, etc.
+* Le système enregistre les nouvelles informations dans la base de données en utilisant des requêtes d'insertion appropriées.
 
 = Partie BD
 
