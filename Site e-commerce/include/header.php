@@ -3,8 +3,8 @@
 ?>
 
 <header>
-    <?php
-        require_once("connect.inc.php");
+        <?php
+            require_once("connect.inc.php");
         ?>
     <div id="header-left">
         <a href="index.php">
@@ -80,28 +80,53 @@
             ?>
             </ul>
             </li>
+
+            <li>
+                <a href="#">Packs</a>
+                <ul class="menu-deroulant">
+            <?php
+                
+                echo "<li><a href='ConsultPack.php'>Découvrez nos packs</a></li>";
+                
+            ?>
+            </ul>
+            </li>
             
         </ul>
 
         </nav>
     </div>
     <div id="header-right">
-        <input type="text" placeholder="Rechercher...">
+    <form id="searchForm" action="ConsultProduit.php" method="get">
+        <input type="text" name="q" id="searchInput" placeholder="Rechercher...">
+        <input type="submit" value="Rechercher">
+    </form>
         <a href="Panier.php">
-            <img src="img/panier.png" alt="Logo Panier"  class="white-background">
+            <img src="img/panier.png" alt="Logo Panier">
         </a>
         <a href="FormConnexion.php">
             <?php
                 if (isset($_SESSION['SigmaPrime_acces']) && $_SESSION['SigmaPrime_acces'] == "oui") {
-                    echo '<a href="Compte.php"><img src="img/compte.png" alt="Logo Compte" class="white-background"></a>';
-                    echo '<a href="Deconnexion.php"><img src="img/logout.png" alt="Logo Déconnexion" class="white-background"></a>';
+                    echo '<a href="Compte.php"><img src="img/compte.png" alt="Logo Compte"</a>';
+                    echo '<a href="Deconnexion.php"><img src="img/logout.png" alt="Logo Déconnexion"</a>';
                     if (isset($_SESSION['SigmaPrime_admin']) && $_SESSION['SigmaPrime_admin'] == "Admin") {
-                        echo '<a href="./admin/Admin.php"><img src="img/admin.png" alt="Logo Administration" class="white-background"></a>';
+                        echo '<a href="./admin/Admin.php"><img src="img/admin.png" alt="Logo Administration"</a>';
                     }
                 } else {
-                    echo '<a href="FormConnexion.php"><img src="img/identification.png" alt="Logo Identification" class="white-background"></a>';
+                    echo '<a href="FormConnexion.php"><img src="img/identification.png" alt="Logo Identification"</a>';
                 }
             ?>
         </a>
+        <script>
+        // Ajoutez un gestionnaire d'événements pour le formulaire
+        document.getElementById('searchForm').addEventListener('submit', function (e) {
+            // Empêcher l'envoi du formulaire par défaut
+            e.preventDefault();
+            // Récupérer la valeur de la barre de recherche
+            var searchTerm = document.getElementById('searchInput').value;
+            // Rediriger vers la page ConsultProduit.php avec le terme de recherche comme paramètre
+            window.location.href = 'ConsultProduit.php?idCategorie=' + encodeURIComponent(searchTerm);
+        });
+    </script>
     </div>
 </header>

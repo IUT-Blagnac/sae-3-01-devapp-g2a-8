@@ -52,6 +52,7 @@
 		echo "</br>";
         echo "<center>";
         echo "Modifier : <a href='ModifClient.php?pIdClient=".$_GET['pIdClient']."'><img src='../img/bouton_modifier.png' alt='Modifier' width='5%'></a>";
+        echo "Supprimer : <a href='SupprimerClient.php?pIdClient=".$_GET['pIdClient']."'><img src='../img/croix_supprimer.png' alt='Supprimer' width='5%'></a>";
         echo "</center>";
     ?>
 </body>
