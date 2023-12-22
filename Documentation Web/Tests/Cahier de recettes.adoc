@@ -177,3 +177,51 @@ Ordinateur possédant les installations requises :
 ^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Editer". ^|Affichage des informations personnelles du client, écrire l'ancien mot de passe et le nouveau puis valider. ^| Avoir un compte et y être connecté ^|OK
 
 |====
+
+|====
+
+>|Cas de test 4+|Test-01-01-10
+>|Titre 4+|Consulter l'historique de ses commandes
+>|Objectif 4+| Pouvoir consulter l'historiquer des commandes passées sur le site
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Consulter l'historique de mes commandes". ^|Affichage des commandes passées avec la possibilité de mettre un avis. ^| Avoir un compte et y être connecté ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-01-11
+>|Titre 4+|Evaluer un article
+>|Objectif 4+| Pouvoir évaluer un article en donnant un avis et une note
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur la page compte, cliquer sur "Consulter l'historique de mes commandes" et évaluer un produit. ^|Ajout d'une note et d'un commentaire sur l'article ^| Avoir un compte et y être connecté ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-01-12
+>|Titre 4+|Afficher les avis clients
+>|Objectif 4+| Pouvoir afficher les avis clients sur chacun des produits
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur un article pour regarder les avis. ^|Affichage de tous les avis clients avec une note moyenne. ^|Aucune. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-01-01-12
+>|Titre 4+|Passer une commande
+>|Objectif 4+| Pouvoir passer une commande avec le panier d'achat
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Aller sur le panier et cliquer sur "Procéder au paiement". ^|Demande des informations pour procéder au paiement et validation de la commande ^|Aucune. ^|OK
+
+|====
