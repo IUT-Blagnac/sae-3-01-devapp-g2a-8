@@ -52,6 +52,10 @@ Il est également possible de cliquer sur "Se souvenir de moi" pour ne pas avoir
 
 ==== Ajouter des articles au panier
 
+Pour ajouter des articles au panier, vous devez vous rendre sur un article et cliquer sur "Ajouter au panier" :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.png[]
+
 ==== Gérer le panier
 
 Il est possible de supprimer l'entièreté du panier grâce au bouton "Supprimer mon panier" ou de choisir de supprimer seulement un article en cliquant sur "Supprimer".
@@ -86,7 +90,26 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 ==== Procéder au paiement
 
+Lorsque vous souhaitez procéder au paiement, il faut vous rendre dans votre panier et cliquer sur "Procéder au paiement" : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/paiementPanier.PNG[]
+
+Vous serez alors redirigé vers la page de paiement et vous devrez entrer les informations demandées :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Payer.PNG[]
+
 ==== Visualiser ses commandes passées
+
+Pour visualiser vos commandes passées, vous devez vous rendre sur votre profil et dans l'onglet "Voir l'historique de mes commandes" : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
+
+==== Evaluer un article
+
+Pour évaluer un article que vous avez commandé, vous devez vous rendre sur votre profil et dans l'onglet "Voir l'historique de mes commandes",
+vous pourrez alors évaluer l'article avec une note, un commentaire et une image si vous le souhaitez :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
 
 ==== Visualiser ses dernières consultations de produits
 
