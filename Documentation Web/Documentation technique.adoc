@@ -5,11 +5,11 @@
 
 = Informations pratiques
 ----
-Version : 0.1.2
-Date : 27/2023
+Version : 0.5
+Date : 22/12/2023
 Equipe : 8
 Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
-Projet : Développement d'un site de e-commerce
+Projet : Développement d'un site de e-commerce pour l'entreprise SigmaPrime
 ----
 
 = Partie Web
@@ -30,15 +30,18 @@ Fonctionnalités du client :
 
     - Ajouter des articles au panier et procéder au paiement.
 
+    - Evaluer un article après avoir passé une commande
+
+
 Fonctionnalités de l'administrateur :
 
     - Accès à une page privée et sécurisée.
 
-    - Gestion des comptes clients (modifier, supprimer).
-
-    - Gestion des commandes (modifier, supprimer).
+    - Gestion des comptes clients (ajouter, modifier, supprimer).
 
     - Gestion des articles (ajouter, modifier, supprimer).
+
+    - Gestion des commandes (modifier, supprimer).
 
 
 == Architecture
@@ -48,8 +51,6 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 == Structure
 
 La structure du système est composé d'un serveur web Apache, d'une base de données et d'un navigateur permettant l'affichage du site e-commerce.
-
-== Éléments essentiels
 
 == Fonctionnalités
 
