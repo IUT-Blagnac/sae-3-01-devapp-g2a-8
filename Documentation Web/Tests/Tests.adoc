@@ -5,8 +5,8 @@
 
 == Informations pratiques
 ----
-Version : 0.1.2
-Date : 12/2023
+Version : 0.5
+Date : 22/12/2023
 Equipe : 8
 Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
 Projet : Site de e-commerce Sigma Prime
@@ -24,11 +24,11 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 ==== Se connecter avec un compte client
 
-Une fois sur la page de connexion, l'adresse e-mail et le mot de passe du compte sont demandés :
+Page de connexion fonctionnelle :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/login.png[scale=50]
 
-Il se peut que les identifiants soit mauvais. Si c'est le cas, un message d'erreur prévient l'utilisateur : 
+Les messages d'erreurs sont affichés :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisIdentifiants.png[scale=50]
 
@@ -39,7 +39,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 ==== Créer un compte client
 
-Une fois sur la page de création de compte, plusieurs informations sont demandées à l'utilisateur :
+Page de création de compte fonctionnelle :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/creerCompte.png[scale=50]
 
