@@ -14,15 +14,13 @@ Projet : Site de e-commerce Sigma Prime
 
 == Tests du site e-commerce
 
-=== Partie Web
-
-==== Naviguer sur le site
+=== Naviguer sur le site
 
 Une fois sur la page d'accueil du site, il est possible de cliquer sur les différentes catégories pour se rendre sur les différentes pages ou se connecter et consulter son panier grâce aux deux boutons situés en haut à droite.
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/index.png[scale=50]
 
-==== Se connecter avec un compte client
+=== Se connecter avec un compte client
 
 Page de connexion fonctionnelle :
 
@@ -37,7 +35,7 @@ Si c'est un compte administrateur, une page sécurisé lui est également propos
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/connecteAdmin.png[scale=50]
 
-==== Créer un compte client
+=== Créer un compte client
 
 Page de création de compte fonctionnelle :
 
@@ -59,7 +57,7 @@ Dans le cas où le numéro de téléphone n'est pas au bon format :
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisTel.png[scale=50]
 
 
-==== Modifier les informations du compte client
+=== Modifier les informations du compte client
 La modification des informations d'un compte client se font avec des requêtes dans la base de données.
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/modifInformations.png[]
@@ -68,7 +66,7 @@ Une fois modifié, les informations sont affichées correctement :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/affichageInformations.png[]
 
-==== Historique des commandes
+=== Historique des commandes
 Depuis la page de profil du compte, on peut se rendre sur l'historique des commandes. Ce dernier fait une requête à la base de données pour afficher l'historique des commandes. Pour vérifier cela, voici les commandes suivi d'une capture d'écran de la base de données.
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/historiqueCommandes.png[]
@@ -79,7 +77,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 On peut voir que cela correspond.
 
-==== Panier
+=== Panier
 
 On ajoute des articles au panier : 
 
@@ -97,7 +95,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 Cela fonctionne également.
 
-==== Visualiser les produits
+=== Visualiser les produits
 Depuis n'importe quelle page du site , il suffit de cliquer sur n'importe quelle catégorie en haut de la page pour visualiser chaque catégorie de produit:
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/acceuilMenu.png[scale=50]
@@ -112,7 +110,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 (Evidemment, ce n'est qu'un début, le design et les fonctionnalités vont changer et s'améliorer par la suite)
 
-==== Evaluer un produit et affichage des évaluations
+=== Evaluer un produit et affichage des évaluations
 Accéder à la page "historique des commandes" : 
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
@@ -121,7 +119,7 @@ Affichage des avis sur les produits :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.PNG[]
 
-==== Passer une commande
+=== Passer une commande
 Accéder à la page de paiement depuis le panier : 
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Payer.PNG[]
