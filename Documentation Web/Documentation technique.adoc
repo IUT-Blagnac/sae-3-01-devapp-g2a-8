@@ -214,3 +214,57 @@ Interactions avec le système : +
 * Le client choisit une commande qui n'a pas encore été évaluée.
 * Le client sélectionne le produit à évaluer et laisse un avis.
 * Le système enregistre l'évaluation et l'avis associé dans la base de données.
+
+=== Fonctionnalité - Administration des comptes clients (CRUD)
+
+Scénario principal : +
+
+   1 - L'administrateur se connecte à son compte
+   2 - Le système vérifie que le compte est un compte administrateur et affiche le bouton pour accéder à la page d'administration
+   3 - L'administrateur accède à la page "Gestion Clients" depuis l'interface d'administration du site
+   4 - Le système fait une requête dans la base de données pour récupérer tous les comptes clients
+   5 - L'administrateur se rend sur la page d'ajout d'un client et rentre les données nécessaires dans le formulaire
+   6 - Le système fait une requête d'insertion à la base de données pour enregistrer un nouveau client
+   7 - L'administrateur consulte les données d'un client
+   8 - Le système fait une requête dans la base de données pour obtenir et afficher les données précises de ce client
+   9 - L'administrateur modifie les données de ce client
+   10 - Le système fait une requête dans la base de données pour changer les données du clients
+   11 - L'administrateur consulte les données d'un client et le supprime
+   12 - Le système fait une requête dans la base de données pour supprimer le client dans la base de données
+
+Interactions avec le système : +
+
+* L'administrateur utilise l'interface utilisateur du système pour accéder à la page d'administration, puis pour aller dans la page de gestion des comptes de clients
+* L'administrateur ajoute un client grâce au formulaire d'ajout
+* Le système enregistre le nouveau client dans la base de données.
+* L'administrateur modifie les données d'un client 
+* Le système enregistre les nouvelles données associé au client dans la base de données.
+* L'administrateur supprime un client
+* Le système supprime ce client de la base de donnée
+
+=== Fonctionnalité - Administration des articles (CRUD)
+
+Scénario principal : +
+
+   1 - L'administrateur se connecte à son compte
+   2 - Le système vérifie que le compte est un compte administrateur et affiche le bouton pour accéder à la page d'administration
+   3 - L'administrateur accède à la page "Gestion Articles" depuis l'interface d'administration du site
+   4 - Le système fait une requête dans la base de données pour récupérer tous les articles du site
+   5 - L'administrateur se rend sur la page d'ajout d'un article et rentre les données nécessaires dans le formulaire
+   6 - Le système fait une requête d'insertion à la base de données pour enregistrer un nouvel article
+   7 - L'administrateur consulte les données d'un article
+   8 - Le système fait une requête dans la base de données pour obtenir et afficher les données précises de cet article
+   9 - L'administrateur modifie les données de cet article
+   10 - Le système fait une requête dans la base de données pour changer les données de l'article
+   11 - L'administrateur consulte les données de l'article et le supprime
+   12 - Le système fait une requête dans la base de données pour supprimer l'article de la base de données et donc du site
+
+Interactions avec le système : +
+
+* L'administrateur utilise l'interface utilisateur du système pour accéder à la page d'administration, puis pour aller dans la page de gestion des articles
+* L'administrateur ajoute un article grâce au formulaire d'ajout
+* Le système enregistre le nouvel article dans la base de données.
+* L'administrateur modifie les données d'un article 
+* Le système enregistre les nouvelles données associé à l'article dans la base de données.
+* L'administrateur supprime un article
+* Le système supprime cet article de la base de donnée
