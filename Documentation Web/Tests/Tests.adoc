@@ -138,17 +138,17 @@ Choisir ses paramètres de tri (Actuellement, on ne peut trier que en fonction d
 
 Trier par prix décroissant:
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TrieDecroissant.PNG[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriDecroissant.PNG[]
 
 
 Trier par prix croissant:
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TrieCroissant.PNG[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriCroissant.PNG[]
 
 
 Trier par fourchette de prix:
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TrieFourchette.PNG[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriFourchette.PNG[]
 
 Actuellement, on peut uniquement trier en fonction du prix, mais il sera possible plus tard de trier en fonction d'autres paramètres.
 
