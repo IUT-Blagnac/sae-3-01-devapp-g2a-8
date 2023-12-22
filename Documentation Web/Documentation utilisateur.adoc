@@ -54,7 +54,7 @@ Il est également possible de cliquer sur "Se souvenir de moi" pour ne pas avoir
 
 Pour ajouter des articles au panier, vous devez vous rendre sur un article et cliquer sur "Ajouter au panier" :
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.PNG[]
 
 ==== Gérer le panier
 
