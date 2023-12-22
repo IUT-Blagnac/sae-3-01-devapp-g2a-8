@@ -63,8 +63,34 @@ Il est possible de supprimer l'entièreté du panier grâce au bouton "Supprimer
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panier.png[]
 
 ==== Trier la liste des produits (croissant/décroissant)
+Il est possible de trier des produits en fonction du prix. Pour ça, il suffit d'utiliser l'option de tri en haut à gauche de la page:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/MenuTri.png[]
+
+On peut ensuite choisir ses options de tri:  
+
+Prix croissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriCroissant.png[]
+
+Prix décroissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriDecroissant.png[]
+
+Par fourchette de prix:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriFourchette.png[]
 
 ==== Rechercher des produits
+
+Pour rechercher un produit, il suffit d'écrire le produit recherché dans la barre de recherche:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BarreDeRecherche.png[]
+
+On peut ensuite visualiser les produits recherchés:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleRecherche.png[]
+
 
 === Fonctionnalités client (un client est un visiteur possédant un compte) : 
 
