@@ -139,6 +139,35 @@ Ordinateur possédant les installations requises :
 
 |====
 
+==== 1.7 Trier les produits :
+
+|====
+
+>|Cas de test 4+|Test-01-01-09
+>|Titre 4+|Trier les produits
+>|Objectif 4+| Trier les produits lorsqu'on les consulte
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Trier les produits selon ses préférences. ^|Afficher les produits en fonction des paramètres de tri, . ^|Accéder à une sous catégorie ^|OK
+
+|====
+
+==== 1.8 Chercher un/des produits :
+
+|====
+
+>|Cas de test 4+|Test-01-01-10
+>|Titre 4+|Rechercher un/des produits
+>|Objectif 4+| Trouver un ou des produits spécifiques
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.1 ^|Chercher un produit dans la barre de recherche. ^|Afficher les produits recherchés . ^|aucune ^|OK
+
+|====
+
+
 === 2. Fonctionnalités d'un client connecté :
 ==== 2.1 Le client peut accéder à ses informations et les modifier :
 
