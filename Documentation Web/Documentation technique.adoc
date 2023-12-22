@@ -51,7 +51,9 @@ La structure du système est composé d'un serveur web Apache, d'une base de don
 
 == Éléments essentiels
 
-== Fonctionnalité - Créer un compte client
+== Fonctionnalités
+
+=== Fonctionnalité - Créer un compte client
 
 Dans cette fonctionnalité, toutes les personnes visisant le site ont la possibilité de créer un compte.
 
@@ -69,7 +71,7 @@ Interactions avec le système : +
 * Le système vérifie la validité des données saisies en effectuant des contrôles, tels que la vérification de la conformité du format des informations, l'absence de doublons, etc.
 * Le système enregistre les nouvelles informations dans la base de données en utilisant des requêtes d'insertion appropriées.
 
-== Fonctionnalité - Se connecter à un compte client
+=== Fonctionnalité - Se connecter à un compte client
 
 Scénario principal : +
 
@@ -84,7 +86,7 @@ Interactions avec le système : +
 * Le client utilise l'interface utilisateur du système pour accéder à la page de connexion à un compte et saisit son adresse e-mail et son mot de passe.
 * Le système vérifie la validité des informations fournies et autorise l'accès au compte.
 
-== Fonctionnalité - Ajouter un article au panier
+=== Fonctionnalité - Ajouter un article au panier
 
 Scénario principal : +
 
@@ -98,7 +100,7 @@ Interactions avec le système : +
 * Le client utilise l'interface utilisateur du système pour naviguer sur le site, trouve un article qui l'intéresse, et clique sur "Ajouter au panier".
 * Le système met à jour le panier du client en ajoutant l'article sélectionné.
 
-== Fonctionnalité - Modifier/Supprimer son panier
+=== Fonctionnalité - Modifier/Supprimer son panier
 
 Scénario principal : +
 
@@ -113,7 +115,7 @@ Interactions avec le système : +
 * Le client modifie la quantité d'articles ou supprime des articles de son panier.
 * Le système met à jour le panier du client en conséquence.
 
-== Fonctionnalité - Modifier les informations de son compte
+=== Fonctionnalité - Modifier les informations de son compte
 
 Scénario principal : +
 
@@ -130,7 +132,7 @@ Interactions avec le système : +
 * Le système vérifie la validité des données modifiées.
 * Le système enregistre les modifications dans la base de données.
 
-== Fonctionnalité - Voir l'historique de ses commandes
+=== Fonctionnalité - Voir l'historique de ses commandes
 
 Scénario principal : +
 
@@ -143,7 +145,7 @@ Interactions avec le système : +
 * Le client utilise l'interface utilisateur du système pour accéder à son profil utilisateur et sélectionne l'option "Historique commandes".
 * Le système affiche la liste des commandes passées par le client.
 
-== Fonctionnalité - Évaluer un produit
+=== Fonctionnalité - Évaluer un produit
 
 Scénario principal : +
 
