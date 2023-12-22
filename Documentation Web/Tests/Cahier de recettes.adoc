@@ -216,7 +216,7 @@ Ordinateur possédant les installations requises :
 
 |====
 
->|Cas de test 4+|Test-01-01-12
+>|Cas de test 4+|Test-01-01-13
 >|Titre 4+|Passer une commande
 >|Objectif 4+| Pouvoir passer une commande avec le panier d'achat
 
