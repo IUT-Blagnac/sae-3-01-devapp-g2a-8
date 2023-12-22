@@ -112,5 +112,20 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 (Evidemment, ce n'est qu'un début, le design et les fonctionnalités vont changer et s'améliorer par la suite)
 
-=== Partie BD
+==== Evaluer un produit et affichage des évaluations
+Accéder à la page "historique des commandes" : 
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
+
+Affichage des avis sur les produits : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.PNG[]
+
+==== Passer une commande
+Accéder à la page de paiement depuis le panier : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Payer.PNG[]
+
+Affichage d'une erreur si les informations sont incorrectes : 
+
+image::image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ErreurPaiement.PNG[]
