@@ -127,3 +127,39 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 Affichage d'une erreur si les informations sont incorrectes : 
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ErreurPaiement.png[]
+
+=== Trier les produits
+
+Accéder à la page de consultation produit, en cliquant sur une sous catégorie :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ProduitNonTrie.PNG[]
+
+Choisir ses paramètres de tri (Actuellement, on ne peut trier que en fonction du prix, mais il sera possible plus tard de trier en fonction de la taile etc...):
+
+Trier par prix décroissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TrieDecroissant.PNG[]
+
+
+Trier par prix croissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TrieCroissant.PNG[]
+
+
+Trier par fourchette de prix:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TrieFourchette.PNG[]
+
+Actuellement, on peut uniquement trier en fonction du prix, mais il sera possible plus tard de trier en fonction d'autres paramètres.
+
+=== Rechercher des produits
+
+Cette fonctionnalité est accessible depuis n'importe quelle page du site.
+Il suffit de faire une recherche dans la barre de recherche situé en haut à droite.
+(Actuellement, la barre de recherche ne fonctione que si on écrit le nom exact d'une sous catégorie, comme tshirt par exemple )
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BarreDeRecherche.PNG[]
+
+on peut ensuite voir les articles qui correspondent à notre recherche:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleCherché.PNG[]
