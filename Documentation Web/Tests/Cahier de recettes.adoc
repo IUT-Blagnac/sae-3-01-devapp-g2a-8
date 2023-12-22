@@ -135,7 +135,7 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Afficher les produits de manière détaillée. ^|Accès aux différents produits de la catégorie. ^| accéder à une sous catégorie ^|OK
+^|All_G_C.1 ^|Afficher les produits de manière détaillée. ^|Accès aux différents produits de la catégorie. ^|Accéder à une sous catégorie ^|OK
 
 |====
 
@@ -150,7 +150,7 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Aller sur la page compte. ^|Affichage des informations personnelles du client. ^| Avoir un compte et y être connecté ^|OK
+^|All_G_C.1 ^|Aller sur la page compte. ^|Affichage des informations personnelles du client. ^|Avoir un compte et y être connecté. ^|OK
 
 |====
 
@@ -162,7 +162,7 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Editer". ^|Affichage des informations personnelles du client, les modifier et valider. ^| Avoir un compte et y être connecté ^|OK
+^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Editer". ^|Affichage des informations personnelles du client, les modifier et valider. ^|Avoir un compte et y être connecté. ^|OK
 
 |====
 
@@ -174,7 +174,7 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Editer". ^|Affichage des informations personnelles du client, écrire l'ancien mot de passe et le nouveau puis valider. ^| Avoir un compte et y être connecté ^|OK
+^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Editer". ^|Affichage des informations personnelles du client, écrire l'ancien mot de passe et le nouveau puis valider. ^|Avoir un compte et y être connecté. ^|OK
 
 |====
 
@@ -186,7 +186,7 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Consulter l'historique de mes commandes". ^|Affichage des commandes passées avec la possibilité de mettre un avis. ^| Avoir un compte et y être connecté ^|OK
+^|All_G_C.1 ^|Aller sur la page compte et cliquer sur "Consulter l'historique de mes commandes". ^|Affichage des commandes passées avec la possibilité de mettre un avis. ^|Avoir un compte et y être connecté. ^|OK
 
 |====
 
@@ -198,7 +198,7 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Aller sur la page compte, cliquer sur "Consulter l'historique de mes commandes" et évaluer un produit. ^|Ajout d'une note et d'un commentaire sur l'article ^| Avoir un compte et y être connecté ^|OK
+^|All_G_C.1 ^|Aller sur la page compte, cliquer sur "Consulter l'historique de mes commandes" et évaluer un produit. ^|Ajout d'une note et d'un commentaire sur l'article ^|Avoir un compte et y être connecté. ^|OK
 
 |====
 
@@ -222,6 +222,6 @@ Ordinateur possédant les installations requises :
 
 5+|
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|All_G_C.1 ^|Aller sur le panier et cliquer sur "Procéder au paiement". ^|Demande des informations pour procéder au paiement et validation de la commande ^|Aucune. ^|OK
+^|All_G_C.1 ^|Aller sur le panier et cliquer sur "Procéder au paiement". ^|Demande des informations pour procéder au paiement et validation de la commande ^|Avoir un compte et y être connecté. ^|OK
 
 |====
