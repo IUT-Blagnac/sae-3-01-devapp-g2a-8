@@ -89,7 +89,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 On peut ensuite visualiser les produits recherchés:
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleRecherche.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleCherche.png[]
 
 
 === Fonctionnalités client (un client est un visiteur possédant un compte) : 
