@@ -46,11 +46,62 @@ Fonctionnalités de l'administrateur :
 
 == Architecture
 
+La structure du système est composé d'un serveur web Apache, d'une base de données et d'un navigateur permettant l'affichage du site e-commerce.
+
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Architecture%20du%20site.png[]
 
-== Structure
+L'architecture générale du système est composée : 
 
-La structure du système est composé d'un serveur web Apache, d'une base de données et d'un navigateur permettant l'affichage du site e-commerce.
+* D'un serveur avec une base de données MySQL. Le serveur est connecté au réseau de l'IUT et doit être connecté à internet. De cette façon, il peut communiquer avec l'application et exéctuter les commande SQL reçues avant de renvoyer le résultat.
+
+=== Ressources externes
+
+Lors de la réalisation du site web e-commerce SigmaPrime, nous avons identifié deux ressources externes essentielles pour son développement : phpmyadmin et FakerPHP.
+
+Faker est une bibliothèque PHP qui génère de fausses données. Cette ressource nous permet de réaliser nos différents tests à plus grande échelle.
+
+phpMyAdmin est une application Web de gestion pour les systèmes de gestion de base de données MySQL, réalisée principalement en PHP et distribuée sous licence GNU GPL. Cette ressource nous permet de créer et gérer notre base de données pour le site.
+
+=== Structuration des packages
+
+Afin de mieux gérer nos fichiers, nous avons créé différents packages pour gérer différentes fonctionnalités du site.
+
+
+* admin/
+
+----
+Ce package contient les différents fichiers liés aux pages des administrateurs.
+----
+
+* img/
+
+----
+Ce package contient les différentes images du site.
+----
+
+* panier/
+
+----
+Ce package contient les différents fichiers liés aux pages du panier.
+----
+
+* include/
+
+----
+Ce package contient les différents include (header.php, footer.php, etc)
+----
+
+* style/
+
+----
+Ce package contient les différents styles CSS du site
+----
+
+* vendor/
+
+----
+Ce package contient les différents fichiers nécessaires pour l'utilisation de FakerPHP.
+----
 
 == Fonctionnalités
 
