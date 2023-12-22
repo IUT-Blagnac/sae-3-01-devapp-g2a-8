@@ -225,3 +225,103 @@ Ordinateur possédant les installations requises :
 ^|All_G_C.1 ^|Aller sur le panier et cliquer sur "Procéder au paiement". ^|Demande des informations pour procéder au paiement et validation de la commande ^|Avoir un compte et y être connecté. ^|OK
 
 |====
+
+=== 3. Fonctionnalités d'un administrateur connecté :
+==== 3.1 CRUD Comptes Clients :
+|====
+
+>|Cas de test 4+|Test-03-01-01
+>|Titre 4+|Consulter Comptes Client
+>|Objectif 4+| Pouvoir consulter l'entièreté des comptes des clients dans leur détail
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_C.1 ^|Aller sur la page "Gestion Clients" et cliquer sur "Informations Clients" ^|Affichage de toutes les informations du compte consulté ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-03-01-02
+>|Titre 4+|Créer Client
+>|Objectif 4+| Pouvoir créer un nouveau compte client
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_C.2 ^|Cliquer sur "Ajouter Client" et remplir correctement le formulaire puis cliquer sur "Valider" ^|Création d'un nouveau client avec les informations spécifiées et redirection vers la page des informations de ce client ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-03-01-03
+>|Titre 4+|Modifier Compte Client
+>|Objectif 4+| Pouvoir modifier les informations d'un compte client
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_C.3 ^|Cliquer sur "Modifier" lors de la consultation des données d'un compte client et modifier des informations dans le formulaire de modification ^|Modification des informations du client et redirection vers la page des informations de ce client ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-03-01-04
+>|Titre 4+|Supprimer Compte Client
+>|Objectif 4+| Pouvoir supprimer un compte client
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_C.4 ^|Cliquer sur "Supprimer" lors de la consultation des données d'un compte client ^|Suppression du compte client et redirection vers la page de gestion de tous les clients ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+==== 3.2 CRUD Articles :
+
+|====
+
+>|Cas de test 4+|Test-03-02-01
+>|Titre 4+|Consulter Articles
+>|Objectif 4+| Pouvoir consulter l'entièreté des articles dans leur détail
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_A.1 ^|Aller sur la page "Gestion Articles" et cliquer sur "Détails article" ^|Affichage de toutes les informations de l'article consulté ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-03-02-02
+>|Titre 4+|Créer Article
+>|Objectif 4+| Pouvoir créer un nouvel article
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_A.2 ^|Cliquer sur "Ajouter Article" et remplir correctement le formulaire puis cliquer sur "Valider" ^|Création d'un nouvel article avec les informations spécifiées et redirection vers la page des informations de cet article ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-03-02-03
+>|Titre 4+|Modifier Article
+>|Objectif 4+| Pouvoir modifier les informations d'un article
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_A.3 ^|Cliquer sur "Modifier" lors de la consultation des données d'un article et modifier des informations dans le formulaire de modification ^|Modification des informations de l'article et redirection vers la page des informations de cet article ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-03-02-04
+>|Titre 4+|Supprimer Article
+>|Objectif 4+| Pouvoir supprimer un article
+
+5+|
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|A_CRUD_A.4 ^|Cliquer sur "Supprimer" lors de la consultation des données d'un article ^|Suppression de l'article et redirection vers la page de gestion de tous les articles ^|Avoir un compte administrateur et y être connecté. ^|OK
+
+|====
