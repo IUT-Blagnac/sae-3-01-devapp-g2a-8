@@ -117,8 +117,66 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 === Fonctionnalités administrateur : 
 
+Pour accéder aux fonctions administrateur, un bouton est disponible en haut à droite de la page d'accueil du site, lorsque l'utilisateur est connecté sur un compte administrateur.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonAdmin.png[]
+
+Vous est alors proposé les options pour gérer les comptes des clients et les articles disponibles sur le site.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/GestionClientsEtArticles.png[]
+
 ==== Gérer les comptes clients (CRUD)
 
-==== Gérer les commandes en cours (CRUD)
+La page de gestion des clients affiche les données principales de l'ensemble des clients dans un tableau.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TableauGestionClients.png[]
+
+Pour créer un nouveau client, il faut appuyer sur le bouton d'ajout, en bas du tableau de gestion des clients.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonAjoutClient.png[]
+
+Un formulaire apparaît alors. 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/FormulaireAjoutClient.png[]
+
+Tous les champs du formulaire doivent être remplis avant d'appuyer sur le bouton "Valider". Un client est alors crée.
+
+Il est possible de supprimer ou de modifier les informations d'un client en cliquant sur "Informations client", dans la dernière case du tableau de gestion.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonInformationsClient.png[]
+
+Une page montrant toutes les informations du client apparaît alors, et deux boutons sont disponibles : Modifier et Supprimer. Le bouton Modifier amène vers une page de modification :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/PageModificationClient.png[]
+
+Toutes les informations du client sont préremplies, et des modifications sont possibles. Une fois les modifications effectuées et le bouton Valider cliqué, les modifications seront effectives.
+
+Si le bouton Supprimer de la page d'un client est cliqué, les informations du client seront enlevées définitivement de la base de données.
 
 ==== Gérer les articles (CRUD)
+
+La page de gestion des articles affiche les données principales de tous les articles du site dans un tableau.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TableauGestionArticles.png[]
+
+Pour créer un nouvel article, il faut appuyer sur le bouton d'ajout, en bas du tableau regroupant tous les articles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonAjoutArticle.png[]
+
+Un formulaire apparaît alors. 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/FormulaireAjoutArticle.png[]
+
+Si les champs obligatoire du formulaire (ID, Nom, prix, catégorie) sont remplis, l'article est créer lors de la validation du formulaire (bouton Valider).
+
+Il est possible de supprimer ou de modifier les informations d'un article en cliquant sur "Détails article", dans la dernière case du tableau des articles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/DetailsArticle.png[]
+
+Une page montrant toutes les informations dee l'article apparaît alors, et deux boutons sont disponibles : Modifier et Supprimer. Le bouton Modifier amène vers une page de modification :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/FormulaireModifierArticle.png[]
+
+Toutes les informations de l'article sont préremplies, et des modifications sont possibles. Une fois les modifications effectuées et le bouton Valider cliqué, les modifications seront effectives.
+
+Si le bouton Supprimer de la page d'un article est cliqué, les informations de l'article seront enlevées définitivement de la base de données, et il sera retiré du site.
