@@ -162,4 +162,4 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Document
 
 on peut ensuite voir les articles qui correspondent à notre recherche:
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleCherché.PNG[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleCherche.PNG[]
