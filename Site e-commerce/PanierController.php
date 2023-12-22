@@ -19,4 +19,14 @@ function ajouterPanier($idProduit, $nomProduit, $prixProduit, $quantite) {
     }
 }
 
+function prixTotal($panier) {
+    $total = 0;
+
+    foreach ($panier as $produit) {
+        $total += $produit['prix'] * $produit['quantite'];
+    }
+
+    return $total;
+}
+
 ?>

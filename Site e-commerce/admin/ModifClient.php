@@ -30,7 +30,8 @@
         echo "</br>";
         echo "</br>";
         require_once("../connect.inc.php");
-        $req = $conn->prepare("SELECT idClient,mdp,ptFidelite,civiliteClient,nomClient,prenomClient,adresseRueClient,codePostalClient,villeClient,telephoneClient,dtNaissanceClient,emailClient,typeCompte FROM Client WHERE idClient = :id");
+        $req = $conn->prepare("SELECT idClient,mdp,ptFidelite,civiliteClient,nomClient,prenomClient,adresseRueClient,
+        codePostalClient,villeClient,telephoneClient,dtNaissanceClient,emailClient,typeCompte FROM Client WHERE idClient = :id");
         $req->execute(['id' => $_GET['pIdClient']]);
         $result = $req->fetchAll();
       
@@ -79,62 +80,61 @@
 
         echo"<center>";
         if (isset($_POST['Valider'])){
-            if(isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['email'])AND isset($_POST['civil'])AND isset($_POST['adr'])AND isset($_POST['ville'])AND isset($_POST['codePostal'])AND isset($_POST['tel'])AND isset($_POST['dtn'])){
-                echo"ok";
+            if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['email'])AND !empty($_POST['civilite'])AND !empty($_POST['adr'])
+            AND !empty($_POST['ville'])AND !empty($_POST['codePostal'])AND !empty($_POST['tel'])AND !empty($_POST['dtn'])){
                 $donneesChangees = false;
                 if($_POST['nom'] != $result[0]["nomClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET nomClient = ".$_POST['nom']." WHERE idClient = :id");
+                    $requeteNom = $conn->prepare("UPDATE Client SET nomClient = '".$_POST['nom']."' WHERE idClient = :id");
                     $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
                 }
                 if($_POST['prenom'] != $result[0]["prenomClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET prenomClient = ".$_POST['prenom']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requetePrenom = $conn->prepare("UPDATE Client SET prenomClient = '".$_POST['prenom']."' WHERE idClient = :id");
+                    $requetePrenom->execute(['id'=>$_GET['pIdClient']]);
                 }
                 if($_POST['email'] != $result[0]["emailClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET emailClient = ".$_POST['email']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteMail = $conn->prepare("UPDATE Client SET emailClient = '".$_POST['email']."' WHERE idClient = :id");
+                    $requeteMail->execute(['id'=>$_GET['pIdClient']]);
                 }
                 if($_POST['civilite'] != $result[0]["civiliteClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET civiliteClient = ".$_POST['civilite']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteCivilite = $conn->prepare("UPDATE Client SET civiliteClient = '".$_POST['civilite']."' WHERE idClient = :id");
+                    $requeteCivilite->execute(['id'=>$_GET['pIdClient']]);
                 }
-                if($_POST['adresse'] != $result[0]["adresseClient"]){
+                if($_POST['adr'] != $result[0]["adresseRueClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET adresseClient = ".$_POST['adresse']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteAdr = $conn->prepare("UPDATE Client SET adresseClient = '".$_POST['adresse']."' WHERE idClient = :id");
+                    $requeteAdr->execute(['id'=>$_GET['pIdClient']]);
                 }
                 if($_POST['ville'] != $result[0]["villeClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET villeClient = ".$_POST['ville']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteVille = $conn->prepare("UPDATE Client SET villeClient = '".$_POST['ville']."' WHERE idClient = :id");
+                    $requeteVille->execute(['id'=>$_GET['pIdClient']]);
                 }
                 if($_POST['codePostal'] != $result[0]["codePostalClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET codePostalClient = ".$_POST['codePostal']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteCodeP = $conn->prepare("UPDATE Client SET codePostalClient = ".$_POST['codePostal']." WHERE idClient = :id");
+                    $requeteCodeP->execute(['id'=>$_GET['pIdClient']]);
                 }
-                if($_POST['telephone'] != $result[0]["telephoneClient"]){
+                if($_POST['tel'] != $result[0]["telephoneClient"]){
                     $donneesChangees = true;
-                    
-                    $requeteNom = $conn->prepare("UPDATE Client SET telephoneClient = ".$_POST['telephone']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteTel = $conn->prepare("UPDATE Client SET telephoneClient = '".$_POST['tel']."' WHERE idClient = :id");
+                    $requeteTel->execute(['id'=>$_GET['pIdClient']]);
                 }
                 if($_POST['dtn'] != $result[0]["dtNaissanceClient"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Client SET dtNaissanceClient = ".$_POST['dtn']." WHERE idClient = :id");
-                    $requeteNomType->execute(['id'=>$_GET['pIdClient']]);
+                    $requeteDTN = $conn->prepare("UPDATE Client SET dtNaissanceClient = '".$_POST['dtn']."' WHERE idClient = :id");
+                    $requeteDTN->execute(['id'=>$_GET['pIdClient']]);
                 }
     
                 if($donneesChangees){
@@ -146,7 +146,7 @@
                             </script>'; 
                 }
                 else{
-                    echo "</br> </br> <h3>Veuillez changer un des champs afin de modifier l'emplacement</h3>";
+                    echo "</br> </br> <h3>Veuillez changer un des champs afin de modifier les informations du client</h3>";
                 }
                 
             }

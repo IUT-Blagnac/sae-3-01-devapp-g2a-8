@@ -40,6 +40,9 @@
 			}
 		echo "</table></center>";
 		echo "</br>";
+        echo "<center>";
+        echo "Ajouter un client : <a href='AjoutClient.php'><img src='../img/ajouter.png' alt='AjoutClient' width='5%'></a>";
+        echo "</center>";
 
         include("../include/footer.php");
     ?>
