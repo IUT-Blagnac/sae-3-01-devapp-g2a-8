@@ -116,6 +116,8 @@ S2 :Release : commenter la relaese (reste à faire par ex).  Readme à revoir j'
 S3 : Commencer à implémenter la doc technique  ! Préciser le nom de votre client. Mettre un lien vers le site fonctionnel si possible. Ok pour le cahier de recette, je e comprends pas le lien vers les tests qui reprend la doc utilisateur ? Le scrumboard n'indique pas le sprint en cours  et ne garde pas l'historique des sprints passés du coup c'est très confus : US en sprint 4 , en sprint 5 ... en Scrum on ne prévoit que le sprint courant. Toutes les tâches doivent être rattachées à une US.
 
 S4: Pensez à mettre un lien dans le readme vers le site. Date doc à revoir ... la doc tech web n'avance pas vite. Pensez à indiquer le nom du site dans le titre. liens Test toujours aussi confus, ok recette. Idem concernant la gestion des scrumboard ... attention si vous ne voulez pas voir les notes de suivi diminuer.
+
+S5 : Préciser le titre des docs pour qu'on ne soit pas obligé d'aller dans les infos pratiques. Sinon des progrès, il reste qq fautes de frappe dans les docs et le pré-requis  dans le cahier de recette à compléter. Scrumborard dommage de ne pas garder les historiques des sprints car du coup au sprint 5 je trouve des task done des sptints précédents ... c'est confus. Sur les US story du sprint 5( responsive design, eco conception) on est plutôt sur des critères d'acceptabilité de US précédente ... revoir aussi les tâches liées génériques (coder, tester)  ... qui ne sont par appropriées ici. A noter que votre superviseur est EP pas JMB ;) Globalement c'est bonne évolution. C'est le dernier retour avant l'évaluation finale. 
 endif::[]
 ifndef::env-github[]
 ++++
