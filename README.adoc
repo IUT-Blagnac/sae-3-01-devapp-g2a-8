@@ -40,7 +40,7 @@ Ce projet est réalisé par::
 - https://github.com/paulEspi117[Paul Espinasse]
 - https://github.com/BastienPRFL[Bastien Perruffel]
 
-Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
+Tuteur/tutrice enseignant(e) de l'équipe : EP
 
 == Contexte général
 
