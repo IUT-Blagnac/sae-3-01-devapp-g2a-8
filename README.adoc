@@ -69,8 +69,8 @@ Le GitHub est séparé en deux parties bien disctinctes. +
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT[Lien vers la documentation de la partie IOT] +
 https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web[Lien vers la documentation de la partie Web]
 
-Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.5[v0.5] +
-Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.5[v0.5] +
+Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.6[v0.6] +
+Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.6[v0.6] +
 
 Lien vers le site SigmaPrime : http://193.54.227.208/~saephp08/index.php[v0.5]
 
@@ -82,7 +82,7 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
 === Partie Web (site e-commerce)
-- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.5[v0.5]
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.6[v0.6]
 - Lien vers le site SigmaPrime : http://193.54.227.208/~saephp08/index.php[v0.5]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique%20Site%20Web%20-%20Sigma%20Prime.adoc[documentation technique Site e-commerce - SigmaPrime]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur%20Site%20Web%20-%20Sigma%20Prime.adoc[documentation utilisateur Site e-commerce - SigmaPrime]
@@ -94,7 +94,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Indicateurs de qualité du code (dette technique) *(à venir)*
 
 === Partie IOT (Java-Python)
-- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.5[v0.5]
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.6[v0.6]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20technique.adoc[documentation technique]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog produit]
