@@ -1,4 +1,4 @@
-# Documentation Technique Site Web - SigmaPrime
+# Documentation Technique Site e-commerce - SigmaPrime
 :toc:
 :toc-title: Sommaire
 :sectnums:
