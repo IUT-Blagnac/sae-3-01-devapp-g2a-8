@@ -14,7 +14,9 @@ Ce document a été produit dans le cadre d'un projet de création d'un site web
 [.text-justify]
 L'exécution des tests spécifiés au chapitre suivant requiert :
 
-* ...
+* Une connexion à internet
+* Un accès à un navigateur
+* Un compte administrateur sur le site SigmaPrime
 
 === 1. Éléments à tester :
 [.text-justify]
