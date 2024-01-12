@@ -84,12 +84,12 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 === Partie Web (site e-commerce)
 - Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.5[v0.5]
 - Lien vers le site SigmaPrime : http://193.54.227.208/~saephp08/index.php[v0.5]
-- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique.adoc[documentation technique]
-- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur.adoc[documentation utilisateur]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique%20Site%20Web%20-%20Sigma%20Prime.adoc[documentation technique Site Web - SigmaPrime]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur%20Site%20Web%20-%20Sigma%20Prime.adoc[documentation utilisateur Site Web - SigmaPrime]
 - Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog produit]
 - Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/89f9c050e7c9f7faf2d7e5024827c339c47164ca/Base%20de%20donn%C3%A9es[base de données]
 - Lien vers les https://github.com/orgs/IUT-Blagnac/projects/129[User Stories en cours de développement]
-- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Cahier%20de%20recettes.adoc[cahier de recettes]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Cahier%20de%20recettes%20Web%20-%20SigmaPrime.adoc[cahier de recettes Site Web - SigmaPrime]
 - Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Tests.adoc[tests]
 - Indicateurs de qualité du code (dette technique) *(à venir)*
 
