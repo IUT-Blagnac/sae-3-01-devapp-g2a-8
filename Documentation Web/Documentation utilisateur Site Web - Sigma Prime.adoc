@@ -1,4 +1,4 @@
-# Documentation Utilisateur
+# Documentation Utilisateur Site Web - SigmaPrime
 :toc:
 :toc-title: Sommaire
 :sectnums:
