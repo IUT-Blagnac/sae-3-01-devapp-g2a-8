@@ -39,21 +39,31 @@
             
         }
 
-        $reqAvis = $conn->prepare("SELECT e.*, c.prenomClient, SUBSTRING(c.nomClient, 1, 1) as premiereLettreNom FROM Evaluation e 
-                          JOIN Client c ON e.idClient = c.idClient
-                          WHERE e.idArticle = ?");
+        $reqAvis = $conn->prepare("SELECT e.*, c.prenomClient FROM Evaluation e, Client c WHERE e.idClient = c.idClient AND e.idArticle = ?");
         $reqAvis->execute([$idPack]);
 
+
+        if(!empty($_SESSION['SigmaPrime_idClient'])){
+            $idClient = $_SESSION['SigmaPrime_idClient'];
+        }
+        
         while ($avis = $reqAvis->fetch()) {
             echo "<div class='avis'>";
-            echo "<p>Avis de : " . $avis['prenomClient'] . " " . $avis['premiereLettreNom'] . "</p>";
+            echo "<p><b>Avis de " . $avis['prenomClient'] . "</b></p>";
             echo "<p>Note : " . $avis['note'] . " / 5</p>";
             echo "<p>Commentaire : " . $avis['avis'] . "</p>";
+            
 
-            if (file_exists("img/avis/idEval_" . $avis['idClient'] . "_" . $avis['idArticle'] . ".jpg")) {
-                echo '<img class="zoomable-image" src="img/avis/idEval_' . $avis['idClient'] . '_' . $avis['idArticle'] . '.jpg" alt="Image de l\'avis">';
+            if(!empty($idClient)){
+                $req = $conn->prepare("SELECT * FROM ReponseEvaluation WHERE idEval = ? AND idClient = ?");
+                $req->execute([$avis['idEval'], $idClient]);
+
+                if ($req->rowCount() == 0) {
+                    echo "<a href='Repondre.php?idEval=" . $avis['idEval'] . "' class='button'>Répondre</a><br><br>";
+                }
             }
 
+            echo "<a href='AfficherReponses.php?idEval=" . $avis['idEval'] . "' class='button'>Voir les réponses</a>";
             echo "</div>";
         }
 
@@ -63,9 +73,9 @@
     <?php
     include("include/footer.php");
     if (isset($_POST['ajouterAuPanier'])) {
-        $idProduit = $_POST['idPack'];
-        $nomProduit = $_POST['nomPack'];
-        $prixProduit = $_POST['prixPack'];
+        $idPack = $_POST['idPack'];
+        $nomPack = $_POST['nomPack'];
+        $prixPack = $_POST['prixPack'];
         $quantite = $_POST['quantite'];
 
         // Appel à la fonction ajouterPanier du PanierController

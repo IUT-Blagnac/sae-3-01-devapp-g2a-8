@@ -69,6 +69,10 @@
                     echo "<td><input type='text' name='gout' value='".$result[0]["gout"]."'></td>";
                 echo "</tr>";
                 echo "<tr>";
+                    echo"<td>Stock</td>";
+                    echo "<td><input type='text' name='stock' value='".$result[0]["stock"]."'></td>";
+                echo "</tr>";
+                echo "<tr>";
                     echo"<td>Regroupement</td>";
                     echo "<td><input type='text' name='regroupement' value='".$result[0]["regroupement"]."'></td>";
                 echo "</tr>";
@@ -93,55 +97,61 @@
                 if($_POST['nom'] != $result[0]["nomArticle"]){
                     $donneesChangees = true;
                     
-                    $requeteNom = $conn->prepare("UPDATE Article SET nomArticle = '".$_POST['nom']."' WHERE idArticle = :id");
+                    $requeteNom = $conn->prepare("CALL updateArticle(:id, 'nomArticle', '".$_POST['nom']."')");
                     $requeteNom->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['prix'] != $result[0]["prix"]){
                     $donneesChangees = true;
                     
-                    $requetePrix = $conn->prepare("UPDATE Article SET prix = ".$_POST['prix']." WHERE idArticle = :id");
+                    $requetePrix = $conn->prepare("CALL updateArticlePrixStock(:id, 'prix', ".$_POST['prix'].")");
                     $requetePrix->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['taille'] != $result[0]["taille"]){
                     $donneesChangees = true;
                     
-                    $requeteTaille = $conn->prepare("UPDATE Article SET prix = '".$_POST['taille']."' WHERE idArticle = :id");
+                    $requeteTaille = $conn->prepare("CALL updateArticle(:id, 'taille', '".$_POST['taille']."')");
                     $requeteTaille->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['categorie'] != $result[0]["categorie"]){
                     $donneesChangees = true;
                     
-                    $requeteCategorie = $conn->prepare("UPDATE Article SET categorie = '".$_POST['categorie']."' WHERE idArticle = :id");
+                    $requeteCategorie = $conn->prepare("CALL updateArticle(:id, 'categorie', '".$_POST['categorie']."')");
                     $requeteCategorie->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['gout'] != $result[0]["gout"]){
                     $donneesChangees = true;
                     
-                    $requeteGout = $conn->prepare("UPDATE Article SET gout = '".$_POST['gout']."' WHERE idArticle = :id");
+                    $requeteGout = $conn->prepare("CALL updateArticle(:id, 'gout', '".$_POST['gout']."')");
+                    $requeteGout->execute(['id'=>$_GET['pIdArticle']]);
+                }
+                if($_POST['stock'] != $result[0]["stock"]){
+                    $donneesChangees = true;
+                    
+                    $requeteGout = $conn->prepare("CALL updateArticlePrixStock(:id, 'stock', '".$_POST['stock']."')");
                     $requeteGout->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['couleur'] != $result[0]["couleur"]){
                     $donneesChangees = true;
                     
-                    $requeteCouleur = $conn->prepare("UPDATE Article SET couleur = '".$_POST['couleur']."' WHERE idArticle = :id");
+                    $requeteCouleur = $conn->prepare("CALL updateArticle(:id, 'couleur', '".$_POST['couleur']."')");
                     $requeteCouleur->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['regroupement'] != $result[0]["regroupement"]){
                     $donneesChangees = true;
                     
-                    $requeteRegroupement = $conn->prepare("UPDATE Article SET regroupement = '".$_POST['regroupement']."' WHERE idArticle = :id");
+                    $requeteRegroupement = $conn->prepare("CALL updateArticle(:id, 'regroupement', '".$_POST['regroupement']."')");
                     $requeteRegroupement->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['artApparente'] != $result[0]["articleApparente"]){
                     $donneesChangees = true;
                     
-                    $requeteArtApparente = $conn->prepare("UPDATE Article SET articleApparente = '".$_POST['artApparente']."' WHERE idArticle = :id");
+                    $requeteArtApparente = $conn->prepare("CALL updateArticle(:id, 'articleApparente', '".$_POST['artApparente']."')");
                     $requeteArtApparente->execute(['id'=>$_GET['pIdArticle']]);
                 }
                 if($_POST['description'] != $result[0]["description"]){
                     $donneesChangees = true;
                     
-                    $requeteDescription = $conn->prepare("UPDATE Article SET description = '".$_POST['description']."' WHERE idArticle = :id");
+                    $requeteDescription = $conn->prepare("CALL updateArticle(:id, 'description', '".$_POST['description']."')");
                     $requeteDescription->execute(['id'=>$_GET['pIdArticle']]);
                 }
     

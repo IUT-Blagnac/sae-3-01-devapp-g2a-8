@@ -41,7 +41,7 @@
                 $req->execute();
                 $result = $req->fetch(PDO::FETCH_ASSOC);
 
-                if($result['stock'] < 10){
+                if($result && $result['stock'] < 10){
                     for ($i = 1; $i <= $result['stock']; $i++) {
                         echo '<option value="' . $i . '" ' . ($i == $produit['quantite'] ? 'selected' : '') . '>' . $i . '</option>';
                     }
@@ -78,7 +78,10 @@
             echo '<input type="submit" value="Supprimer mon panier">';
             echo '</form>';
         } else {
+            echo '<div class="panier-vide-message">';
             echo '<p>Votre panier est vide.</p>';
+            echo '<a href="index.php" class="button">Continuez vos achats</a>';
+            echo '</div>';
         }
     ?>
 

@@ -79,6 +79,10 @@
                         <span></span>
                         <label>Confirmer le mot de passe</label>
                     </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="accept-charte" required>
+                        <label for="accept-charte">J'ai lu et accepté la charte relative aux données personnelles</label>
+                    </div>
                 </div>
             </div>
 

@@ -247,12 +247,151 @@ input[type="submit"]:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
 .button:hover {
     background-color: gray;
 }
 
+.reponse {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #dfdddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.reponse-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.reponse-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reponse-submit {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reponse-submit:hover {
+    background-color: #45a049;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.packs-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.packs-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.pack {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 0 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.pack img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.pack h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.pack p {
+    margin-bottom: 10px;
+}
+
+.pack a {
+    display: block;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.best-sellers-title {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.best-sellers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.best-seller {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.best-seller img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.best-seller h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.best-seller p {
+    margin-bottom: 10px;
+}
+
+.best-seller a {
+    display: block;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.panier-vide-message {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    max-width: 400px;
+}
 
 @media only screen and (max-width: 768px) {
     header {
@@ -267,7 +406,7 @@ input[type="submit"]:hover {
     }
 
     nav {
-        margin-top: 10px; /* Ajout d'une marge en haut pour séparer le logo du menu sur les petits écrans */
+        margin-top: 10px;
     }
 
     header li {

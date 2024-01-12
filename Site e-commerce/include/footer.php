@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="footer-section third">
-        <p class="small-text gray-text">Paiement</p>
-        <p class="large-text white-text">CB, Paypal, Virement bancaire</p>
+        <p class="small-text gray-text">Données personnelles</p>
+        <a class="large-text white-text" href="Charte.php">Charte Données personnelles</a>
     </div>
 </footer>
