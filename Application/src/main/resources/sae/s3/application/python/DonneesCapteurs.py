@@ -21,7 +21,8 @@ salle_config = config
 frequenceConfig = 15.0
 dictBoolDonnees = {}
 
-#Lecture du fichier configuration
+
+# Lecture du fichier configuration
 def read_config():
     global temperature_max
     global humidity_max
@@ -46,15 +47,18 @@ def read_config():
     co2_min = config.getfloat('Seuils', 'co2_min')
     activity_min = config.getfloat('Seuils', 'activity_min')
     frequenceDonnees = config.getfloat('Frequences', 'frequence')
-    salle_config = config['Salles']['salle']
-    dictBoolDonnees = {"Activite":config.getboolean('Donnees', 'activity'),
-                      "CO2":config.getboolean('Donnees', 'co2'),
-                      "Temperature":config.getboolean('Donnees', 'temperature'),
-                      "Humidite":config.getboolean('Donnees', 'humidity')
-                      }
+    salle_config = list(config['Salles']['salle'].split(","))
+    dictBoolDonnees = {"Activite": config.getboolean('Donnees', 'activity'),
+                       "CO2": config.getboolean('Donnees', 'co2'),
+                       "Temperature": config.getboolean('Donnees', 'temperature'),
+                       "Humidite": config.getboolean('Donnees', 'humidity')
+                       }
 
     minuteurConfig = Timer(frequenceConfig, read_config)
     minuteurConfig.start()
+
+    print(salle_config)
+
 
 # Ecriture des données dans le fichier historique.json
 def write_log():
@@ -118,9 +122,11 @@ def write_log():
     minuteurHistorique = Timer(frequenceDonnees, write_log)
     minuteurHistorique.start()
 
+
 def on_connect(client, userdata, flags, rc):
-    print("Connected with result code "+str(rc))
-    client.subscribe(f"AM107/by-room/{salle_config}/data")
+    print("Connected with result code " + str(rc))
+    client.subscribe(f"AM107/by-room/+/data")
+
 
 # Réception des données
 def on_message(client, userdata, msg):
@@ -129,10 +135,11 @@ def on_message(client, userdata, msg):
     message = msg.payload
     data = json.loads(message)
     if "room" in data[1]:
-        fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
-        salleActuelle = data[1]["room"]
 
-        if salle_config == "+" or salle_config == salleActuelle :
+        salleActuelle = data[1]["room"]
+        if salle_config == "+" or salleActuelle in salle_config:
+            fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
+
             salle = data[1]["room"]
             if dictBoolDonnees["Temperature"] is True:
                 temp = data[0]["temperature"]
@@ -180,13 +187,12 @@ def on_message(client, userdata, msg):
 
             donneesHist.append(dictDonnees)
 
-            print ("\n \n")
+            print("\n \n")
             print("Salle : ", data[1]["room"])
             print("Température : ", data[0]["temperature"])
             print("Humidité : ", data[0]["humidity"])
             print("CO2 : ", data[0]["co2"])
             print("Activité : ", data[0]["activity"])
-        
 
         if data[0]["temperature"] > temperature_max:
             ajouter_alerte(salleActuelle, "temperature_max", "alerte.json")
