@@ -36,6 +36,7 @@
 					echo "<td>".$cle[5]."</td>";
 					echo "<td>".$cle[11]."</td>";
                     echo "<td><a href='ConsultClient.php?pIdClient=".$cle[0]."'>Informations client</a></td>";
+                    echo "<td><a href='ConsultCommandes.php?pIdClient=".$cle[0]."'>Commandes</a></td>";
 				echo "</tr>";
 			}
 		echo "</table></center>";

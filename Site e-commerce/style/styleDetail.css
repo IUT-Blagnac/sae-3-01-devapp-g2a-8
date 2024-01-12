@@ -10,11 +10,16 @@ body {
 
 }
 
+.avis-container {
+    text-align: center;
+}
+
 .avis {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
     width: 60%;
 }
 
@@ -27,6 +32,32 @@ body {
     height: auto;
     margin-top: 10px;
 }
+
+.product-details {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 300px;
+    margin-left: 20px;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+.product-description {
+    margin-top: 10px;
+}
+
 .zoomable-image {
 cursor: pointer;
 transition: transform 0.3s ease-in-out;
@@ -37,18 +68,33 @@ transition: transform 0.3s ease-in-out;
 }
 
 .add-to-cart-button {
-    background-color: #000; /* Couleur de fond noire */
-    color: #fff; /* Texte blanc */
-    padding: 10px 20px; /* Espacement interne pour définir la taille du bouton */
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
     margin-left: 100000;
-    border: none; /* Supprime la bordure par défaut */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Indique que le curseur doit changer au survol */
-    font-size: 16px; /* Taille de la police */
-    max-width: 20%; /* Utilisation de max-width au lieu de width */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    max-width: 100%;
 }
 
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
+}
 
+.button:hover {
+    background-color: gray;
+}
 
 
 header {
@@ -209,7 +255,7 @@ nav a {
     }
 
     nav {
-        margin-top: 10px; /* Ajout d'une marge en haut pour séparer le logo du menu sur les petits écrans */
+        margin-top: 10px;
     }
 
     header li {

@@ -8,17 +8,23 @@
 </head>
 <body>
 
-    <?php include("include/header.php"); ?>
+    <?php
+        session_start();
+        
+        if (!isset($_SESSION['SigmaPrime_acces']) || $_SESSION['SigmaPrime_acces'] !== "oui") {
+            header('Location: FormConnexion.php');
+            exit();
+        }
+        
+        include("include/header.php"); 
+    ?>
 
     <div class="wrapper">
         <?php include("include/menus.php"); ?>
 
         <div class="content">
             <?php
-                if (!isset($_SESSION['SigmaPrime_acces']) && $_SESSION['SigmaPrime_acces'] !== "oui") {
-                    header('Location: FormConnexion.php');
-                    exit();
-                }
+
                 include("connect.inc.php");
 
                 $idClient = $_SESSION['SigmaPrime_idClient'];

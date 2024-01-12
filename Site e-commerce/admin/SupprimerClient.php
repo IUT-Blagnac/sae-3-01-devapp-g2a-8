@@ -21,7 +21,7 @@
         echo "</br>";
         echo "</br>";
         require_once("../connect.inc.php");
-        $req = $conn->prepare("DELETE FROM Client WHERE idClient = '".$_GET['pIdClient']."'");
+        $req = $conn->prepare("CALL deleteClient(".$_GET['pIdClient'].")");
         $req->execute();
         echo '<script language="JavaScript" type="text/javascript">
             alert("Suppression effectuée");

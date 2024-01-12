@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>SigmaPrime - Admin Supprimer Article</title>
+    <title>SigmaPrime - Admin Supprimer Commande</title>
 </head>
 
 <body>
@@ -21,13 +21,13 @@
         echo "</br>";
         echo "</br>";
         require_once("../connect.inc.php");
-        $req = $conn->prepare("CALL deleteArticle(".$_GET['pIdArticle'].")");
+        $req = $conn->prepare("CALL deleteCommande(".$_GET['pIdBC'].")");
         $req->execute();
         echo '<script language="JavaScript" type="text/javascript">
             alert("Suppression effectuée");
             </script>';
         echo '<script language="JavaScript" type="text/javascript">
-        window.location.replace("GestionProduits.php");
+        window.location.replace("GestionClients.php");
         </script>'; 
     ?>
 </body>

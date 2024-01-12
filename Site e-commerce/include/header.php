@@ -1,11 +1,13 @@
 <?php
-    session_start();
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 ?>
 
 <header>
-        <?php
-            require_once("connect.inc.php");
-        ?>
+    <?php
+        require_once("connect.inc.php");
+    ?>
     <div id="header-left">
         <a href="index.php">
             <img src="img/SigmaPrime_Logo.png" alt="Logo SigmaPrime">
@@ -15,7 +17,6 @@
             
             <?php
                 $reqNutr = "SELECT idCategorie, nomCategorie FROM Categorie WHERE categorieMere= 'nutr'";
-               
                 $result = $conn->query($reqNutr);
             ?>
             
@@ -24,7 +25,7 @@
                 <ul class="menu-deroulant">
             <?php
                 while ($row = $result->fetch()) {
-                echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
+                    echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
                 }
             ?>
             </ul>
@@ -32,7 +33,6 @@
             
             <?php
                 $reqComplement = "SELECT idCategorie, nomCategorie FROM Categorie WHERE categorieMere= 'complement'";
-               
                 $result = $conn->query($reqComplement);
             ?>
             
@@ -41,7 +41,7 @@
                 <ul class="menu-deroulant">
             <?php
                 while ($row = $result->fetch()) {
-                echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
+                    echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
                 }
             ?>
             </ul>
@@ -49,7 +49,6 @@
             
             <?php
                 $reqVetements = "SELECT idCategorie, nomCategorie FROM Categorie WHERE categorieMere= 'vetement'";
-               
                 $result = $conn->query($reqVetements);
             ?>
             
@@ -58,7 +57,7 @@
                 <ul class="menu-deroulant">
             <?php
                 while ($row = $result->fetch()) {
-                echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
+                    echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
                 }
             ?>
             </ul>
@@ -66,7 +65,6 @@
             
             <?php
                 $reqConseil = "SELECT idCategorie, nomCategorie FROM Categorie WHERE categorieMere= 'conseil'";
-               
                 $result = $conn->query($reqConseil);
             ?>
             
@@ -75,7 +73,7 @@
                 <ul class="menu-deroulant">
             <?php
                 while ($row = $result->fetch()) {
-                echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
+                    echo "<li><a href='ConsultProduit.php?idCategorie=" . $row['idCategorie'] . "'>" . $row['nomCategorie'] . "</a></li>";
                 }
             ?>
             </ul>
@@ -85,9 +83,7 @@
                 <a href="#">Packs</a>
                 <ul class="menu-deroulant">
             <?php
-                
                 echo "<li><a href='ConsultPack.php'>Découvrez nos packs</a></li>";
-                
             ?>
             </ul>
             </li>
@@ -97,13 +93,17 @@
         </nav>
     </div>
     <div id="header-right">
-    <form id="searchForm" action="ConsultProduit.php" method="get">
-        <input type="text" name="q" id="searchInput" placeholder="Rechercher...">
-        <input type="submit" value="Rechercher">
-    </form>
-        <a href="Panier.php">
-            <img src="img/panier.png" alt="Logo Panier">
-        </a>
+        <form id="searchForm" action="ConsultRecherche.php" method="get">
+            <input type="text" name="q" id="searchInput" placeholder="Rechercher...">
+            <input type="submit" value="Rechercher">
+        </form>
+        <?php
+            if(isset($_SESSION['SigmaPrime_panier']) && !empty($_SESSION['SigmaPrime_panier'])) {
+                echo '<a href="Panier.php"><img src="img/panier_rempli.png" alt="Logo Panier"></a>';
+            } else {
+                echo '<a href="Panier.php"><img src="img/panier.png" alt="Logo Panier"></a>';
+            }
+        ?>
         <a href="FormConnexion.php">
             <?php
                 if (isset($_SESSION['SigmaPrime_acces']) && $_SESSION['SigmaPrime_acces'] == "oui") {
@@ -118,15 +118,11 @@
             ?>
         </a>
         <script>
-        // Ajoutez un gestionnaire d'événements pour le formulaire
-        document.getElementById('searchForm').addEventListener('submit', function (e) {
-            // Empêcher l'envoi du formulaire par défaut
-            e.preventDefault();
-            // Récupérer la valeur de la barre de recherche
-            var searchTerm = document.getElementById('searchInput').value;
-            // Rediriger vers la page ConsultProduit.php avec le terme de recherche comme paramètre
-            window.location.href = 'ConsultProduit.php?idCategorie=' + encodeURIComponent(searchTerm);
-        });
-    </script>
+            document.getElementById('searchForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var searchTerm = document.getElementById('searchInput').value;
+                window.location.href = 'ConsultRecherche.php?q=' + encodeURIComponent(searchTerm);
+            });
+        </script>
     </div>
 </header>
