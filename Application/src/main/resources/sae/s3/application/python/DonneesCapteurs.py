@@ -54,10 +54,9 @@ def read_config():
                        "Humidite": config.getboolean('Donnees', 'humidity')
                        }
 
+    # Minuteur pour relancer read_config dans un temps défini
     minuteurConfig = Timer(frequenceConfig, read_config)
     minuteurConfig.start()
-
-    print(salle_config)
 
 
 # Ecriture des données dans le fichier historique.json
@@ -73,6 +72,7 @@ def write_log():
         act = data["Activite"]
         donnees = {date: {"Humidite": hum, "Temperature": temp, "CO2": co2, "Activite": act}}
 
+        # Création du fichier historique s'il n'existe pas
         if not os.path.exists("historique.json"):
 
             fDest = os.open('historique.json', os.O_RDWR | os.O_CREAT | os.O_APPEND)
@@ -95,6 +95,7 @@ def write_log():
             os.write(fDest, b'\n}')
             os.close(fDest)
 
+        # Ajout des données dans le fichier historique s'il existe
         else:
             with open('historique.json', 'r') as fichier_json:
                 donnees_existantes = json.load(fichier_json)
@@ -119,16 +120,18 @@ def write_log():
                 json.dump(donnees_existantes, fichier_json, indent=4)
 
     donneesHist = []
+
+    # Minuteur pour relancer write_log dans un temps défini
     minuteurHistorique = Timer(frequenceDonnees, write_log)
     minuteurHistorique.start()
 
-
+# Instructions à suivre lors de la connexion
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code " + str(rc))
     client.subscribe(f"AM107/by-room/+/data")
 
 
-# Réception des données
+# Instructions à suivre lors de la réception de données
 def on_message(client, userdata, msg):
     global donneesHist
     global dictBoolDonnees
@@ -138,6 +141,7 @@ def on_message(client, userdata, msg):
 
         salleActuelle = data[1]["room"]
         if salle_config == "+" or salleActuelle in salle_config:
+
             fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
 
             salle = data[1]["room"]
@@ -158,6 +162,7 @@ def on_message(client, userdata, msg):
             else:
                 act = ""
 
+            # Ecriture des données dans le fichier donnees
             os.write(fDest, b'{\n\t"')
             os.write(fDest, str.encode(salle))
             os.write(fDest, b'": {\n')
@@ -177,6 +182,7 @@ def on_message(client, userdata, msg):
             os.write(fDest, b'\n}')
             os.close(fDest)
 
+            # Actualisation du dictionnaire de l'historique
             dictDonnees = {"Salle": salle,
                            "Date": datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),
                            "Humidite": str(hum),
@@ -187,6 +193,7 @@ def on_message(client, userdata, msg):
 
             donneesHist.append(dictDonnees)
 
+            # Print des données reçues dans la console
             print("\n \n")
             print("Salle : ", data[1]["room"])
             print("Température : ", data[0]["temperature"])
@@ -194,6 +201,7 @@ def on_message(client, userdata, msg):
             print("CO2 : ", data[0]["co2"])
             print("Activité : ", data[0]["activity"])
 
+        # Appel des alertes
         if data[0]["temperature"] > temperature_max:
             ajouter_alerte(salleActuelle, "temperature_max", "alerte.json")
         if data[0]["humidity"] > humidity_max:
@@ -212,6 +220,7 @@ def on_message(client, userdata, msg):
             ajouter_alerte(salleActuelle, "activity_min", "alerte.json")
 
 
+# Ajout d'une alerte
 def ajouter_alerte(salle, type_alerte, fichier_alerte):
     date_courante = datetime.datetime.now().strftime('%d/%m/%Y, %H:%M:%S')
     alerte = {
@@ -241,13 +250,16 @@ def ajouter_alerte(salle, type_alerte, fichier_alerte):
         print(f"Erreur lors de la création du fichier d'alerte : {e}")
 
 
+
 read_config()
+# Connexion MQTT
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
 client.connect("chirpstack.iut-blagnac.fr", 1883, 60)
 
+# Minuteur pour lancer write_log dans un temps défini
 minuteurHistorique = Timer(frequenceDonnees, write_log)
 minuteurHistorique.start()
 
