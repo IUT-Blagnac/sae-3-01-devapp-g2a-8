@@ -195,12 +195,14 @@ public class EntrepotsFrameController {
     private void updateConfigValues() {
         Map<String, Properties> configMap = loadConfigFromFile();
 
-        Properties frequencesProperties = configMap.get("[Salles]");
-        if (frequencesProperties != null) {
-            frequencesProperties.setProperty("salle", String.valueOf(SettingsFrameController.selectedButtonLabels));
+        Properties sallesProperties = configMap.get("[Salles]");
+        if (sallesProperties != null) {
+            // Convertir la liste des salles en une chaîne séparée par des virgules
+            String salles = SettingsFrameController.selectedButtonLabels.isEmpty() ? "+" : String.join(",", SettingsFrameController.selectedButtonLabels);
+
+            // Mettre à jour la propriété "salle" dans la section [Salles]
+            sallesProperties.setProperty("salle", salles);
         }
-
-
 
         // Sauvegarder les modifications dans le fichier
         saveConfigToFile(configMap);
