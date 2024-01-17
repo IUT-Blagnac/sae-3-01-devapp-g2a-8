@@ -52,7 +52,7 @@ public class HistoriqueFrame {
             StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
             this.primaryStage.setScene(scene);
             this.primaryStage.setTitle("Historique des données");
-            this.primaryStage.setResizable(false);
+            this.primaryStage.setResizable(true);
 
             this.historiqueFrameController = loader.getController();
             this.historiqueFrameController.initContext(this.primaryStage, this);
@@ -79,28 +79,25 @@ public class HistoriqueFrame {
 
         String cheminFichier = "/sae/s3/application/python/historique.json";
 
-        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
-            assert inputStream != null;
-            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
+             InputStreamReader reader = new InputStreamReader(inputStream)) {
 
-                JsonObject historiqueObject = JsonParser.parseReader(reader).getAsJsonObject();
+            JsonObject historiqueObject = JsonParser.parseReader(reader).getAsJsonObject();
 
-                for (Map.Entry<String, JsonElement> salleEntry : historiqueObject.entrySet()) {
-                    String salle = salleEntry.getKey();
-                    JsonObject datesData = salleEntry.getValue().getAsJsonObject();
+            for (Map.Entry<String, JsonElement> salleEntry : historiqueObject.entrySet()) {
+                String salle = salleEntry.getKey();
+                JsonObject datesData = salleEntry.getValue().getAsJsonObject();
 
-                    for (Map.Entry<String, JsonElement> dateEntry : datesData.entrySet()) {
-                        String date = dateEntry.getKey();
-                        JsonObject values = dateEntry.getValue().getAsJsonObject();
+                for (Map.Entry<String, JsonElement> dateEntry : datesData.entrySet()) {
+                    String date = dateEntry.getKey();
+                    JsonObject values = dateEntry.getValue().getAsJsonObject();
 
-                        String temperature = values.get("Temperature").getAsString();
-                        String humidite = values.get("Humidite").getAsString();
-                        String co2 = values.get("CO2").getAsString();
-                        String activite = values.get("Activite").getAsString();
+                    String temperature = values.get("Temperature").getAsString();
+                    String humidite = values.get("Humidite").getAsString();
+                    String co2 = values.get("CO2").getAsString();
+                    String activite = values.get("Activite").getAsString();
 
-                        Donnees donnees = new Donnees(salle, date, temperature, humidite, co2, activite);
-                        donneesList.add(donnees);
-                    }
+                    donneesList.add(new Donnees(salle, date, temperature, humidite, co2, activite));
                 }
             }
         } catch (IOException e) {
@@ -120,25 +117,21 @@ public class HistoriqueFrame {
 
         String cheminFichier = "/sae/s3/application/python/alerte.json";
 
-        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
-            assert inputStream != null;
-            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
+             InputStreamReader reader = new InputStreamReader(inputStream)) {
 
-                JsonArray jsonArray = JsonParser.parseReader(reader).getAsJsonArray();
+            JsonArray jsonArray = JsonParser.parseReader(reader).getAsJsonArray();
 
-                if(jsonArray != null && !jsonArray.isJsonNull()){
-                    for (JsonElement element : jsonArray) {
-                        if(element != null && element.isJsonObject()){
-                            JsonObject alerteObject = element.getAsJsonObject();
-                            String date = alerteObject.get("Date").getAsString();
-                            String salle = alerteObject.get("Salle").getAsString();
-                            String type = alerteObject.get("Type").getAsString();
-                            String message = alerteObject.get("Message").getAsString();
+            for (JsonElement element : jsonArray) {
+                if (element.isJsonObject()) {
+                    JsonObject alerteObject = element.getAsJsonObject();
+                    String date = alerteObject.get("Date").getAsString();
+                    String salle = alerteObject.get("Salle").getAsString();
+                    String type = alerteObject.get("Type").getAsString();
+                    String message = alerteObject.get("Message").getAsString();
 
-                            Alerte alerteData = new Alerte(date, salle, type, message);
-                            alertesList.add(alerteData);
-                        }
-                    }
+                    Alerte alerteData = new Alerte(date, salle, type, message);
+                    alertesList.add(alerteData);
                 }
             }
         } catch (IOException e) {

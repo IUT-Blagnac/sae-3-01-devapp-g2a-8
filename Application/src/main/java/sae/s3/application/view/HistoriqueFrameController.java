@@ -1,6 +1,8 @@
 package sae.s3.application.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -9,7 +11,10 @@ import sae.s3.application.model.Alerte;
 import sae.s3.application.model.Donnees;
 import sae.s3.application.tools.AlertUtilities;
 
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Le contrôleur de vue HistoriqueFrameController gère l'interface utilisateur de l'historique
@@ -65,10 +70,11 @@ public class HistoriqueFrameController {
      */
     @FXML
     private void doQuit() {
-        if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter l'historique",
+        this.primaryStage.close();
+        /*if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter l'historique",
                 "Êtes vous sur de vouloir quitter ?", null, Alert.AlertType.CONFIRMATION)) {
             this.primaryStage.close();
-        }
+        }*/
     }
 
     // Partie FXML
@@ -77,6 +83,8 @@ public class HistoriqueFrameController {
     private TableView<Alerte> alertesTable;
     @FXML
     private TableView<Donnees> historiqueTable;
+    @FXML
+    private LineChart<String, Number> lineChart;
 
     /**
      * Chargement des alertes sur la fenêtre grâce à une Table.
@@ -92,11 +100,35 @@ public class HistoriqueFrameController {
     /**
      * Chargement de l'historique des données sur la fenêtre grâce à une Table.
      */
-    private void chargerHistorique(){
+    private void chargerHistorique() {
+        // Obtenez les données historiques
         List<Donnees> donneesHistorique = this.historiqueFrame.getDonneesHistorique();
 
         if(!donneesHistorique.isEmpty()){
             historiqueTable.getItems().addAll(donneesHistorique);
         }
+
+        donneesHistorique.sort(Comparator.comparing(Donnees::getDate).reversed());
+        Map<String, XYChart.Series<String, Number>> seriesMap = new HashMap<>();
+        int nbSalles = 0;
+
+        for (Donnees donnees : donneesHistorique) {
+            String salle = donnees.getSalle();
+
+            if (!seriesMap.containsKey(salle) && nbSalles < 10) {
+                XYChart.Series<String, Number> series = new XYChart.Series<>();
+                series.setName(salle);
+                seriesMap.put(salle, series);
+                nbSalles++;
+            }
+
+            if (seriesMap.containsKey(salle)) {
+                XYChart.Series<String, Number> series = seriesMap.get(salle);
+                series.getData().add(new XYChart.Data<>(donnees.getDate(), Double.parseDouble(donnees.getTemperature())));
+            }
+        }
+
+        // Ajoutez toutes les séries au LineChart
+        lineChart.getData().addAll(seriesMap.values());
     }
 }

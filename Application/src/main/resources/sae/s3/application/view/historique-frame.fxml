@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -48,11 +51,19 @@
                   </TableColumn>
                </columns>
             </TableView>
+            <LineChart fx:id="lineChart">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
          </VBox>
 
          <VBox spacing="10" VBox.vgrow="ALWAYS">
             <Text text="Historique des alertes" />
-            <TableView fx:id="alertesTable">
+            <TableView fx:id="alertesTable" prefHeight="570.0" prefWidth="395.0">
                <columns>
                   <TableColumn prefWidth="100" text="Salle">
                      <cellValueFactory>

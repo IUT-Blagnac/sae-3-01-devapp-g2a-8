@@ -15,7 +15,6 @@ public class TaskBackground extends TimerTask {
 
     private MainFrameController mf;
 
-    private int nbBarsOfBarChart;
     private Donnees donnees;
     private Alerte alerte;
 
@@ -23,13 +22,11 @@ public class TaskBackground extends TimerTask {
      * Constructeur de la classe TaskBackground.
      *
      * @param _mf               Le Contrôleur MainFrameController
-     * @param _nbBarsOfBarChart Nombre de quartiers dans le BarChart
      * @param _donnees          Les données initiales
      * @param _alerte           L'alerte initiale
      */
-    public TaskBackground(MainFrameController _mf, int _nbBarsOfBarChart, Donnees _donnees, Alerte _alerte) {
+    public TaskBackground(MainFrameController _mf, Donnees _donnees, Alerte _alerte) {
         this.mf = _mf;
-        this.nbBarsOfBarChart = _nbBarsOfBarChart;
         this.donnees = _donnees;
         this.alerte = _alerte;
     }

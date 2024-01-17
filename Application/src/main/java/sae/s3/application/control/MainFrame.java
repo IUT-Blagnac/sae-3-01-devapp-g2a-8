@@ -80,30 +80,30 @@ public class MainFrame extends Application {
      * @return Un objet Donnees représentant les données d'une salle.
      */
     public Donnees getDonnees() {
-
         String cheminFichier = "/sae/s3/application/python/donnees.json";
 
-        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
-            assert inputStream != null;
-            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
+             InputStreamReader reader = new InputStreamReader(inputStream)) {
 
-                JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
-                String salle = jsonObject.keySet().iterator().next();
+            JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
+            String salle = jsonObject.keySet().iterator().next();
 
-                JsonObject salleData = jsonObject.getAsJsonObject(salle);
-                String date = salleData.entrySet().iterator().next().getKey();
-                JsonObject values = salleData.getAsJsonObject(date);
+            JsonObject salleData = jsonObject.getAsJsonObject(salle);
+            String date = salleData.entrySet().iterator().next().getKey();
+            JsonObject values = salleData.getAsJsonObject(date);
 
-                return new Donnees(salle, date, values.get("Temperature").getAsString(),
-                        values.get("Humidite").getAsString(),
-                        values.get("CO2").getAsString(),
-                        values.get("Activite").getAsString());
-            }
+            return new Donnees(salle, date,
+                    values.get("Temperature").getAsString(),
+                    values.get("Humidite").getAsString(),
+                    values.get("CO2").getAsString(),
+                    values.get("Activite").getAsString());
+
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
     }
+
 
     /**
      * Récupère la dernière alerte depuis le fichier alerte.json
@@ -111,33 +111,29 @@ public class MainFrame extends Application {
      * @return Un objet Alerte représentant la dernière alerte.
      */
     public Alerte getDerniereAlerte() {
-        Alerte derniereAlerte = null;
-
         String cheminFichier = "/sae/s3/application/python/alerte.json";
 
-        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
-            assert inputStream != null;
-            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier);
+             InputStreamReader reader = new InputStreamReader(inputStream)) {
 
-                JsonArray jsonArray = JsonParser.parseReader(reader).getAsJsonArray();
+            JsonArray jsonArray = JsonParser.parseReader(reader).getAsJsonArray();
 
-                if (jsonArray != null && !jsonArray.isJsonNull() && !jsonArray.isEmpty()) {
-                    JsonElement dernierElement = jsonArray.get(0);
-                    if (dernierElement != null && dernierElement.isJsonObject()) {
-                        JsonObject alerteObject = dernierElement.getAsJsonObject();
-                        String date = alerteObject.get("Date").getAsString();
-                        String salle = alerteObject.get("Salle").getAsString();
-                        String type = alerteObject.get("Type").getAsString();
-                        String message = alerteObject.get("Message").getAsString();
+            if (jsonArray != null && !jsonArray.isJsonNull() && !jsonArray.isEmpty()) {
+                JsonObject dernierElement = jsonArray.get(0).getAsJsonObject();
+                String date = dernierElement.get("Date").getAsString();
+                String salle = dernierElement.get("Salle").getAsString();
+                String type = dernierElement.get("Type").getAsString();
+                String message = dernierElement.get("Message").getAsString();
 
-                        derniereAlerte = new Alerte(date, salle, type, message);
-                    }
-                }
+                return new Alerte(date, salle, type, message);
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return derniereAlerte;
+
+        return null;
     }
+
 
 }

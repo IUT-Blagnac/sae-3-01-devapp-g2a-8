@@ -76,7 +76,7 @@ public class MainFrameController {
     private void doQuit() {
         if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter l'application",
                 "Êtes vous sur de vouloir quitter ?", null, Alert.AlertType.CONFIRMATION)) {
-            this.rb.stopIt();
+            //this.rb.stopIt();
             this.timer.cancel();
             this.primaryStage.close();
         }
@@ -89,35 +89,19 @@ public class MainFrameController {
         this.primaryStage.show();
 
         donnees = mainFrame.getDonnees();
+        alerte = mainFrame.getDerniereAlerte();
 
-        String affichage = "Aucune donnée";
+        miseAJour(donnees, alerte);
 
-        if (donnees != null) {
-            affichage = "Salle : " + donnees.getSalle() + "\nDate : " + donnees.getDate();
+        this.tb = new TaskBackground(this, this.donnees, this.alerte);
 
-            XYChart.Series<String, Number> series = new XYChart.Series<>();
-            series.getData().add(new XYChart.Data<>("Température", Double.parseDouble(donnees.getTemperature())));
-            series.getData().add(new XYChart.Data<>("CO2", Double.parseDouble(donnees.getCo2())));
-            series.getData().add(new XYChart.Data<>("Humidité", Double.parseDouble(donnees.getHumidite())));
-            series.getData().add(new XYChart.Data<>("Activité", Double.parseDouble(donnees.getActivite())));
+        this.timer = new Timer();
 
-            this.barChart.getData().add(series);
+        this.timer.scheduleAtFixedRate(
+                this.tb,
+                1000L,
+                2000L);
 
-            this.rb = new RunBackground(this, series.getData().size(), this.donnees, this.alerte);
-
-            Thread t = new Thread(this.rb);
-
-            t.start();
-
-            this.tb = new TaskBackground(this, series.getData().size(), this.donnees, this.alerte);
-
-            this.timer = new Timer();
-
-            this.timer.scheduleAtFixedRate(
-                    this.tb,
-                    1000L,
-                    2000L);
-        }
     }
 
     // Partie FXML
@@ -182,10 +166,25 @@ public class MainFrameController {
     public void miseAJour(Donnees donnees, Alerte alerte) {
         this.barChart.getData().clear();
         XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.getData().add(new XYChart.Data<>("Humidité", Double.parseDouble(donnees.getHumidite())));
-        series.getData().add(new XYChart.Data<>("CO2", Double.parseDouble(donnees.getCo2())));
-        series.getData().add(new XYChart.Data<>("Activité", Double.parseDouble(donnees.getActivite())));
-        series.getData().add(new XYChart.Data<>("Température", Double.parseDouble(donnees.getTemperature())));
+
+        if(!donnees.getHumidite().isEmpty()){
+            series.getData().add(new XYChart.Data<>("Humidité", Double.parseDouble(donnees.getHumidite())));
+            this.lblHum.setText("Humidité : " + donnees.getHumidite());
+        }else{
+            this.lblHum.setText("Humidité : Donnée non récupérée.");
+        }
+        if(!donnees.getCo2().isEmpty()){
+            series.getData().add(new XYChart.Data<>("CO2", Double.parseDouble(donnees.getCo2())));
+            this.lblCO2.setText("CO2 : " + donnees.getCo2());
+        }
+        if(!donnees.getActivite().isEmpty()){
+            series.getData().add(new XYChart.Data<>("Activité", Double.parseDouble(donnees.getActivite())));
+            this.lblActivite.setText("Activité : " + donnees.getActivite());
+        }
+        if(!donnees.getTemperature().isEmpty()){
+            series.getData().add(new XYChart.Data<>("Température", Double.parseDouble(donnees.getTemperature())));
+            this.lblTemp.setText("Température : " + donnees.getTemperature());
+        }
 
         barChart.getData().add(series);
 
@@ -196,30 +195,21 @@ public class MainFrameController {
 
         this.affichageDonnees.setText(donnees.getSalle());
 
-        barChart = seriesData.get(0);
-        this.lblHum.setText(barChart.getXValue() + " : " + barChart.getYValue());
-        barChart = seriesData.get(1);
-        this.lblCO2.setText(barChart.getXValue() + " : " + barChart.getYValue());
-        barChart = seriesData.get(2);
-        this.lblActivite.setText(barChart.getXValue() + " : " + barChart.getYValue());
-        barChart = seriesData.get(3);
-        this.lblTemp.setText(barChart.getXValue() + " : " + barChart.getYValue());
-
         System.out.println("Mise à jour de humidité : " + donnees.getHumidite());
         System.out.println("Mise à jour de CO2 : " + donnees.getCo2());
         System.out.println("Mise à jour de activité : " + donnees.getActivite());
         System.out.println("Mise à jour de température : " + donnees.getTemperature());
 
         if (alerte != null && !Objects.equals(alerte, this.alerte)) {
+            this.alerte = alerte;
             System.out.println("Alerte actuelle : " + this.alerte);
             System.out.println("Nouvelle alerte : " + alerte);
             System.out.println("Comparaison : " + !Objects.equals(alerte, this.alerte));
 
             String msgAlerte = alerte.getMessage();
-            System.out.println("Nouvelle alerte détectée. Affichage de l'alerte : " + alerte.getDate() + alerte.getSalle());
+            System.out.println("Nouvelle alerte détectée. Affichage de l'alerte : " + alerte.getDate() + alerte.getSalle() + alerte.getType());
             AlertUtilities.showAlert(this.primaryStage, "Alerte !",
-                    msgAlerte, null, Alert.AlertType.CONFIRMATION);
-            this.alerte = alerte;
+                    msgAlerte, null, Alert.AlertType.WARNING);
         } else {
             System.out.println("Pas de nouvelle alerte à afficher.");
         }
