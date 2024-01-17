@@ -11,6 +11,12 @@ import sae.s3.application.tools.AlertUtilities;
 
 import java.util.List;
 
+/**
+ * Le contrôleur de vue HistoriqueFrameController gère l'interface utilisateur de l'historique
+ * des alertes et des données.
+ *
+ * @author Tristan Delthil
+ */
 public class HistoriqueFrameController {
 
     private HistoriqueFrame historiqueFrame;
@@ -31,7 +37,7 @@ public class HistoriqueFrameController {
     }
 
     /**
-     * Configuration de SettingsFrameController.
+     * Configuration de HistoriqueFrameController.
      */
     private void configure() {
         this.primaryStage.setOnCloseRequest(this::closeWindow);
@@ -39,7 +45,7 @@ public class HistoriqueFrameController {
         this.chargerHistorique();
     }
 
-    /*
+    /**
      * Méthode de fermeture de la fenêtre par la croix.
      */
     private void closeWindow(WindowEvent e) {
@@ -47,11 +53,14 @@ public class HistoriqueFrameController {
         e.consume();
     }
 
+    /**
+     * Affiche la fenêtre de l'historique.
+     */
     public void displayDialog(){
         this.primaryStage.showAndWait();
     }
 
-    /*
+    /**
      * Demande une confirmation puis ferme la fenêtre.
      */
     @FXML
@@ -69,7 +78,7 @@ public class HistoriqueFrameController {
     @FXML
     private TableView<Donnees> historiqueTable;
 
-    /*
+    /**
      * Chargement des alertes sur la fenêtre grâce à une Table.
      */
     private void chargerAlertes() {
@@ -80,6 +89,9 @@ public class HistoriqueFrameController {
         }
     }
 
+    /**
+     * Chargement de l'historique des données sur la fenêtre grâce à une Table.
+     */
     private void chargerHistorique(){
         List<Donnees> donneesHistorique = this.historiqueFrame.getDonneesHistorique();
 

@@ -1,6 +1,5 @@
 package sae.s3.application.control;
 
-import java.util.Objects;
 import java.util.TimerTask;
 
 import javafx.application.Platform;
@@ -8,21 +7,26 @@ import sae.s3.application.model.Alerte;
 import sae.s3.application.model.Donnees;
 import sae.s3.application.view.MainFrameController;
 
-//Code d'une tâche gérée par Timer qui met à jour aléatoirement un quartier du PieChart.
-
+/**
+ * La classe TaskBackground est un thread qui met à jour les données et alertes affichées.
+ * @author Tristan Delthil
+ */
 public class TaskBackground extends TimerTask {
 
-    // Controller pour la mise à jour des PieChart
     private MainFrameController mf;
 
-    // Nombre de quartiers dans le BarChart
     private int nbBarsOfBarChart;
     private Donnees donnees;
     private Alerte alerte;
 
-    // Constructeur
-    // _mf : le controller contenant le PieChart
-    // _nbBarsOfBarChart : nombre de quartiers dans le BarChart
+    /**
+     * Constructeur de la classe TaskBackground.
+     *
+     * @param _mf               Le Contrôleur MainFrameController
+     * @param _nbBarsOfBarChart Nombre de quartiers dans le BarChart
+     * @param _donnees          Les données initiales
+     * @param _alerte           L'alerte initiale
+     */
     public TaskBackground(MainFrameController _mf, int _nbBarsOfBarChart, Donnees _donnees, Alerte _alerte) {
         this.mf = _mf;
         this.nbBarsOfBarChart = _nbBarsOfBarChart;
@@ -30,7 +34,9 @@ public class TaskBackground extends TimerTask {
         this.alerte = _alerte;
     }
 
-    // Corps de la tâche lorsque elle est activée
+    /**
+     * Corps de la tâche lorsqu'elle est activée.
+     */
     @Override
     public void run() {
         // Mise en file d'attente (dans un Runnable) de la mise à jour du PieChart via mf.miseAJourPieChart()

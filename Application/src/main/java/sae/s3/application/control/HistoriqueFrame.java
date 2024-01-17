@@ -22,6 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * La classe HistoriqueFrame gère l'affichage de l'historique des données et des alertes.
+ * @author Tristan Delthil
+ */
 public class HistoriqueFrame {
 
     private Stage primaryStage;
@@ -58,10 +62,18 @@ public class HistoriqueFrame {
         }
     }
 
+    /**
+     * Affiche la boîte de dialogue de l'historique.
+     */
     public void doHistoriqueDialog(){
         this.historiqueFrameController.displayDialog();
     }
 
+    /**
+     * Récupère les données du fichier historique.json.
+     *
+     * @return Une liste d'objets Donnees représentant les données de l'historique.
+     */
     public List<Donnees> getDonneesHistorique() {
         List<Donnees> donneesList = new ArrayList<>();
 
@@ -98,7 +110,11 @@ public class HistoriqueFrame {
         return donneesList;
     }
 
-
+    /**
+     * Récupère les alertes à partir du fichier alerte.json
+     *
+     * @return Une liste d'objets Alerte représentant les alertes.
+     */
     public List<Alerte> getAlertes() {
         List<Alerte> alertesList = new ArrayList<>();
 

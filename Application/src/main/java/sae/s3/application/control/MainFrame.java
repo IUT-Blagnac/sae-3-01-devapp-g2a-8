@@ -16,8 +16,10 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
- * Classe de controleur de Dialogue de la fenêtre principale.
- *
+ * Classe de contrôleur de Dialogue de la fenêtre principale.
+ * Elle gère la création de la fenêtre principale, l'initialisation des contrôleurs
+ * et les actions liées aux différents composants de l'interface utilisateur.
+ * @author Tristan Delthil et Paul Espinasse
  */
 public class MainFrame extends Application {
     private Stage primaryStage;
@@ -48,21 +50,35 @@ public class MainFrame extends Application {
         Application.launch();
     }
 
+    /**
+     * Affiche la boîte de dialogue pour choisir les paramètres.
+     */
     public void choisirParametres(){
         SettingsFrame settingsFrame = new SettingsFrame(primaryStage);
         settingsFrame.doSettingsDialog();
     }
 
+    /**
+     * Affiche la boîte de dialogue pour choisir les entrepôts.
+     */
     public void choisirEntrepots(){
         EntrepotsFrame entrepotsFrame = new EntrepotsFrame(primaryStage);
         entrepotsFrame.doEntrepotsDialog();
     }
 
+    /**
+     * Affiche la boîte de dialogue de l'historique.
+     */
     public void afficherHistorique(){
         HistoriqueFrame historiqueFrame = new HistoriqueFrame(primaryStage);
         historiqueFrame.doHistoriqueDialog();
     }
 
+    /**
+     * Récupère les données depuis le fichier donnees.json
+     *
+     * @return Un objet Donnees représentant les données d'une salle.
+     */
     public Donnees getDonnees() {
 
         String cheminFichier = "/sae/s3/application/python/donnees.json";
@@ -89,6 +105,11 @@ public class MainFrame extends Application {
         }
     }
 
+    /**
+     * Récupère la dernière alerte depuis le fichier alerte.json
+     *
+     * @return Un objet Alerte représentant la dernière alerte.
+     */
     public Alerte getDerniereAlerte() {
         Alerte derniereAlerte = null;
 

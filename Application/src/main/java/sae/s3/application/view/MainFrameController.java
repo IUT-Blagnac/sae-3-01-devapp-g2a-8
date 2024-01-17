@@ -18,7 +18,12 @@ import sae.s3.application.tools.AlertUtilities;
 import java.util.Objects;
 import java.util.Timer;
 
-
+/**
+ * Le contrôleur de la vue principale de l'application.
+ * Il gère l'affichage des données en temps réel et les mises à jour graphiques.
+ *
+ * @author Tristan Delthil
+ */
 public class MainFrameController {
 
     private Stage primaryStage;
@@ -33,10 +38,10 @@ public class MainFrameController {
 
 
     /**
-     * Initialisation du contrôleur de vue SettingsFrameController.
+     * Initialisation du contrôleur de vue MainFrameController.
      *
      * @param _containingStage Stage qui contient le fichier xml contrôlé par
-     *                         SettingsFrameController
+     *                         MainFrameController
      * @param _mainFrame            Contrôleur de Dialogue qui réalisera les opérations
      *                         de navigation ou calcul
      */
@@ -47,7 +52,7 @@ public class MainFrameController {
         SettingsFrameController.updateSelectedButtonsList();
     }
 
-    /*
+    /**
      * Configuration de SettingsFrameController.
      * Fermeture par la croix.
      */
@@ -55,7 +60,7 @@ public class MainFrameController {
         this.primaryStage.setOnCloseRequest(this::closeWindow);
     }
 
-    /*
+    /**
      * Méthode de fermeture de la fenêtre par la croix.
      *
      */
@@ -64,7 +69,7 @@ public class MainFrameController {
         e.consume();
     }
 
-    /*
+    /**
      * Demande une confirmation puis ferme la fenêtre.
      */
     @FXML
@@ -77,6 +82,9 @@ public class MainFrameController {
         }
     }
 
+    /**
+     * Affiche la fenêtre principale et initialise les données.
+     */
     public void displayDialog() {
         this.primaryStage.show();
 
@@ -112,29 +120,7 @@ public class MainFrameController {
         }
     }
 
-    /*public void displayDialog(){
-        this.primaryStage.show();
-        donnees = mainFrame.getDonnees();
-        String affichage = "Aucune donnée";
-        if(donnees != null){
-            affichage = "Salle : " + donnees.getSalle() + "\nDate : " + donnees.getDate();
-            if(!donnees.getTemperature().isEmpty()) {
-                affichage += "\nTempérature : " + donnees.getTemperature();
-            }
-            if(!donnees.getCo2().isEmpty()) {
-                affichage += "\nCO2 : " + donnees.getCo2();
-            }
-            if(!donnees.getHumidite().isEmpty()) {
-                affichage += "\nHumidité : " + donnees.getHumidite();
-            }
-            if(!donnees.getActivite().isEmpty()) {
-                affichage += "\nActivité : " + donnees.getActivite();
-            }
-        }
-        affichageDonnees.setText(affichage);
-
-        //displayGraph(donnees);
-    }*/
+    // Partie FXML
 
     @FXML
     private BarChart<String, Number> barChart;
@@ -149,6 +135,11 @@ public class MainFrameController {
     @FXML
     private Label lblTemp;
 
+    /**
+     * Affiche le graphique des données.
+     *
+     * @param donnees Les données à afficher
+     */
     public void displayGraph(Donnees donnees) {
         barChart.getData().clear();
 
@@ -164,14 +155,30 @@ public class MainFrameController {
         barChart.getData().add(series);
     }
 
+    /**
+     * Met à jour les données.
+     *
+     * @return Les données mises à jour
+     */
     public Donnees miseAJourDonnees(){
         return mainFrame.getDonnees();
     }
 
+    /**
+     * Met à jour les alertes.
+     *
+     * @return La dernière alerte mise à jour
+     */
     public Alerte miseAJourAlertes(){
         return mainFrame.getDerniereAlerte();
     }
 
+    /**
+     * Effectue une mise à jour complète des données et des alertes.
+     *
+     * @param donnees Les données à afficher
+     * @param alerte  La dernière alerte à afficher
+     */
     public void miseAJour(Donnees donnees, Alerte alerte) {
         this.barChart.getData().clear();
         XYChart.Series<String, Number> series = new XYChart.Series<>();
