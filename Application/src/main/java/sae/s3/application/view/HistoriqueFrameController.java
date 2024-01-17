@@ -101,7 +101,6 @@ public class HistoriqueFrameController {
      * Chargement de l'historique des données sur la fenêtre grâce à une Table.
      */
     private void chargerHistorique() {
-        // Obtenez les données historiques
         List<Donnees> donneesHistorique = this.historiqueFrame.getDonneesHistorique();
 
         if(!donneesHistorique.isEmpty()){
@@ -128,7 +127,6 @@ public class HistoriqueFrameController {
             }
         }
 
-        // Ajoutez toutes les séries au LineChart
         lineChart.getData().addAll(seriesMap.values());
     }
 }

@@ -36,8 +36,6 @@ public class TaskBackground extends TimerTask {
      */
     @Override
     public void run() {
-        // Mise en file d'attente (dans un Runnable) de la mise à jour du PieChart via mf.miseAJourPieChart()
-        // Ce Runnable sera exécuté par le thread GUI "dès que possible"
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
