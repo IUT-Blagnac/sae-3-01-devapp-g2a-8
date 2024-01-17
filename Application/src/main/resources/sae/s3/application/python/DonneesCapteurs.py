@@ -140,7 +140,7 @@ def on_message(client, userdata, msg):
     if "room" in data[1]:
 
         salleActuelle = data[1]["room"]
-        if salle_config == "+" or salleActuelle in salle_config:
+        if salle_config == ['+'] or salleActuelle in salle_config:
 
             fDest = os.open('donnees.json', os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
 
