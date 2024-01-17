@@ -1,5 +1,7 @@
 package sae.s3.application.model;
 
+import java.util.Objects;
+
 public class Alerte {
 
     private String date;
@@ -45,4 +47,21 @@ public class Alerte {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Alerte alerte = (Alerte) o;
+        return Objects.equals(getDate(), alerte.getDate()) &&
+                Objects.equals(getSalle(), alerte.getSalle()) &&
+                Objects.equals(getType(), alerte.getType()) &&
+                Objects.equals(getMessage(), alerte.getMessage());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getDate(), getSalle(), getType(), getMessage());
+    }
+
 }

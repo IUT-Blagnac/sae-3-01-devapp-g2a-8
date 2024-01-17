@@ -17,11 +17,11 @@ public class HistoriqueFrameController {
     private Stage primaryStage;
 
     /**
-     * Initialisation du contrôleur de vue SettingsFrameController.
+     * Initialisation du contrôleur de vue HistoriqueFrameController.
      *
-     * @param _containingStage Stage qui contient le fichier xml contrôlé par
+     * @param _containingStage       Stage qui contient le fichier xml contrôlé par
      *                         HistoriqueFrameController
-     * @param _historiqueFrame            Contrôleur de Dialogue qui réalisera les opérations
+     * @param _historiqueFrame       Contrôleur de Dialogue qui réalisera les opérations
      *                         de navigation ou calcul
      */
     public void initContext(Stage _containingStage, HistoriqueFrame _historiqueFrame) {
@@ -30,7 +30,7 @@ public class HistoriqueFrameController {
         this.configure();
     }
 
-    /*
+    /**
      * Configuration de SettingsFrameController.
      */
     private void configure() {

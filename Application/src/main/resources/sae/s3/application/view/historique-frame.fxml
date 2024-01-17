@@ -3,14 +3,12 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.cell.PropertyValueFactory?>
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sae.s3.application.view.HistoriqueFrameController"
-            prefWidth="800" prefHeight="600">
+<BorderPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sae.s3.application.view.HistoriqueFrameController">
 
    <center>
       <SplitPane dividerPositions="0.5">
@@ -18,34 +16,34 @@
             <Text text="Historique des données" />
             <TableView fx:id="historiqueTable">
                <columns>
-                  <TableColumn text="Salle" prefWidth="100">
+                  <TableColumn prefWidth="100" text="Salle">
                      <cellValueFactory>
-                        <PropertyValueFactory property="salle"/>
+                        <PropertyValueFactory property="salle" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Date" prefWidth="150">
+                  <TableColumn prefWidth="150" text="Date">
                      <cellValueFactory>
-                        <PropertyValueFactory property="date"/>
+                        <PropertyValueFactory property="date" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Humidité" prefWidth="100">
+                  <TableColumn prefWidth="100" text="Humidité">
                      <cellValueFactory>
-                        <PropertyValueFactory property="humidite"/>
+                        <PropertyValueFactory property="humidite" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="CO2" prefWidth="100">
+                  <TableColumn prefWidth="100" text="CO2">
                      <cellValueFactory>
-                        <PropertyValueFactory property="co2"/>
+                        <PropertyValueFactory property="co2" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Activité" prefWidth="100">
+                  <TableColumn prefWidth="100" text="Activité">
                      <cellValueFactory>
-                        <PropertyValueFactory property="activite"/>
+                        <PropertyValueFactory property="activite" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Température" prefWidth="100">
+                  <TableColumn prefWidth="100" text="Température">
                      <cellValueFactory>
-                        <PropertyValueFactory property="temperature"/>
+                        <PropertyValueFactory property="temperature" />
                      </cellValueFactory>
                   </TableColumn>
                </columns>
@@ -56,24 +54,24 @@
             <Text text="Historique des alertes" />
             <TableView fx:id="alertesTable">
                <columns>
-                  <TableColumn text="Salle" prefWidth="100">
+                  <TableColumn prefWidth="100" text="Salle">
                      <cellValueFactory>
-                        <PropertyValueFactory property="salle"/>
+                        <PropertyValueFactory property="salle" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Date" prefWidth="150">
+                  <TableColumn prefWidth="150" text="Date">
                      <cellValueFactory>
-                        <PropertyValueFactory property="date"/>
+                        <PropertyValueFactory property="date" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Type" prefWidth="100">
+                  <TableColumn prefWidth="100" text="Type">
                      <cellValueFactory>
-                        <PropertyValueFactory property="type"/>
+                        <PropertyValueFactory property="type" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Message" prefWidth="400">
+                  <TableColumn prefWidth="400" text="Message">
                      <cellValueFactory>
-                        <PropertyValueFactory property="message"/>
+                        <PropertyValueFactory property="message" />
                      </cellValueFactory>
                   </TableColumn>
                </columns>

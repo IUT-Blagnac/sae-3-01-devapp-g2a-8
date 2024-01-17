@@ -1,13 +1,11 @@
 package sae.s3.application.control;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sae.s3.application.model.Alerte;
 import sae.s3.application.model.Donnees;
 import sae.s3.application.view.MainFrameController;
 
@@ -15,9 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Classe de controleur de Dialogue de la fenêtre principale.
@@ -92,4 +88,35 @@ public class MainFrame extends Application {
             return null;
         }
     }
+
+    public Alerte getDerniereAlerte() {
+        Alerte derniereAlerte = null;
+
+        String cheminFichier = "/sae/s3/application/python/alerte.json";
+
+        try (InputStream inputStream = MainFrame.class.getResourceAsStream(cheminFichier)) {
+            assert inputStream != null;
+            try (InputStreamReader reader = new InputStreamReader(inputStream)) {
+
+                JsonArray jsonArray = JsonParser.parseReader(reader).getAsJsonArray();
+
+                if (jsonArray != null && !jsonArray.isJsonNull() && !jsonArray.isEmpty()) {
+                    JsonElement dernierElement = jsonArray.get(0);
+                    if (dernierElement != null && dernierElement.isJsonObject()) {
+                        JsonObject alerteObject = dernierElement.getAsJsonObject();
+                        String date = alerteObject.get("Date").getAsString();
+                        String salle = alerteObject.get("Salle").getAsString();
+                        String type = alerteObject.get("Type").getAsString();
+                        String message = alerteObject.get("Message").getAsString();
+
+                        derniereAlerte = new Alerte(date, salle, type, message);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return derniereAlerte;
+    }
+
 }

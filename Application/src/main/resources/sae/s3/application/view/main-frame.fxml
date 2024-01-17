@@ -33,6 +33,10 @@
                                 <Button fx:id="entrpts" layoutX="20.0" layoutY="280.0" mnemonicParsing="false" onAction="#ouvrirEntrepots" text="Entrepôts" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="320.0" />
                                 <Button fx:id="hstrq" layoutX="20.0" layoutY="240.0" mnemonicParsing="false" onAction="#ouvrirHist" text="Historique" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="320.0" />
                                 <Button fx:id="prmtr" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" onAction="#ouvrirParam" text="Paramétrage" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="320.0" />
+                        <Label fx:id="lblHum" layoutX="20.0" layoutY="73.0" text="Label" />
+                        <Label fx:id="lblCO2" layoutX="20.0" layoutY="97.0" text="Label" />
+                        <Label fx:id="lblActivite" layoutX="20.0" layoutY="122.0" text="Label" />
+                        <Label fx:id="lblTemp" layoutX="20.0" layoutY="146.0" text="Label" />
                             </children>
                         </AnchorPane>
                     </content>

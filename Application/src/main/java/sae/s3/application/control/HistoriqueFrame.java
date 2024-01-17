@@ -128,7 +128,6 @@ public class HistoriqueFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return alertesList;
     }
 }
