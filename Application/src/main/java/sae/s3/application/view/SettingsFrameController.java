@@ -56,7 +56,7 @@ public class SettingsFrameController {
 
     }
 
-    /*
+    /**
      * Configuration de SettingsFrameController.
      * Fermeture par la croix.
      */
@@ -64,7 +64,7 @@ public class SettingsFrameController {
         this.primaryStage.setOnCloseRequest(this::closeWindow);
     }
 
-    /*
+    /**
      * Méthode de fermeture de la fenêtre par la croix.
      *
      */
@@ -77,7 +77,7 @@ public class SettingsFrameController {
         this.primaryStage.showAndWait();
     }
 
-    /*
+    /**
      * Demande une confirmation puis ferme la fenêtre.
      */
     @FXML
@@ -129,14 +129,17 @@ public class SettingsFrameController {
     @FXML
     private TextField textFreq;
 
+    /**
+     * Trouve les erreurs de saisie dans les champs de texte.
+     *
+     * @return Une chaîne contenant les erreurs trouvées.
+     */
     private String trouverErreursSaisie() {
         String erreurs = "";
         String regex = "^\\d+(\\.\\d+)?$";
 
-        // Créer le pattern
         Pattern pattern = Pattern.compile(regex);
 
-        // Créer le matcher avec la chaîne d'entrée
         Matcher matcher = pattern.matcher(textAct.getText());
 
         // Vérifier si la chaîne correspond à la regex
@@ -184,6 +187,9 @@ public class SettingsFrameController {
         return erreurs;
     }
 
+    /**
+     * Charge la configuration depuis le fichier.
+     */
     private static Map<String, Properties> loadConfigFromFile() {
         Map<String, Properties> configMap = new LinkedHashMap<>();
 
@@ -204,11 +210,17 @@ public class SettingsFrameController {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();  // Gérer les exceptions de manière appropriée dans votre application
+            e.printStackTrace();
         }
 
         return configMap;
     }
+
+    /**
+     * Sauvegarde la configuration dans le fichier.
+     *
+     * @param configMap La map représentant les sections et les propriétés du fichier de configuration.
+     */
     private void saveConfigToFile(Map<String, Properties> configMap) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(CONFIG_FILE_PATH))) {
             for (Map.Entry<String, Properties> entry : configMap.entrySet()) {
@@ -221,16 +233,19 @@ public class SettingsFrameController {
                     writer.newLine();
                 }
 
-                writer.newLine(); // Ligne vide entre les sections
+                writer.newLine(); // Ligne vide
             }
         } catch (IOException e) {
-            e.printStackTrace();  // Gérer les exceptions de manière appropriée dans votre application
+            e.printStackTrace();
         }
     }
+
+    /**
+     * Met à jour les valeurs de configuration en fonction des boutons sélectionnés.
+     */
     private void updateConfigValues() {
         Map<String, Properties> configMap = loadConfigFromFile();
 
-        // Mettre à jour les valeurs nécessaires
         Properties seuilsProperties = configMap.get("[Seuils]");
         if (seuilsProperties != null) {
             seuilsProperties.setProperty("temperature_max", String.valueOf(seuilTemperature));
@@ -256,14 +271,17 @@ public class SettingsFrameController {
             donneesProperties.setProperty("humidity", String.valueOf(affichageHumidite));
         }
 
-        // Sauvegarder les modifications dans le fichier
         saveConfigToFile(configMap);
     }
 
+
+    /**
+     * Charge les valeurs de configuration depuis le fichier.
+     */
     private void loadConfigValues() {
         Map<String, Properties> configMap = loadConfigFromFile();
 
-        // Charger les valeurs de la section [Seuils]
+        // Seuils
         Properties seuilsProperties = configMap.get("[Seuils]");
         if (seuilsProperties != null) {
             textCo2.setText(seuilsProperties.getProperty("co2_max", ""));
@@ -276,13 +294,13 @@ public class SettingsFrameController {
             textActMin.setText(seuilsProperties.getProperty("activity_min", ""));
         }
 
-        // Charger les valeurs de la section [Frequences]
+        //Frequences
         Properties frequencesProperties = configMap.get("[Frequences]");
         if (frequencesProperties != null) {
             textFreq.setText(frequencesProperties.getProperty("frequence", ""));
         }
 
-        // Charger les valeurs de la section [Donnees]
+        // Donnees
         Properties donneesProperties = configMap.get("[Donnees]");
         if (donneesProperties != null) {
             act.setSelected(Boolean.parseBoolean(donneesProperties.getProperty("activity", "false")));
@@ -293,6 +311,10 @@ public class SettingsFrameController {
     }
 
 
+    /**
+     * Valide les saisies effectuées dans l'interface utilisateur et enregistre les données si aucune erreur n'est détectée.
+     * En cas d'erreurs de saisie, affiche une boîte de dialogue d'erreur.
+     */
     @FXML
     protected void valider()  {
         String erreurs = this.trouverErreursSaisie();
@@ -345,6 +367,9 @@ public class SettingsFrameController {
         }
     }
 
+    /**
+     * Met à jour la liste des boutons sélectionnés à partir de la configuration du fichier.
+     */
     public static void updateSelectedButtonsList() {
         Map<String, Properties> configMap = loadConfigFromFile();
         Properties sallesProperties = configMap.get("[Salles]");
@@ -356,7 +381,6 @@ public class SettingsFrameController {
 
             selectedButtonLabels.clear();
 
-            // Ajouter chaque salle à la liste des boutons sélectionnés
             for (String salle : sallesArray) {
                 selectedButtonLabels.add(salle.trim());
 

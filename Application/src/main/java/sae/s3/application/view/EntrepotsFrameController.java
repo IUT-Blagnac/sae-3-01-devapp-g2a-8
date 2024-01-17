@@ -3,6 +3,7 @@ package sae.s3.application.view;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -19,25 +20,22 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Controller JavaFX de la view settings-frame.
+ * Contrôleur JavaFX de la vue EntrepotsFrame.
  */
 public class EntrepotsFrameController {
-
-
 
     private EntrepotsFrame entrepotsFrame;
     private Stage primaryStage;
 
     private static final String CONFIG_FILE_PATH = "src/main/resources/sae/s3/application/python/config.ini";
 
-
     /**
-     * Initialisation du contrôleur de vue SettingsFrameController.
+     * Initialise le contrôleur de vue EntrepotsFrameController.
      *
-     * @param _containingStage Stage qui contient le fichier xml contrôlé par
-     *                         SettingsFrameController
-     * @param _entrepotsFrame            Contrôleur de Dialogue qui réalisera les opérations
-     *                         de navigation ou calcul
+     * @param _containingStage Stage qui contient le fichier XML contrôlé par
+     *                         EntrepotsFrameController.
+     * @param _entrepotsFrame  Contrôleur de Dialogue qui réalisera les opérations
+     *                         de navigation ou de calcul.
      */
     public void initContext(Stage _containingStage, EntrepotsFrame _entrepotsFrame) {
         this.primaryStage = _containingStage;
@@ -46,34 +44,36 @@ public class EntrepotsFrameController {
         this.configure();
     }
 
-    /*
-     * Configuration de SettingsFrameController.
+    /**
+     * Configuration du contrôleur EntrepotsFrameController.
      * Fermeture par la croix.
      */
     private void configure() {
         this.primaryStage.setOnCloseRequest(this::closeWindow);
     }
 
-    /*
+    /**
      * Méthode de fermeture de la fenêtre par la croix.
-     *
      */
     private void closeWindow(WindowEvent e) {
         this.doQuit();
         e.consume();
     }
 
-    public void displayDialog(){
+    /**
+     * Affiche la boîte de dialogue des paramètres.
+     */
+    public void displayDialog() {
         this.primaryStage.showAndWait();
     }
 
-    /*
+    /**
      * Demande une confirmation puis ferme la fenêtre.
      */
     @FXML
     private void doQuit() {
         if (AlertUtilities.confirmYesCancel(this.primaryStage, "Quitter les paramètres",
-                "Êtes vous sur de vouloir quitter et valider les salles ?", null, Alert.AlertType.CONFIRMATION)) {
+                "Êtes-vous sûr de vouloir quitter et valider les salles ?", null, Alert.AlertType.CONFIRMATION)) {
 
             this.updateConfigValues();
             this.primaryStage.close();
@@ -82,33 +82,41 @@ public class EntrepotsFrameController {
         }
     }
 
+    /**
+     * Liste des noms des boutons pour la création des boutons.
+     */
     private List<String> buttonNames = Arrays.asList(
-            "C004", "B106", "E003", "Serveurs", "E209", "B234", "E207", "E103", " hall-amphi",
+            "C004", "B106", "E003", "Serveurs", "E209", "B234", "E207", "E103", "hall-amphi",
             "B103", "B113", "B217", "E106", "B212", "E102", "Foyer-personnels", "B201", "amphi1",
             "E208", "hall-entrée-principale", "E206", "B112", "E210", "E105", "B111", "B110",
             "B109", "E100", "E007", "salleConseil", "E104", "B203", "B003", "Local-velo", "B108",
             "E006", "C006", "E004", "B202", "E001", "E101"
     );
 
-
     @FXML
-    private GridPane gridPane; // Assurez-vous d'avoir un GridPane dans votre FXML avec l'id correspondant
+    private GridPane gridPane;
+    @FXML
+    private Button selectAllButton;
 
-
-
-
+    /**
+     * Crée les boutons en fonction des noms de boutons préalablement définis.
+     */
     private void createButtons() {
         int numButtons = buttonNames.size();
-        int columns = 7; // Vous pouvez ajuster le nombre de colonnes en fonction de vos besoins
+        int columns = 7;
 
-        double buttonHeight = 40; // Ajustez la hauteur des boutons selon vos besoins
+        double buttonHeight = 40;
 
-        gridPane.setHgap(5); // Espace horizontal réduit entre les boutons
-        gridPane.setVgap(5); // Espace vertical réduit entre les boutons
-        gridPane.setPadding(new Insets(10, 10, 10, 10)); // Marge autour du GridPane avec 10 de padding de tous les côtés
+        gridPane.setHgap(5);
+        gridPane.setVgap(5);
+        gridPane.setPadding(new Insets(10, 10, 10, 10));
+
+        selectAllButton = new Button("Sélectionner tout");
+        selectAllButton.setOnAction(this::handleSelectAllButtonClick);
+        gridPane.add(selectAllButton, columns - 1, (numButtons / columns) + 1);
 
         for (int i = 0; i < numButtons; i++) {
-            Button button = new Button(buttonNames.get(i)); // Utiliser le nom de la liste
+            Button button = new Button(buttonNames.get(i));
             button.setMinHeight(buttonHeight);
             button.setPrefHeight(buttonHeight);
             button.setMaxHeight(buttonHeight);
@@ -117,18 +125,38 @@ public class EntrepotsFrameController {
             int col = i % columns;
             gridPane.add(button, col, row);
 
-            // Ajouter le gestionnaire d'événements pour chaque bouton
             button.setOnAction(this::handleButtonClick);
 
-            // Vérifier si le bouton est dans la liste selectedButtonLabels et le mettre en vert si nécessaire
             if (SettingsFrameController.selectedButtonLabels.contains(button.getText())) {
                 button.setStyle("-fx-background-color: green;");
             }
         }
     }
 
+    /**
+     * Gère le clic sur le bouton "Sélectionner tout".
+     */
+    private void handleSelectAllButtonClick(ActionEvent event) {
+        boolean selectAll = !SettingsFrameController.selectedButtonLabels.isEmpty();
+        for (Node node : gridPane.getChildren()) {
+            if (node instanceof Button) {
+                Button button = (Button) node;
+                button.setStyle(selectAll ? "-fx-background-color: #3498db;" : "");
+            }
+        }
 
+        if (selectAll) {
+            SettingsFrameController.selectedButtonLabels.clear();
+        } else {
+            SettingsFrameController.selectedButtonLabels.addAll(buttonNames);
+        }
 
+        updateConfigValues();
+    }
+
+    /**
+     * Gère le clic sur un bouton.
+     */
     private void handleButtonClick(ActionEvent event) {
         if (event.getSource() instanceof Button) {
             Button clickedButton = (Button) event.getSource();
@@ -139,7 +167,7 @@ public class EntrepotsFrameController {
                 SettingsFrameController.selectedButtonLabels.add(buttonText);
                 clickedButton.setStyle("-fx-background-color: green;");
             } else {
-                // Bouton déjà sélectionné, le désélectionner
+                // Bouton déjà sélectionné
                 SettingsFrameController.selectedButtonLabels.remove(buttonText);
                 clickedButton.setStyle("-fx-background-color: #3498db;"); // Changer la couleur en bleu clair
             }
@@ -148,7 +176,11 @@ public class EntrepotsFrameController {
         }
     }
 
-
+    /**
+     * Charge la configuration depuis le fichier.
+     *
+     * @return Une map représentant les sections et les propriétés du fichier de configuration.
+     */
     private Map<String, Properties> loadConfigFromFile() {
         Map<String, Properties> configMap = new LinkedHashMap<>();
 
@@ -174,6 +206,12 @@ public class EntrepotsFrameController {
 
         return configMap;
     }
+
+    /**
+     * Sauvegarde la configuration dans le fichier.
+     *
+     * @param configMap La map représentant les sections et les propriétés du fichier de configuration.
+     */
     private void saveConfigToFile(Map<String, Properties> configMap) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(CONFIG_FILE_PATH))) {
             for (Map.Entry<String, Properties> entry : configMap.entrySet()) {
@@ -186,30 +224,31 @@ public class EntrepotsFrameController {
                     writer.newLine();
                 }
 
-                writer.newLine(); // Ligne vide entre les sections
+                writer.newLine(); // Ligne vide
             }
         } catch (IOException e) {
-            e.printStackTrace();  // Gérer les exceptions de manière appropriée dans votre application
+            e.printStackTrace();
         }
     }
+
+    /**
+     * Met à jour les valeurs de configuration en fonction des boutons sélectionnés.
+     */
     private void updateConfigValues() {
         Map<String, Properties> configMap = loadConfigFromFile();
 
         Properties sallesProperties = configMap.get("[Salles]");
         if (sallesProperties != null) {
-            // Convertir la liste des salles en une chaîne séparée par des virgules
-            String salles = SettingsFrameController.selectedButtonLabels.isEmpty() ? "+" : String.join(",", SettingsFrameController.selectedButtonLabels);
+            if (!SettingsFrameController.selectedButtonLabels.isEmpty()) {
+                // Convertir la liste des salles en une chaîne séparée par des virgules
+                String salles = String.join(",", SettingsFrameController.selectedButtonLabels);
 
-            // Mettre à jour la propriété "salle" dans la section [Salles]
-            sallesProperties.setProperty("salle", salles);
+                sallesProperties.setProperty("salle", salles);
+            } else {
+                sallesProperties.remove("salle");
+            }
         }
 
-        // Sauvegarder les modifications dans le fichier
         saveConfigToFile(configMap);
     }
-
-
-
-
-
 }
