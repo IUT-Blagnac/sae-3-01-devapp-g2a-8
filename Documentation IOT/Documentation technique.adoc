@@ -1,0 +1,27 @@
+# Documentation Technique 
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.3
+Date : 27/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Développement d'une application IOT
+----
+
+== Présentation de l'Application
+
+L'application IOT...
+
+== Architecture
+
+Plusieurs couches : Java, python...
+
+== Structure
+
+== Éléments essentiels
+
+== Fonctionnalités

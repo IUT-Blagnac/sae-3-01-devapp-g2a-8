@@ -28,44 +28,25 @@ ifdef::env-github[]
 :icongit: Git
 endif::[]
 
-// /!\ A MODIFIER !!!
-:baseURL: https://github.com/IUT-Blagnac/sae3-01-template
-
-// Tags
-image:{baseURL}/actions/workflows/blank.yml/badge.svg[Bidon] 
-image:{baseURL}/actions/workflows/build.yml/badge.svg[Build] 
-image:{baseURL}/actions/workflows/tests.yml/badge.svg[Tests] 
-image:https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg[License: MPL-2.0, link="https://opensource.org/licenses/MPL-2.0"]
-//---------------------------------------------------------------
-
-TIP: Pensez à mettre à jour les infos dans ce fichier pour que les badges pointent sur les résultats effectifs de vos intégrations continue ou sur la bonne licence logicielle.
-
-WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT1 Informatique de l'IUT de Blagnac.
-
-Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquement effectué par GitHUb), fait partie du dépôt initial cloné à partir du lien GitHub classroom qui vous a été donné en cours (https://classroom.github.com/a/fePVlfpN).
-Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. <<liensUtiles>>), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
+WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT2 Informatique de l'IUT de Blagnac.
 
 toc::[]
 
 == Equipe
 
-Projet est réalisé par::
+Ce projet est réalisé par::
 
-- https://github.com/janeDoe[Jane Doe]
-- https://github.com/johnSmith[John Smith]
-...
+- https://github.com/tristandlth[Tristan Delthil (Scrum Master)]
+- https://github.com/paulEspi117[Paul Espinasse]
+- https://github.com/BastienPRFL[Bastien Perruffel]
 
-Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
+Tuteur/tutrice enseignant(e) de l'équipe : EP
 
 == Contexte général
 
 TIP: Cette partie de votre `README.adoc` peut être supprimée ou mise ailleurs.
 
 === Dépôt initial
-
-Ce dépôt initial a été créé pour que tous les groupes de 2ème année aient les mêmes informations de départ.
-
-Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pas utiles :
 
 - `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l'ajout d'un fichier Jar qui ne bougera plus, pour archive par exemple).
 - `.github` => le répertoire qui contient des éléments de gestion de projet :
@@ -75,8 +56,6 @@ Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pa
 *** `us.yml` => Exemple de template pour les User Stories
 *** `bug.yml` => Exemple de template pour les issues de bug report
 
-TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-vous en pour en ajouter.
-
 [[liensUtiles]]
 === Liens utiles
 
@@ -84,11 +63,16 @@ TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-
 - Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
 - Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
 
-TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
-
 == Réalisations 
 
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+Le GitHub est séparé en deux parties bien disctinctes. +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20IOT[Lien vers la documentation de la partie IOT] +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/master/Documentation%20Web[Lien vers la documentation de la partie Web]
+
+Release Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.6[v0.6] +
+Release IOT : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.6[v0.6] +
+
+Lien vers le site SigmaPrime : http://193.54.227.208/~saephp08/index.php[v0.6]
 
 == Gestion de projet & Qualité
 
@@ -97,20 +81,44 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
-- Tests unitaires et plans de test
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+=== Partie Web (site e-commerce)
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/Web_V0.6[v0.6]
+- Lien vers le site SigmaPrime : http://193.54.227.208/~saephp08/index.php[v0.6]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20technique%20Site%20Web%20-%20Sigma%20Prime.adoc[documentation technique Site e-commerce - SigmaPrime]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Documentation%20utilisateur%20Site%20Web%20-%20Sigma%20Prime.adoc[documentation utilisateur Site e-commerce - SigmaPrime]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Backlog.adoc[backlog produit]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/tree/89f9c050e7c9f7faf2d7e5024827c339c47164ca/Base%20de%20donn%C3%A9es[base de données]
+- Lien vers les https://github.com/orgs/IUT-Blagnac/projects/129[User Stories en cours de développement]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Cahier%20de%20recettes%20Web%20-%20SigmaPrime.adoc[cahier de recettes Site e-comerce - SigmaPrime]
+- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/Tests.adoc[tests]
+- Indicateurs de qualité du code (dette technique) *(à venir)*
 
-Voici un exemple d'évaluation :
+=== Partie IOT (Java-Python)
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/releases/tag/IOT_V0.6[v0.6]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20technique.adoc[documentation technique]
+- Lien vers la https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Documentation%20utilisateur.adoc[documentation utilisateur]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Backlog.adoc[backlog produit]
+- Lien vers les https://github.com/orgs/IUT-Blagnac/projects/144[User Stories en cours de développement]
+- Lien vers le https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/Cahier%20de%20recettes.adoc[cahier de recettes]
+- Lien vers les https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/Tests.adoc[tests]
+- Indicateurs de qualité du code (dette technique) *(à venir)*
+
+
+Évaluation :
 
 ifdef::env-github[]
-image:https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image]
-endif::[]
+image:https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=881427875&format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=881427875&format=image]
 
+Sprint 1 : Quel est votre backlog sprint 1 pour le site  ? Si c'est les US en TODO elles devraient avoir un milestone sprint 1. Sinon OK. Les docs doivent être initialisées (page de garde, sommaire ... cf. SAE2) ... je n'ai qu'un lien vers un doc vide ! Pas de tests ni de fiches, ni de plan de tests ... pourtant des tâches sont terminées en IOT ! Pas de release ou au moins un état d'avancement ...
+
+S2 :Release : commenter la relaese (reste à faire par ex).  Readme à revoir j'ai toujours beaucoup d'inutile. Pensez à affecter une US à un sprint (Milestone) et à l'assignée lorsqu'elle est en todo. Pour un meilleur suivi il faudrait une vue par sprint dans votre projet.  Faire une page de garde pour les docs (cf. S2).  Tests j'ai des liens vers des adoc qui ne s'ouvrent pas.
+
+S3 : Commencer à implémenter la doc technique  ! Préciser le nom de votre client. Mettre un lien vers le site fonctionnel si possible. Ok pour le cahier de recette, je e comprends pas le lien vers les tests qui reprend la doc utilisateur ? Le scrumboard n'indique pas le sprint en cours  et ne garde pas l'historique des sprints passés du coup c'est très confus : US en sprint 4 , en sprint 5 ... en Scrum on ne prévoit que le sprint courant. Toutes les tâches doivent être rattachées à une US.
+
+S4: Pensez à mettre un lien dans le readme vers le site. Date doc à revoir ... la doc tech web n'avance pas vite. Pensez à indiquer le nom du site dans le titre. liens Test toujours aussi confus, ok recette. Idem concernant la gestion des scrumboard ... attention si vous ne voulez pas voir les notes de suivi diminuer.
+
+S5 : Préciser le titre des docs pour qu'on ne soit pas obligé d'aller dans les infos pratiques. Sinon des progrès, il reste qq fautes de frappe dans les docs et le pré-requis  dans le cahier de recette à compléter. Scrumboard dommage de ne pas garder les historiques des sprints car du coup au sprint 5 je trouve des task done des sprints précédents ... c'est confus. Sur les US story du sprint 5( responsive design, eco conception) on est plutôt sur des critères d'acceptabilité de US précédentes ... revoir aussi les tâches liées génériques (coder, tester)  ... qui ne sont par appropriées ici. A noter que votre superviseur est EP pas JMB ;) Globalement c'est une bonne évolution. C'est le dernier retour avant l'évaluation finale, bon courage ! 
+endif::[]
 ifndef::env-github[]
 ++++
 <iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image"></iframe>

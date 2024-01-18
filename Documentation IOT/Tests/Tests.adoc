@@ -1,0 +1,70 @@
+# Documentation Utilisateur
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.1.2
+Date : 12/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Site de e-commerce Sigma Prime
+----
+
+== Tests des applications
+
+=== Partie Java
+
+==== Modifier le fichier de configuration
+
+Lorsque nous allons dans les paramètres de l'application, nous avons ce résultat :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/fenetre_base.png[598, 425]
+
+Actuellement, le fichier de configuration n'est pas configuré : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/config_sans_modif.png[162, 336]
+
+Nous allons donc modifier les valeurs depuis l'application Java pour vérifier si les données sont modifiées dans le fichier de configuration.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/fenetre_modif.png[596, 426]
+
+Comme nous pouvons le voir, les données ont été modifiées. Le programme python peut désormais lire le fichier de configuration afin de récupérer les données attendues.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/config_modif.png[181, 336]
+
+==== Choix des salles (réception des données)
+
+Lorsque nous sommes sur la page principale de l'application, on clique sur le bouton "Entrepots". Actuellement, la liste "salle" est vide car aucune salle n'est sélectionnée.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/configVierge.png[200, 350]
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/listeSalleVierge.png[200, 350]
+
+On choisie maintenant des salles dans la liste:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/listeSalles.png[200, 350]
+
+Après avoir validé et fermé la fenêtre, on peut voir que la liste "salle" dans le fichier config a été mise à jour:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/configListeSalle.png[250, 400]
+
+==== Historique des données et des alertes
+
+Comme on peut le voir dans le fichier Json de l'historique, nous avons à chaque fois : la salle, la date et les différentes données qui y sont associées.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/historiqueJson.png[226, 331]
+
+De même pour les alertes : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/historiqueJson.png[554, 327]
+
+Maintenant, voici ce qui est affiché dans l'application :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20IOT/Tests/images/affichageHistorique.png[2878, 906]
+
+Comme on peut le voir, les données sont les mêmes et les alertes également.
+
+=== Partie Python
+

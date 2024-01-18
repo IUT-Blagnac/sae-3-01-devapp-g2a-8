@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sae.s3.application.view.HistoriqueFrameController"
+            prefWidth="800" prefHeight="600">
+
+   <center>
+      <SplitPane dividerPositions="0.5">
+         <VBox spacing="10" VBox.vgrow="ALWAYS">
+            <Text text="Historique des données" />
+            <TableView fx:id="historiqueTable">
+               <columns>
+                  <TableColumn text="Salle" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="salle"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Date" prefWidth="150">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="date"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Humidité" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="humidite"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="CO2" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="co2"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Activité" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="activite"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Température" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="temperature"/>
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </VBox>
+
+         <VBox spacing="10" VBox.vgrow="ALWAYS">
+            <Text text="Historique des alertes" />
+            <TableView fx:id="alertesTable">
+               <columns>
+                  <TableColumn text="Salle" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="salle"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Date" prefWidth="150">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="date"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Type" prefWidth="100">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="type"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Message" prefWidth="400">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="message"/>
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </VBox>
+      </SplitPane>
+   </center>
+</BorderPane>

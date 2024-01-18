@@ -1,0 +1,208 @@
+# Documentation Utilisateur Site e-commerce - SigmaPrime
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.1.2
+Date : 27/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Site de e-commerce Sigma Prime
+----
+
+== Introduction
+
+Le projet vise à développer un site de e-commerce pour SigmaPrime, en mettant en avant la vente de produits sportifs et de vêtements de sport. Les principaux objectifs sont :
+- Augmenter le chiffre d’affaires et la rentabilité de l’entreprise
+- Fidéliser les Sigma existants et en attirer de nouveaux
+- Renforcer l’image de marque et la notoriété de l’entreprise
+- Proposer une expérience utilisateur optimale et personnalisée
+- Se différencier de la concurrence par la qualité des produits et des services
+
+== Installation
+
+Aucune installation nécessaire. Pour accéder à l'application il suffit de se rendre sur un moteur de recherche et d'accéder au site depuis l'adresse : "Non disponible" si vous êtes sur le réseau. Sinon, cette adresse est accessible : "Non disponible".
+
+== Fonctionnalités
+
+=== Fonctionnalités visiteur : 
+
+==== Naviguer sur le site
+
+Lorsqu'on arrive sur le site, une page d'accueil est proposée avec différentes catégories cliquables. Il est également possible de se connecter, de consulter son panier ou de créer un compte.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/index.png[]
+
+==== Créer un compte et se connecter
+
+Si on choisi de créer un compte, différentes informations sont demandées :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/creerCompte.png[]
+
+Il suffit de renseigner tous les champs et de cliquer sur "Créer un compte".
+
+Pour se connecter, l'adresse e-mail et le mot de passe du compte sont demandés :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/login.png[]
+
+Il suffit de renseigner tous les champs et de cliquer sur "Me connecter".
+Il est également possible de cliquer sur "Se souvenir de moi" pour ne pas avoir à entrer de nouveau l'adresse e-mail.
+
+==== Ajouter des articles au panier
+
+Pour ajouter des articles au panier, vous devez vous rendre sur un article et cliquer sur "Ajouter au panier" :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.PNG[]
+
+==== Gérer le panier
+
+Il est possible de supprimer l'entièreté du panier grâce au bouton "Supprimer mon panier" ou de choisir de supprimer seulement un article en cliquant sur "Supprimer".
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panier.png[]
+
+==== Trier la liste des produits (croissant/décroissant)
+Il est possible de trier des produits en fonction du prix. Pour ça, il suffit d'utiliser l'option de tri en haut à gauche de la page:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/MenuTri.png[]
+
+On peut ensuite choisir ses options de tri:  
+
+Prix croissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriCroissant.png[]
+
+Prix décroissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriDecroissant.png[]
+
+Par fourchette de prix:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriFourchette.png[]
+
+==== Rechercher des produits
+
+Pour rechercher un produit, il suffit d'écrire le produit recherché dans la barre de recherche:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BarreDeRecherche.png[]
+
+On peut ensuite visualiser les produits recherchés:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleCherche.png[]
+
+
+=== Fonctionnalités client (un client est un visiteur possédant un compte) : 
+
+==== Afficher les informations de son compte
+
+Avant d'afficher les informations de votre compte, il vous faut être connecté. Ensuite, cliquez sur l'onglet "Compte" représenté par l'image ci-dessous :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Compte.png[]
+
+Vous pourrez alors afficher vos informations :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/affichageInformations.png[]
+
+==== Modifier les informations de son compte
+
+Avant de modifier les informations de votre compte, il vous faut être connecté. Ensuite, cliquez sur l'onglet "Compte" représenté par l'image ci-dessous :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Compte.png[]
+
+Vous pourrez alors cliquer sur "Editer" et vous pourrez modifier vos informations en validant les modifications :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/modifInformations.png[]
+
+==== Procéder au paiement
+
+Lorsque vous souhaitez procéder au paiement, il faut vous rendre dans votre panier et cliquer sur "Procéder au paiement" : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/paiementPanier.PNG[]
+
+Vous serez alors redirigé vers la page de paiement et vous devrez entrer les informations demandées :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Payer.PNG[]
+
+==== Visualiser ses commandes passées
+
+Pour visualiser vos commandes passées, vous devez vous rendre sur votre profil et dans l'onglet "Voir l'historique de mes commandes" : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
+
+==== Evaluer un article
+
+Pour évaluer un article que vous avez commandé, vous devez vous rendre sur votre profil et dans l'onglet "Voir l'historique de mes commandes",
+vous pourrez alors évaluer l'article avec une note, un commentaire et une image si vous le souhaitez :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
+
+==== Visualiser ses dernières consultations de produits
+
+==== Gérer des points fidélité
+
+=== Fonctionnalités administrateur : 
+
+Pour accéder aux fonctions administrateur, un bouton est disponible en haut à droite de la page d'accueil du site, lorsque l'utilisateur est connecté sur un compte administrateur.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonAdmin.png[]
+
+Vous est alors proposé les options pour gérer les comptes des clients et les articles disponibles sur le site.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/GestionClientsEtArticles.png[]
+
+==== Gérer les comptes clients (CRUD)
+
+La page de gestion des clients affiche les données principales de l'ensemble des clients dans un tableau.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TableauGestionClients.png[]
+
+Pour créer un nouveau client, il faut appuyer sur le bouton d'ajout, en bas du tableau de gestion des clients.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonAjoutClient.png[]
+
+Un formulaire apparaît alors. 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/FormulaireAjoutClient.png[]
+
+Tous les champs du formulaire doivent être remplis avant d'appuyer sur le bouton "Valider". Un client est alors crée.
+
+Il est possible de supprimer ou de modifier les informations d'un client en cliquant sur "Informations client", dans la dernière case du tableau de gestion.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonInformationsClient.png[]
+
+Une page montrant toutes les informations du client apparaît alors, et deux boutons sont disponibles : Modifier et Supprimer. Le bouton Modifier amène vers une page de modification :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/PageModificationClient.png[]
+
+Toutes les informations du client sont préremplies, et des modifications sont possibles. Une fois les modifications effectuées et le bouton Valider cliqué, les modifications seront effectives.
+
+Si le bouton Supprimer de la page d'un client est cliqué, les informations du client seront enlevées définitivement de la base de données.
+
+==== Gérer les articles (CRUD)
+
+La page de gestion des articles affiche les données principales de tous les articles du site dans un tableau.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TableauGestionArticles.png[]
+
+Pour créer un nouvel article, il faut appuyer sur le bouton d'ajout, en bas du tableau regroupant tous les articles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BoutonAjoutArticle.png[]
+
+Un formulaire apparaît alors. 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/FormulaireAjoutArticle.png[]
+
+Si les champs obligatoire du formulaire (ID, Nom, prix, catégorie) sont remplis, l'article est créer lors de la validation du formulaire (bouton Valider).
+
+Il est possible de supprimer ou de modifier les informations d'un article en cliquant sur "Détails article", dans la dernière case du tableau des articles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/DetailsArticle.png[]
+
+Une page montrant toutes les informations dee l'article apparaît alors, et deux boutons sont disponibles : Modifier et Supprimer. Le bouton Modifier amène vers une page de modification :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/FormulaireModifierArticle.png[]
+
+Toutes les informations de l'article sont préremplies, et des modifications sont possibles. Une fois les modifications effectuées et le bouton Valider cliqué, les modifications seront effectives.
+
+Si le bouton Supprimer de la page d'un article est cliqué, les informations de l'article seront enlevées définitivement de la base de données, et il sera retiré du site.

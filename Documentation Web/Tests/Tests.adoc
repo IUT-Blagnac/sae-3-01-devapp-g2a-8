@@ -1,0 +1,165 @@
+# Tests des fonctionnalités du site web
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.5
+Date : 22/12/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Site de e-commerce Sigma Prime
+----
+
+== Tests du site e-commerce
+
+=== Naviguer sur le site
+
+Une fois sur la page d'accueil du site, il est possible de cliquer sur les différentes catégories pour se rendre sur les différentes pages ou se connecter et consulter son panier grâce aux deux boutons situés en haut à droite.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/index.png[scale=50]
+
+=== Se connecter avec un compte client
+
+Page de connexion fonctionnelle :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/login.png[scale=50]
+
+Les messages d'erreurs sont affichés :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisIdentifiants.png[scale=50]
+
+Si les informations sont correctes, l'utilisateur est redirigé vers la page d'accueil et peut maintenant se déconnecter.
+Si c'est un compte administrateur, une page sécurisé lui est également proposé : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/connecteAdmin.png[scale=50]
+
+=== Créer un compte client
+
+Page de création de compte fonctionnelle :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/creerCompte.png[scale=50]
+
+Si les informations sont correctes, le compte est alors créé et l'utilisateur est redirigé vers la page d'accueil du site.
+
+Si les informations sont incorrectes, une erreur détaillant ce qui doit être changé est affichée à l'utilisateur.
+Dans le cas où les deux mots de passe ne sont pas identiques :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/confirmMdpFaux.png[scale=50]
+
+Dans le cas où le code postal n'est pas au bon format :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisCodePostal.png[scale=50]
+
+Dans le cas où le numéro de téléphone n'est pas au bon format : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/mauvaisTel.png[scale=50]
+
+
+=== Modifier les informations du compte client
+La modification des informations d'un compte client se font avec des requêtes dans la base de données.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/modifInformations.png[]
+
+Une fois modifié, les informations sont affichées correctement :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/affichageInformations.png[]
+
+=== Historique des commandes
+Depuis la page de profil du compte, on peut se rendre sur l'historique des commandes. Ce dernier fait une requête à la base de données pour afficher l'historique des commandes. Pour vérifier cela, voici les commandes suivi d'une capture d'écran de la base de données.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/historiqueCommandes.png[]
+
+Base de données :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/historiqueCommandesBD.png[]
+
+On peut voir que cela correspond.
+
+=== Panier
+
+On ajoute des articles au panier : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panier.png[]
+
+On peut voir que cela fonctionne, maintenant on appuie sur "Supprimer" sur les flocons d'avoine :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/supprimerUnPanier.png[]
+
+Les flocons d'avoine sont bien supprimés.
+
+Et maintenant on supprime tout le panier : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/panierSupprimer.png[]
+
+Cela fonctionne également.
+
+=== Visualiser les produits
+Depuis n'importe quelle page du site , il suffit de cliquer sur n'importe quelle catégorie en haut de la page pour visualiser chaque catégorie de produit:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/acceuilMenu.png[scale=50]
+
+On clique ensuite sur la catégorie qu'on souhaite visualiser pour accéder à la liste des produits qui appartiennent à cette catégorie:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/listeProduitSite.png[scale=50]
+
+Une fois dans cette liste, on peut cliquer sur un produit pour avoir des détails et pour l'ajouter au panier:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/detailProduitSite.png[scale=50]
+
+(Evidemment, ce n'est qu'un début, le design et les fonctionnalités vont changer et s'améliorer par la suite)
+
+=== Evaluer un produit et affichage des évaluations
+Accéder à la page "historique des commandes" : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/avis.PNG[]
+
+Affichage des avis sur les produits : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/AffichageAvis.PNG[]
+
+=== Passer une commande
+Accéder à la page de paiement depuis le panier : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/Payer.PNG[]
+
+Affichage d'une erreur si les informations sont incorrectes : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ErreurPaiement.png[]
+
+=== Trier les produits
+
+Accéder à la page de consultation produit, en cliquant sur une sous catégorie :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ProduitNonTrie.png[]
+
+Choisir ses paramètres de tri (Actuellement, on ne peut trier que en fonction du prix, mais il sera possible plus tard de trier en fonction de la taile etc...):
+
+Trier par prix décroissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriDecroissant.png[]
+
+
+Trier par prix croissant:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriCroissant.png[]
+
+
+Trier par fourchette de prix:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/TriFourchette.png[]
+
+Actuellement, on peut uniquement trier en fonction du prix, mais il sera possible plus tard de trier en fonction d'autres paramètres.
+
+=== Rechercher des produits
+
+Cette fonctionnalité est accessible depuis n'importe quelle page du site.
+Il suffit de faire une recherche dans la barre de recherche situé en haut à droite.
+(Actuellement, la barre de recherche ne fonctione que si on écrit le nom exact d'une sous catégorie, comme tshirt par exemple )
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/BarreDeRecherche.png[]
+
+on peut ensuite voir les articles qui correspondent à notre recherche:
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-g2a-8/blob/master/Documentation%20Web/Tests/images/ArticleCherche.png[]

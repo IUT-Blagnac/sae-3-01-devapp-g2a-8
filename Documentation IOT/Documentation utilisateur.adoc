@@ -1,0 +1,37 @@
+# Documentation Utilisateur
+:toc:
+:toc-title: Sommaire
+:sectnums:
+
+== Informations pratiques
+----
+Version : 0.1.2
+Date : 27/2023
+Equipe : 8
+Auteurs : Tristan Delthil - Bastien Perruffel - Paul Espinasse
+Projet : Développement d'une application IOT
+----
+
+== Introduction
+
+Une application Python va permettre d'accéder aux données de capteurs et écrire ces données dans un ou des fichiers.
+Une application Java va permettre de paramétrer le comportement du programme python et récupérera les valeurs captées 
+via des fichiers pour affichage.
+
+== Installation
+
+1. Assurez-vous que votre système dispose des versions appropriées de Java et Python.
+2. Téléchargez le fichier JAR, qui se nomme "Application-1.0-shaded.jar", de l'application à partir de la source appropriée.
+3. Placez le fichier "Application-1.0-shaded.jar" (le JAR) dans un répertoire de votre choix sur votre système.
+4. Ouvrez une ligne de commande ou un terminal.
+5. Accédez au répertoire où vous avez placé le fichier JAR.
+6. Exécutez la commande pour démarrer l'application, par exemple : `java -jar Application-1.0-shaded.jar`.
+7. L'application devrait se lancer et être prête à être utilisée.
+
+_L'application pourra également être démarrée avec un simple double-clic._
+
+== Fonctionnalités
+
+=== Ecrire dans le fichier de configuration
+
+Lorsque l'application est lancée, il est possible de cliquer sur le bouton "Paramétrer" qui va permettre de modifier les seuils d'alertes (CO2, humidité, température, activité) et la fréquence de réception des données (en secondes).
