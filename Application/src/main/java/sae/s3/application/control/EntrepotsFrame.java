@@ -24,7 +24,7 @@ public class EntrepotsFrame {
         try {
             FXMLLoader loader = new FXMLLoader(EntrepotsFrameController.class.getResource("entrepots-frame.fxml"));
 
-            Scene scene = new Scene(loader.load(), 700, 300);
+            Scene scene = new Scene(loader.load(), 800, 600);
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/sae/s3/application/application.css")).toExternalForm());
 
 

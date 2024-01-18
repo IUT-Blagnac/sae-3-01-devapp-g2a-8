@@ -146,19 +146,31 @@ def on_message(client, userdata, msg):
 
             salle = data[1]["room"]
             if dictBoolDonnees["Temperature"] is True:
-                temp = data[0]["temperature"]
+                if data[0]["temperature"] in data[0]:
+                    temp = data[0]["temperature"]
+                else:
+                    temp = ""
             else:
                 temp = ""
             if dictBoolDonnees["Humidite"] is True:
-                hum = data[0]["humidity"]
+                if data[0]["humidity"] in data[0]:
+                    hum = data[0]["humidity"]
+                else:
+                    hum = ""
             else:
                 hum = ""
             if dictBoolDonnees["CO2"] is True:
-                co2 = data[0]["co2"]
+                if data[0]["co2"] in data[0]:
+                    co2 = data[0]["co2"]
+                else:
+                    co2 = ""
             else:
                 co2 = ""
             if dictBoolDonnees["Activite"] is True:
-                act = data[0]["activity"]
+                if data[0]["activity"] in data[0]:
+                    act = data[0]["activity"]
+                else:
+                    act = ""
             else:
                 act = ""
 

@@ -119,6 +119,8 @@ public class EntrepotsFrameController {
             Button button = new Button(buttonNames.get(i));
             button.setMinHeight(buttonHeight);
             button.setPrefHeight(buttonHeight);
+            button.setPrefWidth(100);
+
             button.setMaxHeight(buttonHeight);
 
             int row = i / columns;
