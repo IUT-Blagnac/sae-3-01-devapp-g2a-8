@@ -137,8 +137,8 @@ def on_message(client, userdata, msg):
     global dictBoolDonnees
     message = msg.payload
     data = json.loads(message)
-    if "room" in data[1]:
 
+    if "room" in data[1]:
         salleActuelle = data[1]["room"]
         if salle_config == ['+'] or salleActuelle in salle_config:
 
@@ -146,28 +146,28 @@ def on_message(client, userdata, msg):
 
             salle = data[1]["room"]
             if dictBoolDonnees["Temperature"] is True:
-                if data[0]["temperature"] in data[0]:
+                if "temperature" in data[0]:
                     temp = data[0]["temperature"]
                 else:
                     temp = ""
             else:
                 temp = ""
             if dictBoolDonnees["Humidite"] is True:
-                if data[0]["humidity"] in data[0]:
+                if "humidity" in data[0]:
                     hum = data[0]["humidity"]
                 else:
                     hum = ""
             else:
                 hum = ""
             if dictBoolDonnees["CO2"] is True:
-                if data[0]["co2"] in data[0]:
+                if "co2" in data[0]:
                     co2 = data[0]["co2"]
                 else:
                     co2 = ""
             else:
                 co2 = ""
             if dictBoolDonnees["Activite"] is True:
-                if data[0]["activity"] in data[0]:
+                if "activity" in data[0]:
                     act = data[0]["activity"]
                 else:
                     act = ""
@@ -207,29 +207,33 @@ def on_message(client, userdata, msg):
 
             # Print des données reçues dans la console
             print("\n \n")
-            print("Salle : ", data[1]["room"])
-            print("Température : ", data[0]["temperature"])
-            print("Humidité : ", data[0]["humidity"])
-            print("CO2 : ", data[0]["co2"])
-            print("Activité : ", data[0]["activity"])
+            print("Salle : ", salle)
+            print("Température : ", temp)
+            print("Humidité : ", hum)
+            print("CO2 : ", co2)
+            print("Activité : ", act)
 
         # Appel des alertes
-        if data[0]["temperature"] > temperature_max:
-            ajouter_alerte(salleActuelle, "temperature_max", "alerte.json")
-        if data[0]["humidity"] > humidity_max:
-            ajouter_alerte(salleActuelle, "humidity_max", "alerte.json")
-        if data[0]["co2"] > co2_max:
-            ajouter_alerte(salleActuelle, "co2", "alerte.json")
-        if data[0]["activity"] > activity_max:
-            ajouter_alerte(salleActuelle, "activity_max", "alerte.json")
-        if data[0]["temperature"] < temperature_min:
-            ajouter_alerte(salleActuelle, "temperature_min", "alerte.json")
-        if data[0]["humidity"] < humidity_min:
-            ajouter_alerte(salleActuelle, "humidity_min", "alerte.json")
-        if data[0]["co2"] < co2_min:
-            ajouter_alerte(salleActuelle, "co2_min", "alerte.json")
-        if data[0]["activity"] > activity_min:
-            ajouter_alerte(salleActuelle, "activity_min", "alerte.json")
+        if "temperature" in data[0]:
+            if data[0]["temperature"] > temperature_max:
+                ajouter_alerte(salleActuelle, "temperature_max", "alerte.json")
+            if data[0]["temperature"] < temperature_min:
+                ajouter_alerte(salleActuelle, "temperature_min", "alerte.json")
+        if "humidity" in data[0]:
+            if data[0]["humidity"] > humidity_max:
+                ajouter_alerte(salleActuelle, "humidity_max", "alerte.json")
+            if data[0]["humidity"] < humidity_min:
+                ajouter_alerte(salleActuelle, "humidity_min", "alerte.json")
+        if "co2" in data[0]:
+            if data[0]["co2"] > co2_max:
+                ajouter_alerte(salleActuelle, "co2", "alerte.json")
+            if data[0]["co2"] < co2_min:
+                ajouter_alerte(salleActuelle, "co2_min", "alerte.json")
+        if "activity" in data[0]:
+            if data[0]["activity"] > activity_max:
+                ajouter_alerte(salleActuelle, "activity_max", "alerte.json")
+            if data[0]["activity"] > activity_min:
+                ajouter_alerte(salleActuelle, "activity_min", "alerte.json")
 
 
 # Ajout d'une alerte
