@@ -57,7 +57,6 @@ def read_config():
     minuteurConfig = Timer(frequenceConfig, read_config)
     minuteurConfig.start()
 
-    print(salle_config)
 
 
 # Ecriture des données dans le fichier historique.json

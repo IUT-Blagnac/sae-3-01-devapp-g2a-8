@@ -11,7 +11,7 @@ import sae.s3.application.control.MainFrame;
 import java.io.*;
 
 /**
- * Démarrage de l'application DailyBank
+ * Démarrage de l'application
  *
  */
 public class Application {
