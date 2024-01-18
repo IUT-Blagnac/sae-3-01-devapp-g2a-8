@@ -100,7 +100,7 @@ public class MainFrameController {
         this.timer.scheduleAtFixedRate(
                 this.tb,
                 1000L,
-                2000L);
+                5000L);
 
     }
 
@@ -176,22 +176,23 @@ public class MainFrameController {
         if(!donnees.getCo2().isEmpty()){
             series.getData().add(new XYChart.Data<>("CO2", Double.parseDouble(donnees.getCo2())));
             this.lblCO2.setText("CO2 : " + donnees.getCo2());
+        }else{
+            this.lblCO2.setText("CO2 : Donnée non récupérée.");
         }
         if(!donnees.getActivite().isEmpty()){
             series.getData().add(new XYChart.Data<>("Activité", Double.parseDouble(donnees.getActivite())));
             this.lblActivite.setText("Activité : " + donnees.getActivite());
+        }else{
+            this.lblActivite.setText("Activité : Donnée non récupérée.");
         }
         if(!donnees.getTemperature().isEmpty()){
             series.getData().add(new XYChart.Data<>("Température", Double.parseDouble(donnees.getTemperature())));
             this.lblTemp.setText("Température : " + donnees.getTemperature());
+        }else{
+            this.lblTemp.setText("Température : Donnée non récupérée.");
         }
 
         barChart.getData().add(series);
-
-        XYChart.Data<String, Number> barChart;
-        ObservableList<XYChart.Data<String, Number>> seriesData;
-
-        seriesData = series.getData();
 
         this.affichageDonnees.setText(donnees.getSalle());
 
