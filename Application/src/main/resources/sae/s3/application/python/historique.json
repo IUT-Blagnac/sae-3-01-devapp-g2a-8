@@ -1,0 +1,3990 @@
+{
+    "C004": {
+        "04/12/2023, 11:23:23": {
+            "Humidite": "37.5",
+            "CO2": "1242",
+            "Activite": "55",
+            "Temperature": "24.2"
+        },
+        "04/12/2023, 11:33:22": {
+            "Humidite": "38",
+            "CO2": "1307",
+            "Activite": "69",
+            "Temperature": "24.2"
+        },
+        "04/12/2023, 11:43:27": {
+            "Humidite": "38",
+            "CO2": "1367",
+            "Activite": "53",
+            "Temperature": "24.2"
+        },
+        "05/12/2023, 08:33:21": {
+            "Humidite": "33",
+            "CO2": "420",
+            "Activite": "0",
+            "Temperature": "23.5"
+        },
+        "06/12/2023, 11:33:21": {
+            "Humidite": "40",
+            "CO2": "1264",
+            "Activite": "138",
+            "Temperature": "23.9"
+        },
+        "06/12/2023, 11:43:21": {
+            "Humidite": "40",
+            "CO2": "1182",
+            "Activite": "82",
+            "Temperature": "23.8"
+        },
+        "06/12/2023, 11:53:21": {
+            "Humidite": "39.5",
+            "CO2": "1173",
+            "Activite": "204",
+            "Temperature": "23.8"
+        },
+        "06/12/2023, 12:03:21": {
+            "Humidite": "39.5",
+            "CO2": "1146",
+            "Activite": "197",
+            "Temperature": "23.7"
+        },
+        "06/12/2023, 12:13:21": {
+            "Humidite": "39",
+            "CO2": "1097",
+            "Activite": "21",
+            "Temperature": "23.6"
+        },
+        "06/12/2023, 12:23:20": {
+            "Humidite": "38.5",
+            "CO2": "978",
+            "Activite": "13",
+            "Temperature": "23.5"
+        },
+        "12/12/2023, 11:43:25": {
+            "Humidite": "43",
+            "Temperature": "24.6",
+            "CO2": "926",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:33:25": {
+            "Humidite": "44",
+            "Temperature": "24.3",
+            "CO2": "732",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:33:45": {
+            "Humidite": "58.5",
+            "Temperature": "17",
+            "CO2": "589",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:43:45": {
+            "Humidite": "58",
+            "Temperature": "17",
+            "CO2": "588",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:53:47": {
+            "Humidite": "58",
+            "Temperature": "17",
+            "CO2": "581",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:03:47": {
+            "Humidite": "58",
+            "Temperature": "17",
+            "CO2": "578",
+            "Activite": "0"
+        }
+    },
+    "B106": {
+        "04/12/2023, 11:24:45": {
+            "Humidite": "39",
+            "CO2": "1046",
+            "Activite": "255",
+            "Temperature": "20.2"
+        },
+        "04/12/2023, 11:34:44": {
+            "Humidite": "39.5",
+            "CO2": "1126",
+            "Activite": "206",
+            "Temperature": "20.4"
+        },
+        "04/12/2023, 11:44:44": {
+            "Humidite": "40.5",
+            "CO2": "1303",
+            "Activite": "72",
+            "Temperature": "20.6"
+        },
+        "06/12/2023, 11:34:43": {
+            "Humidite": "47",
+            "CO2": "1570",
+            "Activite": "10",
+            "Temperature": "21"
+        },
+        "06/12/2023, 11:44:43": {
+            "Humidite": "47.5",
+            "CO2": "1661",
+            "Activite": "9",
+            "Temperature": "21.1"
+        },
+        "06/12/2023, 11:54:42": {
+            "Humidite": "47.5",
+            "CO2": "1722",
+            "Activite": "58",
+            "Temperature": "21.2"
+        },
+        "06/12/2023, 12:04:42": {
+            "Humidite": "48",
+            "CO2": "1797",
+            "Activite": "64",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:14:43": {
+            "Humidite": "48",
+            "CO2": "1809",
+            "Activite": "38",
+            "Temperature": "21.4"
+        },
+        "06/12/2023, 12:24:43": {
+            "Humidite": "48",
+            "CO2": "1800",
+            "Activite": "30",
+            "Temperature": "21.5"
+        },
+        "12/12/2023, 11:44:47": {
+            "Humidite": "55.5",
+            "Temperature": "21.2",
+            "CO2": "1397",
+            "Activite": "0"
+        },
+        "12/12/2023, 11:54:47": {
+            "Humidite": "55",
+            "Temperature": "21.2",
+            "CO2": "1333",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:34:47": {
+            "Humidite": "57.5",
+            "Temperature": "21.2",
+            "CO2": "1325",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:35:16": {
+            "Humidite": "53",
+            "Temperature": "20",
+            "CO2": "544",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:45:17": {
+            "Humidite": "53",
+            "Temperature": "20",
+            "CO2": "548",
+            "Activite": "30"
+        },
+        "17/01/2024, 08:55:17": {
+            "Humidite": "53",
+            "Temperature": "20.1",
+            "CO2": "577",
+            "Activite": "75"
+        },
+        "17/01/2024, 09:05:17": {
+            "Humidite": "53.5",
+            "Temperature": "20.2",
+            "CO2": "648",
+            "Activite": "79"
+        }
+    },
+    "E003": {
+        "04/12/2023, 11:24:45": {
+            "Humidite": "41.5",
+            "CO2": "718",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "04/12/2023, 11:34:45": {
+            "Humidite": "41.5",
+            "CO2": "723",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:34:44": {
+            "Humidite": "42",
+            "CO2": "593",
+            "Activite": "0",
+            "Temperature": "20.1"
+        },
+        "06/12/2023, 11:44:44": {
+            "Humidite": "42",
+            "CO2": "626",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 11:54:47": {
+            "Humidite": "42",
+            "CO2": "607",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 12:04:44": {
+            "Humidite": "41.5",
+            "CO2": "603",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 12:14:44": {
+            "Humidite": "41.5",
+            "CO2": "594",
+            "Activite": "0",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 12:24:47": {
+            "Humidite": "41.5",
+            "CO2": "576",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "12/12/2023, 11:44:49": {
+            "Humidite": "48",
+            "Temperature": "20.7",
+            "CO2": "530",
+            "Activite": "0"
+        },
+        "12/12/2023, 11:54:49": {
+            "Humidite": "48",
+            "Temperature": "20.7",
+            "CO2": "532",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:34:49": {
+            "Humidite": "53.5",
+            "Temperature": "21.2",
+            "CO2": "513",
+            "Activite": "9"
+        },
+        "17/01/2024, 08:35:34": {
+            "Humidite": "54",
+            "Temperature": "19.2",
+            "CO2": "474",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:45:36": {
+            "Humidite": "54",
+            "Temperature": "19.3",
+            "CO2": "470",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:55:36": {
+            "Humidite": "54",
+            "Temperature": "19.3",
+            "CO2": "471",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:05:35": {
+            "Humidite": "53.5",
+            "Temperature": "19.4",
+            "CO2": "472",
+            "Activite": "0"
+        }
+    },
+    "Serveurs": {
+        "04/12/2023, 11:24:48": {
+            "Humidite": "37.5",
+            "CO2": "534",
+            "Activite": "0",
+            "Temperature": "24.6"
+        },
+        "04/12/2023, 11:34:48": {
+            "Humidite": "35",
+            "CO2": "543",
+            "Activite": "0",
+            "Temperature": "24.6"
+        },
+        "04/12/2023, 11:44:48": {
+            "Humidite": "38",
+            "CO2": "545",
+            "Activite": "0",
+            "Temperature": "24.6"
+        },
+        "06/12/2023, 11:34:47": {
+            "Humidite": "37",
+            "CO2": "589",
+            "Activite": "0",
+            "Temperature": "24.5"
+        },
+        "06/12/2023, 11:44:48": {
+            "Humidite": "38.5",
+            "CO2": "583",
+            "Activite": "0",
+            "Temperature": "24.6"
+        },
+        "06/12/2023, 11:54:47": {
+            "Humidite": "39.5",
+            "CO2": "586",
+            "Activite": "0",
+            "Temperature": "24.4"
+        },
+        "06/12/2023, 12:04:47": {
+            "Humidite": "39.5",
+            "CO2": "588",
+            "Activite": "0",
+            "Temperature": "24.4"
+        },
+        "06/12/2023, 12:14:47": {
+            "Humidite": "40.5",
+            "CO2": "584",
+            "Activite": "0",
+            "Temperature": "24.5"
+        },
+        "06/12/2023, 12:24:48": {
+            "Humidite": "35",
+            "CO2": "591",
+            "Activite": "0",
+            "Temperature": "24.4"
+        },
+        "12/12/2023, 11:54:56": {
+            "Humidite": "35.5",
+            "Temperature": "24.6",
+            "CO2": "636",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:34:56": {
+            "Humidite": "43.5",
+            "Temperature": "24.5",
+            "CO2": "668",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:35:13": {
+            "Humidite": "42.5",
+            "Temperature": "24.6",
+            "CO2": "447",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:45:14": {
+            "Humidite": "38.5",
+            "Temperature": "24.3",
+            "CO2": "455",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:55:13": {
+            "Humidite": "40",
+            "Temperature": "24.5",
+            "CO2": "454",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:05:14": {
+            "Humidite": "38",
+            "Temperature": "24.4",
+            "CO2": "453",
+            "Activite": "0"
+        }
+    },
+    "E209": {
+        "04/12/2023, 11:25:18": {
+            "Humidite": "41.5",
+            "CO2": "455",
+            "Activite": "0",
+            "Temperature": "17.8"
+        },
+        "04/12/2023, 11:35:17": {
+            "Humidite": "41.5",
+            "CO2": "463",
+            "Activite": "0",
+            "Temperature": "17.9"
+        },
+        "04/12/2023, 11:45:18": {
+            "Humidite": "41.5",
+            "CO2": "466",
+            "Activite": "0",
+            "Temperature": "18"
+        },
+        "05/12/2023, 08:15:17": {
+            "Humidite": "45.5",
+            "CO2": "427",
+            "Activite": "0",
+            "Temperature": "17"
+        },
+        "05/12/2023, 08:25:17": {
+            "Humidite": "45.5",
+            "CO2": "435",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "06/12/2023, 11:35:16": {
+            "Humidite": "44.5",
+            "CO2": "470",
+            "Activite": "0",
+            "Temperature": "18.1"
+        },
+        "06/12/2023, 11:45:17": {
+            "Humidite": "44.5",
+            "CO2": "469",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "06/12/2023, 11:55:16": {
+            "Humidite": "44",
+            "CO2": "466",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "06/12/2023, 12:05:16": {
+            "Humidite": "44",
+            "CO2": "466",
+            "Activite": "0",
+            "Temperature": "18.3"
+        },
+        "06/12/2023, 12:15:17": {
+            "Humidite": "44",
+            "CO2": "467",
+            "Activite": "0",
+            "Temperature": "18.3"
+        },
+        "12/12/2023, 11:55:21": {
+            "Humidite": "51.5",
+            "Temperature": "19.7",
+            "CO2": "537",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:35:47": {
+            "Humidite": "57.5",
+            "Temperature": "17.7",
+            "CO2": "477",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:45:48": {
+            "Humidite": "57.5",
+            "Temperature": "17.7",
+            "CO2": "478",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:55:49": {
+            "Humidite": "57.5",
+            "Temperature": "17.8",
+            "CO2": "478",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:05:48": {
+            "Humidite": "57.5",
+            "Temperature": "17.9",
+            "CO2": "475",
+            "Activite": "0"
+        }
+    },
+    "B234": {
+        "04/12/2023, 11:25:23": {
+            "Humidite": "32",
+            "CO2": "988",
+            "Activite": "0",
+            "Temperature": "22.8"
+        },
+        "04/12/2023, 11:35:23": {
+            "Humidite": "32",
+            "CO2": "1022",
+            "Activite": "0",
+            "Temperature": "22.9"
+        },
+        "04/12/2023, 11:45:23": {
+            "Humidite": "32.5",
+            "CO2": "1032",
+            "Activite": "0",
+            "Temperature": "22.8"
+        },
+        "05/12/2023, 08:15:22": {
+            "Humidite": "34.5",
+            "CO2": "481",
+            "Activite": "0",
+            "Temperature": "22.9"
+        },
+        "05/12/2023, 08:25:21": {
+            "Humidite": "34.5",
+            "CO2": "482",
+            "Activite": "0",
+            "Temperature": "22.9"
+        },
+        "06/12/2023, 11:35:21": {
+            "Humidite": "37",
+            "CO2": "978",
+            "Activite": "0",
+            "Temperature": "23.1"
+        },
+        "06/12/2023, 11:45:21": {
+            "Humidite": "37",
+            "CO2": "983",
+            "Activite": "0",
+            "Temperature": "23.1"
+        },
+        "06/12/2023, 11:55:21": {
+            "Humidite": "37",
+            "CO2": "979",
+            "Activite": "0",
+            "Temperature": "23.1"
+        },
+        "06/12/2023, 12:05:20": {
+            "Humidite": "37",
+            "CO2": "995",
+            "Activite": "0",
+            "Temperature": "23.1"
+        },
+        "06/12/2023, 12:15:21": {
+            "Humidite": "37",
+            "CO2": "1002",
+            "Activite": "0",
+            "Temperature": "23.1"
+        },
+        "12/12/2023, 11:55:20": {
+            "Humidite": "47.5",
+            "Temperature": "22.5",
+            "CO2": "1271",
+            "Activite": "0"
+        }
+    },
+    "E207": {
+        "04/12/2023, 11:26:15": {
+            "Humidite": "42",
+            "CO2": "1201",
+            "Activite": "351",
+            "Temperature": "20.4"
+        },
+        "04/12/2023, 11:36:15": {
+            "Humidite": "42.5",
+            "CO2": "1274",
+            "Activite": "350",
+            "Temperature": "20.6"
+        },
+        "04/12/2023, 11:46:15": {
+            "Humidite": "42.5",
+            "CO2": "1281",
+            "Activite": "367",
+            "Temperature": "20.7"
+        },
+        "05/12/2023, 08:16:14": {
+            "Humidite": "40",
+            "CO2": "469",
+            "Activite": "0",
+            "Temperature": "19.3"
+        },
+        "05/12/2023, 08:26:18": {
+            "Humidite": "40",
+            "CO2": "472",
+            "Activite": "0",
+            "Temperature": "19.4"
+        },
+        "06/12/2023, 11:36:12": {
+            "Humidite": "40",
+            "CO2": "691",
+            "Activite": "0",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 11:46:12": {
+            "Humidite": "39.5",
+            "CO2": "682",
+            "Activite": "0",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 11:56:13": {
+            "Humidite": "39.5",
+            "CO2": "660",
+            "Activite": "0",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 12:06:12": {
+            "Humidite": "39.5",
+            "CO2": "643",
+            "Activite": "0",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 12:16:13": {
+            "Humidite": "39.5",
+            "CO2": "638",
+            "Activite": "3765",
+            "Temperature": "20.7"
+        },
+        "12/12/2023, 11:56:25": {
+            "Humidite": "46",
+            "Temperature": "21.4",
+            "CO2": "581",
+            "Activite": "0"
+        },
+        "12/01/2024, 12:46:41": {
+            "Humidite": "33",
+            "Temperature": "18.7",
+            "CO2": "505",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:36:32": {
+            "Humidite": "49.5",
+            "Temperature": "20.3",
+            "CO2": "449",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:46:33": {
+            "Humidite": "49.5",
+            "Temperature": "20.4",
+            "CO2": "442",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:56:33": {
+            "Humidite": "49",
+            "Temperature": "20.4",
+            "CO2": "445",
+            "Activite": "0"
+        }
+    },
+    "E103": {
+        "04/12/2023, 11:26:16": {
+            "Humidite": "47",
+            "CO2": "1122",
+            "Activite": "0",
+            "Temperature": "18.1"
+        },
+        "04/12/2023, 11:36:16": {
+            "Humidite": "47",
+            "CO2": "1149",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "04/12/2023, 11:46:14": {
+            "Humidite": "47",
+            "CO2": "1181",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "05/12/2023, 08:16:13": {
+            "Humidite": "45",
+            "CO2": "432",
+            "Activite": "0",
+            "Temperature": "16.9"
+        },
+        "05/12/2023, 08:26:18": {
+            "Humidite": "45",
+            "CO2": "434",
+            "Activite": "0",
+            "Temperature": "16.9"
+        },
+        "06/12/2023, 11:36:15": {
+            "Humidite": "47",
+            "CO2": "1130",
+            "Activite": "385",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 11:56:14": {
+            "Humidite": "46.5",
+            "CO2": "1129",
+            "Activite": "61",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:06:15": {
+            "Humidite": "46",
+            "CO2": "1084",
+            "Activite": "0",
+            "Temperature": "20.1"
+        },
+        "06/12/2023, 12:16:23": {
+            "Humidite": "45.5",
+            "CO2": "961",
+            "Activite": "0",
+            "Temperature": "19.8"
+        },
+        "12/12/2023, 11:56:19": {
+            "Humidite": "55",
+            "Temperature": "20.5",
+            "CO2": "1150",
+            "Activite": "367"
+        },
+        "17/01/2024, 08:36:45": {
+            "Humidite": "55",
+            "Temperature": "18.4",
+            "CO2": "472",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:56:47": {
+            "Humidite": "55.5",
+            "Temperature": "18.4",
+            "CO2": "472",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:06:47": {
+            "Humidite": "55.5",
+            "Temperature": "18.4",
+            "CO2": "470",
+            "Activite": "0"
+        }
+    },
+    " hall-amphi": {
+        "04/12/2023, 11:26:17": {
+            "Humidite": "44.5",
+            "CO2": "568",
+            "Activite": "76",
+            "Temperature": "18"
+        },
+        "04/12/2023, 11:36:16": {
+            "Humidite": "44.5",
+            "CO2": "585",
+            "Activite": "18",
+            "Temperature": "18.1"
+        },
+        "04/12/2023, 11:46:16": {
+            "Humidite": "44.5",
+            "CO2": "582",
+            "Activite": "34",
+            "Temperature": "18.1"
+        },
+        "05/12/2023, 08:16:15": {
+            "Humidite": "45.5",
+            "CO2": "514",
+            "Activite": "75",
+            "Temperature": "18.3"
+        },
+        "05/12/2023, 08:26:18": {
+            "Humidite": "45.5",
+            "CO2": "511",
+            "Activite": "70",
+            "Temperature": "18.3"
+        },
+        "06/12/2023, 11:36:15": {
+            "Humidite": "45.5",
+            "CO2": "765",
+            "Activite": "20",
+            "Temperature": "19.3"
+        },
+        "06/12/2023, 11:46:15": {
+            "Humidite": "45.5",
+            "CO2": "777",
+            "Activite": "12",
+            "Temperature": "19.4"
+        },
+        "06/12/2023, 11:56:15": {
+            "Humidite": "45.5",
+            "CO2": "769",
+            "Activite": "48",
+            "Temperature": "19.4"
+        },
+        "06/12/2023, 12:06:16": {
+            "Humidite": "45",
+            "CO2": "762",
+            "Activite": "72",
+            "Temperature": "19.4"
+        },
+        "06/12/2023, 12:16:15": {
+            "Humidite": "45",
+            "CO2": "749",
+            "Activite": "71",
+            "Temperature": "19.5"
+        },
+        "12/12/2023, 11:56:20": {
+            "Humidite": "53",
+            "Temperature": "19.3",
+            "CO2": "532",
+            "Activite": "45"
+        },
+        "17/01/2024, 08:34:46": {
+            "Humidite": "55",
+            "Temperature": "19.2",
+            "CO2": "454",
+            "Activite": "12"
+        },
+        "17/01/2024, 08:44:48": {
+            "Humidite": "54.5",
+            "Temperature": "19.2",
+            "CO2": "462",
+            "Activite": "69"
+        },
+        "17/01/2024, 08:54:48": {
+            "Humidite": "55",
+            "Temperature": "19.2",
+            "CO2": "468",
+            "Activite": "36"
+        },
+        "17/01/2024, 09:04:48": {
+            "Humidite": "55",
+            "Temperature": "19.2",
+            "CO2": "469",
+            "Activite": "52"
+        }
+    },
+    "B103": {
+        "04/12/2023, 11:26:44": {
+            "Humidite": "39",
+            "CO2": "3040",
+            "Activite": "90",
+            "Temperature": "21"
+        },
+        "04/12/2023, 11:46:45": {
+            "Humidite": "40",
+            "CO2": "3250",
+            "Activite": "137",
+            "Temperature": "21.3"
+        },
+        "05/12/2023, 08:16:43": {
+            "Humidite": "42",
+            "CO2": "1893",
+            "Activite": "202",
+            "Temperature": "19.7"
+        },
+        "05/12/2023, 08:26:47": {
+            "Humidite": "44",
+            "CO2": "2240",
+            "Activite": "193",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:16:43": {
+            "Humidite": "45.5",
+            "CO2": "3122",
+            "Activite": "170",
+            "Temperature": "21.1"
+        },
+        "06/12/2023, 11:36:43": {
+            "Humidite": "41.5",
+            "CO2": "2020",
+            "Activite": "204",
+            "Temperature": "20.1"
+        },
+        "06/12/2023, 11:46:42": {
+            "Humidite": "41.5",
+            "CO2": "1934",
+            "Activite": "95",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 11:56:43": {
+            "Humidite": "41.5",
+            "CO2": "1932",
+            "Activite": "149",
+            "Temperature": "19.6"
+        },
+        "06/12/2023, 12:06:43": {
+            "Humidite": "42",
+            "CO2": "1993",
+            "Activite": "204",
+            "Temperature": "19.6"
+        },
+        "06/12/2023, 12:16:43": {
+            "Humidite": "43",
+            "CO2": "2413",
+            "Activite": "1",
+            "Temperature": "19.9"
+        },
+        "12/12/2023, 11:56:47": {
+            "Humidite": "54",
+            "Temperature": "21",
+            "CO2": "3072",
+            "Activite": "0"
+        },
+        "12/01/2024, 12:47:12": {
+            "Humidite": "34",
+            "Temperature": "22.3",
+            "CO2": "2693",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:12": {
+            "Humidite": "54.5",
+            "Temperature": "19",
+            "CO2": "1888",
+            "Activite": "104"
+        },
+        "17/01/2024, 08:47:13": {
+            "Humidite": "54.5",
+            "Temperature": "19.1",
+            "CO2": "1921",
+            "Activite": "54"
+        },
+        "17/01/2024, 08:57:13": {
+            "Humidite": "55",
+            "Temperature": "19.2",
+            "CO2": "2066",
+            "Activite": "230"
+        },
+        "17/01/2024, 09:07:13": {
+            "Humidite": "55",
+            "Temperature": "19.4",
+            "CO2": "2224",
+            "Activite": "147"
+        }
+    },
+    "B113": {
+        "04/12/2023, 11:26:49": {
+            "Humidite": "39",
+            "CO2": "845",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "04/12/2023, 11:36:49": {
+            "Humidite": "39",
+            "CO2": "831",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "04/12/2023, 11:46:48": {
+            "Humidite": "39.5",
+            "CO2": "821",
+            "Activite": "27",
+            "Temperature": "19.9"
+        },
+        "05/12/2023, 08:16:48": {
+            "Humidite": "43.5",
+            "CO2": "488",
+            "Activite": "0",
+            "Temperature": "19.3"
+        },
+        "05/12/2023, 08:26:48": {
+            "Humidite": "43.5",
+            "CO2": "486",
+            "Activite": "0",
+            "Temperature": "19.3"
+        },
+        "06/12/2023, 11:16:48": {
+            "Humidite": "49.5",
+            "CO2": "1393",
+            "Activite": "70",
+            "Temperature": "20.5"
+        },
+        "06/12/2023, 11:36:47": {
+            "Humidite": "50",
+            "CO2": "1570",
+            "Activite": "11",
+            "Temperature": "20.8"
+        },
+        "06/12/2023, 11:46:47": {
+            "Humidite": "50.5",
+            "CO2": "1630",
+            "Activite": "6",
+            "Temperature": "20.9"
+        },
+        "06/12/2023, 11:56:48": {
+            "Humidite": "51",
+            "CO2": "1700",
+            "Activite": "31",
+            "Temperature": "21"
+        },
+        "06/12/2023, 12:06:47": {
+            "Humidite": "51",
+            "CO2": "1752",
+            "Activite": "196",
+            "Temperature": "21.1"
+        },
+        "06/12/2023, 12:16:47": {
+            "Humidite": "51.5",
+            "CO2": "1838",
+            "Activite": "108",
+            "Temperature": "21.2"
+        },
+        "12/12/2023, 11:56:47": {
+            "Humidite": "56",
+            "Temperature": "18.7",
+            "CO2": "485",
+            "Activite": "0"
+        },
+        "12/01/2024, 12:47:10": {
+            "Humidite": "38.5",
+            "Temperature": "21.1",
+            "CO2": "1179",
+            "Activite": "284"
+        },
+        "17/01/2024, 08:27:19": {
+            "Humidite": "55.5",
+            "Temperature": "19.4",
+            "CO2": "704",
+            "Activite": "92"
+        },
+        "17/01/2024, 08:37:19": {
+            "Humidite": "55.5",
+            "Temperature": "19.5",
+            "CO2": "750",
+            "Activite": "155"
+        },
+        "17/01/2024, 08:47:21": {
+            "Humidite": "56",
+            "Temperature": "19.6",
+            "CO2": "806",
+            "Activite": "105"
+        },
+        "17/01/2024, 08:57:21": {
+            "Humidite": "56",
+            "Temperature": "19.6",
+            "CO2": "870",
+            "Activite": "127"
+        },
+        "17/01/2024, 09:07:21": {
+            "Humidite": "56",
+            "Temperature": "19.7",
+            "CO2": "888",
+            "Activite": "161"
+        }
+    },
+    "B217": {
+        "04/12/2023, 11:26:49": {
+            "Humidite": "38",
+            "CO2": "608",
+            "Activite": "0",
+            "Temperature": "18.3"
+        },
+        "04/12/2023, 11:36:49": {
+            "Humidite": "38",
+            "CO2": "611",
+            "Activite": "0",
+            "Temperature": "18.3"
+        },
+        "05/12/2023, 08:16:47": {
+            "Humidite": "44",
+            "CO2": "561",
+            "Activite": "383",
+            "Temperature": "18.1"
+        },
+        "05/12/2023, 08:26:48": {
+            "Humidite": "44",
+            "CO2": "638",
+            "Activite": "412",
+            "Temperature": "18.3"
+        },
+        "06/12/2023, 11:16:47": {
+            "Humidite": "51",
+            "CO2": "1882",
+            "Activite": "386",
+            "Temperature": "21.2"
+        },
+        "06/12/2023, 11:36:47": {
+            "Humidite": "50.5",
+            "CO2": "1899",
+            "Activite": "430",
+            "Temperature": "21.6"
+        },
+        "06/12/2023, 11:46:47": {
+            "Humidite": "50",
+            "CO2": "1869",
+            "Activite": "463",
+            "Temperature": "21.8"
+        },
+        "06/12/2023, 11:56:46": {
+            "Humidite": "49.5",
+            "CO2": "1862",
+            "Activite": "474",
+            "Temperature": "21.9"
+        },
+        "06/12/2023, 12:06:47": {
+            "Humidite": "49",
+            "CO2": "1828",
+            "Activite": "472",
+            "Temperature": "22"
+        },
+        "06/12/2023, 12:16:47": {
+            "Humidite": "48.5",
+            "CO2": "1799",
+            "Activite": "465",
+            "Temperature": "22.1"
+        },
+        "12/12/2023, 11:56:51": {
+            "Humidite": "57.5",
+            "Temperature": "20.7",
+            "CO2": "1724",
+            "Activite": "428"
+        },
+        "12/01/2024, 12:47:14": {
+            "Humidite": "36",
+            "Temperature": "18.6",
+            "CO2": "724",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:27:18": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "453",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:18": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "455",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:47:19": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "453",
+            "Activite": "2"
+        },
+        "17/01/2024, 08:57:21": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "450",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:07:20": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "450",
+            "Activite": "0"
+        }
+    },
+    "E106": {
+        "04/12/2023, 11:26:52": {
+            "Humidite": "40.5",
+            "CO2": "1237",
+            "Activite": "204",
+            "Temperature": "22.1"
+        },
+        "04/12/2023, 11:36:56": {
+            "Humidite": "40.5",
+            "CO2": "1303",
+            "Activite": "171",
+            "Temperature": "22.1"
+        },
+        "04/12/2023, 11:46:52": {
+            "Humidite": "41",
+            "CO2": "1374",
+            "Activite": "111",
+            "Temperature": "22.2"
+        },
+        "05/12/2023, 08:16:50": {
+            "Humidite": "41.5",
+            "CO2": "609",
+            "Activite": "245",
+            "Temperature": "19.6"
+        },
+        "05/12/2023, 08:26:51": {
+            "Humidite": "42.5",
+            "CO2": "752",
+            "Activite": "90",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 11:16:50": {
+            "Humidite": "46.5",
+            "CO2": "1588",
+            "Activite": "122",
+            "Temperature": "21.8"
+        },
+        "06/12/2023, 11:36:51": {
+            "Humidite": "47.5",
+            "CO2": "1802",
+            "Activite": "92",
+            "Temperature": "22"
+        },
+        "06/12/2023, 11:46:50": {
+            "Humidite": "47",
+            "CO2": "1739",
+            "Activite": "216",
+            "Temperature": "22.1"
+        },
+        "06/12/2023, 11:56:50": {
+            "Humidite": "46.5",
+            "CO2": "1681",
+            "Activite": "250",
+            "Temperature": "22.1"
+        },
+        "06/12/2023, 12:06:51": {
+            "Humidite": "45",
+            "CO2": "1461",
+            "Activite": "62",
+            "Temperature": "22"
+        },
+        "06/12/2023, 12:16:51": {
+            "Humidite": "44",
+            "CO2": "1223",
+            "Activite": "0",
+            "Temperature": "21.8"
+        },
+        "12/12/2023, 11:56:57": {
+            "Humidite": "49",
+            "Temperature": "20.5",
+            "CO2": "586",
+            "Activite": "0"
+        },
+        "12/01/2024, 12:47:39": {
+            "Humidite": "38",
+            "Temperature": "17.9",
+            "CO2": "758",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:27:31": {
+            "Humidite": "51.5",
+            "Temperature": "19.6",
+            "CO2": "436",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:30": {
+            "Humidite": "51.5",
+            "Temperature": "19.6",
+            "CO2": "441",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:47:31": {
+            "Humidite": "51.5",
+            "Temperature": "19.6",
+            "CO2": "440",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:57:31": {
+            "Humidite": "52",
+            "Temperature": "19.6",
+            "CO2": "444",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:07:31": {
+            "Humidite": "52",
+            "Temperature": "19.6",
+            "CO2": "446",
+            "Activite": "0"
+        }
+    },
+    "B212": {
+        "04/12/2023, 11:26:54": {
+            "Humidite": "45",
+            "CO2": "1274",
+            "Activite": "0",
+            "Temperature": "19.1"
+        },
+        "04/12/2023, 11:36:56": {
+            "Humidite": "45",
+            "CO2": "1249",
+            "Activite": "0",
+            "Temperature": "18.9"
+        },
+        "04/12/2023, 11:46:54": {
+            "Humidite": "45.5",
+            "CO2": "1219",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "05/12/2023, 08:17:03": {
+            "Humidite": "46",
+            "CO2": "445",
+            "Activite": "0",
+            "Temperature": "17.3"
+        },
+        "05/12/2023, 08:26:53": {
+            "Humidite": "45.5",
+            "CO2": "445",
+            "Activite": "0",
+            "Temperature": "17.4"
+        },
+        "06/12/2023, 11:16:52": {
+            "Humidite": "48",
+            "CO2": "758",
+            "Activite": "0",
+            "Temperature": "17.9"
+        },
+        "06/12/2023, 11:36:52": {
+            "Humidite": "47.5",
+            "CO2": "729",
+            "Activite": "0",
+            "Temperature": "17.9"
+        },
+        "06/12/2023, 11:46:52": {
+            "Humidite": "48",
+            "CO2": "758",
+            "Activite": "0",
+            "Temperature": "18"
+        },
+        "06/12/2023, 11:56:51": {
+            "Humidite": "48",
+            "CO2": "759",
+            "Activite": "0",
+            "Temperature": "18"
+        },
+        "06/12/2023, 12:06:52": {
+            "Humidite": "48",
+            "CO2": "771",
+            "Activite": "0",
+            "Temperature": "18"
+        },
+        "06/12/2023, 12:16:52": {
+            "Humidite": "47.5",
+            "CO2": "772",
+            "Activite": "0",
+            "Temperature": "18"
+        },
+        "12/12/2023, 11:56:52": {
+            "Humidite": "58",
+            "Temperature": "18.4",
+            "CO2": "746",
+            "Activite": "0"
+        },
+        "12/01/2024, 12:47:16": {
+            "Humidite": "40",
+            "Temperature": "19.1",
+            "CO2": "990",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:27:19": {
+            "Humidite": "57",
+            "Temperature": "18.2",
+            "CO2": "522",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:47:21": {
+            "Humidite": "57",
+            "Temperature": "18.3",
+            "CO2": "537",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:57:22": {
+            "Humidite": "57",
+            "Temperature": "18.3",
+            "CO2": "539",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:07:21": {
+            "Humidite": "57",
+            "Temperature": "18.3",
+            "CO2": "547",
+            "Activite": "0"
+        }
+    },
+    "E102": {
+        "04/12/2023, 11:27:27": {
+            "Humidite": "44",
+            "CO2": "1292",
+            "Activite": "285",
+            "Temperature": "20"
+        },
+        "04/12/2023, 11:37:15": {
+            "Humidite": "44.5",
+            "CO2": "1327",
+            "Activite": "453",
+            "Temperature": "20.1"
+        },
+        "05/12/2023, 08:17:13": {
+            "Humidite": "43",
+            "CO2": "441",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "05/12/2023, 08:27:14": {
+            "Humidite": "43",
+            "CO2": "441",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "06/12/2023, 11:17:13": {
+            "Humidite": "44",
+            "CO2": "1251",
+            "Activite": "164",
+            "Temperature": "21.9"
+        },
+        "06/12/2023, 11:37:14": {
+            "Humidite": "43.5",
+            "CO2": "1257",
+            "Activite": "281",
+            "Temperature": "22.2"
+        },
+        "06/12/2023, 11:47:14": {
+            "Humidite": "43",
+            "CO2": "1280",
+            "Activite": "233",
+            "Temperature": "22.4"
+        },
+        "06/12/2023, 12:07:14": {
+            "Humidite": "42.5",
+            "CO2": "1264",
+            "Activite": "185",
+            "Temperature": "22.5"
+        },
+        "06/12/2023, 12:17:12": {
+            "Humidite": "42.5",
+            "CO2": "1221",
+            "Activite": "252",
+            "Temperature": "22.3"
+        },
+        "12/12/2023, 11:57:23": {
+            "Humidite": "53.5",
+            "Temperature": "21.7",
+            "CO2": "1396",
+            "Activite": "224"
+        },
+        "12/12/2023, 13:57:21": {
+            "Humidite": "51",
+            "Temperature": "21.5",
+            "CO2": "780",
+            "Activite": "0"
+        },
+        "12/01/2024, 12:47:39": {
+            "Humidite": "33.5",
+            "Temperature": "19.3",
+            "CO2": "593",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:27:43": {
+            "Humidite": "50",
+            "Temperature": "20",
+            "CO2": "451",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:42": {
+            "Humidite": "50",
+            "Temperature": "20",
+            "CO2": "452",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:47:43": {
+            "Humidite": "50",
+            "Temperature": "20",
+            "CO2": "446",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:57:44": {
+            "Humidite": "50",
+            "Temperature": "20",
+            "CO2": "450",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:07:44": {
+            "Humidite": "50.5",
+            "Temperature": "20",
+            "CO2": "451",
+            "Activite": "0"
+        }
+    },
+    "Foyer-personnels": {
+        "04/12/2023, 11:27:28": {
+            "Humidite": "40.5",
+            "CO2": "851",
+            "Activite": "0",
+            "Temperature": "19.1"
+        },
+        "04/12/2023, 11:37:19": {
+            "Humidite": "41",
+            "CO2": "825",
+            "Activite": "0",
+            "Temperature": "19.1"
+        },
+        "04/12/2023, 11:47:18": {
+            "Humidite": "40.5",
+            "CO2": "808",
+            "Activite": "0",
+            "Temperature": "19.1"
+        },
+        "05/12/2023, 08:17:23": {
+            "Humidite": "43.5",
+            "CO2": "460",
+            "Activite": "28",
+            "Temperature": "18"
+        },
+        "05/12/2023, 08:27:29": {
+            "Humidite": "43",
+            "CO2": "461",
+            "Activite": "8",
+            "Temperature": "18"
+        },
+        "06/12/2023, 11:17:19": {
+            "Humidite": "46.5",
+            "CO2": "948",
+            "Activite": "34",
+            "Temperature": "18.7"
+        },
+        "06/12/2023, 11:37:18": {
+            "Humidite": "46.5",
+            "CO2": "910",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "06/12/2023, 11:47:19": {
+            "Humidite": "46.5",
+            "CO2": "923",
+            "Activite": "11",
+            "Temperature": "18.7"
+        },
+        "06/12/2023, 11:57:19": {
+            "Humidite": "46.5",
+            "CO2": "924",
+            "Activite": "4",
+            "Temperature": "18.8"
+        },
+        "06/12/2023, 12:07:20": {
+            "Humidite": "46.5",
+            "CO2": "938",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "06/12/2023, 12:17:20": {
+            "Humidite": "46.5",
+            "CO2": "943",
+            "Activite": "7",
+            "Temperature": "18.8"
+        },
+        "12/12/2023, 11:57:30": {
+            "Humidite": "58.5",
+            "Temperature": "19.5",
+            "CO2": "1394",
+            "Activite": "12"
+        },
+        "12/12/2023, 13:57:30": {
+            "Humidite": "59",
+            "Temperature": "20",
+            "CO2": "1338",
+            "Activite": "19"
+        },
+        "12/01/2024, 12:47:47": {
+            "Humidite": "40",
+            "Temperature": "18.8",
+            "CO2": "1103",
+            "Activite": "4"
+        },
+        "17/01/2024, 08:27:49": {
+            "Humidite": "56",
+            "Temperature": "19.2",
+            "CO2": "528",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:49": {
+            "Humidite": "55.5",
+            "Temperature": "19.2",
+            "CO2": "522",
+            "Activite": "12"
+        },
+        "17/01/2024, 08:47:50": {
+            "Humidite": "55.5",
+            "Temperature": "19.2",
+            "CO2": "524",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:57:49": {
+            "Humidite": "55.5",
+            "Temperature": "19.3",
+            "CO2": "531",
+            "Activite": "0"
+        }
+    },
+    "B201": {
+        "04/12/2023, 11:27:28": {
+            "Humidite": "45.5",
+            "CO2": "1700",
+            "Activite": "337",
+            "Temperature": "20.5"
+        },
+        "04/12/2023, 11:37:24": {
+            "Humidite": "45.5",
+            "CO2": "1713",
+            "Activite": "264",
+            "Temperature": "20.6"
+        },
+        "04/12/2023, 11:47:23": {
+            "Humidite": "45.5",
+            "CO2": "1611",
+            "Activite": "285",
+            "Temperature": "20.7"
+        },
+        "05/12/2023, 08:18:09": {
+            "Humidite": "43",
+            "CO2": "452",
+            "Activite": "0",
+            "Temperature": "18.7"
+        },
+        "05/12/2023, 08:27:29": {
+            "Humidite": "42.5",
+            "CO2": "450",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "06/12/2023, 11:17:23": {
+            "Humidite": "48",
+            "CO2": "1302",
+            "Activite": "402",
+            "Temperature": "19.9"
+        },
+        "06/12/2023, 11:37:22": {
+            "Humidite": "49",
+            "CO2": "1616",
+            "Activite": "338",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 11:47:22": {
+            "Humidite": "49.5",
+            "CO2": "1744",
+            "Activite": "374",
+            "Temperature": "20.4"
+        },
+        "06/12/2023, 11:57:23": {
+            "Humidite": "50",
+            "CO2": "1859",
+            "Activite": "371",
+            "Temperature": "20.5"
+        },
+        "06/12/2023, 12:07:21": {
+            "Humidite": "50.5",
+            "CO2": "1896",
+            "Activite": "24",
+            "Temperature": "20.6"
+        },
+        "06/12/2023, 12:17:21": {
+            "Humidite": "50",
+            "CO2": "1782",
+            "Activite": "0",
+            "Temperature": "20.4"
+        },
+        "12/12/2023, 11:57:23": {
+            "Humidite": "59.5",
+            "Temperature": "20.2",
+            "CO2": "1580",
+            "Activite": "76"
+        },
+        "12/12/2023, 13:57:22": {
+            "Humidite": "60.5",
+            "Temperature": "21.1",
+            "CO2": "1851",
+            "Activite": "317"
+        },
+        "12/01/2024, 12:47:42": {
+            "Humidite": "38.5",
+            "Temperature": "21.8",
+            "CO2": "1420",
+            "Activite": "435"
+        },
+        "17/01/2024, 08:27:44": {
+            "Humidite": "52.5",
+            "Temperature": "19.5",
+            "CO2": "432",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:45": {
+            "Humidite": "52.5",
+            "Temperature": "19.6",
+            "CO2": "437",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:47:46": {
+            "Humidite": "52.5",
+            "Temperature": "19.5",
+            "CO2": "434",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:57:46": {
+            "Humidite": "52.5",
+            "Temperature": "19.6",
+            "CO2": "445",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:07:46": {
+            "Humidite": "52.5",
+            "Temperature": "19.6",
+            "CO2": "472",
+            "Activite": "274"
+        }
+    },
+    "amphi1": {
+        "04/12/2023, 11:27:44": {
+            "Humidite": "48.5",
+            "CO2": "459",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "04/12/2023, 11:37:44": {
+            "Humidite": "48.5",
+            "CO2": "459",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "04/12/2023, 11:47:45": {
+            "Humidite": "48.5",
+            "CO2": "455",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "05/12/2023, 08:18:09": {
+            "Humidite": "50.5",
+            "CO2": "435",
+            "Activite": "0",
+            "Temperature": "15.8"
+        },
+        "05/12/2023, 08:27:43": {
+            "Humidite": "50",
+            "CO2": "433",
+            "Activite": "0",
+            "Temperature": "15.9"
+        },
+        "06/12/2023, 11:17:43": {
+            "Humidite": "52",
+            "CO2": "465",
+            "Activite": "0",
+            "Temperature": "17"
+        },
+        "06/12/2023, 11:37:43": {
+            "Humidite": "52.5",
+            "CO2": "475",
+            "Activite": "0",
+            "Temperature": "17"
+        },
+        "06/12/2023, 11:47:43": {
+            "Humidite": "52.5",
+            "CO2": "472",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "06/12/2023, 11:57:43": {
+            "Humidite": "52",
+            "CO2": "471",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "06/12/2023, 12:07:43": {
+            "Humidite": "52",
+            "CO2": "465",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "06/12/2023, 12:17:43": {
+            "Humidite": "52",
+            "CO2": "469",
+            "Activite": "0",
+            "Temperature": "17.1"
+        },
+        "12/01/2024, 12:47:43": {
+            "Humidite": "43",
+            "Temperature": "15.7",
+            "CO2": "483",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:27:52": {
+            "Humidite": "65",
+            "Temperature": "17.1",
+            "CO2": "445",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:37:52": {
+            "Humidite": "64.5",
+            "Temperature": "17.1",
+            "CO2": "442",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:47:53": {
+            "Humidite": "64.5",
+            "Temperature": "17.2",
+            "CO2": "442",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:57:53": {
+            "Humidite": "64.5",
+            "Temperature": "17.3",
+            "CO2": "449",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:07:54": {
+            "Humidite": "64.5",
+            "Temperature": "17.3",
+            "CO2": "448",
+            "Activite": "0"
+        }
+    },
+    "E208": {
+        "04/12/2023, 11:27:44": {
+            "Humidite": "39.5",
+            "CO2": "558",
+            "Activite": "0",
+            "Temperature": "18.9"
+        },
+        "04/12/2023, 11:37:44": {
+            "Humidite": "40",
+            "CO2": "559",
+            "Activite": "0",
+            "Temperature": "18.9"
+        },
+        "04/12/2023, 11:47:45": {
+            "Humidite": "40",
+            "CO2": "551",
+            "Activite": "0",
+            "Temperature": "18.9"
+        },
+        "05/12/2023, 08:18:09": {
+            "Humidite": "42",
+            "CO2": "473",
+            "Activite": "0",
+            "Temperature": "18.5"
+        },
+        "05/12/2023, 08:27:46": {
+            "Humidite": "42",
+            "CO2": "468",
+            "Activite": "0",
+            "Temperature": "18.6"
+        },
+        "06/12/2023, 11:17:44": {
+            "Humidite": "46.5",
+            "CO2": "1324",
+            "Activite": "68",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 11:37:43": {
+            "Humidite": "46.5",
+            "CO2": "1347",
+            "Activite": "41",
+            "Temperature": "20.8"
+        },
+        "06/12/2023, 11:47:44": {
+            "Humidite": "46",
+            "CO2": "1352",
+            "Activite": "20",
+            "Temperature": "20.9"
+        },
+        "06/12/2023, 11:57:44": {
+            "Humidite": "46",
+            "CO2": "1343",
+            "Activite": "46",
+            "Temperature": "20.9"
+        },
+        "06/12/2023, 12:07:43": {
+            "Humidite": "45.5",
+            "CO2": "1337",
+            "Activite": "214",
+            "Temperature": "20.9"
+        },
+        "06/12/2023, 12:17:43": {
+            "Humidite": "45",
+            "CO2": "1209",
+            "Activite": "4",
+            "Temperature": "20.8"
+        },
+        "12/01/2024, 12:48:17": {
+            "Humidite": "33.5",
+            "Temperature": "19",
+            "CO2": "502",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:28:19": {
+            "Humidite": "55.5",
+            "Temperature": "19.1",
+            "CO2": "759",
+            "Activite": "290"
+        },
+        "17/01/2024, 08:38:20": {
+            "Humidite": "55.5",
+            "Temperature": "19.4",
+            "CO2": "844",
+            "Activite": "471"
+        },
+        "17/01/2024, 08:48:21": {
+            "Humidite": "56.5",
+            "Temperature": "19.6",
+            "CO2": "943",
+            "Activite": "398"
+        },
+        "17/01/2024, 08:58:21": {
+            "Humidite": "56.5",
+            "Temperature": "19.7",
+            "CO2": "969",
+            "Activite": "331"
+        },
+        "17/01/2024, 09:08:21": {
+            "Humidite": "56.5",
+            "Temperature": "19.7",
+            "CO2": "1008",
+            "Activite": "239"
+        }
+    },
+    "hall-entr\u00e9e-principale": {
+        "04/12/2023, 11:27:53": {
+            "Humidite": "41.5",
+            "CO2": "557",
+            "Activite": "55",
+            "Temperature": "19.2"
+        },
+        "04/12/2023, 11:37:52": {
+            "Humidite": "41.5",
+            "CO2": "553",
+            "Activite": "0",
+            "Temperature": "19.3"
+        },
+        "04/12/2023, 11:47:52": {
+            "Humidite": "41.5",
+            "CO2": "561",
+            "Activite": "59",
+            "Temperature": "19.4"
+        },
+        "05/12/2023, 08:18:09": {
+            "Humidite": "43.5",
+            "CO2": "526",
+            "Activite": "54",
+            "Temperature": "18.8"
+        },
+        "05/12/2023, 08:27:52": {
+            "Humidite": "43",
+            "CO2": "520",
+            "Activite": "94",
+            "Temperature": "18.9"
+        },
+        "06/12/2023, 11:17:52": {
+            "Humidite": "43.5",
+            "CO2": "720",
+            "Activite": "20",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 11:37:52": {
+            "Humidite": "43.5",
+            "CO2": "747",
+            "Activite": "6",
+            "Temperature": "19.9"
+        },
+        "06/12/2023, 11:47:51": {
+            "Humidite": "43.5",
+            "CO2": "764",
+            "Activite": "6",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:57:52": {
+            "Humidite": "43.5",
+            "CO2": "743",
+            "Activite": "29",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:07:52": {
+            "Humidite": "43",
+            "CO2": "723",
+            "Activite": "39",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:17:51": {
+            "Humidite": "43",
+            "CO2": "724",
+            "Activite": "42",
+            "Temperature": "20"
+        },
+        "17/01/2024, 08:38:47": {
+            "Humidite": "53",
+            "Temperature": "19.6",
+            "CO2": "461",
+            "Activite": "8"
+        },
+        "17/01/2024, 08:48:47": {
+            "Humidite": "53",
+            "Temperature": "19.6",
+            "CO2": "461",
+            "Activite": "6"
+        },
+        "17/01/2024, 08:58:48": {
+            "Humidite": "53",
+            "Temperature": "19.6",
+            "CO2": "462",
+            "Activite": "17"
+        },
+        "17/01/2024, 09:08:47": {
+            "Humidite": "53",
+            "Temperature": "19.6",
+            "CO2": "465",
+            "Activite": "29"
+        }
+    },
+    "E206": {
+        "04/12/2023, 11:28:15": {
+            "Humidite": "39.5",
+            "CO2": "1163",
+            "Activite": "247",
+            "Temperature": "22"
+        },
+        "04/12/2023, 11:38:24": {
+            "Humidite": "39",
+            "CO2": "1041",
+            "Activite": "0",
+            "Temperature": "21.9"
+        },
+        "04/12/2023, 11:48:16": {
+            "Humidite": "38.5",
+            "CO2": "958",
+            "Activite": "29",
+            "Temperature": "21.8"
+        },
+        "05/12/2023, 08:28:14": {
+            "Humidite": "42",
+            "CO2": "813",
+            "Activite": "186",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:18:14": {
+            "Humidite": "41.5",
+            "CO2": "1168",
+            "Activite": "60",
+            "Temperature": "22.2"
+        },
+        "06/12/2023, 11:38:13": {
+            "Humidite": "41.5",
+            "CO2": "1163",
+            "Activite": "216",
+            "Temperature": "22.4"
+        },
+        "06/12/2023, 11:48:13": {
+            "Humidite": "41.5",
+            "CO2": "1180",
+            "Activite": "100",
+            "Temperature": "22.5"
+        },
+        "06/12/2023, 11:58:14": {
+            "Humidite": "41",
+            "CO2": "1158",
+            "Activite": "214",
+            "Temperature": "22.5"
+        },
+        "06/12/2023, 12:08:14": {
+            "Humidite": "41",
+            "CO2": "1199",
+            "Activite": "287",
+            "Temperature": "22.6"
+        },
+        "06/12/2023, 12:18:12": {
+            "Humidite": "40",
+            "CO2": "1065",
+            "Activite": "19",
+            "Temperature": "22.5"
+        },
+        "17/01/2024, 08:38:44": {
+            "Humidite": "49.5",
+            "Temperature": "20.5",
+            "CO2": "450",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:48:45": {
+            "Humidite": "49.5",
+            "Temperature": "20.6",
+            "CO2": "456",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:58:44": {
+            "Humidite": "49.5",
+            "Temperature": "20.6",
+            "CO2": "460",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:08:45": {
+            "Humidite": "49.5",
+            "Temperature": "20.6",
+            "CO2": "464",
+            "Activite": "0"
+        }
+    },
+    "B112": {
+        "04/12/2023, 11:28:15": {
+            "Humidite": "45",
+            "CO2": "2038",
+            "Activite": "119",
+            "Temperature": "20.9"
+        },
+        "04/12/2023, 11:38:24": {
+            "Humidite": "44.5",
+            "CO2": "2055",
+            "Activite": "145",
+            "Temperature": "20.9"
+        },
+        "04/12/2023, 11:48:16": {
+            "Humidite": "44",
+            "CO2": "2062",
+            "Activite": "147",
+            "Temperature": "20.9"
+        },
+        "05/12/2023, 08:28:13": {
+            "Humidite": "43",
+            "CO2": "411",
+            "Activite": "0",
+            "Temperature": "18.9"
+        },
+        "06/12/2023, 11:18:14": {
+            "Humidite": "49",
+            "CO2": "1875",
+            "Activite": "199",
+            "Temperature": "21"
+        },
+        "06/12/2023, 11:38:14": {
+            "Humidite": "49",
+            "CO2": "1903",
+            "Activite": "219",
+            "Temperature": "21"
+        },
+        "06/12/2023, 11:48:14": {
+            "Humidite": "49",
+            "CO2": "1884",
+            "Activite": "209",
+            "Temperature": "21.1"
+        },
+        "06/12/2023, 11:58:15": {
+            "Humidite": "48.5",
+            "CO2": "1868",
+            "Activite": "247",
+            "Temperature": "21.2"
+        },
+        "06/12/2023, 12:08:15": {
+            "Humidite": "48.5",
+            "CO2": "1866",
+            "Activite": "248",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:18:14": {
+            "Humidite": "49",
+            "CO2": "1916",
+            "Activite": "253",
+            "Temperature": "21.3"
+        },
+        "17/01/2024, 08:38:45": {
+            "Humidite": "52",
+            "Temperature": "19.7",
+            "CO2": "489",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:48:46": {
+            "Humidite": "52",
+            "Temperature": "19.7",
+            "CO2": "487",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:58:47": {
+            "Humidite": "52",
+            "Temperature": "19.7",
+            "CO2": "485",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:08:47": {
+            "Humidite": "52",
+            "Temperature": "19.7",
+            "CO2": "482",
+            "Activite": "0"
+        }
+    },
+    "E210": {
+        "04/12/2023, 11:28:44": {
+            "Humidite": "70",
+            "CO2": "441",
+            "Activite": "0",
+            "Temperature": "11.7"
+        },
+        "04/12/2023, 11:38:45": {
+            "Humidite": "69.5",
+            "CO2": "441",
+            "Activite": "0",
+            "Temperature": "11.9"
+        },
+        "04/12/2023, 11:48:44": {
+            "Humidite": "70",
+            "CO2": "440",
+            "Activite": "0",
+            "Temperature": "12.2"
+        },
+        "05/12/2023, 08:28:44": {
+            "Humidite": "71",
+            "CO2": "444",
+            "Activite": "0",
+            "Temperature": "8.7"
+        },
+        "06/12/2023, 11:18:43": {
+            "Humidite": "74.5",
+            "CO2": "488",
+            "Activite": "81",
+            "Temperature": "10.5"
+        },
+        "06/12/2023, 11:38:44": {
+            "Humidite": "73.5",
+            "CO2": "464",
+            "Activite": "0",
+            "Temperature": "10.5"
+        },
+        "06/12/2023, 11:48:43": {
+            "Humidite": "73.5",
+            "CO2": "458",
+            "Activite": "0",
+            "Temperature": "10.5"
+        },
+        "06/12/2023, 11:58:43": {
+            "Humidite": "74",
+            "CO2": "462",
+            "Activite": "0",
+            "Temperature": "10.5"
+        },
+        "06/12/2023, 12:08:44": {
+            "Humidite": "73.5",
+            "CO2": "456",
+            "Activite": "0",
+            "Temperature": "10.5"
+        },
+        "06/12/2023, 12:18:43": {
+            "Humidite": "73.5",
+            "CO2": "457",
+            "Activite": "0",
+            "Temperature": "10.6"
+        },
+        "12/12/2023, 16:18:53": {
+            "Humidite": "81",
+            "Temperature": "14.9",
+            "CO2": "445",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:55": {
+            "Humidite": "87",
+            "Temperature": "11.7",
+            "CO2": "543",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:55": {
+            "Humidite": "87",
+            "Temperature": "11.8",
+            "CO2": "540",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:55": {
+            "Humidite": "87",
+            "Temperature": "11.8",
+            "CO2": "547",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:56": {
+            "Humidite": "87",
+            "Temperature": "11.8",
+            "CO2": "546",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:49:46": {
+            "Humidite": "89",
+            "Temperature": "12.9",
+            "CO2": "553",
+            "Activite": "0"
+        }
+    },
+    "E105": {
+        "04/12/2023, 11:28:51": {
+            "Humidite": "44.5",
+            "CO2": "1079",
+            "Activite": "10",
+            "Temperature": "19.2"
+        },
+        "04/12/2023, 11:38:51": {
+            "Humidite": "44",
+            "CO2": "985",
+            "Activite": "0",
+            "Temperature": "19.1"
+        },
+        "04/12/2023, 11:48:50": {
+            "Humidite": "44.5",
+            "CO2": "934",
+            "Activite": "3",
+            "Temperature": "19"
+        },
+        "05/12/2023, 08:28:51": {
+            "Humidite": "44.5",
+            "CO2": "546",
+            "Activite": "0",
+            "Temperature": "17.8"
+        },
+        "06/12/2023, 11:18:50": {
+            "Humidite": "43.5",
+            "CO2": "558",
+            "Activite": "0",
+            "Temperature": "18.7"
+        },
+        "06/12/2023, 11:38:50": {
+            "Humidite": "43.5",
+            "CO2": "561",
+            "Activite": "0",
+            "Temperature": "18.7"
+        },
+        "06/12/2023, 11:48:50": {
+            "Humidite": "43.5",
+            "CO2": "559",
+            "Activite": "0",
+            "Temperature": "18.7"
+        },
+        "06/12/2023, 11:58:49": {
+            "Humidite": "43.5",
+            "CO2": "552",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "06/12/2023, 12:08:50": {
+            "Humidite": "43",
+            "CO2": "552",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "06/12/2023, 12:18:50": {
+            "Humidite": "43",
+            "CO2": "556",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "17/01/2024, 08:38:44": {
+            "Humidite": "53.5",
+            "Temperature": "18.9",
+            "CO2": "429",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:48:46": {
+            "Humidite": "53.5",
+            "Temperature": "18.9",
+            "CO2": "428",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:08:45": {
+            "Humidite": "54",
+            "Temperature": "18.9",
+            "CO2": "425",
+            "Activite": "0"
+        }
+    },
+    "B111": {
+        "04/12/2023, 11:29:18": {
+            "Humidite": "37",
+            "CO2": "661",
+            "Activite": "0",
+            "Temperature": "19.6"
+        },
+        "04/12/2023, 11:39:17": {
+            "Humidite": "37",
+            "CO2": "658",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "04/12/2023, 11:49:17": {
+            "Humidite": "37",
+            "CO2": "667",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "05/12/2023, 08:29:18": {
+            "Humidite": "45.5",
+            "CO2": "983",
+            "Activite": "320",
+            "Temperature": "19.5"
+        },
+        "06/12/2023, 11:39:15": {
+            "Humidite": "48",
+            "CO2": "1791",
+            "Activite": "0",
+            "Temperature": "22.1"
+        },
+        "06/12/2023, 11:49:15": {
+            "Humidite": "47.5",
+            "CO2": "1718",
+            "Activite": "0",
+            "Temperature": "22"
+        },
+        "06/12/2023, 11:59:15": {
+            "Humidite": "47.5",
+            "CO2": "1674",
+            "Activite": "0",
+            "Temperature": "21.8"
+        },
+        "06/12/2023, 12:09:15": {
+            "Humidite": "47.5",
+            "CO2": "1613",
+            "Activite": "0",
+            "Temperature": "21.7"
+        },
+        "06/12/2023, 12:19:15": {
+            "Humidite": "47",
+            "CO2": "1560",
+            "Activite": "0",
+            "Temperature": "21.6"
+        },
+        "12/12/2023, 11:39:21": {
+            "Humidite": "58",
+            "Temperature": "21.3",
+            "CO2": "2055",
+            "Activite": "85"
+        },
+        "12/12/2023, 16:19:19": {
+            "Humidite": "57",
+            "Temperature": "21.4",
+            "CO2": "1333",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:42": {
+            "Humidite": "53.5",
+            "Temperature": "19.4",
+            "CO2": "516",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:43": {
+            "Humidite": "53.5",
+            "Temperature": "19.5",
+            "CO2": "514",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:43": {
+            "Humidite": "53.5",
+            "Temperature": "19.5",
+            "CO2": "516",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:44": {
+            "Humidite": "53",
+            "Temperature": "19.5",
+            "CO2": "508",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:49:46": {
+            "Humidite": "53",
+            "Temperature": "19.9",
+            "CO2": "450",
+            "Activite": "0"
+        }
+    },
+    "B110": {
+        "04/12/2023, 11:29:18": {
+            "Humidite": "38",
+            "CO2": "690",
+            "Activite": "0",
+            "Temperature": "19.2"
+        },
+        "04/12/2023, 11:39:18": {
+            "Humidite": "38",
+            "CO2": "684",
+            "Activite": "0",
+            "Temperature": "19.2"
+        },
+        "04/12/2023, 11:49:18": {
+            "Humidite": "38",
+            "CO2": "674",
+            "Activite": "0",
+            "Temperature": "19.2"
+        },
+        "05/12/2023, 08:29:17": {
+            "Humidite": "43",
+            "CO2": "422",
+            "Activite": "0",
+            "Temperature": "18.1"
+        },
+        "06/12/2023, 11:39:18": {
+            "Humidite": "51.5",
+            "CO2": "2631",
+            "Activite": "246",
+            "Temperature": "21.8"
+        },
+        "06/12/2023, 11:49:19": {
+            "Humidite": "51.5",
+            "CO2": "2737",
+            "Activite": "213",
+            "Temperature": "21.9"
+        },
+        "06/12/2023, 11:59:19": {
+            "Humidite": "52",
+            "CO2": "2800",
+            "Activite": "340",
+            "Temperature": "22.1"
+        },
+        "06/12/2023, 12:09:18": {
+            "Humidite": "52",
+            "CO2": "2925",
+            "Activite": "344",
+            "Temperature": "22.2"
+        },
+        "06/12/2023, 12:19:19": {
+            "Humidite": "52.5",
+            "CO2": "2984",
+            "Activite": "296",
+            "Temperature": "22.3"
+        },
+        "12/12/2023, 11:39:19": {
+            "Humidite": "57",
+            "Temperature": "21.1",
+            "CO2": "1729",
+            "Activite": "400"
+        },
+        "12/12/2023, 16:19:18": {
+            "Humidite": "58.5",
+            "Temperature": "20.6",
+            "CO2": "1149",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:43": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "498",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:43": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "496",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:46": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "496",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:44": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "495",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:47": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "495",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:44": {
+            "Humidite": "53.5",
+            "Temperature": "19.1",
+            "CO2": "494",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:49:49": {
+            "Humidite": "54",
+            "Temperature": "19.5",
+            "CO2": "480",
+            "Activite": "0"
+        }
+    },
+    "B109": {
+        "04/12/2023, 11:29:19": {
+            "Humidite": "39.5",
+            "CO2": "529",
+            "Activite": "0",
+            "Temperature": "18.1"
+        },
+        "04/12/2023, 11:39:18": {
+            "Humidite": "39.5",
+            "CO2": "526",
+            "Activite": "0",
+            "Temperature": "18.1"
+        },
+        "04/12/2023, 11:49:18": {
+            "Humidite": "40",
+            "CO2": "529",
+            "Activite": "0",
+            "Temperature": "18.2"
+        },
+        "05/12/2023, 08:29:18": {
+            "Humidite": "44.5",
+            "CO2": "501",
+            "Activite": "0",
+            "Temperature": "17.4"
+        },
+        "06/12/2023, 11:39:18": {
+            "Humidite": "51.5",
+            "CO2": "2643",
+            "Activite": "0",
+            "Temperature": "20.5"
+        },
+        "06/12/2023, 11:49:18": {
+            "Humidite": "51.5",
+            "CO2": "2523",
+            "Activite": "0",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 11:59:18": {
+            "Humidite": "51",
+            "CO2": "2422",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 12:09:18": {
+            "Humidite": "51",
+            "CO2": "2315",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:19:18": {
+            "Humidite": "51",
+            "CO2": "2246",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "12/12/2023, 11:39:23": {
+            "Humidite": "55.5",
+            "Temperature": "18.5",
+            "CO2": "730",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:19:23": {
+            "Humidite": "56.5",
+            "Temperature": "19",
+            "CO2": "651",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:46": {
+            "Humidite": "55.5",
+            "Temperature": "18.5",
+            "CO2": "537",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:49": {
+            "Humidite": "55.5",
+            "Temperature": "18.4",
+            "CO2": "542",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:48": {
+            "Humidite": "55.5",
+            "Temperature": "18.5",
+            "CO2": "537",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:49": {
+            "Humidite": "55.5",
+            "Temperature": "18.5",
+            "CO2": "535",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:49:49": {
+            "Humidite": "57",
+            "Temperature": "18.8",
+            "CO2": "658",
+            "Activite": "0"
+        }
+    },
+    "E100": {
+        "04/12/2023, 11:29:21": {
+            "Humidite": "31.5",
+            "CO2": "804",
+            "Activite": "0",
+            "Temperature": "23.7"
+        },
+        "04/12/2023, 11:39:21": {
+            "Humidite": "31",
+            "CO2": "819",
+            "Activite": "0",
+            "Temperature": "24.1"
+        },
+        "04/12/2023, 11:49:22": {
+            "Humidite": "31.5",
+            "CO2": "829",
+            "Activite": "0",
+            "Temperature": "23.8"
+        },
+        "05/12/2023, 08:29:21": {
+            "Humidite": "33.5",
+            "CO2": "506",
+            "Activite": "0",
+            "Temperature": "23.2"
+        },
+        "06/12/2023, 11:39:22": {
+            "Humidite": "37",
+            "CO2": "967",
+            "Activite": "39",
+            "Temperature": "23"
+        },
+        "06/12/2023, 11:49:21": {
+            "Humidite": "36.5",
+            "CO2": "1014",
+            "Activite": "78",
+            "Temperature": "23.8"
+        },
+        "06/12/2023, 11:59:22": {
+            "Humidite": "35.5",
+            "CO2": "1042",
+            "Activite": "95",
+            "Temperature": "24.4"
+        },
+        "06/12/2023, 12:09:22": {
+            "Humidite": "37",
+            "CO2": "1045",
+            "Activite": "35",
+            "Temperature": "23.4"
+        },
+        "06/12/2023, 12:19:21": {
+            "Humidite": "36",
+            "CO2": "1023",
+            "Activite": "0",
+            "Temperature": "23.9"
+        },
+        "12/12/2023, 11:39:27": {
+            "Humidite": "41",
+            "Temperature": "24.5",
+            "CO2": "753",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:19:26": {
+            "Humidite": "44.5",
+            "Temperature": "25",
+            "CO2": "896",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:43": {
+            "Humidite": "37.5",
+            "Temperature": "25.1",
+            "CO2": "463",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:43": {
+            "Humidite": "37",
+            "Temperature": "25.5",
+            "CO2": "474",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:44": {
+            "Humidite": "37.5",
+            "Temperature": "25.2",
+            "CO2": "491",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:43": {
+            "Humidite": "37",
+            "Temperature": "25.4",
+            "CO2": "500",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:49:34": {
+            "Humidite": "38",
+            "Temperature": "25.5",
+            "CO2": "457",
+            "Activite": "0"
+        }
+    },
+    "E007": {
+        "04/12/2023, 11:29:23": {
+            "Humidite": "44",
+            "CO2": "908",
+            "Activite": "104",
+            "Temperature": "19.9"
+        },
+        "04/12/2023, 11:39:23": {
+            "Humidite": "44",
+            "CO2": "884",
+            "Activite": "84",
+            "Temperature": "20"
+        },
+        "04/12/2023, 11:49:23": {
+            "Humidite": "44.5",
+            "CO2": "869",
+            "Activite": "144",
+            "Temperature": "20.1"
+        },
+        "05/12/2023, 08:29:22": {
+            "Humidite": "41.5",
+            "CO2": "436",
+            "Activite": "0",
+            "Temperature": "18.4"
+        },
+        "06/12/2023, 11:39:23": {
+            "Humidite": "45.5",
+            "CO2": "953",
+            "Activite": "325",
+            "Temperature": "19.9"
+        },
+        "06/12/2023, 11:49:23": {
+            "Humidite": "45.5",
+            "CO2": "1056",
+            "Activite": "321",
+            "Temperature": "20.1"
+        },
+        "06/12/2023, 11:59:23": {
+            "Humidite": "45.5",
+            "CO2": "1095",
+            "Activite": "177",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 12:09:22": {
+            "Humidite": "44.5",
+            "CO2": "998",
+            "Activite": "0",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 12:19:22": {
+            "Humidite": "43.5",
+            "CO2": "826",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "12/12/2023, 11:39:29": {
+            "Humidite": "49.5",
+            "Temperature": "22.4",
+            "CO2": "1151",
+            "Activite": "60"
+        },
+        "12/12/2023, 16:19:29": {
+            "Humidite": "55",
+            "Temperature": "22.9",
+            "CO2": "1187",
+            "Activite": ""
+        },
+        "17/01/2024, 08:40:04": {
+            "Humidite": "56",
+            "Temperature": "18.6",
+            "CO2": "466",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:50:04": {
+            "Humidite": "56",
+            "Temperature": "18.6",
+            "CO2": "472",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:00:04": {
+            "Humidite": "56",
+            "Temperature": "18.6",
+            "CO2": "469",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:10:04": {
+            "Humidite": "56",
+            "Temperature": "18.7",
+            "CO2": "482",
+            "Activite": "0"
+        }
+    },
+    "Salle-conseil": {
+        "04/12/2023, 11:29:23": {
+            "Humidite": "34",
+            "CO2": "485",
+            "Activite": "0",
+            "Temperature": "21"
+        },
+        "04/12/2023, 11:39:23": {
+            "Humidite": "34",
+            "CO2": "490",
+            "Activite": "0",
+            "Temperature": "21"
+        },
+        "04/12/2023, 11:49:23": {
+            "Humidite": "34",
+            "CO2": "486",
+            "Activite": "0",
+            "Temperature": "21"
+        },
+        "05/12/2023, 08:29:22": {
+            "Humidite": "40",
+            "CO2": "449",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:39:23": {
+            "Humidite": "40.5",
+            "CO2": "773",
+            "Activite": "56",
+            "Temperature": "21.2"
+        },
+        "06/12/2023, 11:49:22": {
+            "Humidite": "40.5",
+            "CO2": "816",
+            "Activite": "55",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 11:59:22": {
+            "Humidite": "41",
+            "CO2": "847",
+            "Activite": "56",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:09:23": {
+            "Humidite": "41",
+            "CO2": "891",
+            "Activite": "97",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:19:23": {
+            "Humidite": "41.5",
+            "CO2": "920",
+            "Activite": "50",
+            "Temperature": "21.4"
+        },
+        "12/12/2023, 11:39:16": {
+            "Humidite": "51.5",
+            "Temperature": "20.7",
+            "CO2": "719",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:19:16": {
+            "Humidite": "52.5",
+            "Temperature": "20.6",
+            "CO2": "654",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:46": {
+            "Humidite": "51",
+            "Temperature": "19.9",
+            "CO2": "455",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:47": {
+            "Humidite": "51",
+            "Temperature": "20",
+            "CO2": "458",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:48": {
+            "Humidite": "51",
+            "Temperature": "20",
+            "CO2": "449",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:48": {
+            "Humidite": "51",
+            "Temperature": "20",
+            "CO2": "451",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:49:51": {
+            "Humidite": "51.5",
+            "Temperature": "21.6",
+            "CO2": "744",
+            "Activite": "0"
+        }
+    },
+    "E104": {
+        "04/12/2023, 11:29:50": {
+            "Humidite": "44.5",
+            "CO2": "453",
+            "Activite": "0",
+            "Temperature": "16.9"
+        },
+        "04/12/2023, 11:49:50": {
+            "Humidite": "45",
+            "CO2": "461",
+            "Activite": "0",
+            "Temperature": "16.9"
+        },
+        "06/12/2023, 11:29:48": {
+            "Humidite": "41.5",
+            "CO2": "462",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "06/12/2023, 11:39:47": {
+            "Humidite": "41.5",
+            "CO2": "455",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "06/12/2023, 11:49:48": {
+            "Humidite": "41.5",
+            "CO2": "461",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "06/12/2023, 11:59:48": {
+            "Humidite": "41",
+            "CO2": "456",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "06/12/2023, 12:09:47": {
+            "Humidite": "41",
+            "CO2": "456",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "06/12/2023, 12:19:47": {
+            "Humidite": "41",
+            "CO2": "454",
+            "Activite": "0",
+            "Temperature": "19.5"
+        },
+        "06/12/2023, 13:19:48": {
+            "Humidite": "40.5",
+            "CO2": "447",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "12/12/2023, 11:39:44": {
+            "Humidite": "53",
+            "Temperature": "21.3",
+            "CO2": "1297",
+            "Activite": "112"
+        },
+        "12/12/2023, 16:19:50": {
+            "Humidite": "58",
+            "Temperature": "",
+            "CO2": "1366",
+            "Activite": "139"
+        },
+        "17/01/2024, 08:39:15": {
+            "Humidite": "54.5",
+            "Temperature": "18.6",
+            "CO2": "442",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:49:15": {
+            "Humidite": "55",
+            "Temperature": "18.6",
+            "CO2": "443",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:15": {
+            "Humidite": "55",
+            "Temperature": "18.5",
+            "CO2": "438",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:09:16": {
+            "Humidite": "55",
+            "Temperature": "18.6",
+            "CO2": "458",
+            "Activite": "171"
+        },
+        "17/01/2024, 14:49:15": {
+            "Humidite": "56.5",
+            "Temperature": "19.3",
+            "CO2": "461",
+            "Activite": "0"
+        }
+    },
+    "B203": {
+        "04/12/2023, 11:29:52": {
+            "Humidite": "50.5",
+            "CO2": "2761",
+            "Activite": "185",
+            "Temperature": "23"
+        },
+        "04/12/2023, 11:39:53": {
+            "Humidite": "51.5",
+            "CO2": "3011",
+            "Activite": "142",
+            "Temperature": "23.1"
+        },
+        "04/12/2023, 11:49:53": {
+            "Humidite": "52",
+            "CO2": "3215",
+            "Activite": "178",
+            "Temperature": "23.3"
+        },
+        "06/12/2023, 11:29:52": {
+            "Humidite": "52",
+            "CO2": "2792",
+            "Activite": "180",
+            "Temperature": "23.7"
+        },
+        "06/12/2023, 11:39:52": {
+            "Humidite": "52.5",
+            "CO2": "2915",
+            "Activite": "211",
+            "Temperature": "23.8"
+        },
+        "06/12/2023, 11:49:52": {
+            "Humidite": "52.5",
+            "CO2": "2973",
+            "Activite": "324",
+            "Temperature": "23.9"
+        },
+        "06/12/2023, 11:59:52": {
+            "Humidite": "51.5",
+            "CO2": "2782",
+            "Activite": "207",
+            "Temperature": "23.9"
+        },
+        "06/12/2023, 12:09:51": {
+            "Humidite": "50",
+            "CO2": "2387",
+            "Activite": "0",
+            "Temperature": "23.5"
+        },
+        "06/12/2023, 12:19:52": {
+            "Humidite": "48.5",
+            "CO2": "2114",
+            "Activite": "0",
+            "Temperature": "23.2"
+        },
+        "12/12/2023, 11:39:47": {
+            "Humidite": "60.5",
+            "Temperature": "20.6",
+            "CO2": "1762",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:19:47": {
+            "Humidite": "63.5",
+            "Temperature": "",
+            "CO2": "2228",
+            "Activite": "362"
+        },
+        "17/01/2024, 08:40:12": {
+            "Humidite": "55",
+            "Temperature": "19.7",
+            "CO2": "765",
+            "Activite": "123"
+        },
+        "17/01/2024, 08:50:14": {
+            "Humidite": "56",
+            "Temperature": "19.8",
+            "CO2": "835",
+            "Activite": "352"
+        },
+        "17/01/2024, 09:00:13": {
+            "Humidite": "56.5",
+            "Temperature": "19.9",
+            "CO2": "885",
+            "Activite": "137"
+        },
+        "17/01/2024, 09:10:13": {
+            "Humidite": "56",
+            "Temperature": "19.9",
+            "CO2": "882",
+            "Activite": "106"
+        },
+        "17/01/2024, 14:50:16": {
+            "Humidite": "59",
+            "Temperature": "20.6",
+            "CO2": "1270",
+            "Activite": "110"
+        }
+    },
+    "B003": {
+        "04/12/2023, 11:30:18": {
+            "Humidite": "35.5",
+            "CO2": "616",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "04/12/2023, 11:40:19": {
+            "Humidite": "35.5",
+            "CO2": "619",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "04/12/2023, 11:50:18": {
+            "Humidite": "35.5",
+            "CO2": "634",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "05/12/2023, 08:20:24": {
+            "Humidite": "42",
+            "CO2": "637",
+            "Activite": "33",
+            "Temperature": "19.5"
+        },
+        "06/12/2023, 11:30:18": {
+            "Humidite": "45.5",
+            "CO2": "1413",
+            "Activite": "100",
+            "Temperature": "21.2"
+        },
+        "06/12/2023, 11:40:19": {
+            "Humidite": "45.5",
+            "CO2": "1421",
+            "Activite": "19",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 11:50:19": {
+            "Humidite": "45.5",
+            "CO2": "1417",
+            "Activite": "0",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:00:17": {
+            "Humidite": "45.5",
+            "CO2": "1423",
+            "Activite": "0",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:10:19": {
+            "Humidite": "45.5",
+            "CO2": "1426",
+            "Activite": "1",
+            "Temperature": "21.4"
+        },
+        "06/12/2023, 12:20:19": {
+            "Humidite": "45.5",
+            "CO2": "1429",
+            "Activite": "20",
+            "Temperature": "21.4"
+        },
+        "12/12/2023, 11:40:27": {
+            "Humidite": "54",
+            "Temperature": "20.8",
+            "CO2": "1336",
+            "Activite": "45"
+        },
+        "12/12/2023, 15:50:27": {
+            "Humidite": "57",
+            "Temperature": "21.5",
+            "CO2": "1203",
+            "Activite": "312"
+        },
+        "12/12/2023, 16:20:26": {
+            "Humidite": "56.5",
+            "Temperature": "",
+            "CO2": "1081",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:40:46": {
+            "Humidite": "51",
+            "Temperature": "19.9",
+            "CO2": "467",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:50:48": {
+            "Humidite": "51",
+            "Temperature": "19.9",
+            "CO2": "472",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:00:47": {
+            "Humidite": "51",
+            "Temperature": "19.9",
+            "CO2": "467",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:10:47": {
+            "Humidite": "51",
+            "Temperature": "19.9",
+            "CO2": "462",
+            "Activite": "0"
+        },
+        "17/01/2024, 14:50:48": {
+            "Humidite": "57.5",
+            "Temperature": "21.7",
+            "CO2": "1495",
+            "Activite": "346"
+        }
+    },
+    "Local-velo": {
+        "04/12/2023, 11:31:17": {
+            "Humidite": "63",
+            "CO2": "431",
+            "Activite": "2",
+            "Temperature": "13.8"
+        },
+        "04/12/2023, 11:41:31": {
+            "Humidite": "62",
+            "CO2": "432",
+            "Activite": "0",
+            "Temperature": "14.4"
+        },
+        "04/12/2023, 11:51:23": {
+            "Humidite": "58",
+            "CO2": "433",
+            "Activite": "9",
+            "Temperature": "15.4"
+        },
+        "05/12/2023, 08:21:24": {
+            "Humidite": "87",
+            "CO2": "485",
+            "Activite": "31",
+            "Temperature": "5.9"
+        },
+        "06/12/2023, 11:31:20": {
+            "Humidite": "89",
+            "CO2": "494",
+            "Activite": "12",
+            "Temperature": "7.6"
+        },
+        "06/12/2023, 11:41:19": {
+            "Humidite": "88",
+            "CO2": "490",
+            "Activite": "2",
+            "Temperature": "7.7"
+        },
+        "06/12/2023, 11:51:19": {
+            "Humidite": "87.5",
+            "CO2": "482",
+            "Activite": "36",
+            "Temperature": "7.8"
+        },
+        "06/12/2023, 12:01:20": {
+            "Humidite": "87",
+            "CO2": "479",
+            "Activite": "70",
+            "Temperature": "7.9"
+        },
+        "06/12/2023, 12:21:19": {
+            "Humidite": "85.5",
+            "CO2": "474",
+            "Activite": "94",
+            "Temperature": "8"
+        },
+        "12/12/2023, 11:41:33": {
+            "Humidite": "73",
+            "Temperature": "14.8",
+            "CO2": "473",
+            "Activite": "1"
+        },
+        "12/12/2023, 16:21:34": {
+            "Humidite": "",
+            "Temperature": "",
+            "CO2": "",
+            "Activite": ""
+        },
+        "12/12/2023, 16:31:40": {
+            "Humidite": "89.5",
+            "Temperature": "12.6",
+            "CO2": "440",
+            "Activite": "0"
+        }
+    },
+    "B108": {
+        "04/12/2023, 11:31:56": {
+            "Humidite": "37",
+            "CO2": "985",
+            "Activite": "0",
+            "Temperature": "20.1"
+        },
+        "04/12/2023, 11:41:52": {
+            "Humidite": "37",
+            "CO2": "995",
+            "Activite": "0",
+            "Temperature": "20.1"
+        },
+        "04/12/2023, 11:51:53": {
+            "Humidite": "37.5",
+            "CO2": "995",
+            "Activite": "0",
+            "Temperature": "20.1"
+        },
+        "05/12/2023, 08:21:52": {
+            "Humidite": "42.5",
+            "CO2": "789",
+            "Activite": "0",
+            "Temperature": "19.5"
+        },
+        "05/12/2023, 08:32:24": {
+            "Humidite": "42.5",
+            "CO2": "785",
+            "Activite": "0",
+            "Temperature": "19.6"
+        },
+        "06/12/2023, 11:31:50": {
+            "Humidite": "47.5",
+            "CO2": "1627",
+            "Activite": "0",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 11:41:50": {
+            "Humidite": "47.5",
+            "CO2": "1570",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 11:51:51": {
+            "Humidite": "47",
+            "CO2": "1524",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 12:01:50": {
+            "Humidite": "47",
+            "CO2": "1482",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 12:11:50": {
+            "Humidite": "46.5",
+            "CO2": "1437",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "06/12/2023, 12:21:51": {
+            "Humidite": "46.5",
+            "CO2": "1403",
+            "Activite": "0",
+            "Temperature": "20.2"
+        },
+        "12/12/2023, 11:41:45": {
+            "Humidite": "52.5",
+            "Temperature": "19.2",
+            "CO2": "800",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:21:54": {
+            "Humidite": "",
+            "Temperature": "",
+            "CO2": "",
+            "Activite": ""
+        },
+        "12/12/2023, 16:31:54": {
+            "Humidite": "54",
+            "Temperature": "19.4",
+            "CO2": "876",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:42:13": {
+            "Humidite": "56",
+            "Temperature": "20.8",
+            "CO2": "1480",
+            "Activite": "444"
+        },
+        "17/01/2024, 08:52:16": {
+            "Humidite": "56",
+            "Temperature": "20.9",
+            "CO2": "1535",
+            "Activite": "281"
+        },
+        "17/01/2024, 09:02:16": {
+            "Humidite": "56",
+            "Temperature": "21",
+            "CO2": "1604",
+            "Activite": "397"
+        },
+        "17/01/2024, 09:12:15": {
+            "Humidite": "56",
+            "Temperature": "21.3",
+            "CO2": "1669",
+            "Activite": "436"
+        },
+        "17/01/2024, 14:52:15": {
+            "Humidite": "55",
+            "Temperature": "20.8",
+            "CO2": "1325",
+            "Activite": "0"
+        }
+    },
+    "E006": {
+        "04/12/2023, 11:33:13": {
+            "Humidite": "43",
+            "CO2": "503",
+            "Activite": "0",
+            "Temperature": "18.7"
+        },
+        "04/12/2023, 11:43:13": {
+            "Humidite": "43",
+            "CO2": "507",
+            "Activite": "0",
+            "Temperature": "18.8"
+        },
+        "05/12/2023, 08:23:14": {
+            "Humidite": "44.5",
+            "CO2": "689",
+            "Activite": "145",
+            "Temperature": "18.4"
+        },
+        "05/12/2023, 08:33:18": {
+            "Humidite": "45.5",
+            "CO2": "797",
+            "Activite": "116",
+            "Temperature": "18.6"
+        },
+        "06/12/2023, 11:33:12": {
+            "Humidite": "46.5",
+            "CO2": "1029",
+            "Activite": "199",
+            "Temperature": "19.5"
+        },
+        "06/12/2023, 11:43:12": {
+            "Humidite": "47",
+            "CO2": "1113",
+            "Activite": "173",
+            "Temperature": "19.7"
+        },
+        "06/12/2023, 11:53:13": {
+            "Humidite": "47.5",
+            "CO2": "1199",
+            "Activite": "190",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 12:03:12": {
+            "Humidite": "47.5",
+            "CO2": "1212",
+            "Activite": "56",
+            "Temperature": "19.9"
+        },
+        "06/12/2023, 12:13:12": {
+            "Humidite": "47",
+            "CO2": "1232",
+            "Activite": "213",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:23:12": {
+            "Humidite": "47.5",
+            "CO2": "1284",
+            "Activite": "149",
+            "Temperature": "20.1"
+        },
+        "12/12/2023, 11:43:25": {
+            "Humidite": "52.5",
+            "Temperature": "21.7",
+            "CO2": "1279",
+            "Activite": "98"
+        },
+        "12/12/2023, 13:33:24": {
+            "Humidite": "50",
+            "Temperature": "21.6",
+            "CO2": "626",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:33:24": {
+            "Humidite": "53.5",
+            "Temperature": "22.3",
+            "CO2": "748",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:33:44": {
+            "Humidite": "58",
+            "Temperature": "19.6",
+            "CO2": "921",
+            "Activite": "19"
+        },
+        "17/01/2024, 08:43:43": {
+            "Humidite": "59",
+            "Temperature": "19.9",
+            "CO2": "1079",
+            "Activite": "15"
+        },
+        "17/01/2024, 08:53:45": {
+            "Humidite": "59.5",
+            "Temperature": "20.1",
+            "CO2": "1195",
+            "Activite": "23"
+        },
+        "17/01/2024, 08:54:34": {
+            "Humidite": "51.5",
+            "Temperature": "19.9",
+            "CO2": "1850",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:59:17": {
+            "Humidite": "51.5",
+            "Temperature": "19.9",
+            "CO2": "1850",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:03:44": {
+            "Humidite": "59.5",
+            "Temperature": "20.3",
+            "CO2": "1268",
+            "Activite": "36"
+        },
+        "17/01/2024, 09:08:22": {
+            "Humidite": "51.5",
+            "Temperature": "19.9",
+            "CO2": "1850",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:08:43": {
+            "Humidite": "51.5",
+            "Temperature": "25.9",
+            "CO2": "1850",
+            "Activite": "0"
+        }
+    },
+    "C006": {
+        "04/12/2023, 11:33:52": {
+            "Humidite": "30",
+            "CO2": "579",
+            "Activite": "36",
+            "Temperature": "24.3"
+        },
+        "04/12/2023, 11:43:56": {
+            "Humidite": "30",
+            "CO2": "564",
+            "Activite": "23",
+            "Temperature": "24.2"
+        },
+        "06/12/2023, 11:33:51": {
+            "Humidite": "32",
+            "CO2": "426",
+            "Activite": "0",
+            "Temperature": "25.2"
+        },
+        "06/12/2023, 11:43:51": {
+            "Humidite": "32",
+            "CO2": "425",
+            "Activite": "0",
+            "Temperature": "25.2"
+        },
+        "06/12/2023, 11:53:50": {
+            "Humidite": "32",
+            "CO2": "428",
+            "Activite": "0",
+            "Temperature": "25.2"
+        },
+        "06/12/2023, 12:03:50": {
+            "Humidite": "32",
+            "CO2": "431",
+            "Activite": "0",
+            "Temperature": "25.1"
+        },
+        "06/12/2023, 12:13:51": {
+            "Humidite": "32",
+            "CO2": "430",
+            "Activite": "0",
+            "Temperature": "25.1"
+        },
+        "06/12/2023, 12:23:50": {
+            "Humidite": "32",
+            "CO2": "424",
+            "Activite": "0",
+            "Temperature": "25.1"
+        },
+        "12/12/2023, 11:43:47": {
+            "Humidite": "38",
+            "Temperature": "25.5",
+            "CO2": "638",
+            "Activite": "64"
+        },
+        "12/12/2023, 11:53:47": {
+            "Humidite": "38",
+            "Temperature": "25.4",
+            "CO2": "646",
+            "Activite": "99"
+        },
+        "12/12/2023, 16:33:47": {
+            "Humidite": "40.5",
+            "Temperature": "25.7",
+            "CO2": "501",
+            "Activite": "112"
+        },
+        "17/01/2024, 08:34:45": {
+            "Humidite": "56",
+            "Temperature": "17.8",
+            "CO2": "438",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:44:46": {
+            "Humidite": "56",
+            "Temperature": "17.8",
+            "CO2": "437",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:54:46": {
+            "Humidite": "56",
+            "Temperature": "17.8",
+            "CO2": "433",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:04:45": {
+            "Humidite": "56",
+            "Temperature": "17.8",
+            "CO2": "435",
+            "Activite": "0"
+        }
+    },
+    "E004": {
+        "04/12/2023, 11:34:18": {
+            "Humidite": "46",
+            "CO2": "1415",
+            "Activite": "208",
+            "Temperature": "20.6"
+        },
+        "04/12/2023, 11:44:13": {
+            "Humidite": "47",
+            "CO2": "1610",
+            "Activite": "166",
+            "Temperature": "21"
+        },
+        "06/12/2023, 11:34:22": {
+            "Humidite": "42.5",
+            "CO2": "809",
+            "Activite": "0",
+            "Temperature": "20.9"
+        },
+        "06/12/2023, 11:44:22": {
+            "Humidite": "42",
+            "CO2": "751",
+            "Activite": "0",
+            "Temperature": "20.9"
+        },
+        "06/12/2023, 11:54:22": {
+            "Humidite": "42",
+            "CO2": "722",
+            "Activite": "0",
+            "Temperature": "20.8"
+        },
+        "06/12/2023, 12:04:21": {
+            "Humidite": "41.5",
+            "CO2": "693",
+            "Activite": "0",
+            "Temperature": "20.8"
+        },
+        "06/12/2023, 12:14:22": {
+            "Humidite": "41.5",
+            "CO2": "667",
+            "Activite": "0",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 12:24:22": {
+            "Humidite": "41.5",
+            "CO2": "638",
+            "Activite": "0",
+            "Temperature": "20.6"
+        },
+        "12/12/2023, 11:44:27": {
+            "Humidite": "51.5",
+            "Temperature": "19.1",
+            "CO2": "517",
+            "Activite": "0"
+        },
+        "12/12/2023, 11:54:28": {
+            "Humidite": "51.5",
+            "Temperature": "19.2",
+            "CO2": "520",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:34:27": {
+            "Humidite": "56.5",
+            "Temperature": "19.7",
+            "CO2": "473",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:34:44": {
+            "Humidite": "55",
+            "Temperature": "18.7",
+            "CO2": "520",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:44:46": {
+            "Humidite": "55",
+            "Temperature": "18.8",
+            "CO2": "522",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:54:46": {
+            "Humidite": "55",
+            "Temperature": "18.9",
+            "CO2": "521",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:04:46": {
+            "Humidite": "55",
+            "Temperature": "18.9",
+            "CO2": "519",
+            "Activite": "0"
+        }
+    },
+    "B202": {
+        "04/12/2023, 11:34:19": {
+            "Humidite": "46.5",
+            "CO2": "2056",
+            "Activite": "106",
+            "Temperature": "21.1"
+        },
+        "04/12/2023, 11:44:19": {
+            "Humidite": "47",
+            "CO2": "2181",
+            "Activite": "106",
+            "Temperature": "21.2"
+        },
+        "06/12/2023, 11:34:16": {
+            "Humidite": "50.5",
+            "CO2": "2138",
+            "Activite": "0",
+            "Temperature": "21.6"
+        },
+        "06/12/2023, 11:44:16": {
+            "Humidite": "50",
+            "CO2": "2024",
+            "Activite": "0",
+            "Temperature": "21.5"
+        },
+        "06/12/2023, 11:54:15": {
+            "Humidite": "50",
+            "CO2": "1968",
+            "Activite": "0",
+            "Temperature": "21.4"
+        },
+        "06/12/2023, 12:04:16": {
+            "Humidite": "49.5",
+            "CO2": "1894",
+            "Activite": "0",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:14:16": {
+            "Humidite": "49.5",
+            "CO2": "1830",
+            "Activite": "0",
+            "Temperature": "21.3"
+        },
+        "06/12/2023, 12:24:16": {
+            "Humidite": "49",
+            "CO2": "1753",
+            "Activite": "0",
+            "Temperature": "21.2"
+        },
+        "12/12/2023, 11:44:25": {
+            "Humidite": "61.5",
+            "Temperature": "20.7",
+            "CO2": "1988",
+            "Activite": "0"
+        },
+        "12/12/2023, 11:54:25": {
+            "Humidite": "61",
+            "Temperature": "20.6",
+            "CO2": "1875",
+            "Activite": "0"
+        },
+        "12/12/2023, 16:34:24": {
+            "Humidite": "63.5",
+            "Temperature": "20.7",
+            "CO2": "2037",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:34:46": {
+            "Humidite": "60.5",
+            "Temperature": "20.6",
+            "CO2": "1499",
+            "Activite": "362"
+        },
+        "17/01/2024, 08:44:49": {
+            "Humidite": "59.5",
+            "Temperature": "20.6",
+            "CO2": "1422",
+            "Activite": "102"
+        },
+        "17/01/2024, 08:54:49": {
+            "Humidite": "60",
+            "Temperature": "20.7",
+            "CO2": "1549",
+            "Activite": "65"
+        },
+        "17/01/2024, 09:04:49": {
+            "Humidite": "61",
+            "Temperature": "20.9",
+            "CO2": "1728",
+            "Activite": "116"
+        }
+    },
+    "E001": {
+        "04/12/2023, 11:34:21": {
+            "Humidite": "48.5",
+            "CO2": "1259",
+            "Activite": "214",
+            "Temperature": "20.6"
+        },
+        "04/12/2023, 11:44:21": {
+            "Humidite": "48.5",
+            "CO2": "1214",
+            "Activite": "271",
+            "Temperature": "20.7"
+        },
+        "06/12/2023, 11:34:18": {
+            "Humidite": "47",
+            "CO2": "987",
+            "Activite": "0",
+            "Temperature": "20.3"
+        },
+        "06/12/2023, 11:44:19": {
+            "Humidite": "46.5",
+            "CO2": "899",
+            "Activite": "0",
+            "Temperature": "20.1"
+        },
+        "06/12/2023, 11:54:19": {
+            "Humidite": "46",
+            "CO2": "806",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:04:18": {
+            "Humidite": "45.5",
+            "CO2": "734",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "06/12/2023, 12:14:18": {
+            "Humidite": "45",
+            "CO2": "690",
+            "Activite": "0",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 12:24:19": {
+            "Humidite": "44.5",
+            "CO2": "642",
+            "Activite": "0",
+            "Temperature": "19.7"
+        },
+        "12/12/2023, 11:44:24": {
+            "Humidite": "54.5",
+            "Temperature": "21.1",
+            "CO2": "1183",
+            "Activite": "142"
+        },
+        "12/12/2023, 11:54:24": {
+            "Humidite": "52.5",
+            "Temperature": "21",
+            "CO2": "878",
+            "Activite": "6"
+        },
+        "12/12/2023, 16:34:22": {
+            "Humidite": "57.5",
+            "Temperature": "20",
+            "CO2": "469",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:34:37": {
+            "Humidite": "55.5",
+            "Temperature": "19.4",
+            "CO2": "465",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:44:38": {
+            "Humidite": "55.5",
+            "Temperature": "19.5",
+            "CO2": "467",
+            "Activite": "0"
+        },
+        "17/01/2024, 08:54:38": {
+            "Humidite": "55.5",
+            "Temperature": "19.5",
+            "CO2": "476",
+            "Activite": "0"
+        },
+        "17/01/2024, 09:04:38": {
+            "Humidite": "55.5",
+            "Temperature": "19.5",
+            "CO2": "480",
+            "Activite": "0"
+        }
+    },
+    "E101": {
+        "04/12/2023, 11:39:15": {
+            "Humidite": "43",
+            "CO2": "1512",
+            "Activite": "47",
+            "Temperature": "21"
+        },
+        "04/12/2023, 11:49:15": {
+            "Humidite": "44",
+            "CO2": "1576",
+            "Activite": "243",
+            "Temperature": "21.1"
+        },
+        "05/12/2023, 08:29:17": {
+            "Humidite": "40",
+            "CO2": "526",
+            "Activite": "77",
+            "Temperature": "19.8"
+        },
+        "06/12/2023, 11:39:14": {
+            "Humidite": "42.5",
+            "CO2": "710",
+            "Activite": "19",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:49:13": {
+            "Humidite": "42.5",
+            "CO2": "692",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "06/12/2023, 11:59:13": {
+            "Humidite": "42.5",
+            "CO2": "682",
+            "Activite": "0",
+            "Temperature": "20"
+        },
+        "06/12/2023, 12:09:13": {
+            "Humidite": "42.5",
+            "CO2": "667",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "06/12/2023, 12:19:12": {
+            "Humidite": "42",
+            "CO2": "653",
+            "Activite": "0",
+            "Temperature": "19.9"
+        },
+        "12/12/2023, 11:39:22": {
+            "Humidite": "55",
+            "Temperature": "22.2",
+            "CO2": "1946",
+            "Activite": "216"
+        },
+        "12/12/2023, 16:19:22": {
+            "Humidite": "54",
+            "Temperature": "20.8",
+            "CO2": "480",
+            "Activite": ""
+        },
+        "17/01/2024, 08:39:43": {
+            "Humidite": "53.5",
+            "Temperature": "20.8",
+            "CO2": "814",
+            "Activite": "220"
+        },
+        "17/01/2024, 08:49:44": {
+            "Humidite": "53",
+            "Temperature": "21",
+            "CO2": "874",
+            "Activite": "321"
+        },
+        "17/01/2024, 08:59:47": {
+            "Humidite": "53",
+            "Temperature": "21.2",
+            "CO2": "930",
+            "Activite": "206"
+        },
+        "17/01/2024, 09:09:45": {
+            "Humidite": "53",
+            "Temperature": "21.4",
+            "CO2": "945",
+            "Activite": "167"
+        },
+        "17/01/2024, 14:49:47": {
+            "Humidite": "53.5",
+            "Temperature": "21",
+            "CO2": "647",
+            "Activite": "138"
+        }
+    }
+}
